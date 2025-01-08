@@ -1,86 +1,115 @@
-
-<h1 align="center">Hi there, I'm William Zujkowski <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35px"></h1>
+<h1 align="center">Hi, I'm William Zujkowski, your friendly neighborhood DevSecOps-slinger <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35px"></h1>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/williamzujkowski">LinkedIn</a> •
-  <a href="https://github.com/wz-gsa?tab=followers">Followers</a>
+  <a href="https://github.com/williamzujkowski?tab=followers">Followers</a> •
+  <a href="williamzujkowski.github.io/index.html">Personal Website</a>
 </p>
 
 <p align="center">
-  <a href="https://fedramp.gov"><img src="https://img.shields.io/badge/Cloud%20Security-FedRAMP%20Moderate-informational?style=flat&logo=Cloudflare&color=orange" /></a>
-  <a href="https://cloud.gov"><img src="https://img.shields.io/badge/Platform--as--a--Service-Cloud.gov-informational?style=flat&logo=Amazon%20AWS&color=blue" /></a>
-  <img src="https://img.shields.io/badge/DevSecOps-Automation-informational?style=flat&logo=Docker&color=pink" />
+  <img src="https://img.shields.io/badge/Level%2099-Dad%20Joke%20Bard-orange?style=flat&logo=Github%20Copilot" alt="Level 99 Dad Joke Bard" />
+  <img src="https://img.shields.io/badge/Dungeon-Master-orange?style=flat&logo=Dungeons%20&%20Dragons" alt="Dungeon Master" />
+  <img src="https://img.shields.io/badge/Wielder%20of%20the-Diaper%20of%20Smiting-orange?style=flat&logo=Book-Dead" alt="+1 Diaper of Smiting" />
+  <img src="https://img.shields.io/badge/Chief%20of%20the-Cereal%20Protocol-orange?style=flat&logo=Windows%20Terminal" alt="Chief of the Cereal Protocol" />
+  <img src="https://img.shields.io/badge/Architect%20of%20the-Home%20LAN-blue?style=flat&logo=Cisco" alt="Architect of the Home LAN" />
+  <img src="https://img.shields.io/badge/Administrator%20of%20the-Netflix%20Domain-blue?style=flat&logo=Netflix" alt="Administrator of the Netflix Domain" />
+  <img src="https://img.shields.io/badge/Custodian%20of%20the-Steam%20Library-blue?style=flat&logo=Steam" alt="Custodian of the Steam Library" />
+  <img src="https://img.shields.io/badge/Jedi%20Master%20of-Home%20Automation-pink?style=flat&logo=Star%20Wars" alt="Jedi Master of Home Automation" />
+  <img src="https://img.shields.io/badge/Debugger%20of%20the-NullPointerException%20of%20Life-pink?style=flat&logo=Java" alt="Debugger of the NullPointerException of Life" />
+  <img src="https://img.shields.io/badge/Chaos-Engineer%20(Family%20Edition)-pink?style=flat&logo=Chaos" alt="Chaos Engineer (Family Edition)" />
+  <img src="https://img.shields.io/badge/Full--Stack-Parent-pink?style=flat&logo=React" alt="Full-Stack Parent (Reacting to Everything)" />
 </p>
 
 ---
 
-## About Me
+## About Me: The TL;DR Version
 
-- :satellite: Passionate about **secure-by-design** cloud architectures, **automation**, and building strong **CI/CD** pipelines with **GitHub Actions**, **Terraform**, and other DevSecOps tools.
-- :handshake: Love collaborating with cross-functional teams, bridging the gap between Dev, Ops, and Security.
-- :brain: Constantly learning about new threat vectors, zero-trust architectures, and container security.
-- :raised_hands: A strong believer in open-source and knowledge sharing.
+-   :zap: I make cloud infrastructure that's **secure-by-design** (because patching is so last season). I speak fluent **automation** and can spin up a **CI/CD** pipeline faster than you can say "OWASP Top 10." (using **GitHub Actions**, **Terraform**, and a sprinkle of magic DevSecOps tools).
+-   :handshake: I'm a team player (yes, even with those folks from Security). I enjoy herding developers, wrangling ops, and generally translating "tech" into "human."
+-   :brain: My brain is a sponge for new threat vectors, zero-trust architectures, and container security vulnerabilities. (Don't worry, I won't bore you with the details... unless you ask nicely.)
+-   :raised_hands: Open-source enthusiast and firm believer that knowledge is meant to be shared (unlike my Netflix password).
 
 ---
 
-## Tech & Tools
+## Tech & Tools: My Digital Arsenal
 
 <p align="left">
-  <!-- Programming Languages -->
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-I%20speak%20snake-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python - I speak snake" />
+  <img src="https://img.shields.io/badge/Bash-better%20than%20average-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash - better than average" />
   
-  <!-- DevOps Tools -->
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-automating%20all%20the%20things-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions - automating all the things" />
   
-  <!-- Cloud Platforms -->
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-my%20cloud%20dojo-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS - my cloud dojo" />
+  <img src="https://img.shields.io/badge/Azure-I%20dabble%20here%20too-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure - I dabble here too" />
 
-  <!-- Security Tools -->
-  <img src="https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tenable-009EC2?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Wazuh-E02020?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/OWASP%20ZAP-000000?style=for-the-badge&logo=owasp&logoColor=white" />
-  <img src="https://img.shields.io/badge/Snyk-4C4A73?style=for-the-badge&logo=snyk&logoColor=white" />
-  <img src="https://img.shields.io/badge/Burp%20Suite-FF703F?style=for-the-badge&logo=PortSwigger&logoColor=white" />
-  <img src="https://img.shields.io/badge/Nmap-004080?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Splunk-data%20wizard-000000?style=for-the-badge&logo=splunk&logoColor=white" alt="Splunk - data wizard" />
+  <img src="https://img.shields.io/badge/Tenable-vulnerability%20slayer-009EC2?style=for-the-badge&logoColor=white" alt="Tenable - vulnerability slayer" />
+  <img src="https://img.shields.io/badge/Wazuh-endpoint%20ninja-E02020?style=for-the-badge&logoColor=white" alt="Wazuh - endpoint ninja" />
+  <img src="https://img.shields.io/badge/OWASP%20ZAP-appsec%20aficionado-000000?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP ZAP - appsec aficionado" />
+  <img src="https://img.shields.io/badge/Snyk-dev%20first%20security-4C4A73?style=for-the-badge&logo=snyk&logoColor=white" alt="Snyk - dev first security" />
+  <img src="https://img.shields.io/badge/Burp%20Suite-web%20hacker%20toolkit-FF703F?style=for-the-badge&logo=PortSwigger&logoColor=white" alt="Burp Suite - web hacker toolkit" />
+  <img src="https://img.shields.io/badge/Nmap-port%20scanner%20extraordinaire-004080?style=for-the-badge&logoColor=white" alt="Nmap - port scanner extraordinaire" />
 </p>
 
 ---
 
-## My GitHub Stats
+## My GitHub Stats: (Don't Judge Me)
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=wz-gsa&show_icons=true&theme=vue" alt="wz-gsa's GitHub Stats" width="49%" />
-
+  <img src="https://github-readme-stats.vercel.app/api?username=williamzujkowski&show_icons=true&theme=vue" alt="williamzujkowski's GitHub Stats" width="49%" />
 </p>
 
 ---
 
-## Current Projects
+## Current Projects: What's Keeping Me Busy
 
-- **Security Automation Pipelines**  
-  :white_check_mark: Building robust CI/CD pipelines to automatically scan, test, and deploy secure container images.
+-   **Security Automation Pipelines**
+    :construction: Building CI/CD pipelines that automatically scan, test, and deploy secure container images. (Because manual security checks are *so* 2010s.)
 
-- **Zero Trust Architecture**  
-  :white_check_mark: Experimenting with various open-source tools for managing identity, policy enforcement, and micro-segmentation.
+-   **Zero Trust Architecture**
+    :detective: Experimenting with open-source tools to implement zero trust. (Trust no one, not even your own code.)
 
-- **Secure Cloud Native Apps**  
-  :white_check_mark: Hardening PaaS environments through continuous compliance with FedRAMP and other frameworks.
+-   **Secure Cloud Native Apps**
+    :closed_lock_with_key: Hardening PaaS environments like a digital Fort Knox. (FedRAMP compliance is my jam).
 
 ---
 
-## A Little More About Me
+## A Little More About Me: The YAML Version
 
 ```yaml
-favorite_things:
-  - DevSecOps
-  - Learning new infosec tools
-  - Mentoring and education
-  - Live music and traveling
-  - Reading tech blogs
-```
+# William Zujkowski: A Configuration File
 
-- :blue_heart: Outside of tech, you’ll find me exploring hiking trails, reading sci-fi novels, or tinkering with Raspberry Pi home projects.
-- :speech_balloon: Always open to discussing anything DevSecOps, cloud-native best practices, or your favorite cybersecurity war stories!
+name: William Zujkowski
+title: Security Guru (Self-Proclaimed)
+status: 50% Coffee, 50% Code
+location: The Cloud (or my home office, depending on the day)
+
+skills:
+  - DevSecOps: Expert (Still learning, but don't tell anyone)
+  - Dad Jokes: Master
+  - Cloud Security: High
+  - Automation: Fluent
+  - Explaining Tech to Non-Techies: Intermediate (Work in progress)
+
+hobbies:
+  - DevSecOps: (Yes, it's a hobby and a job)
+  - Learning new infosec tools: (Gotta catch 'em all!)
+  - Mentoring and education: (Sharing is caring)
+  - Traveling with my family: (I steer the wheels on the bus)
+  - Reading tech blogs: (My version of bedtime stories)
+  - Sci-Fi Novels: (Because reality is sometimes boring)
+  - Raspberry Pi Tinkering: (Building random things for the fun of it)
+  - Daydreaming: (I've always managed to have my head in some sort of cloud)
+
+weaknesses:
+  - Cannot resist a good pun
+  - Easily distracted by shiny new tech
+  - May spontaneously start talking about security best practices
+
+contact:
+  - GitHub: @williamzujkowski (Stalk me, I dare you)
+  - LinkedIn: [/in/williamzujkowski](https://www.linkedin.com/in/williamzujkowski) (Let's connect and pretend to be professional)
+  - Personal Website: https://williamzujkowski.github.io/
+
+:blue_heart: When I'm not busy securing the digital world, you'll probably find me exploring the great outdoors, lost in a sci-fi novel, or building questionable contraptions with my Raspberry Pi.
+:speech_balloon: Always up for a chat about DevSecOps, cloud-native, or your favorite cybersecurity war stories! (Bonus points if you have good memes.)

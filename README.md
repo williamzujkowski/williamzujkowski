@@ -1,5 +1,5 @@
 <h1 align="center">
-  Hi, I'm William Zujkowski, a security professional by day, and a family man always. I believe in a secure digital future for all. <img src="https://giphy.com/embed/2tRkgSlLsmqjdwR1nu" width="480" height="269">
+  Hi, I'm William Zujkowski, a security professional by day, and a family man always. I believe in a secure digital future for all.
 </h1>
 
 <p align="center">

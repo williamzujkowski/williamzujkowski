@@ -109,7 +109,7 @@ weaknesses:
   - May spontaneously start talking about security best practices
 
 contact:
-  - GitHub: @williamzujkowski (Stalk me, I dare you)
+  - GitHub: @williamzujkowski (Follow for terrible code and ideas)
   - LinkedIn: https://www.linkedin.com/in/williamzujkowski (Let's connect and pretend to be professional)
   - Personal Website: https://williamzujkowski.github.io/ (I write long blogs about tech and add weird stuff I find funny)
 ```

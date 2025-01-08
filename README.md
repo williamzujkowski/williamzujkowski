@@ -108,8 +108,8 @@ weaknesses:
 
 contact:
   - GitHub: @williamzujkowski (Stalk me, I dare you)
-  - LinkedIn: [/in/williamzujkowski](https://www.linkedin.com/in/williamzujkowski) (Let's connect and pretend to be professional)
-  - Personal Website: https://williamzujkowski.github.io/
+  - LinkedIn: https://www.linkedin.com/in/williamzujkowski (Let's connect and pretend to be professional)
+  - Personal Website: https://williamzujkowski.github.io/ (I write long blogs about tech and add weird stuff I find funny)
 
 :blue_heart: When I'm not busy securing the digital world, you'll probably find me exploring the great outdoors, lost in a sci-fi novel, or building questionable contraptions with my Raspberry Pi.
 :speech_balloon: Always up for a chat about DevSecOps, cloud-native, or your favorite cybersecurity war stories! (Bonus points if you have good memes.)

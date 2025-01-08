@@ -25,7 +25,7 @@
 ## About Me: The TL;DR Version
 
 -   :zap: I make cloud infrastructure that's **secure-by-design** (because patching is so last season). I speak fluent **automation** and can spin up a **CI/CD** pipeline faster than you can say "OWASP Top 10." (using **GitHub Actions**, **Terraform**, and a sprinkle of magic DevSecOps tools).
--   :handshake: I'm a team player (yes, even with those folks from Security). I enjoy herding developers, wrangling ops, and generally translating "tech" into "human."
+-   :handshake: I'm a team player (a spoonful of sugar makes the CVEs go down). I enjoy herding developers, wrangling ops, and generally translating "tech" into "human."
 -   :brain: My brain is a sponge for new threat vectors, zero-trust architectures, and container security vulnerabilities. (Don't worry, I won't bore you with the details... unless you ask nicely.)
 -   :raised_hands: Open-source enthusiast and firm believer that knowledge is meant to be shared (unlike my Netflix password).
 
@@ -34,7 +34,7 @@
 ## Tech & Tools: My Digital Arsenal
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Python-I%20speak%20snake-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python - I speak snake" />
+  <img src="https://img.shields.io/badge/Python-I%20speak%20snake-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python - I speak ok snake" />
   <img src="https://img.shields.io/badge/Bash-better%20than%20average-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash - better than average" />
   
   <img src="https://img.shields.io/badge/GitHub%20Actions-automating%20all%20the%20things-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions - automating all the things" />

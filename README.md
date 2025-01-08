@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/williamzujkowski">LinkedIn</a> •
   <a href="https://github.com/williamzujkowski?tab=followers">Followers</a> •
-  <a href="williamzujkowski.github.io/index.html">Personal Website</a>
+  <a href="https://williamzujkowski.github.io/index.html">Personal Website</a>
 </p>
 
 <p align="center">

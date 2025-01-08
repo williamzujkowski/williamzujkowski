@@ -1,4 +1,6 @@
-<h1 align="center">Hi, I'm William Zujkowski, your friendly neighborhood DevSecOps-slinger <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35px"></h1>
+<h1 align="center">
+  Hi, I'm William Zujkowski, a security professional by day, and a family man always. I believe in a secure digital future for all. <img src="https://giphy.com/embed/2tRkgSlLsmqjdwR1nu" width="480" height="269">
+</h1>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/williamzujkowski">LinkedIn</a> •

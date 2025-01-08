@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Level%2099-Dad%20Joke%20Bard-navy?style=flat&logo=Github%20Copilot" alt="Level 99 Dad Joke Bard" />
+  <a herf="https://ap.tritonguild.net/character.php?char=grenlan"><img src="https://img.shields.io/badge/Level%20120-Bard-navy?style=flat&logo=Github%20Copilot" alt="Level 99 Dad Joke Bard" /></a>
   <img src="https://img.shields.io/badge/Dungeon-Master-red?style=flat&logo=Dungeons%20&%20Dragons" alt="Dungeon Master" />
   <img src="https://img.shields.io/badge/Wielder%20of%20the-Diaper%20of%20Smiting-brown?style=flat&logo=Book-Dead" alt="+1 Diaper of Smiting" />
   <img src="https://img.shields.io/badge/Chief%20of%20the-Cereal%20Protocol-orange?style=flat&logo=Windows%20Terminal" alt="Chief of the Cereal Protocol" />

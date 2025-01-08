@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/Wielder%20of%20the-Diaper%20of%20Smiting-brown?style=flat&logo=Book-Dead" alt="+1 Diaper of Smiting" />
   <img src="https://img.shields.io/badge/Chief%20of%20the-Cereal%20Protocol-orange?style=flat&logo=Windows%20Terminal" alt="Chief of the Cereal Protocol" />
   <img src="https://img.shields.io/badge/Architect%20of%20the-Home%20LAN-blue?style=flat&logo=Cisco" alt="Architect of the Home LAN" />
-  <img src="https://img.shields.io/badge/Administrator%20of%20the-Netflix%20Domain-darkred?style=flat&logo=Netflix" alt="Administrator of the Netflix Domain" />
+  <img src="https://img.shields.io/badge/Administrator%20of%20the-Netflix%20Password-darkred?style=flat&logo=Netflix" alt="Administrator of the Netflix Domain" />
   <img src="https://img.shields.io/badge/Custodian%20of%20the-Steam%20Library-black?style=flat&logo=Steam" alt="Custodian of the Steam Library" />
   <img src="https://img.shields.io/badge/Jedi%20Master%20of-Home%20Automation-green?style=flat&logo=Star%20Wars" alt="Jedi Master of Home Automation" />
   <img src="https://img.shields.io/badge/Debugger%20of%20the-NullPointerException%20of%20Life-violet?style=flat&logo=Java" alt="Debugger of the NullPointerException of Life" />

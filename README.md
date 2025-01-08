@@ -19,7 +19,7 @@
   <img src="https://img.shields.io/badge/Jedi%20Master%20of-Home%20Automation-green?style=flat&logo=Star%20Wars" alt="Jedi Master of Home Automation" />
   <img src="https://img.shields.io/badge/Debugger%20of%20the-NullPointerException%20of%20Life-violet?style=flat&logo=Java" alt="Debugger of the NullPointerException of Life" />
   <img src="https://img.shields.io/badge/Chaos-Engineer%20(Family%20Edition)-purple?style=flat&logo=Chaos" alt="Chaos Engineer (Family Edition)" />
-  <img src="https://img.shields.io/badge/Full--Stack-Parent-green?style=flat&logo=React" alt="Full-Stack Parent (Reacting to Everything)" />
+  <img src="https://img.shields.io/badge/Full--Stack-Parent-darkgreen?style=flat&logo=React" alt="Full-Stack Parent (Reacting to Everything)" />
 </p>
 
 ---

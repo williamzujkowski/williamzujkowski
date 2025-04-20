@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <em>Dad‑joke enthusiast by choice and champion of bedtime stories.</em>
+  <em>Dad‑joke enthusiast and champion of bedtime stories.</em>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 
 ## 🙋‍♂️ About Me
 
-- 👨‍👩‍👧‍👦 Proud husband & dad (Chief of the Diaper Protocol, +1 to bedtime stories)  
+- 👨‍👩‍👧‍👦 Proud husband & dad
 - 🎮 Strategy gamer at heart (Civilization emperor, Crusader Kings schemer & Tropico island dictator)  
 - ☕ Coffee enthusiast (I run on espresso and puns)  
 - 📚 Lifelong learner – from sci‑fi world‑building to Raspberry Pi wizardry
@@ -48,7 +48,6 @@
 
 ```yaml
 name: William Zujkowski
-alias: Will the Shield
 roles:
   - Dad‑Joke Enthusiast
   - Home Automation Jedi

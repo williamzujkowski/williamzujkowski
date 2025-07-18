@@ -1,0 +1,50 @@
+{
+  "window": {
+    "width": 700,
+    "height": 450,
+    "titleBar": {
+      "title": "william@dad-joke-hq:~",
+      "backgroundColor": "#2d2d2d"
+    },
+    "backgroundColor": "#1e1e1e",
+    "shadow": true
+  },
+  "terminal": {
+    "fontFamily": "Fira Code, Consolas, monospace",
+    "fontSize": 14,
+    "textColor": "#00ff00",
+    "promptColor": "#36BCF7",
+    "backgroundColor": "#1e1e1e"
+  },
+  "sections": [
+    {
+      "heading": "$ whoami",
+      "content": "William Zujkowski\nSenior Security Specialist | Home Automator | Dad Joke Distributor",
+      "color": "#00ff00",
+      "duration": 2000,
+      "pause": 1500
+    },
+    {
+      "heading": "$ cat interests.txt",
+      "content": "🏠 Home Automation\n🍓 Raspberry Pi Wizardry\n🛡️ Security (Defensive Only!)\n🎮 Gaming\n👨‍👩‍👧‍👦 Family Time",
+      "color": "#ffcc00",
+      "duration": 2500,
+      "pause": 1500
+    },
+    {
+      "heading": "$ ./dad-joke --random",
+      "content": "Generating dad joke...\n\n\"I used to hate facial hair,\nbut then it grew on me.\"\n\n[Press any key to groan...]",
+      "color": "#ff7b00",
+      "promptColor": "#00ff00",
+      "duration": 3000,
+      "pause": 2000
+    },
+    {
+      "heading": "$ git log --oneline -1",
+      "content": "a1b2c3d Living life one commit at a time 👨‍💻",
+      "color": "#36BCF7",
+      "duration": 1500,
+      "pause": 1000
+    }
+  ]
+}

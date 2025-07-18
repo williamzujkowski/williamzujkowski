@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/williamzujkowski/williamzujkowski/main/.github/schema/terminal-config-v2.schema.json",
+  "title": "Terminal Window Configuration",
+  "description": "Configuration schema for generating animated terminal window SVGs",
+  "type": "object",
+  "required": ["sections"],
+  "properties": {
+    "window": {
+      "type": "object",
+      "description": "Terminal window appearance settings",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "description": "Window width in pixels",
+          "default": 600,
+          "minimum": 400,
+          "maximum": 1200
+        },
+        "height": {
+          "type": "integer",
+          "description": "Window height in pixels",
+          "default": 400,
+          "minimum": 200,
+          "maximum": 800
+        },
+        "backgroundColor": {
+          "type": "string",
+          "description": "Window background color",
+          "default": "#1e1e1e"
+        },
+        "borderRadius": {
+          "type": "integer",
+          "description": "Window corner radius",
+          "default": 8
+        },
+        "shadow": {
+          "type": "boolean",
+          "description": "Enable window shadow",
+          "default": true
+        },
+        "titleBar": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "Window title text",
+              "default": "Terminal"
+            },
+            "backgroundColor": {
+              "type": "string",
+              "description": "Title bar background color",
+              "default": "#2d2d2d"
+            }
+          }
+        }
+      }
+    },
+    "terminal": {
+      "type": "object",
+      "description": "Terminal content area settings",
+      "properties": {
+        "fontFamily": {
+          "type": "string",
+          "description": "Terminal font family",
+          "default": "Fira Code, monospace"
+        },
+        "fontSize": {
+          "type": "integer",
+          "description": "Terminal font size",
+          "default": 14,
+          "minimum": 10,
+          "maximum": 24
+        },
+        "textColor": {
+          "type": "string",
+          "description": "Default text color",
+          "default": "#00ff00"
+        },
+        "promptColor": {
+          "type": "string",
+          "description": "Command prompt color",
+          "default": "#36BCF7"
+        },
+        "backgroundColor": {
+          "type": "string",
+          "description": "Terminal background color",
+          "default": "#1e1e1e"
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "description": "Terminal command sections to animate",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["heading", "content"],
+        "properties": {
+          "heading": {
+            "type": "string",
+            "description": "Command or prompt text",
+            "minLength": 1
+          },
+          "content": {
+            "type": "string",
+            "description": "Output content (use \\n for line breaks)",
+            "minLength": 1
+          },
+          "color": {
+            "type": "string",
+            "description": "Override text color for this section"
+          },
+          "promptColor": {
+            "type": "string",
+            "description": "Override prompt color for this section"
+          },
+          "duration": {
+            "type": "integer",
+            "description": "Typing animation duration in ms",
+            "default": 2000,
+            "minimum": 500,
+            "maximum": 10000
+          },
+          "pause": {
+            "type": "integer",
+            "description": "Pause after section in ms",
+            "default": 1000,
+            "minimum": 0,
+            "maximum": 5000
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "window": {
+        "title": "william@dad-joke-hq:~"
+      },
+      "sections": [
+        {
+          "heading": "$ whoami",
+          "content": "William Zujkowski\\nDad, Tinkerer, Problem Solver",
+          "color": "#00ff00"
+        },
+        {
+          "heading": "$ ./dad-joke --random",
+          "content": "Why don't scientists trust atoms?\\nBecause they make up everything!",
+          "color": "#ffcc00"
+        }
+      ]
+    }
+  ]
+}

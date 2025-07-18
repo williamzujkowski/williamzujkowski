@@ -41,6 +41,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python generate_terminal.py
+          # Rename output.gif to terminal.gif if needed
+          if [[ -f output.gif && ! -f terminal.gif ]]; then
+            mv output.gif terminal.gif
+          fi
 
       - name: Check if terminal.gif changed
         id: verify

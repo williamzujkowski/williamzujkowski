@@ -18,6 +18,7 @@ on:
       - 'src/terminal-config.json'
       - 'src/terminal-config-v2.json'
       - 'src/awesome-terminal-config.json'
+      - 'src/unix-terminal-config.json'
       - 'scripts/**'
       - '.github/workflows/update-terminal-svg.yml'
 

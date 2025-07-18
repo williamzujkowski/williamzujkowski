@@ -13,6 +13,7 @@ on:
     branches:
       - main
       - svg_update
+      - terminal_window_design
     paths:
       - 'src/terminal-config.json'
       - 'src/terminal-config-v2.json'

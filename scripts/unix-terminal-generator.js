@@ -24,7 +24,7 @@ class UnixTerminalGenerator {
         fontFamily: 'Consolas, Monaco, \'Courier New\', monospace',
         fontSize: 14,
         charWidth: 8.4, // Precise monospace width
-        lineHeight: 1.2,
+        lineHeight: 1.6, // Increased for better readability
         textColor: '#00ff00',
         backgroundColor: '#000000',
         cursorColor: '#00ff00',
@@ -86,12 +86,18 @@ class UnixTerminalGenerator {
                values="1;1;0;0" 
                dur="${terminal.cursorBlinkRate * 2}ms" 
                repeatCount="indefinite"/>
+      <animate attributeName="fill" 
+               values="${terminal.cursorColor};#00ff44;${terminal.cursorColor}" 
+               dur="2000ms" 
+               repeatCount="indefinite"/>
     </rect>
     
-    <!-- Scanline effect -->
-    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="1" height="2">
+    <!-- Animated scanline effect -->
+    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="1" height="3">
       <rect width="1" height="1" fill="transparent"/>
-      <rect y="1" width="1" height="1" fill="rgba(0,255,0,0.02)"/>
+      <rect width="1" height="1" fill="rgba(0,255,0,0.03)">
+        <animate attributeName="y" values="0;1;2;0" dur="8s" repeatCount="indefinite"/>
+      </rect>
     </pattern>
     
     <!-- CRT phosphor glow -->
@@ -104,6 +110,18 @@ class UnixTerminalGenerator {
     <filter id="textGlow">
       <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
       <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Enhanced glow for special elements -->
+    <filter id="enhancedGlow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feColorMatrix in="coloredBlur" mode="matrix" 
+                     values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
@@ -205,7 +223,7 @@ class UnixTerminalGenerator {
 
   generateSequences(sequences) {
     const { terminal } = this.config;
-    let currentY = 0;
+    let currentY = terminal.fontSize; // Start with baseline offset
     let currentTime = 0;
     let cursorX = 0;
     let cursorY = 0;
@@ -313,7 +331,7 @@ class UnixTerminalGenerator {
     
     // Show prompt immediately
     elements.push(`
-    <text x="0" y="${y + terminal.fontSize}" 
+    <text x="0" y="${y}" 
           font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
           font-size="${terminal.fontSize}" 
           fill="${terminal.promptColor}" 
@@ -343,7 +361,7 @@ class UnixTerminalGenerator {
       
       // Move cursor with each character
       elements.push(`
-      <use href="#blockCursor" x="${xOffset}" y="${y + 2}" opacity="0">
+      <use href="#blockCursor" x="${xOffset}" y="${y - terminal.fontSize + 2}" opacity="0">
         <animate attributeName="opacity" from="0" to="1" 
                  begin="${charTime}ms" dur="10ms" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" 
@@ -370,10 +388,11 @@ class UnixTerminalGenerator {
     let currentY = startY;
     
     lines.forEach((line, i) => {
-      if (line.trim()) {
+      // Include empty lines for proper spacing
+      if (line !== undefined) {
         // Instant display for output (like real terminal)
         elements.push(`
-        <text x="0" y="${currentY + terminal.fontSize}" 
+        <text x="0" y="${currentY}" 
               font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
               font-size="${terminal.fontSize}" 
               fill="${color}" 
@@ -403,15 +422,18 @@ class UnixTerminalGenerator {
     // ASCII art fades in with glow effect
     lines.forEach((line, i) => {
       elements.push(`
-      <text x="0" y="${startY + (i + 1) * terminal.fontSize * terminal.lineHeight}" 
+      <text x="0" y="${startY + (i * terminal.fontSize * terminal.lineHeight) + terminal.fontSize}" 
             font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
             font-size="${terminal.fontSize}" 
             fill="${color}" 
-            filter="url(#textGlow)"
+            filter="url(${seq.glow ? '#enhancedGlow' : '#textGlow'})"
             opacity="0">
         ${this.escapeXml(line)}
         <animate attributeName="opacity" from="0" to="1" 
                  begin="${startTime}ms" dur="500ms" fill="freeze"/>
+        ${seq.glow ? `<animate attributeName="filter" 
+                 values="url(#enhancedGlow);url(#textGlow);url(#enhancedGlow)" 
+                 dur="3000ms" repeatCount="indefinite"/>` : ''}
       </text>`);
     });
 
@@ -495,8 +517,9 @@ class UnixTerminalGenerator {
   }
 
   generateFinalCursor(x, y, startTime) {
+    const { terminal } = this.config;
     return `
-    <use href="#blockCursor" x="${x}" y="${y + 2}" opacity="0">
+    <use href="#blockCursor" x="${x}" y="${y - terminal.fontSize + 2}" opacity="0">
       <animate attributeName="opacity" from="0" to="1" 
                begin="${startTime}ms" dur="10ms" fill="freeze"/>
     </use>`;

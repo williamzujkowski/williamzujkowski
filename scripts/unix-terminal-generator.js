@@ -20,24 +20,23 @@ class UnixTerminalGenerator {
         }
       },
       terminal: {
-        padding: 15,
+        padding: 20,
         fontFamily: 'Consolas, Monaco, \'Courier New\', monospace',
         fontSize: 14,
-        charWidth: 8.4, // Precise monospace width
-        lineHeight: 1.6, // Increased for better readability
+        charWidth: 8.4,
+        lineHeight: 1.8, // Increased for better spacing
         textColor: '#00ff00',
         backgroundColor: '#000000',
         cursorColor: '#00ff00',
-        cursorWidth: 8.4, // Full character width
+        cursorWidth: 8.4,
         prompt: 'william@dad-joke-hq:~$ ',
         promptColor: '#00ff00',
-        // Timing
         typingSpeed: {
-          min: 30,  // Fastest typing (ms per char)
-          max: 120, // Slowest typing
-          avg: 60   // Average speed
+          min: 30,
+          max: 120,
+          avg: 60
         },
-        cursorBlinkRate: 530, // Standard Unix cursor blink rate
+        cursorBlinkRate: 530,
       }
     };
   }
@@ -49,11 +48,8 @@ class UnixTerminalGenerator {
   generateTerminal(sequences) {
     const { window, terminal } = this.config;
     const contentHeight = window.height - window.titleBar.height - (terminal.padding * 2);
-    const lineHeight = terminal.fontSize * terminal.lineHeight;
+    const lineHeight = Math.round(terminal.fontSize * terminal.lineHeight);
     
-    // Calculate total animation duration with realistic typing
-    let totalDuration = this.calculateTotalDuration(sequences);
-
     const svg = `<svg width="${window.width}" height="${window.height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     ${this.generateDefs()}
@@ -70,6 +66,11 @@ class UnixTerminalGenerator {
   <rect x="0" y="${window.titleBar.height}" width="${window.width}" 
         height="${window.height - window.titleBar.height}" 
         fill="url(#phosphorGlow)" opacity="0.4" pointer-events="none"/>
+  
+  <!-- Animated scanlines -->
+  <rect x="0" y="${window.titleBar.height}" width="${window.width}" 
+        height="${window.height - window.titleBar.height}" 
+        fill="url(#scanlines)" opacity="0.8"/>
 </svg>`;
 
     return svg;
@@ -156,12 +157,7 @@ class UnixTerminalGenerator {
     <!-- Window background -->
     <rect x="0" y="0" width="${window.width}" height="${window.height}" 
           rx="${window.borderRadius}" ry="${window.borderRadius}" 
-          fill="${window.backgroundColor}"/>
-    
-    <!-- CRT screen effect -->
-    <rect x="0" y="${window.titleBar.height}" width="${window.width}" 
-          height="${window.height - window.titleBar.height}" 
-          fill="url(#scanlines)" opacity="0.8"/>`;
+          fill="${window.backgroundColor}"/>`;
   }
 
   generateTitleBar() {
@@ -223,18 +219,23 @@ class UnixTerminalGenerator {
 
   generateSequences(sequences) {
     const { terminal } = this.config;
-    let currentY = terminal.fontSize; // Start with baseline offset
+    let currentY = 0;
     let currentTime = 0;
     let cursorX = 0;
     let cursorY = 0;
     const elements = [];
-    const lineHeight = terminal.fontSize * terminal.lineHeight;
+    const lineHeight = Math.round(terminal.fontSize * terminal.lineHeight);
+    const viewportHeight = this.config.window.height - this.config.window.titleBar.height - (terminal.padding * 2);
+    let totalScrollOffset = 0;
 
     sequences.forEach((seq, index) => {
       currentTime += seq.delay || 0;
 
       switch (seq.type) {
         case 'command': {
+          // Add spacing before command
+          if (index > 0) currentY += lineHeight * 0.5;
+          
           const result = this.generateCommand(seq, currentY, currentTime, cursorX);
           elements.push(result.element);
           cursorX = result.newCursorX;
@@ -242,26 +243,28 @@ class UnixTerminalGenerator {
           currentTime = result.endTime;
           currentY += lineHeight;
           
-          // Add output immediately after command
           if (seq.output) {
-            currentTime += 200; // Small pause before output
+            currentTime += 200;
             const outputResult = this.generateOutput(seq.output, currentY, currentTime);
             elements.push(outputResult.element);
             currentY = outputResult.newY;
             currentTime = outputResult.endTime;
             cursorX = 0;
-            cursorY = currentY - lineHeight;
+            cursorY = currentY;
           }
           break;
         }
 
         case 'ascii': {
+          // Add spacing before ASCII art
+          if (index > 0) currentY += lineHeight * 0.5;
+          
           const result = this.generateAsciiArt(seq, currentY, currentTime);
           elements.push(result.element);
           currentY = result.newY;
           currentTime = result.endTime;
           cursorX = 0;
-          cursorY = currentY - lineHeight;
+          cursorY = currentY;
           break;
         }
 
@@ -271,23 +274,27 @@ class UnixTerminalGenerator {
           currentY = result.newY;
           currentTime = result.endTime;
           cursorX = 0;
-          cursorY = currentY - lineHeight;
+          cursorY = currentY;
           break;
         }
 
         case 'clear': {
-          elements.push(this.generateClear(currentTime, currentY));
+          elements.push(this.generateClear(currentTime, viewportHeight + totalScrollOffset));
           currentY = 0;
           cursorX = 0;
           cursorY = 0;
+          totalScrollOffset = 0;
           currentTime += 100;
           break;
         }
 
         case 'progress': {
+          // Add spacing before progress
+          if (index > 0) currentY += lineHeight * 0.5;
+          
           const result = this.generateProgress(seq, currentY, currentTime);
           elements.push(result.element);
-          currentY += lineHeight * 2;
+          currentY += lineHeight * 3;
           currentTime = result.endTime;
           break;
         }
@@ -297,17 +304,19 @@ class UnixTerminalGenerator {
       currentTime += seq.pause || 500;
 
       // Auto-scroll if needed
-      const viewportHeight = this.config.window.height - this.config.window.titleBar.height - (terminal.padding * 2);
-      if (currentY > viewportHeight - lineHeight * 3) {
-        const scrollAmount = lineHeight * 5;
-        elements.push(this.generateScroll(currentTime, scrollAmount));
+      if (currentY > viewportHeight - lineHeight * 4) {
+        const scrollAmount = Math.min(currentY - lineHeight * 2, lineHeight * 10);
+        elements.push(this.generateScroll(currentTime, scrollAmount, totalScrollOffset));
+        totalScrollOffset += scrollAmount;
         currentY -= scrollAmount;
-        cursorY -= scrollAmount;
+        cursorY = Math.max(0, cursorY - scrollAmount);
       }
     });
 
-    // Add final cursor at end
-    elements.push(this.generateFinalCursor(cursorX, cursorY, currentTime));
+    // Add final cursor
+    if (cursorY >= 0) {
+      elements.push(this.generateFinalCursor(cursorX, cursorY, currentTime));
+    }
 
     return elements.join('\n');
   }
@@ -317,7 +326,6 @@ class UnixTerminalGenerator {
     const prompt = seq.prompt || terminal.prompt;
     const command = seq.content;
     
-    // Calculate typing duration with realistic variance
     const chars = command.split('');
     let typingTime = 0;
     const charTimings = chars.map(() => {
@@ -331,7 +339,7 @@ class UnixTerminalGenerator {
     
     // Show prompt immediately
     elements.push(`
-    <text x="0" y="${y}" 
+    <text x="0" y="${y + terminal.fontSize}" 
           font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
           font-size="${terminal.fontSize}" 
           fill="${terminal.promptColor}" 
@@ -361,7 +369,7 @@ class UnixTerminalGenerator {
       
       // Move cursor with each character
       elements.push(`
-      <use href="#blockCursor" x="${xOffset}" y="${y - terminal.fontSize + 2}" opacity="0">
+      <use href="#blockCursor" x="${xOffset}" y="${y}" opacity="0">
         <animate attributeName="opacity" from="0" to="1" 
                  begin="${charTime}ms" dur="10ms" fill="freeze"/>
         <animate attributeName="opacity" from="1" to="0" 
@@ -382,28 +390,27 @@ class UnixTerminalGenerator {
 
   generateOutput(seq, startY, startTime) {
     const { terminal } = this.config;
-    const lines = seq.content ? seq.content.split('\n') : seq.split('\n');
+    const content = seq.content || seq;
+    const lines = typeof content === 'string' ? content.split('\n') : [];
     const color = seq.color || terminal.textColor;
     let elements = [];
     let currentY = startY;
+    const lineHeight = Math.round(terminal.fontSize * terminal.lineHeight);
     
     lines.forEach((line, i) => {
-      // Include empty lines for proper spacing
-      if (line !== undefined) {
-        // Instant display for output (like real terminal)
-        elements.push(`
-        <text x="0" y="${currentY}" 
-              font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
-              font-size="${terminal.fontSize}" 
-              fill="${color}" 
-              filter="url(#textGlow)"
-              opacity="0">
-          ${this.escapeXml(line)}
-          <animate attributeName="opacity" from="0" to="1" 
-                   begin="${startTime + (i * 20)}ms" dur="20ms" fill="freeze"/>
-        </text>`);
-      }
-      currentY += terminal.fontSize * terminal.lineHeight;
+      // Always render lines, even if empty, to maintain spacing
+      elements.push(`
+      <text x="0" y="${currentY + terminal.fontSize}" 
+            font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
+            font-size="${terminal.fontSize}" 
+            fill="${color}" 
+            filter="url(#textGlow)"
+            opacity="0">
+        ${this.escapeXml(line)}
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="${startTime + (i * 20)}ms" dur="20ms" fill="freeze"/>
+      </text>`);
+      currentY += lineHeight;
     });
 
     return {
@@ -418,11 +425,12 @@ class UnixTerminalGenerator {
     const lines = seq.content.split('\n');
     const color = seq.color || '#00ff00';
     let elements = [];
+    const lineHeight = Math.round(terminal.fontSize * terminal.lineHeight);
+    let currentY = startY;
     
-    // ASCII art fades in with glow effect
     lines.forEach((line, i) => {
       elements.push(`
-      <text x="0" y="${startY + (i * terminal.fontSize * terminal.lineHeight) + terminal.fontSize}" 
+      <text x="0" y="${currentY + terminal.fontSize}" 
             font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
             font-size="${terminal.fontSize}" 
             fill="${color}" 
@@ -435,11 +443,12 @@ class UnixTerminalGenerator {
                  values="url(#enhancedGlow);url(#textGlow);url(#enhancedGlow)" 
                  dur="3000ms" repeatCount="indefinite"/>` : ''}
       </text>`);
+      currentY += lineHeight;
     });
 
     return {
       element: `<g id="ascii_${startTime}">${elements.join('')}</g>`,
-      newY: startY + (lines.length * terminal.fontSize * terminal.lineHeight),
+      newY: currentY,
       endTime: startTime + 500
     };
   }
@@ -493,9 +502,9 @@ class UnixTerminalGenerator {
     };
   }
 
-  generateClear(startTime, currentY) {
+  generateClear(startTime, height) {
     return `
-    <rect x="-20" y="-20" width="1000" height="${currentY + 100}" 
+    <rect x="-50" y="-50" width="1000" height="${height + 100}" 
           fill="${this.config.terminal.backgroundColor}" 
           opacity="0">
       <animate attributeName="opacity" from="0" to="1" 
@@ -503,41 +512,37 @@ class UnixTerminalGenerator {
     </rect>`;
   }
 
-  generateScroll(startTime, scrollAmount) {
+  generateScroll(startTime, scrollAmount, currentOffset) {
     return `
     <animateTransform 
       attributeName="transform" 
       type="translate" 
-      from="0 0" 
-      to="0 -${scrollAmount}" 
+      from="0 ${-currentOffset}" 
+      to="0 ${-(currentOffset + scrollAmount)}" 
       begin="${startTime}ms" 
-      dur="200ms" 
+      dur="300ms" 
       fill="freeze" 
-      additive="sum"/>`;
+      additive="replace"/>`;
   }
 
   generateFinalCursor(x, y, startTime) {
     const { terminal } = this.config;
     return `
-    <use href="#blockCursor" x="${x}" y="${y - terminal.fontSize + 2}" opacity="0">
+    <use href="#blockCursor" x="${x}" y="${y}" opacity="0">
       <animate attributeName="opacity" from="0" to="1" 
                begin="${startTime}ms" dur="10ms" fill="freeze"/>
     </use>`;
   }
 
   getTypingSpeed() {
-    // Realistic typing speed variation
     const { min, max, avg } = this.config.terminal.typingSpeed;
     const random = Math.random();
     
     if (random < 0.1) {
-      // 10% chance of pause (thinking)
       return Math.random() * 300 + 200;
     } else if (random < 0.3) {
-      // 20% chance of slow typing
       return Math.random() * (max - avg) + avg;
     } else {
-      // 70% normal speed
       return Math.random() * (avg - min) + min;
     }
   }

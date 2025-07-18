@@ -2,54 +2,228 @@
   "sequences": [
     {
       "type": "ascii",
-      "content": "+----------------------------------------+\n|  William's GitHub Terminal v2.0        |\n+----------------------------------------+",
+      "content": "01101000 01100101 01101100 01101100 01101111\n10110101 11010011 10101010 11110000 10101111\n01010111 01101001 01101100 01101100 01101001\n11100001 10101110 10111101 11010101 10110010\n01100001 01101101 00100001 00100001 00100001",
+      "color": "#00ff00",
+      "delay": 20,
+      "pause": 800
+    },
+    {
+      "type": "clear",
+      "pause": 200
+    },
+    {
+      "type": "ascii",
+      "content": "#============================================#\n#     __        _____ _     _     _         #\n#     \\ \\      / /_ _| |   | |   (_) __ _   #\n#      \\ \\ /\\ / / | || |   | |   | |/ _` |  #\n#       \\ V  V /  | || |___| |___| | (_| |  #\n#        \\_/\\_/  |___|_____|_____|_|\\__,_|  #\n#                                           #\n#         Dad Joke Terminal v35.0           #\n#============================================#",
       "color": "#00ffff",
-      "delay": 100,
-      "pause": 500
+      "delay": 30,
+      "pause": 1000,
+      "glow": true
     },
     {
       "type": "command",
       "prompt": "",
       "content": "",
       "output": {
-        "content": "\n[  OK  ] Starting william.service...\n[  OK  ] Loading dad-joke-generator...\n[  OK  ] Mounting /dev/coffee...\n",
+        "content": "\n[BOOT] Initializing Dad OS v35.0...\n[##--------] 10%",
         "color": "#00ff00"
       },
       "delay": 0,
-      "pause": 1000
+      "pause": 200
     },
     {
       "type": "command",
-      "prompt": "william@dad-joke-hq:~$ ",
-      "content": "whoami --verbose",
+      "prompt": "",
+      "content": "",
       "output": {
-        "content": "name: William Zujkowski\nrole: Senior Security Specialist\nuptime: 35+ years\nshell: /bin/dad-jokes",
-        "color": "#ffff00"
-      },
-      "delay": 200,
-      "pause": 1000
-    },
-    {
-      "type": "command",
-      "prompt": "william@dad-joke-hq:~$ ",
-      "content": "./dad-joke --random",
-      "output": {
-        "content": "[*] Generating dad joke...\n\n> \"I used to hate facial hair, but then it grew on me.\"\n\n[Groan Factor: ############## 100%]",
-        "color": "#ffff00"
-      },
-      "delay": 200,
-      "pause": 2000
-    },
-    {
-      "type": "command",
-      "prompt": "william@dad-joke-hq:~$ ",
-      "content": "echo \"Living life one git commit at a time\"",
-      "output": {
-        "content": "Living life one git commit at a time",
+        "content": "\r[###-------] 30% Loading dad-jokes.ko",
         "color": "#00ff00"
       },
-      "delay": 200,
+      "delay": 0,
+      "pause": 300
+    },
+    {
+      "type": "command",
+      "prompt": "",
+      "content": "",
+      "output": {
+        "content": "\r[#####-----] 50% Mounting /dev/coffee",
+        "color": "#00ff00"
+      },
+      "delay": 0,
+      "pause": 300
+    },
+    {
+      "type": "command",
+      "prompt": "",
+      "content": "",
+      "output": {
+        "content": "\r[#######---] 70% Compiling puns...",
+        "color": "#00ff00"
+      },
+      "delay": 0,
+      "pause": 400
+    },
+    {
+      "type": "command",
+      "prompt": "",
+      "content": "",
+      "output": {
+        "content": "\r[##########] 100% Boot complete!\n",
+        "color": "#00ff00"
+      },
+      "delay": 0,
+      "pause": 500
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "neofetch",
+      "output": {
+        "content": "\n       _,met$$$$$gg.          william@dad-hq\n    ,g$$$$$$$$$$$$$$$P.       --------------\n  ,g$$P\"     \"\"\"Y$$.\".        OS: Dad OS v35.0 (Family Edition)\n ,$$P'              `$$$.     Kernel: 5.15.0-dad-jokes\n',$$P       ,ggs.     `$$b:   Uptime: 35 years, 2 months, 17 days\n`d$$'     ,$P\"'   .    $$$    Shell: /bin/dad-bash\n $$P      d$'     ,    $$P    Resolution: 1920x1080 (Dad Vision)\n $$:      $.   -    ,d$$'     Terminal: william-term v2.0\n $$;      Y$b._   _,d$P'      CPU: Intel Dad Core i9-FAMILY\n Y$$.    `.`\"Y$$$$P\"'         GPU: NVIDIA GeForce DAD 4090\n `$$b      \"-.__              Memory: 12GB / 16GB (75% Coffee Buffer)\n  `Y$$                        Disk: 80% full of dad jokes\n   `Y$$.                      Packages: 1337 (dad-jokes)\n     `$$b.                    Theme: Dark Mode (bugs hate it)\n       `Y$$b.                 Icons: Dad Emoji Set\n          `\"Y$b._             Font: Comic Dad MS\n              `\"\"\"            \n",
+        "color": "#00ffff"
+      },
+      "delay": 50,
       "pause": 2000
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "htop --dad-mode",
+      "output": {
+        "content": "\n  DAD PROCESS MONITOR                          \n CPU [########--] 80% (thinking of jokes)      \n MEM [######----] 60% (storing dad wisdom)     \n SWP [##--------] 20% (emergency puns)         \n                                               \n PID   USER     %CPU  %MEM  COMMAND            \n 1337  william  45.0  12.3  dad-joke-generator \n 2048  william  23.1   8.7  coffee-daemon      \n 3141  william  15.9   5.2  lawn-mower-sim     \n 4242  william   8.0   3.1  bbq-controller     \n 5555  william   5.0   2.0  sock-matcher       \n 6789  william   3.0   1.5  thermostat-guard  \n                                               ",
+        "color": "#ffff00"
+      },
+      "delay": 30,
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "./dad-joke --random",
+      "output": {
+        "content": "\n[*] Accessing dad joke database...\n[*] Joke quality: MAXIMUM GROAN\n\n=> \"Why do programmers prefer dark mode?\"\n   \"Because light attracts bugs!\"\n\n[Audience Reaction: *groans*]",
+        "color": "#00ff00"
+      },
+      "delay": 100,
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "git log --oneline --dad-commits -5",
+      "output": {
+        "content": "\na1b2c3d fix: told kids to git pull their socks up\nd4e5f6g feat: added new dad joke to /etc/puns\ng7h8i9j refactor: reorganized BBQ algorithm\nj1k2l3m chore: updated coffee dependency to v5.0\nm4n5o6p docs: explained why I'm not just dad, I'm data",
+        "color": "#ffff00"
+      },
+      "delay": 50,
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "sudo systemctl status dad-services",
+      "output": {
+        "content": "\n* dad-joke.service - Dad Joke Generator Service\n   Loaded: loaded (/etc/systemd/dad/dad-joke.service; enabled)\n   Active: active (running) since boot\n   Status: \"Generating quality puns...\"\n\n* lawn-care.service - Lawn Maintenance Daemon\n   Loaded: loaded (/etc/systemd/dad/lawn-care.service; enabled)\n   Active: active (idle) waiting for Saturday\n\n* thermostat-guard.service - Temperature Protection\n   Loaded: loaded (/etc/systemd/dad/thermostat-guard.service; enabled)\n   Active: active (watching) \"Who touched the thermostat?!\"",
+        "color": "#00ff00"
+      },
+      "delay": 40,
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "./dad-joke --tell-another",
+      "output": {
+        "content": "\n[*] Loading premium dad joke...\n[##########] 100%\n\n=> \"I told my wife she was drawing her eyebrows too high.\"\n   \"She looked surprised.\"\n\n[Groan Level: ############ CRITICAL]",
+        "color": "#ffff00"
+      },
+      "delay": 80,
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "cat /proc/dad/stats",
+      "output": {
+        "content": "\n#========== DAD STATISTICS ==========#\n# Total Dad Jokes Told:      42,069  #\n# Eye Rolls Received:        41,999  #\n# Actual Laughs:                 70  #\n# \"Hi Hungry, I'm Dad\":       9,001  #\n# Thermostat Adjustments:         0  #\n# \"Back in my day...\":       3,141  #\n# Kids Embarrassed:   COUNTER_OVERFLOW#\n#====================================#",
+        "color": "#00ffff"
+      },
+      "delay": 30,
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "./dad-joke --science",
+      "output": {
+        "content": "\n[*] Calculating optimal pun parameters...\n[*] Science joke detected!\n\n=> \"Why don't scientists trust atoms?\"\n   \"Because they make up everything!\"\n\n[Scientific Accuracy: [########--] 80%]\n[Dad Joke Quality:   [##########] 100%]",
+        "color": "#00ff00"
+      },
+      "delay": 100,
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "diagnostic --run-dad-check",
+      "output": {
+        "content": "\n= Running Dad Diagnostic Suite v2.0...\n\n[PASS] Cargo shorts detected\n[PASS] New Balance sneakers online\n[PASS] Grill fuel levels optimal\n[PASS] Dad reflexes calibrated\n[WARN] ! Low on coffee (only 3 cups today)\n[PASS] Joke database synchronized\n[PASS] \"Ask your mother\" response ready\n\nDad Status: FULLY OPERATIONAL",
+        "color": "#ffff00"
+      },
+      "delay": 60,
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "./dad-joke --italian",
+      "output": {
+        "content": "\n[*] Mama mia! Italian joke incoming...\n\n=> \"What do you call a fake noodle?\"\n   \"An impasta!\"\n\n[Spice Level: *** MILD]\n[Groans in Italian: *mamma mia*]",
+        "color": "#00ff00"
+      },
+      "delay": 100,
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "fortune --dad-wisdom",
+      "output": {
+        "content": "\n#==========================================#\n#        DAD WISDOM OF THE DAY            #\n#                                         #\n#  \"Why did the scarecrow win an award?   #\n#   He was outstanding in his field!\"     #\n#                                         #\n#  Remember: Life is like a git repo -    #\n#  commit to your family branch daily.    #\n#==========================================#",
+        "color": "#00ffff"
+      },
+      "delay": 40,
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "./dad-joke --geography",
+      "output": {
+        "content": "\n[*] Locating geographical humor...\n[*] GPS coordinates of funny: FOUND\n\n=> \"What's the best thing about Switzerland?\"\n   \"I don't know, but the flag is a big plus.\"\n\n[International Groans: +++++ +100]",
+        "color": "#ffff00"
+      },
+      "delay": 100,
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "prompt": "william@dad-hq:~$ ",
+      "content": "sl",
+      "output": {
+        "content": "\n    ====        ________                ___________\n _D _|  |_______/        \\__I_I_____===__|_________|_\n  |(_)---  |   H\\________/ |   |        =|___ ___|   \n  /     |  |   H  |  |     |   |         ||_| |_||   \n |      |  |   H  |__--------------------| [___] |   \n | ________|___H__/__|_____/[][]~\\_______|       |   \n |/ |   |-----------I_____I [][] []  D   |=======|__ \n\n[DAD TRAIN: All aboard the pun express!]",
+        "color": "#00ff00"
+      },
+      "delay": 20,
+      "pause": 1500
+    },
+    {
+      "type": "ascii",
+      "content": "\n#================================================#\n#                                                #\n#   Thanks for visiting my terminal!             #\n#                                                #\n#   Remember: I'm not just a dad...              #\n#   I'm a data-driven dad! *wink*                #\n#                                                #\n#   william@dad-hq:~$ exit                       #\n#   Goodbye! Don't forget to git commit! :)      #\n#                                                #\n#================================================#",
+      "color": "#00ffff",
+      "delay": 50,
+      "pause": 3000,
+      "glow": true
     }
   ]
 }

@@ -24,6 +24,8 @@ on:
 jobs:
   update-svg:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     # Prevent multiple runs at the same time
     concurrency:

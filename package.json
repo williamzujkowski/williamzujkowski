@@ -8,7 +8,8 @@
     "test:watch": "jest --watch",
     "lint": "eslint scripts/**/*.js",
     "generate-svg": "node scripts/generate-svg.js",
-    "generate-terminal": "node scripts/generate-svg-v2.js"
+    "generate-terminal": "node scripts/generate-svg-v2.js",
+    "generate-awesome": "node scripts/generate-awesome-terminal.js"
   },
   "repository": {
     "type": "git",

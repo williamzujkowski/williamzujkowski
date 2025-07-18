@@ -1,0 +1,181 @@
+{
+  "sequences": [
+    {
+      "type": "ascii",
+      "content": " _    _ _ _ _ _                 \n| |  | (_) | (_)                \n| |  | |_| | |_  __ _ _ __ ___  \n| |/\\| | | | | |/ _` | '_ ` _ \\ \n\\  /\\  / | | | | (_| | | | | | |\n \\/  \\/|_|_|_|_|\\__,_|_| |_| |_|\n                                \nSecurity Specialist | Home Automator | Dad Joke Distributor",
+      "color": "#00ff00",
+      "delay": 500,
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "cat /etc/profile",
+      "typingDuration": 1500,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "Loading profile...",
+      "color": "#808080",
+      "pause": 1000
+    },
+    {
+      "type": "clear",
+      "delay": 100
+    },
+    {
+      "type": "command",
+      "content": "whoami --verbose",
+      "typingDuration": 1800,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "name: William Zujkowski\nrole: Senior Security Specialist & Family CTO\nuptime: 35+ years\nshell: /bin/dad-jokes\npackages_installed:\n  - python3-security-tools\n  - homeassistant-core\n  - raspberry-pi-wizardry\n  - family-priority-daemon (always running)",
+      "color": "#ffcc00",
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "systemctl status william",
+      "typingDuration": 2000,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "● william.service - Dad Operations Manager\n   Loaded: loaded (/etc/systemd/system/william.service; enabled)\n   Active: active (running) since birth\n   Main PID: 1 (family)\n   \n   CGroup: /system.slice/william.service\n           ├─1 family.exe --priority=realtime\n           ├─2 security-automation.py --mode=defensive\n           ├─3 home-assistant --config=/home/smart\n           └─4 dad-joke-generator --interval=30s",
+      "color": "#00ff00",
+      "pause": 1000
+    },
+    {
+      "type": "progress",
+      "label": " Memory:",
+      "progress": 0.8,
+      "color": "#ff7b00",
+      "duration": 2000,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "         (coffee refill needed)",
+      "color": "#ff7b00",
+      "pause": 500
+    },
+    {
+      "type": "progress",
+      "label": " CPU:   ",
+      "progress": 1.0,
+      "color": "#00ff00",
+      "duration": 2000,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "         (multitasking parent mode)",
+      "color": "#00ff00",
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "ls -la /current/projects/",
+      "typingDuration": 2000,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "drwxr-xr-x  2 william family  4096 Jan 17 [Standards]     # Battle-tested dev standards\ndrwxr-xr-x  2 william family  4096 Jan 17 [Personal-Site] # 11ty + dark mode magic\ndrwx------  2 william family  4096 Jan 17 [Security-Auto] # Defensive tools (private)\ndrwxr-xr-x  2 william family  4096 Jan 17 [Home-Network]  # Digital fortress project",
+      "color": "#36BCF7",
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "./dad-joke --random",
+      "typingDuration": 1500,
+      "pause": 500
+    },
+    {
+      "type": "loading",
+      "content": "Generating dad joke",
+      "duration": 2000,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "Done.\n\n> \"I used to hate facial hair, but then it grew on me.\"\n\n[Press any key to groan...]",
+      "color": "#ffcc00",
+      "pause": 3000
+    },
+    {
+      "type": "command",
+      "content": "man william",
+      "typingDuration": 1000,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "WILLIAM(1)                    Dad Manual                    WILLIAM(1)\n\nNAME\n       william - security specialist, home automator, dad joke enthusiast\n\nSYNOPSIS\n       william [OPTIONS] [PROJECT]\n\nDESCRIPTION\n       William is a multi-threaded process optimized for family operations\n       while maintaining high-performance security and automation tasks.\n       \nOPTIONS\n       --coffee          Boost performance by 50%\n       --family          Override all other priorities\n       --security        Launch defensive security mode\n       --homelab         Access smart home controls\n       --dad-joke        Generate context-aware humor\n\nEXAMPLES\n       william --coffee --security\n              Morning security audit with maximum efficiency\n              \nSEE ALSO\n       husband(1), father(1), homeassistant(8), python(1)",
+      "color": "#d4d4d4",
+      "pause": 3000
+    },
+    {
+      "type": "command",
+      "content": "./dad-joke --one-more",
+      "typingDuration": 1800,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "> \"Why don't scientists trust atoms?\"\n> \"Because they make up everything!\"\n\n😄",
+      "color": "#ffcc00",
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "fortune | cowsay",
+      "typingDuration": 1500,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": " _____________________________________\n< A commit a day keeps the bugs away >\n -------------------------------------\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||",
+      "color": "#36BCF7",
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "content": "git log --oneline -3",
+      "typingDuration": 1500,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "a1b2c3d Living life one commit at a time 👨‍💻\nf4e5d6c Added more dad jokes to production\n7890abc Fixed bug where coffee === null",
+      "color": "#36BCF7",
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "contact --list",
+      "typingDuration": 1200,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "📧 GitHub:   github.com/williamzujkowski\n💼 LinkedIn: linkedin.com/in/williamzujkowski\n🌐 Website:  williamzujkowski.github.io",
+      "color": "#00ff00",
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "logout",
+      "typingDuration": 800,
+      "pause": 500
+    },
+    {
+      "type": "output",
+      "content": "\n\"Living life one git commit at a time,\n with family as the main branch.\"\n\nConnection closed.",
+      "color": "#808080",
+      "pause": 3000
+    }
+  ]
+}

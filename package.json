@@ -9,7 +9,8 @@
     "lint": "eslint scripts/**/*.js",
     "generate-svg": "node scripts/generate-svg.js",
     "generate-terminal": "node scripts/generate-svg-v2.js",
-    "generate-awesome": "node scripts/generate-awesome-terminal.js"
+    "generate-awesome": "node scripts/generate-awesome-terminal.js",
+    "generate-unix": "node scripts/generate-unix-terminal.js"
   },
   "repository": {
     "type": "git",

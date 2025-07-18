@@ -46,7 +46,7 @@ jobs:
         run: npm ci
       
       - name: Generate SVG
-        run: npm run generate-awesome
+        run: npm run generate-unix
         env:
           NODE_ENV: production
       

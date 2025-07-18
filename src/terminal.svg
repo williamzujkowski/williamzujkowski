@@ -1,102 +1,289 @@
-<!-- https://github.com/DenverCoder1/readme-typing-svg/ -->
-<svg xmlns='http://www.w3.org/2000/svg'
-    xmlns:xlink='http://www.w3.org/1999/xlink'
-    viewBox='0 0 500 300'
-    style='background-color: #00000000;'
-    width='500px' height='300px'>
+<svg width="700" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="0" dy="5" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.3"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Terminal gradient background -->
+    <linearGradient id="terminalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d2d2d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e1e1e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Blinking cursor -->
+    <g id="cursor">
+      <rect width="8" height="16" fill="#00ff00">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </defs>
+  
+  <!-- Main window with shadow -->
+  <g filter="url(#shadow)">
+    <!-- Window background -->
+    <rect x="0" y="0" width="700" height="450" 
+          rx="8" ry="8" 
+          fill="#1e1e1e"/>
+    
+    <!-- Title bar -->
+    <rect x="0" y="0" width="700" height="30" 
+          rx="8" ry="8" 
+          fill="#2d2d2d"/>
+    
+    <!-- Fix bottom corners of title bar -->
+    <rect x="0" y="15" width="700" 
+          height="15" fill="#2d2d2d"/>
+    
+    <!-- Window control buttons -->
+    <g id="window-controls">
+      <circle cx="20" cy="15" r="6" fill="#ff5f56"/>
+      <circle cx="40" cy="15" r="6" fill="#ffbd2e"/>
+      <circle cx="60" cy="15" r="6" fill="#27c93f"/>
+    </g>
+    
+    <!-- Window title -->
+    <text x="350" y="20" font-family="Fira Code, Consolas, monospace" 
+          font-size="13" fill="#cccccc" text-anchor="middle">
+      william@dad-joke-hq:~
+    </text>
+    
+    <!-- Terminal content area -->
+    <g id="terminal-content" transform="translate(20, 50)">
+      <rect x="-20" y="-20" 
+            width="700" height="420" 
+            fill="#1e1e1e"/>
+      
+      <!-- Animated content -->
+      
+      <g transform="translate(0, 0)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#36BCF7" opacity="0">
+          <tspan>$<animate attributeName="opacity" from="0" to="1" 
+                      begin="0ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="250ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>w<animate attributeName="opacity" from="0" to="1" 
+                      begin="500ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>h<animate attributeName="opacity" from="0" to="1" 
+                      begin="750ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>o<animate attributeName="opacity" from="0" to="1" 
+                      begin="1000ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>a<animate attributeName="opacity" from="0" to="1" 
+                      begin="1250ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>m<animate attributeName="opacity" from="0" to="1" 
+                      begin="1500ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>i<animate attributeName="opacity" from="0" to="1" 
+                      begin="1750ms" 
+                      dur="0.1s" fill="freeze"/></tspan>
+        </text>
+        
+      </g>
 
-    <style>
-@font-face {
-  font-family: 'Fira Code';
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url(data:font/truetype;base64,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AAEAEgACABIAEgAAAAEAAQApAAEAAAABAAgAAQCKAAMAAQAAAAEACAABAHwADQAGAAAABQBkAFIAOAAkABAAAwAAAAEAZgACAGYAZgABAAAAEwADAAEAKAABAFIAAQBSAAEAAAASAAMAAgAUABQAAQA+AAAAAQAAABEAAQABADQAAwAAAAEAJAADACQAJAAkAAAAAwABABIAAQASAAIAEgASAAAAAQABADEAAQAAAAEACAABARYAAwABAAAAAQAIAAEBCAAFAAYAAAAHAIwAegBoAFYAPAAoABQAAwAAAAEA7gACAO4A7gABAAAADwADAAEAKAABANoAAQDaAAEAAAAOAAMAAgAUABQAAQDGAAAAAQAAAA0AAQABADkAAwAAAAEArAADAKwArAFkAAAAAwABAVIAAQCaAAIAmgCaAAAAAwAAAAEAiAADAIgAiACIAAAAAwABAHYAAQB2AAIAdgB2AAAAAQAAAAEACAABARQAAgAGAAAABgBsAFwARgA2ACQAEgADAAAAAQD8AAEA/AABAAAACwADAAEAwAABAOoAAAABAAAACgADAAAAAQDYAAIA2AAgAAAAAwABABAAAQDIAAEAyAAAAAEAAQA2AAMAAAABALIAAgCyALIAAAADAAEAogABAKIAAQCiAAAAAQAAAAEACAABAIoAAQABAAAAAQAIAAEAfAADAAYAAAAFAGQAUgA4ACQAEAADAAAAAQBmAAIAZgBmAAEAAAAIAAMAAQAoAAEAUgABAFIAAQAAAAcAAwACABQAFAABAD4AAAABAAAABgABAAEASQADAAAAAQAkAAMAJAAkACQAAAADAAEAEgABABIAAgASABIAAAABAAEASAABAAAAAQAIAAEABgACAAEAAQAaAAAABABQ/5gEYAXGAAMABwAoADQAABMhESElESERARQGIyImNTU2NjU0JiMiBgcGIyImNTQ2NjMyFhYVFAYHAzQ2MzIWFRQGIyImUAQQ+/ADpPzKAaggEhMfbEovSx8vGg8LFho9VidWYSdZZXgoHh4oKB4eKAXG+dJoBV76ogIEFhoaFqgGRU87TwsLBhsTGyMQQWk8aXQP/vYeKCgeHysrAAIAKQAABIcFYQAHAAoAAAEhAyMBMwEjASEDA2P9326rAcDeAcC2/Z4Bx+IBX/6hBWH6nwHvAuAAAwDBAAAENwVhAAsAFAAp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) format('truetype');
-}
-</style>
+      <g transform="translate(0, 21)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#00ff00" opacity="0">
+          William Zujkowski
+Senior Security Specialist | Home Automator | Dad Joke Distributor<animate attributeName="opacity" from="0" to="1" 
+                    begin="2500ms" dur="0.1s" fill="freeze"/>
+        </text>
+        
+      </g>
 
-                <path id='path0'>
-                            <!-- Single line -->
-                                <animate id='d0' attributeName='d' begin='0s;d5.end'
-                    dur='4500ms' fill='remove'
-                    values='m0,150 h0 ; m0,150 h500 ; m0,150 h500 ; m0,150 h0' keyTimes='0;0.53333333333333;0.86666666666667;1' />
-                    </path>
-    <text font-family='"Fira Code", monospace' fill='#00ff00' font-size='16'
-        dominant-baseline='auto'
-        x='0%' text-anchor='start'
-        letter-spacing='normal'>
-        <textPath xlink:href='#path0'>
-            $ whoami
-        </textPath>
-    </text>
-        <path id='path1'>
-                            <!-- Single line -->
-                                <animate id='d1' attributeName='d' begin='d0.end'
-                    dur='4500ms' fill='remove'
-                    values='m0,150 h0 ; m0,150 h500 ; m0,150 h500 ; m0,150 h0' keyTimes='0;0.53333333333333;0.86666666666667;1' />
-                    </path>
-    <text font-family='"Fira Code", monospace' fill='#00ff00' font-size='16'
-        dominant-baseline='auto'
-        x='0%' text-anchor='start'
-        letter-spacing='normal'>
-        <textPath xlink:href='#path1'>
-            William Zujkowski - Dad, Tinkerer, Problem Solver
-        </textPath>
-    </text>
-        <path id='path2'>
-                            <!-- Single line -->
-                                <animate id='d2' attributeName='d' begin='d1.end'
-                    dur='4500ms' fill='remove'
-                    values='m0,150 h0 ; m0,150 h500 ; m0,150 h500 ; m0,150 h0' keyTimes='0;0.53333333333333;0.86666666666667;1' />
-                    </path>
-    <text font-family='"Fira Code", monospace' fill='#00ff00' font-size='16'
-        dominant-baseline='auto'
-        x='0%' text-anchor='start'
-        letter-spacing='normal'>
-        <textPath xlink:href='#path2'>
-            $ cat interests.txt
-        </textPath>
-    </text>
-        <path id='path3'>
-                            <!-- Single line -->
-                                <animate id='d3' attributeName='d' begin='d2.end'
-                    dur='4500ms' fill='remove'
-                    values='m0,150 h0 ; m0,150 h500 ; m0,150 h500 ; m0,150 h0' keyTimes='0;0.53333333333333;0.86666666666667;1' />
-                    </path>
-    <text font-family='"Fira Code", monospace' fill='#00ff00' font-size='16'
-        dominant-baseline='auto'
-        x='0%' text-anchor='start'
-        letter-spacing='normal'>
-        <textPath xlink:href='#path3'>
-            🏠 Home Automation | 🍓 Raspberry Pi | 🛡️ Security | 🎮 Gaming
-        </textPath>
-    </text>
-        <path id='path4'>
-                            <!-- Single line -->
-                                <animate id='d4' attributeName='d' begin='d3.end'
-                    dur='4500ms' fill='remove'
-                    values='m0,150 h0 ; m0,150 h500 ; m0,150 h500 ; m0,150 h0' keyTimes='0;0.53333333333333;0.86666666666667;1' />
-                    </path>
-    <text font-family='"Fira Code", monospace' fill='#00ff00' font-size='16'
-        dominant-baseline='auto'
-        x='0%' text-anchor='start'
-        letter-spacing='normal'>
-        <textPath xlink:href='#path4'>
-            $ echo $CURRENT_PROJECTS
-        </textPath>
-    </text>
-        <path id='path5'>
-                            <!-- Single line -->
-                                <animate id='d5' attributeName='d' begin='d4.end'
-                    dur='4500ms' fill='remove'
-                    values='m0,150 h0 ; m0,150 h500 ; m0,150 h500 ; m0,150 h0' keyTimes='0;0.53333333333333;0.86666666666667;1' />
-                    </path>
-    <text font-family='"Fira Code", monospace' fill='#00ff00' font-size='16'
-        dominant-baseline='auto'
-        x='0%' text-anchor='start'
-        letter-spacing='normal'>
-        <textPath xlink:href='#path5'>
-            Building cool stuff with code and making dad jokes
-        </textPath>
-    </text>
+      <g transform="translate(0, 52.5)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#36BCF7" opacity="0">
+          <tspan>$<animate attributeName="opacity" from="0" to="1" 
+                      begin="4100ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="4231.578947368421ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>c<animate attributeName="opacity" from="0" to="1" 
+                      begin="4363.157894736842ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>a<animate attributeName="opacity" from="0" to="1" 
+                      begin="4494.736842105263ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>t<animate attributeName="opacity" from="0" to="1" 
+                      begin="4626.315789473684ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="4757.894736842105ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>i<animate attributeName="opacity" from="0" to="1" 
+                      begin="4889.473684210527ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>n<animate attributeName="opacity" from="0" to="1" 
+                      begin="5021.0526315789475ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>t<animate attributeName="opacity" from="0" to="1" 
+                      begin="5152.631578947368ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>e<animate attributeName="opacity" from="0" to="1" 
+                      begin="5284.210526315789ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>r<animate attributeName="opacity" from="0" to="1" 
+                      begin="5415.789473684211ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>e<animate attributeName="opacity" from="0" to="1" 
+                      begin="5547.368421052632ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>s<animate attributeName="opacity" from="0" to="1" 
+                      begin="5678.9473684210525ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>t<animate attributeName="opacity" from="0" to="1" 
+                      begin="5810.526315789473ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>s<animate attributeName="opacity" from="0" to="1" 
+                      begin="5942.105263157895ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>.<animate attributeName="opacity" from="0" to="1" 
+                      begin="6073.684210526316ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>t<animate attributeName="opacity" from="0" to="1" 
+                      begin="6205.263157894737ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>x<animate attributeName="opacity" from="0" to="1" 
+                      begin="6336.842105263158ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>t<animate attributeName="opacity" from="0" to="1" 
+                      begin="6468.421052631578ms" 
+                      dur="0.1s" fill="freeze"/></tspan>
+        </text>
+        
+      </g>
+
+      <g transform="translate(0, 73.5)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#ffcc00" opacity="0">
+          🏠 Home Automation
+🍓 Raspberry Pi Wizardry
+🛡️ Security (Defensive Only!)
+🎮 Gaming
+👨‍👩‍👧‍👦 Family Time<animate attributeName="opacity" from="0" to="1" 
+                    begin="7100ms" dur="0.1s" fill="freeze"/>
+        </text>
+        
+      </g>
+
+      <g transform="translate(0, 105)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#00ff00" opacity="0">
+          <tspan>$<animate attributeName="opacity" from="0" to="1" 
+                      begin="8700ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="8842.857142857143ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>.<animate attributeName="opacity" from="0" to="1" 
+                      begin="8985.714285714286ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>/<animate attributeName="opacity" from="0" to="1" 
+                      begin="9128.57142857143ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>d<animate attributeName="opacity" from="0" to="1" 
+                      begin="9271.42857142857ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>a<animate attributeName="opacity" from="0" to="1" 
+                      begin="9414.285714285714ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>d<animate attributeName="opacity" from="0" to="1" 
+                      begin="9557.142857142857ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>-<animate attributeName="opacity" from="0" to="1" 
+                      begin="9700ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>j<animate attributeName="opacity" from="0" to="1" 
+                      begin="9842.857142857143ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>o<animate attributeName="opacity" from="0" to="1" 
+                      begin="9985.714285714286ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>k<animate attributeName="opacity" from="0" to="1" 
+                      begin="10128.57142857143ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>e<animate attributeName="opacity" from="0" to="1" 
+                      begin="10271.42857142857ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="10414.285714285714ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>-<animate attributeName="opacity" from="0" to="1" 
+                      begin="10557.142857142857ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>-<animate attributeName="opacity" from="0" to="1" 
+                      begin="10700ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>r<animate attributeName="opacity" from="0" to="1" 
+                      begin="10842.857142857143ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>a<animate attributeName="opacity" from="0" to="1" 
+                      begin="10985.714285714286ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>n<animate attributeName="opacity" from="0" to="1" 
+                      begin="11128.571428571428ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>d<animate attributeName="opacity" from="0" to="1" 
+                      begin="11271.428571428572ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>o<animate attributeName="opacity" from="0" to="1" 
+                      begin="11414.285714285714ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>m<animate attributeName="opacity" from="0" to="1" 
+                      begin="11557.142857142857ms" 
+                      dur="0.1s" fill="freeze"/></tspan>
+        </text>
+        
+      </g>
+
+      <g transform="translate(0, 126)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#ff7b00" opacity="0">
+          Generating dad joke...
+
+&quot;I used to hate facial hair,
+but then it grew on me.&quot;
+
+[Press any key to groan...]<animate attributeName="opacity" from="0" to="1" 
+                    begin="12200ms" dur="0.1s" fill="freeze"/>
+        </text>
+        
+      </g>
+
+      <g transform="translate(0, 157.5)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#36BCF7" opacity="0">
+          <tspan>$<animate attributeName="opacity" from="0" to="1" 
+                      begin="14300ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="14368.181818181818ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>g<animate attributeName="opacity" from="0" to="1" 
+                      begin="14436.363636363636ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>i<animate attributeName="opacity" from="0" to="1" 
+                      begin="14504.545454545454ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>t<animate attributeName="opacity" from="0" to="1" 
+                      begin="14572.727272727272ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="14640.90909090909ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>l<animate attributeName="opacity" from="0" to="1" 
+                      begin="14709.09090909091ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>o<animate attributeName="opacity" from="0" to="1" 
+                      begin="14777.272727272728ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>g<animate attributeName="opacity" from="0" to="1" 
+                      begin="14845.454545454546ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="14913.636363636364ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>-<animate attributeName="opacity" from="0" to="1" 
+                      begin="14981.818181818182ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>-<animate attributeName="opacity" from="0" to="1" 
+                      begin="15050ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>o<animate attributeName="opacity" from="0" to="1" 
+                      begin="15118.181818181818ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>n<animate attributeName="opacity" from="0" to="1" 
+                      begin="15186.363636363636ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>e<animate attributeName="opacity" from="0" to="1" 
+                      begin="15254.545454545454ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>l<animate attributeName="opacity" from="0" to="1" 
+                      begin="15322.727272727272ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>i<animate attributeName="opacity" from="0" to="1" 
+                      begin="15390.909090909092ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>n<animate attributeName="opacity" from="0" to="1" 
+                      begin="15459.090909090908ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>e<animate attributeName="opacity" from="0" to="1" 
+                      begin="15527.272727272728ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan> <animate attributeName="opacity" from="0" to="1" 
+                      begin="15595.454545454546ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>-<animate attributeName="opacity" from="0" to="1" 
+                      begin="15663.636363636364ms" 
+                      dur="0.1s" fill="freeze"/></tspan><tspan>1<animate attributeName="opacity" from="0" to="1" 
+                      begin="15731.818181818182ms" 
+                      dur="0.1s" fill="freeze"/></tspan>
+        </text>
+        
+      </g>
+
+      <g transform="translate(0, 178.5)">
+        <text font-family="Fira Code, Consolas, monospace" font-size="14" 
+              fill="#36BCF7" opacity="0">
+          a1b2c3d Living life one commit at a time 👨‍💻<animate attributeName="opacity" from="0" to="1" 
+                    begin="16300ms" dur="0.1s" fill="freeze"/>
+        </text>
+        <use href="#cursor" x="386.4" y="-2" 
+                opacity="0">
+            <animate attributeName="opacity" from="0" to="1" 
+                     begin="16350ms" dur="0.1s" fill="freeze"/>
+          </use>
+      </g>
+    </g>
+  </g>
 </svg>

@@ -15,6 +15,7 @@ on:
       - svg_update
     paths:
       - 'src/terminal-config.json'
+      - 'src/terminal-config-v2.json'
       - 'scripts/**'
       - '.github/workflows/update-terminal-svg.yml'
 
@@ -43,7 +44,7 @@ jobs:
         run: npm ci
       
       - name: Generate SVG
-        run: npm run generate-svg
+        run: npm run generate-terminal
         env:
           NODE_ENV: production
       

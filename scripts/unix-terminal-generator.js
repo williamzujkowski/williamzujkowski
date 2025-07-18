@@ -21,7 +21,7 @@ class UnixTerminalGenerator {
       },
       terminal: {
         padding: 15,
-        fontFamily: 'Consolas, Monaco, "Courier New", monospace',
+        fontFamily: 'Consolas, Monaco, \'Courier New\', monospace',
         fontSize: 14,
         charWidth: 8.4, // Precise monospace width
         lineHeight: 1.2,
@@ -40,6 +40,10 @@ class UnixTerminalGenerator {
         cursorBlinkRate: 530, // Standard Unix cursor blink rate
       }
     };
+  }
+
+  escapeXmlAttr(str) {
+    return str.replace(/"/g, '&quot;').replace(/'/g, '&apos;');
   }
 
   generateTerminal(sequences) {
@@ -164,7 +168,7 @@ class UnixTerminalGenerator {
     
     <!-- Window title -->
     <text x="${window.width / 2}" y="${window.titleBar.height / 2 + 5}" 
-          font-family="${this.config.terminal.fontFamily}" font-size="13" 
+          font-family="${this.escapeXmlAttr(this.config.terminal.fontFamily)}" font-size="13" 
           fill="${window.titleBar.titleColor}" text-anchor="middle">
       ${window.titleBar.title}
     </text>`;
@@ -310,7 +314,7 @@ class UnixTerminalGenerator {
     // Show prompt immediately
     elements.push(`
     <text x="0" y="${y + terminal.fontSize}" 
-          font-family="${terminal.fontFamily}" 
+          font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
           font-size="${terminal.fontSize}" 
           fill="${terminal.promptColor}" 
           filter="url(#textGlow)"
@@ -327,7 +331,7 @@ class UnixTerminalGenerator {
       
       elements.push(`
       <text x="${xOffset}" y="${y + terminal.fontSize}" 
-            font-family="${terminal.fontFamily}" 
+            font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
             font-size="${terminal.fontSize}" 
             fill="${terminal.textColor}" 
             filter="url(#textGlow)"
@@ -370,7 +374,7 @@ class UnixTerminalGenerator {
         // Instant display for output (like real terminal)
         elements.push(`
         <text x="0" y="${currentY + terminal.fontSize}" 
-              font-family="${terminal.fontFamily}" 
+              font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
               font-size="${terminal.fontSize}" 
               fill="${color}" 
               filter="url(#textGlow)"
@@ -400,7 +404,7 @@ class UnixTerminalGenerator {
     lines.forEach((line, i) => {
       elements.push(`
       <text x="0" y="${startY + (i + 1) * terminal.fontSize * terminal.lineHeight}" 
-            font-family="${terminal.fontFamily}" 
+            font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
             font-size="${terminal.fontSize}" 
             fill="${color}" 
             filter="url(#textGlow)"
@@ -433,7 +437,7 @@ class UnixTerminalGenerator {
                  begin="${startTime}ms" dur="50ms" fill="freeze"/>
         
         <!-- Label -->
-        <text font-family="${terminal.fontFamily}" 
+        <text font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
               font-size="${terminal.fontSize}" 
               fill="${terminal.textColor}">
           ${this.escapeXml(label)}
@@ -457,7 +461,7 @@ class UnixTerminalGenerator {
         
         <!-- Percentage -->
         <text x="${width + 10}" y="${terminal.fontSize + 12}" 
-              font-family="${terminal.fontFamily}" 
+              font-family="${this.escapeXmlAttr(terminal.fontFamily)}" 
               font-size="${terminal.fontSize * 0.9}" 
               fill="${terminal.textColor}">
           ${Math.round(progress * 100)}%

@@ -1,7 +1,7 @@
-![Terminal](./terminal.gif)
+![Terminal](./src/terminal.svg)
 
 <p align="center">
-  <em>🔄 This terminal updates daily with fresh dad jokes and GitHub stats!</em>
+  <em>🔄 This terminal updates hourly with animated typing effects!</em>
 </p>
 
 ---

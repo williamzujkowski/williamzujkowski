@@ -1,0 +1,23 @@
+[
+  {
+    "heading": "$ whoami",
+    "content": "William Zujkowski - Dad, Tinkerer, Problem Solver",
+    "color": "#00ff00",
+    "duration": 3000,
+    "pause": 1500
+  },
+  {
+    "heading": "$ cat interests.txt",
+    "content": "🏠 Home Automation | 🍓 Raspberry Pi | 🛡️ Security | 🎮 Gaming",
+    "color": "#36BCF7",
+    "duration": 4000,
+    "pause": 2000
+  },
+  {
+    "heading": "$ echo $CURRENT_PROJECTS",
+    "content": "Building cool stuff with code and making dad jokes",
+    "color": "#ff7b00",
+    "duration": 3500,
+    "pause": 1000
+  }
+]

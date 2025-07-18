@@ -1,0 +1,66 @@
+name: Update Terminal SVG
+
+on:
+  # Run hourly
+  schedule:
+    - cron: '0 * * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Run on push to test
+  push:
+    branches:
+      - main
+      - svg_update
+    paths:
+      - 'src/terminal-config.json'
+      - 'scripts/**'
+      - '.github/workflows/update-terminal-svg.yml'
+
+jobs:
+  update-svg:
+    runs-on: ubuntu-latest
+    
+    # Prevent multiple runs at the same time
+    concurrency:
+      group: update-terminal-svg
+      cancel-in-progress: true
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Generate SVG
+        run: npm run generate-svg
+        env:
+          NODE_ENV: production
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet src/terminal.svg; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'src/terminal.svg'
+          message: 'chore: update terminal.svg [skip ci]'
+          default_author: github_actions
+          push: true

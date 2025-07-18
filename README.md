@@ -1,3 +1,11 @@
+![Terminal](./terminal.gif)
+
+<p align="center">
+  <em>🔄 This terminal updates daily with fresh dad jokes and GitHub stats!</em>
+</p>
+
+---
+
 ```bash
 william@dad-joke-hq:~$ cat /etc/profile
 ```

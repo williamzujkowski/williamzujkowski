@@ -8,8 +8,17 @@ This is a **GitHub Profile README repository** (`williamzujkowski/williamzujkows
 
 ## Repository Structure
 
-- Single-file repository containing only `README.md`
-- No build system, dependencies, or complex codebase
+- **README.md** - Main profile content with embedded terminal SVG
+- **src/** - Configuration files and generated SVG
+  - `terminal.svg` - Generated animated terminal (auto-updated)
+  - `awesome-terminal-config.json` - Animation sequences
+- **scripts/** - SVG generators and utilities
+  - `generate-awesome-terminal.js` - Main terminal generator
+  - Supporting modules for validation and generation
+- **.github/** - GitHub Actions and schemas
+  - `workflows/update-terminal-svg.yml` - Hourly automation
+  - `schema/` - JSON validation schemas
+- **package.json** - Node.js dependencies (ajv, axios, jest)
 - Git-based version control for tracking changes
 
 ## Development Standards
@@ -133,11 +142,28 @@ git commit -m "fix: update broken badge/link URL"
 git push origin main
 ```
 
+## Terminal SVG Feature
+
+### Overview
+The animated terminal SVG displays William's profile information through a realistic terminal interface that updates hourly via GitHub Actions.
+
+### Updating Terminal Content
+1. Edit `src/awesome-terminal-config.json` to modify animation sequences
+2. Run `npm run generate-awesome` to preview locally
+3. Commit changes - GitHub Actions will auto-update the SVG
+
+### Terminal Features
+- Character-by-character typing animations
+- Loading effects and progress bars
+- Auto-scrolling for long content
+- ASCII art with glow effects
+- Multiple dad jokes from the README
+
 ## Best Practices
 
-1. **Keep It Simple**: This is a single-file repo - avoid overcomplicating
+1. **Test SVG Generation**: Run `npm run generate-awesome` before committing
 2. **Regular Maintenance**: Review quarterly for outdated information
-3. **Test Locally**: Preview markdown changes before committing
+3. **Animation Timing**: Keep total duration under 90 seconds
 4. **Atomic Commits**: One logical change per commit
 5. **Meaningful Messages**: Clear commit messages help track profile evolution
 
@@ -149,8 +175,11 @@ git push origin main
 
 ## Notes for Claude Code
 
-- This repository is intentionally simple - no build process or dependencies
+- This repository now includes an automated terminal SVG generation system
+- Run `npm install` before making changes to ensure dependencies are available
+- The terminal SVG updates hourly via GitHub Actions
 - Focus on content quality and maintaining William's personal voice
 - When in doubt, preserve the existing playful tone
 - All changes are immediately visible on the GitHub profile
 - Remember: this is a public-facing personal brand representation
+- Terminal animations should be tested locally before committing

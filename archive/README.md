@@ -37,6 +37,10 @@ Tests for deprecated generators:
 - `generate-svg.test.js`
 - `svg-generator.test.js`
 
+### `/.github/workflows/`
+Deprecated GitHub Actions workflows:
+- `terminal-update.yml` - GIF generation workflow (no longer needed)
+
 ## Note
 These files are preserved for historical reference. The active terminal generator is:
 - `scripts/generate-advanced-terminal.js` (entry point)

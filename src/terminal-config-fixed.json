@@ -75,7 +75,7 @@
     },
     {
       "type": "output",
-      "content": "Developer Statistics for PID 1000 (william)\n============================================\nUptime: 35 years, 0 days, 0 hours\nCoffee consumed: 25,550 cups (2.0 cups/day avg)\nBugs fixed: 98,234\nBugs created: 98,233 (net positive!)\nStack Overflow visits: 142,857\nDad jokes told: ∞\nKids who laughed: 0\nWife eye rolls: 12,775",
+      "content": "Developer Statistics for PID 1000 (william)\n============================================\nUptime: 42 years, 0 days, 0 hours\nCoffee consumed: 25,550 cups (2.0 cups/day avg)\nBugs fixed: 98,234\nBugs created: 98,233 (net positive!)\nStack Overflow visits: 142,857\nDad jokes told: ∞\nKids who laughed: 0\nWife eye rolls: 12,775",
       "color": "#729fcf",
       "pause": 2000
     },
@@ -127,7 +127,7 @@
     },
     {
       "type": "output",
-      "content": "╔═══════════════════════════════════════════════╗\n║          GROAN-O-METER™ v3.14159             ║\n╚═══════════════════════════════════════════════╝\n\nAnalyzing: \"I used to hate facial hair, but then it grew on me.\"\n\nRecipient Reactions:\n├─ Kid #1: Eye roll duration: 3.7 seconds\n├─ Kid #2: Audible groan detected (62 dB)\n└─ Wife: Smile suppression failed\n\nOverall Score: 9.6/10 (LEGENDARY)",
+      "content": "╔═══════════════════════════╗\n║ GROAN-O-METER™ v3.14159 ║\n╚═══════════════════════════╝\n\nAnalyzing: \"I used to hate facial hair, but then it grew on me.\"\n\nRecipient Reactions:\n├─ Kid #1: Eye roll duration: 3.7 seconds\n├─ Kid #2: Audible groan detected (62 dB)\n└─ Wife: Smile suppression failed\n\nOverall Score: 9.6/10 (LEGENDARY)\n",
       "color": "#87d75f",
       "pause": 2500
     },

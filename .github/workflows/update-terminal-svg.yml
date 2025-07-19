@@ -22,6 +22,7 @@ on:
       - 'src/terminal-config-v2.json'
       - 'src/awesome-terminal-config.json'
       - 'src/awesome-terminal-config-jokes.json'
+      - 'src/terminal-config-fixed.json'
       - 'src/unix-terminal-config.json'
       - 'scripts/**'
       - 'terminal_svg_generator.py'

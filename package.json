@@ -11,7 +11,8 @@
     "generate-terminal": "node scripts/generate-svg-v2.js",
     "generate-awesome": "node scripts/generate-awesome-terminal.js",
     "generate-unix": "node scripts/generate-unix-terminal.js",
-    "generate": "node scripts/generate-fixed-terminal.js"
+    "generate-fixed": "node scripts/generate-fixed-terminal.js",
+    "generate": "node scripts/generate-optimized-terminal.js"
   },
   "repository": {
     "type": "git",

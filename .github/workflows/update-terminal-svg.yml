@@ -17,12 +17,14 @@ on:
     paths:
       - 'terminal-config.json'
       - 'terminal-config-linux.json'
+      - 'terminal-jokes-config.json'
       - 'src/terminal-config.json'
       - 'src/terminal-config-v2.json'
       - 'src/awesome-terminal-config.json'
       - 'src/unix-terminal-config.json'
       - 'scripts/**'
       - 'terminal_svg_generator.py'
+      - 'real_terminal_generator.py'
       - '.github/workflows/update-terminal-svg.yml'
 
 jobs:

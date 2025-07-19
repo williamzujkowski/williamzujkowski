@@ -10,7 +10,7 @@ import json
 # Add parent directory to path to import the generator
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from terminal_svg_generator import TerminalSVGGenerator
+from real_terminal_generator import RealTerminalSVGGenerator
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     # Paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
-    config_path = os.path.join(root_dir, 'terminal-config-linux.json')
+    config_path = os.path.join(root_dir, 'terminal-jokes-config.json')
     output_path = os.path.join(root_dir, 'src', 'terminal.svg')
     
     try:
@@ -29,7 +29,7 @@ def main():
             config_data = json.load(f)
         
         # Generate SVG
-        generator = TerminalSVGGenerator(config_data)
+        generator = RealTerminalSVGGenerator(config_data)
         svg = generator.generate()
         
         # Write output

@@ -12,7 +12,8 @@
     "generate-awesome": "node scripts/generate-awesome-terminal.js",
     "generate-unix": "node scripts/generate-unix-terminal.js",
     "generate-fixed": "node scripts/generate-fixed-terminal.js",
-    "generate": "node scripts/generate-optimized-terminal.js"
+    "generate-optimized": "node scripts/generate-optimized-terminal.js",
+    "generate": "node scripts/generate-advanced-terminal.js"
   },
   "repository": {
     "type": "git",

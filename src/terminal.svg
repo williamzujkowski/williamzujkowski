@@ -181,7 +181,7 @@
             <animate attributeName="opacity" from="0" to="1" 
                      begin="2042ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="2098ms" dur="10ms" fill="freeze"/>
+                     begin="2115ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="222.32000000000002" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -190,16 +190,16 @@
               transform="translate(0, 0)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2098ms" dur="10ms" fill="freeze"/>
+                     begin="2115ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="208.32000000000002" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2098ms" dur="10ms" fill="freeze"/>
+                     begin="2115ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="2160ms" dur="10ms" fill="freeze"/>
+                     begin="2162ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="222.32000000000002" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -208,16 +208,16 @@
               transform="translate(0, 0)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2160ms" dur="10ms" fill="freeze"/>
+                     begin="2162ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="208.32000000000002" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2160ms" dur="10ms" fill="freeze"/>
+                     begin="2162ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="2425ms" dur="10ms" fill="freeze"/>
+                     begin="2275ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="222.32000000000002" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -226,16 +226,16 @@
               transform="translate(0, 0)">
             m
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2425ms" dur="10ms" fill="freeze"/>
+                     begin="2275ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="208.32000000000002" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2425ms" dur="10ms" fill="freeze"/>
+                     begin="2275ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="2754ms" dur="10ms" fill="freeze"/>
+                     begin="2339ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="222.32000000000002" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -244,16 +244,16 @@
               transform="translate(0, 0)">
             i
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2754ms" dur="10ms" fill="freeze"/>
+                     begin="2339ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="208.32000000000002" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="2754ms" dur="10ms" fill="freeze"/>
+                     begin="2339ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="2811ms" dur="10ms" fill="freeze"/>
+                     begin="2417ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="244.72000000000003" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -262,7 +262,7 @@
               transform="translate(0, 0)">
             William Zujkowski
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="3011ms" dur="50ms" fill="freeze"/>
+                     begin="2617ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="267.12" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -271,7 +271,7 @@
               transform="translate(0, 0)">
             ├─ Software Developer &amp; Dad Joke Enthusiast
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="3031ms" dur="50ms" fill="freeze"/>
+                     begin="2637ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="289.52000000000004" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -280,7 +280,7 @@
               transform="translate(0, 0)">
             ├─ 35 years of debugging life &amp; code
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="3051ms" dur="50ms" fill="freeze"/>
+                     begin="2657ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="311.92" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -289,7 +289,7 @@
               transform="translate(0, 0)">
             ├─ Powered by coffee ☕ and curiosity 🔍
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="3071ms" dur="50ms" fill="freeze"/>
+                     begin="2677ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="334.32" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -298,7 +298,7 @@
               transform="translate(0, 0)">
             └─ Making the world better, one commit at a time
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="3091ms" dur="50ms" fill="freeze"/>
+                     begin="2697ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -314,16 +314,16 @@
               transform="translate(0, 0)">
             c
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5111ms" dur="10ms" fill="freeze"/>
+                     begin="4717ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="168.0" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5111ms" dur="10ms" fill="freeze"/>
+                     begin="4717ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5226ms" dur="10ms" fill="freeze"/>
+                     begin="5180ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="176.4" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -332,16 +332,16 @@
               transform="translate(0, 0)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5226ms" dur="10ms" fill="freeze"/>
+                     begin="5180ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="176.4" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5226ms" dur="10ms" fill="freeze"/>
+                     begin="5180ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5295ms" dur="10ms" fill="freeze"/>
+                     begin="5230ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -350,16 +350,16 @@
               transform="translate(0, 0)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5295ms" dur="10ms" fill="freeze"/>
+                     begin="5230ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5295ms" dur="10ms" fill="freeze"/>
+                     begin="5230ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5412ms" dur="10ms" fill="freeze"/>
+                     begin="5300ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -368,16 +368,16 @@
               transform="translate(0, 0)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5412ms" dur="10ms" fill="freeze"/>
+                     begin="5300ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5412ms" dur="10ms" fill="freeze"/>
+                     begin="5300ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5482ms" dur="10ms" fill="freeze"/>
+                     begin="5357ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -386,16 +386,16 @@
               transform="translate(0, 0)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5482ms" dur="10ms" fill="freeze"/>
+                     begin="5357ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5482ms" dur="10ms" fill="freeze"/>
+                     begin="5357ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5540ms" dur="10ms" fill="freeze"/>
+                     begin="5468ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -404,16 +404,16 @@
               transform="translate(0, 0)">
             b
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5540ms" dur="10ms" fill="freeze"/>
+                     begin="5468ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5540ms" dur="10ms" fill="freeze"/>
+                     begin="5468ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5597ms" dur="10ms" fill="freeze"/>
+                     begin="5551ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="218.40000000000003" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -422,16 +422,16 @@
               transform="translate(0, 0)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5597ms" dur="10ms" fill="freeze"/>
+                     begin="5551ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="218.40000000000003" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5597ms" dur="10ms" fill="freeze"/>
+                     begin="5551ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5818ms" dur="10ms" fill="freeze"/>
+                     begin="5602ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="226.80000000000004" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -440,16 +440,16 @@
               transform="translate(0, 0)">
             u
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5818ms" dur="10ms" fill="freeze"/>
+                     begin="5602ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="226.80000000000004" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5818ms" dur="10ms" fill="freeze"/>
+                     begin="5602ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5888ms" dur="10ms" fill="freeze"/>
+                     begin="5650ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="235.20000000000005" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -458,16 +458,16 @@
               transform="translate(0, 0)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5888ms" dur="10ms" fill="freeze"/>
+                     begin="5650ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="235.20000000000005" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5888ms" dur="10ms" fill="freeze"/>
+                     begin="5650ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="5954ms" dur="10ms" fill="freeze"/>
+                     begin="6088ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="243.60000000000005" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -476,16 +476,16 @@
               transform="translate(0, 0)">
             .
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5954ms" dur="10ms" fill="freeze"/>
+                     begin="6088ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="243.60000000000005" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="5954ms" dur="10ms" fill="freeze"/>
+                     begin="6088ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="6009ms" dur="10ms" fill="freeze"/>
+                     begin="6158ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="252.00000000000006" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -494,16 +494,16 @@
               transform="translate(0, 0)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6009ms" dur="10ms" fill="freeze"/>
+                     begin="6158ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="252.00000000000006" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6009ms" dur="10ms" fill="freeze"/>
+                     begin="6158ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="6058ms" dur="10ms" fill="freeze"/>
+                     begin="6228ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="260.40000000000003" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -512,16 +512,16 @@
               transform="translate(0, 0)">
             x
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6058ms" dur="10ms" fill="freeze"/>
+                     begin="6228ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="260.40000000000003" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6058ms" dur="10ms" fill="freeze"/>
+                     begin="6228ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="6144ms" dur="10ms" fill="freeze"/>
+                     begin="6297ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="268.8" y="363.44" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -530,16 +530,16 @@
               transform="translate(0, 0)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6144ms" dur="10ms" fill="freeze"/>
+                     begin="6297ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="268.8" y="349.44" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, 0)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6144ms" dur="10ms" fill="freeze"/>
+                     begin="6297ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="6208ms" dur="10ms" fill="freeze"/>
+                     begin="6411ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="385.84" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -548,7 +548,7 @@
               transform="translate(0, 0)">
             ABOUT ME
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6408ms" dur="50ms" fill="freeze"/>
+                     begin="6611ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="408.23999999999995" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -557,7 +557,7 @@
               transform="translate(0, 0)">
             ========
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6428ms" dur="50ms" fill="freeze"/>
+                     begin="6631ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="430.63999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -566,7 +566,7 @@
               transform="translate(0, 0)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6448ms" dur="50ms" fill="freeze"/>
+                     begin="6651ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="453.0399999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -575,7 +575,7 @@
               transform="translate(0, 0)">
             🚀 Full-stack developer with a passion for clean code
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6468ms" dur="50ms" fill="freeze"/>
+                     begin="6671ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="475.4399999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -584,7 +584,7 @@
               transform="translate(0, 0)">
             📊 Data enthusiast who loves turning chaos into insights
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6488ms" dur="50ms" fill="freeze"/>
+                     begin="6691ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="497.83999999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -593,7 +593,7 @@
               transform="translate(0, 0)">
             🎮 Raspberry Pi wizard building retro gaming magic
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6508ms" dur="50ms" fill="freeze"/>
+                     begin="6711ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="520.2399999999998" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -602,7 +602,7 @@
               transform="translate(0, 0)">
             🏠 Smart home automator (except the thermostat!)
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6528ms" dur="50ms" fill="freeze"/>
+                     begin="6731ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="542.6399999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -611,7 +611,7 @@
               transform="translate(0, 0)">
             👨‍👧‍👦 Professional dad joke teller (kids&#x27; eye rolls included)
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6548ms" dur="50ms" fill="freeze"/>
+                     begin="6751ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="565.0399999999998" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -620,7 +620,7 @@
               transform="translate(0, 0)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6568ms" dur="50ms" fill="freeze"/>
+                     begin="6771ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="587.4399999999998" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -629,7 +629,7 @@
               transform="translate(0, 0)">
             I believe in:
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6588ms" dur="50ms" fill="freeze"/>
+                     begin="6791ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="609.8399999999998" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -638,7 +638,7 @@
               transform="translate(0, 0)">
               • Writing code that my future self will thank me for
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6608ms" dur="50ms" fill="freeze"/>
+                     begin="6811ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="632.2399999999998" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -647,7 +647,7 @@
               transform="translate(0, 0)">
               • Documentation that actually helps
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6628ms" dur="50ms" fill="freeze"/>
+                     begin="6831ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="654.6399999999998" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -656,7 +656,7 @@
               transform="translate(0, 0)">
               • Tests that actually test things
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6648ms" dur="50ms" fill="freeze"/>
+                     begin="6851ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="677.0399999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -665,7 +665,7 @@
               transform="translate(0, 0)">
               • Coffee before commits
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="6668ms" dur="50ms" fill="freeze"/>
+                     begin="6871ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -681,16 +681,16 @@
               transform="translate(0, -224.00000000000003)">
             s
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9588ms" dur="10ms" fill="freeze"/>
+                     begin="9791ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="168.0" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9588ms" dur="10ms" fill="freeze"/>
+                     begin="9791ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="9642ms" dur="10ms" fill="freeze"/>
+                     begin="9909ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="176.4" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -699,16 +699,16 @@
               transform="translate(0, -224.00000000000003)">
             k
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9642ms" dur="10ms" fill="freeze"/>
+                     begin="9909ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="176.4" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9642ms" dur="10ms" fill="freeze"/>
+                     begin="9909ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="9688ms" dur="10ms" fill="freeze"/>
+                     begin="9960ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -717,16 +717,16 @@
               transform="translate(0, -224.00000000000003)">
             i
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9688ms" dur="10ms" fill="freeze"/>
+                     begin="9960ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9688ms" dur="10ms" fill="freeze"/>
+                     begin="9960ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="9956ms" dur="10ms" fill="freeze"/>
+                     begin="10019ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -735,16 +735,16 @@
               transform="translate(0, -224.00000000000003)">
             l
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9956ms" dur="10ms" fill="freeze"/>
+                     begin="10019ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="9956ms" dur="10ms" fill="freeze"/>
+                     begin="10019ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10024ms" dur="10ms" fill="freeze"/>
+                     begin="10078ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -753,16 +753,16 @@
               transform="translate(0, -224.00000000000003)">
             l
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10024ms" dur="10ms" fill="freeze"/>
+                     begin="10078ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10024ms" dur="10ms" fill="freeze"/>
+                     begin="10078ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10067ms" dur="10ms" fill="freeze"/>
+                     begin="10145ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -771,16 +771,16 @@
               transform="translate(0, -224.00000000000003)">
             s
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10067ms" dur="10ms" fill="freeze"/>
+                     begin="10145ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10067ms" dur="10ms" fill="freeze"/>
+                     begin="10145ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10128ms" dur="10ms" fill="freeze"/>
+                     begin="10553ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="218.40000000000003" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -789,16 +789,16 @@
               transform="translate(0, -224.00000000000003)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10128ms" dur="10ms" fill="freeze"/>
+                     begin="10553ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="218.40000000000003" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10128ms" dur="10ms" fill="freeze"/>
+                     begin="10553ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10172ms" dur="10ms" fill="freeze"/>
+                     begin="10624ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="226.80000000000004" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -807,16 +807,16 @@
               transform="translate(0, -224.00000000000003)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10172ms" dur="10ms" fill="freeze"/>
+                     begin="10624ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="226.80000000000004" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10172ms" dur="10ms" fill="freeze"/>
+                     begin="10624ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10260ms" dur="10ms" fill="freeze"/>
+                     begin="10680ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="235.20000000000005" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -825,16 +825,16 @@
               transform="translate(0, -224.00000000000003)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10260ms" dur="10ms" fill="freeze"/>
+                     begin="10680ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="235.20000000000005" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10260ms" dur="10ms" fill="freeze"/>
+                     begin="10680ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10320ms" dur="10ms" fill="freeze"/>
+                     begin="10730ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="243.60000000000005" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -843,16 +843,16 @@
               transform="translate(0, -224.00000000000003)">
             s
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10320ms" dur="10ms" fill="freeze"/>
+                     begin="10730ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="243.60000000000005" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10320ms" dur="10ms" fill="freeze"/>
+                     begin="10730ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10360ms" dur="10ms" fill="freeze"/>
+                     begin="10770ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="252.00000000000006" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -861,16 +861,16 @@
               transform="translate(0, -224.00000000000003)">
             h
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10360ms" dur="10ms" fill="freeze"/>
+                     begin="10770ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="252.00000000000006" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10360ms" dur="10ms" fill="freeze"/>
+                     begin="10770ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10427ms" dur="10ms" fill="freeze"/>
+                     begin="10833ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="260.40000000000003" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -879,16 +879,16 @@
               transform="translate(0, -224.00000000000003)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10427ms" dur="10ms" fill="freeze"/>
+                     begin="10833ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="260.40000000000003" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10427ms" dur="10ms" fill="freeze"/>
+                     begin="10833ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10492ms" dur="10ms" fill="freeze"/>
+                     begin="10898ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="268.8" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -897,16 +897,16 @@
               transform="translate(0, -224.00000000000003)">
             w
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10492ms" dur="10ms" fill="freeze"/>
+                     begin="10898ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="268.8" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10492ms" dur="10ms" fill="freeze"/>
+                     begin="10898ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10537ms" dur="10ms" fill="freeze"/>
+                     begin="11017ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="277.2" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -915,16 +915,16 @@
               transform="translate(0, -224.00000000000003)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10537ms" dur="10ms" fill="freeze"/>
+                     begin="11017ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="277.2" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10537ms" dur="10ms" fill="freeze"/>
+                     begin="11017ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10582ms" dur="10ms" fill="freeze"/>
+                     begin="11136ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="285.59999999999997" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -933,16 +933,16 @@
               transform="translate(0, -224.00000000000003)">
             b
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10582ms" dur="10ms" fill="freeze"/>
+                     begin="11136ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="285.59999999999997" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10582ms" dur="10ms" fill="freeze"/>
+                     begin="11136ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10647ms" dur="10ms" fill="freeze"/>
+                     begin="11195ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="293.99999999999994" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -951,16 +951,16 @@
               transform="translate(0, -224.00000000000003)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10647ms" dur="10ms" fill="freeze"/>
+                     begin="11195ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="293.99999999999994" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10647ms" dur="10ms" fill="freeze"/>
+                     begin="11195ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10694ms" dur="10ms" fill="freeze"/>
+                     begin="11242ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="302.3999999999999" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -969,16 +969,16 @@
               transform="translate(0, -224.00000000000003)">
             r
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10694ms" dur="10ms" fill="freeze"/>
+                     begin="11242ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="302.3999999999999" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10694ms" dur="10ms" fill="freeze"/>
+                     begin="11242ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10740ms" dur="10ms" fill="freeze"/>
+                     begin="11285ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="310.7999999999999" y="482.15999999999974" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -987,16 +987,16 @@
               transform="translate(0, -224.00000000000003)">
             s
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10740ms" dur="10ms" fill="freeze"/>
+                     begin="11285ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="310.7999999999999" y="468.15999999999974" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -224.00000000000003)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="10740ms" dur="10ms" fill="freeze"/>
+                     begin="11285ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="10807ms" dur="10ms" fill="freeze"/>
+                     begin="11340ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="504.5599999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1005,7 +1005,7 @@
               transform="translate(0, -224.00000000000003)">
             TECHNICAL SKILLS
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="11007ms" dur="50ms" fill="freeze"/>
+                     begin="11540ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="526.9599999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1014,7 +1014,7 @@
               transform="translate(0, -224.00000000000003)">
             ================
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="11027ms" dur="50ms" fill="freeze"/>
+                     begin="11560ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="336.55999999999966" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1026,14 +1026,14 @@
 
         <g transform="translate(0, -103.04000000000042)" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="11947ms" dur="50ms" fill="freeze"/>
+                     begin="12480ms" dur="50ms" fill="freeze"/>
             
             <rect x="0" y="0" width="300" height="10" 
                   fill="none" stroke="#3776ab" stroke-width="1"/>
             
             <rect x="1" y="1" width="0" height="8" fill="#3776ab">
                 <animate attributeName="width" from="0" to="283.09999999999997" 
-                         begin="12047ms" dur="1000ms" fill="freeze"/>
+                         begin="12580ms" dur="1000ms" fill="freeze"/>
             </rect>
             
             <text x="310" y="8" 
@@ -1050,14 +1050,14 @@
 
         <g transform="translate(0, -37.04000000000042)" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="13647ms" dur="50ms" fill="freeze"/>
+                     begin="14180ms" dur="50ms" fill="freeze"/>
             
             <rect x="0" y="0" width="300" height="10" 
                   fill="none" stroke="#f7df1e" stroke-width="1"/>
             
             <rect x="1" y="1" width="0" height="8" fill="#f7df1e">
                 <animate attributeName="width" from="0" to="268.2" 
-                         begin="13747ms" dur="1000ms" fill="freeze"/>
+                         begin="14280ms" dur="1000ms" fill="freeze"/>
             </rect>
             
             <text x="310" y="8" 
@@ -1074,14 +1074,14 @@
 
         <g transform="translate(0, 28.95999999999958)" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="15347ms" dur="50ms" fill="freeze"/>
+                     begin="15880ms" dur="50ms" fill="freeze"/>
             
             <rect x="0" y="0" width="300" height="10" 
                   fill="none" stroke="#336791" stroke-width="1"/>
             
             <rect x="1" y="1" width="0" height="8" fill="#336791">
                 <animate attributeName="width" from="0" to="283.09999999999997" 
-                         begin="15447ms" dur="1000ms" fill="freeze"/>
+                         begin="15980ms" dur="1000ms" fill="freeze"/>
             </rect>
             
             <text x="310" y="8" 
@@ -1098,14 +1098,14 @@
 
         <g transform="translate(0, -353.0400000000005)" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="17447ms" dur="50ms" fill="freeze"/>
+                     begin="17980ms" dur="50ms" fill="freeze"/>
             
             <rect x="0" y="0" width="300" height="10" 
                   fill="none" stroke="#61dafb" stroke-width="1"/>
             
             <rect x="1" y="1" width="0" height="8" fill="#61dafb">
                 <animate attributeName="width" from="0" to="253.29999999999998" 
-                         begin="17547ms" dur="1000ms" fill="freeze"/>
+                         begin="18080ms" dur="1000ms" fill="freeze"/>
             </rect>
             
             <text x="310" y="8" 
@@ -1122,14 +1122,14 @@
 
         <g transform="translate(0, -287.0400000000005)" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="19147ms" dur="50ms" fill="freeze"/>
+                     begin="19680ms" dur="50ms" fill="freeze"/>
             
             <rect x="0" y="0" width="300" height="10" 
                   fill="none" stroke="#2496ed" stroke-width="1"/>
             
             <rect x="1" y="1" width="0" height="8" fill="#2496ed">
                 <animate attributeName="width" from="0" to="238.4" 
-                         begin="19247ms" dur="1000ms" fill="freeze"/>
+                         begin="19780ms" dur="1000ms" fill="freeze"/>
             </rect>
             
             <text x="310" y="8" 
@@ -1146,14 +1146,14 @@
 
         <g transform="translate(0, -221.04000000000048)" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="20847ms" dur="50ms" fill="freeze"/>
+                     begin="21380ms" dur="50ms" fill="freeze"/>
             
             <rect x="0" y="0" width="300" height="10" 
                   fill="none" stroke="#ff6b6b" stroke-width="1"/>
             
             <rect x="1" y="1" width="0" height="8" fill="#ff6b6b">
                 <animate attributeName="width" from="0" to="298.0" 
-                         begin="20947ms" dur="1000ms" fill="freeze"/>
+                         begin="21480ms" dur="1000ms" fill="freeze"/>
             </rect>
             
             <text x="310" y="8" 
@@ -1174,16 +1174,16 @@
               transform="translate(0, -896.0000000000001)">
             .
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="22947ms" dur="10ms" fill="freeze"/>
+                     begin="23480ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="168.0" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="22947ms" dur="10ms" fill="freeze"/>
+                     begin="23480ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="23431ms" dur="10ms" fill="freeze"/>
+                     begin="23779ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="176.4" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1192,16 +1192,16 @@
               transform="translate(0, -896.0000000000001)">
             /
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23431ms" dur="10ms" fill="freeze"/>
+                     begin="23779ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="176.4" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23431ms" dur="10ms" fill="freeze"/>
+                     begin="23779ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="23513ms" dur="10ms" fill="freeze"/>
+                     begin="23828ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1210,16 +1210,16 @@
               transform="translate(0, -896.0000000000001)">
             c
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23513ms" dur="10ms" fill="freeze"/>
+                     begin="23828ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23513ms" dur="10ms" fill="freeze"/>
+                     begin="23828ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="23553ms" dur="10ms" fill="freeze"/>
+                     begin="23881ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1228,16 +1228,16 @@
               transform="translate(0, -896.0000000000001)">
             u
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23553ms" dur="10ms" fill="freeze"/>
+                     begin="23881ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23553ms" dur="10ms" fill="freeze"/>
+                     begin="23881ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="23623ms" dur="10ms" fill="freeze"/>
+                     begin="24286ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1246,16 +1246,16 @@
               transform="translate(0, -896.0000000000001)">
             r
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23623ms" dur="10ms" fill="freeze"/>
+                     begin="24286ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23623ms" dur="10ms" fill="freeze"/>
+                     begin="24286ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="23847ms" dur="10ms" fill="freeze"/>
+                     begin="24336ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1264,16 +1264,16 @@
               transform="translate(0, -896.0000000000001)">
             r
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23847ms" dur="10ms" fill="freeze"/>
+                     begin="24336ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23847ms" dur="10ms" fill="freeze"/>
+                     begin="24336ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="23962ms" dur="10ms" fill="freeze"/>
+                     begin="24749ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="218.40000000000003" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1282,16 +1282,16 @@
               transform="translate(0, -896.0000000000001)">
             e
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23962ms" dur="10ms" fill="freeze"/>
+                     begin="24749ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="218.40000000000003" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="23962ms" dur="10ms" fill="freeze"/>
+                     begin="24749ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24031ms" dur="10ms" fill="freeze"/>
+                     begin="24790ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="226.80000000000004" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1300,16 +1300,16 @@
               transform="translate(0, -896.0000000000001)">
             n
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24031ms" dur="10ms" fill="freeze"/>
+                     begin="24790ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="226.80000000000004" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24031ms" dur="10ms" fill="freeze"/>
+                     begin="24790ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24085ms" dur="10ms" fill="freeze"/>
+                     begin="24856ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="235.20000000000005" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1318,16 +1318,16 @@
               transform="translate(0, -896.0000000000001)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24085ms" dur="10ms" fill="freeze"/>
+                     begin="24856ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="235.20000000000005" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24085ms" dur="10ms" fill="freeze"/>
+                     begin="24856ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24155ms" dur="10ms" fill="freeze"/>
+                     begin="24927ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="243.60000000000005" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1336,16 +1336,16 @@
               transform="translate(0, -896.0000000000001)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24155ms" dur="10ms" fill="freeze"/>
+                     begin="24927ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="243.60000000000005" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24155ms" dur="10ms" fill="freeze"/>
+                     begin="24927ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24219ms" dur="10ms" fill="freeze"/>
+                     begin="24983ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="252.00000000000006" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1354,16 +1354,16 @@
               transform="translate(0, -896.0000000000001)">
             p
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24219ms" dur="10ms" fill="freeze"/>
+                     begin="24983ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="252.00000000000006" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24219ms" dur="10ms" fill="freeze"/>
+                     begin="24983ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24286ms" dur="10ms" fill="freeze"/>
+                     begin="25049ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="260.40000000000003" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1372,16 +1372,16 @@
               transform="translate(0, -896.0000000000001)">
             r
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24286ms" dur="10ms" fill="freeze"/>
+                     begin="25049ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="260.40000000000003" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24286ms" dur="10ms" fill="freeze"/>
+                     begin="25049ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24341ms" dur="10ms" fill="freeze"/>
+                     begin="25106ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="268.8" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1390,16 +1390,16 @@
               transform="translate(0, -896.0000000000001)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24341ms" dur="10ms" fill="freeze"/>
+                     begin="25106ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="268.8" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24341ms" dur="10ms" fill="freeze"/>
+                     begin="25106ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24395ms" dur="10ms" fill="freeze"/>
+                     begin="25200ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="277.2" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1408,16 +1408,16 @@
               transform="translate(0, -896.0000000000001)">
             j
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24395ms" dur="10ms" fill="freeze"/>
+                     begin="25200ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="277.2" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24395ms" dur="10ms" fill="freeze"/>
+                     begin="25200ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24469ms" dur="10ms" fill="freeze"/>
+                     begin="25260ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="285.59999999999997" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1426,16 +1426,16 @@
               transform="translate(0, -896.0000000000001)">
             e
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24469ms" dur="10ms" fill="freeze"/>
+                     begin="25260ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="285.59999999999997" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24469ms" dur="10ms" fill="freeze"/>
+                     begin="25260ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="24551ms" dur="10ms" fill="freeze"/>
+                     begin="25323ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="293.99999999999994" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1444,16 +1444,16 @@
               transform="translate(0, -896.0000000000001)">
             c
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24551ms" dur="10ms" fill="freeze"/>
+                     begin="25323ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="293.99999999999994" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="24551ms" dur="10ms" fill="freeze"/>
+                     begin="25323ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="25026ms" dur="10ms" fill="freeze"/>
+                     begin="25375ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="302.3999999999999" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1462,16 +1462,16 @@
               transform="translate(0, -896.0000000000001)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25026ms" dur="10ms" fill="freeze"/>
+                     begin="25375ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="302.3999999999999" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25026ms" dur="10ms" fill="freeze"/>
+                     begin="25375ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="25072ms" dur="10ms" fill="freeze"/>
+                     begin="25446ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="310.7999999999999" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1480,16 +1480,16 @@
               transform="translate(0, -896.0000000000001)">
             s
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25072ms" dur="10ms" fill="freeze"/>
+                     begin="25446ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="310.7999999999999" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25072ms" dur="10ms" fill="freeze"/>
+                     begin="25446ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="25129ms" dur="10ms" fill="freeze"/>
+                     begin="25826ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="319.1999999999999" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1498,16 +1498,16 @@
               transform="translate(0, -896.0000000000001)">
             .
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25129ms" dur="10ms" fill="freeze"/>
+                     begin="25826ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="319.1999999999999" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25129ms" dur="10ms" fill="freeze"/>
+                     begin="25826ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="25196ms" dur="10ms" fill="freeze"/>
+                     begin="26180ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="327.59999999999985" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1516,16 +1516,16 @@
               transform="translate(0, -896.0000000000001)">
             s
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25196ms" dur="10ms" fill="freeze"/>
+                     begin="26180ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="327.59999999999985" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25196ms" dur="10ms" fill="freeze"/>
+                     begin="26180ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="25266ms" dur="10ms" fill="freeze"/>
+                     begin="26248ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="335.99999999999983" y="280.0799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1534,16 +1534,16 @@
               transform="translate(0, -896.0000000000001)">
             h
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25266ms" dur="10ms" fill="freeze"/>
+                     begin="26248ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="335.99999999999983" y="266.0799999999997" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -896.0000000000001)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25266ms" dur="10ms" fill="freeze"/>
+                     begin="26248ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="25375ms" dur="10ms" fill="freeze"/>
+                     begin="26308ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="302.4799999999997" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1552,7 +1552,7 @@
               transform="translate(0, -896.0000000000001)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25575ms" dur="50ms" fill="freeze"/>
+                     begin="26508ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="324.87999999999965" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1561,7 +1561,7 @@
               transform="translate(0, -896.0000000000001)">
             🚀 CURRENT PROJECTS
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25595ms" dur="50ms" fill="freeze"/>
+                     begin="26528ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="347.27999999999963" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1570,7 +1570,7 @@
               transform="translate(0, -896.0000000000001)">
             ==================
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25615ms" dur="50ms" fill="freeze"/>
+                     begin="26548ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="369.6799999999996" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1579,7 +1579,7 @@
               transform="translate(0, -896.0000000000001)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25635ms" dur="50ms" fill="freeze"/>
+                     begin="26568ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="392.0799999999996" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1588,7 +1588,7 @@
               transform="translate(0, -896.0000000000001)">
             📊 Personal Knowledge Graph System
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25655ms" dur="50ms" fill="freeze"/>
+                     begin="26588ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="414.47999999999956" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1597,7 +1597,7 @@
               transform="translate(0, -896.0000000000001)">
                Building a Neo4j-powered system to organize and connect ideas
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25675ms" dur="50ms" fill="freeze"/>
+                     begin="26608ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="436.87999999999954" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1606,7 +1606,7 @@
               transform="translate(0, -896.0000000000001)">
                Status: In Development | Stack: Python, Neo4j, React
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25695ms" dur="50ms" fill="freeze"/>
+                     begin="26628ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="459.2799999999995" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1615,7 +1615,7 @@
               transform="translate(0, -896.0000000000001)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25715ms" dur="50ms" fill="freeze"/>
+                     begin="26648ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="481.6799999999995" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1624,7 +1624,7 @@
               transform="translate(0, -896.0000000000001)">
             🎮 RetroPi Gaming Station
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25735ms" dur="50ms" fill="freeze"/>
+                     begin="26668ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="504.0799999999995" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1633,7 +1633,7 @@
               transform="translate(0, -896.0000000000001)">
                Custom Raspberry Pi build with 500+ classic games
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25755ms" dur="50ms" fill="freeze"/>
+                     begin="26688ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="526.4799999999994" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1642,7 +1642,7 @@
               transform="translate(0, -896.0000000000001)">
                Status: v2.0 Released | Kids&#x27; Approval: 100%
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25775ms" dur="50ms" fill="freeze"/>
+                     begin="26708ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="548.8799999999994" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1651,7 +1651,7 @@
               transform="translate(0, -896.0000000000001)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25795ms" dur="50ms" fill="freeze"/>
+                     begin="26728ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="571.2799999999994" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1660,7 +1660,7 @@
               transform="translate(0, -896.0000000000001)">
             🤖 AI-Powered Dad Joke Generator
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25815ms" dur="50ms" fill="freeze"/>
+                     begin="26748ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="593.6799999999994" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1669,7 +1669,7 @@
               transform="translate(0, -896.0000000000001)">
                Because the world needs more groans
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25835ms" dur="50ms" fill="freeze"/>
+                     begin="26768ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="616.0799999999994" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1678,7 +1678,7 @@
               transform="translate(0, -896.0000000000001)">
                Status: Complete | Groan Level: Maximum
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25855ms" dur="50ms" fill="freeze"/>
+                     begin="26788ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="638.4799999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1687,7 +1687,7 @@
               transform="translate(0, -896.0000000000001)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25875ms" dur="50ms" fill="freeze"/>
+                     begin="26808ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="660.8799999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1696,7 +1696,7 @@
               transform="translate(0, -896.0000000000001)">
             🏠 Smart Home Automation Hub
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25895ms" dur="50ms" fill="freeze"/>
+                     begin="26828ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="683.2799999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1705,7 +1705,7 @@
               transform="translate(0, -896.0000000000001)">
                Everything connected except the thermostat (it&#x27;s sacred)
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25915ms" dur="50ms" fill="freeze"/>
+                     begin="26848ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="705.6799999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1714,7 +1714,7 @@
               transform="translate(0, -896.0000000000001)">
                Status: Ongoing | Wife Approval: Pending
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="25935ms" dur="50ms" fill="freeze"/>
+                     begin="26868ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1730,16 +1730,16 @@
               transform="translate(0, -1120.0000000000002)">
             f
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29355ms" dur="10ms" fill="freeze"/>
+                     begin="30288ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="168.0" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29355ms" dur="10ms" fill="freeze"/>
+                     begin="30288ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29422ms" dur="10ms" fill="freeze"/>
+                     begin="30358ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="176.4" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1748,16 +1748,16 @@
               transform="translate(0, -1120.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29422ms" dur="10ms" fill="freeze"/>
+                     begin="30358ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="176.4" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29422ms" dur="10ms" fill="freeze"/>
+                     begin="30358ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29462ms" dur="10ms" fill="freeze"/>
+                     begin="30412ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1766,16 +1766,16 @@
               transform="translate(0, -1120.0000000000002)">
             r
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29462ms" dur="10ms" fill="freeze"/>
+                     begin="30412ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29462ms" dur="10ms" fill="freeze"/>
+                     begin="30412ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29532ms" dur="10ms" fill="freeze"/>
+                     begin="30482ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1784,16 +1784,16 @@
               transform="translate(0, -1120.0000000000002)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29532ms" dur="10ms" fill="freeze"/>
+                     begin="30482ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29532ms" dur="10ms" fill="freeze"/>
+                     begin="30482ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29588ms" dur="10ms" fill="freeze"/>
+                     begin="30537ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1802,16 +1802,16 @@
               transform="translate(0, -1120.0000000000002)">
             u
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29588ms" dur="10ms" fill="freeze"/>
+                     begin="30537ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29588ms" dur="10ms" fill="freeze"/>
+                     begin="30537ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29628ms" dur="10ms" fill="freeze"/>
+                     begin="30839ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1820,16 +1820,16 @@
               transform="translate(0, -1120.0000000000002)">
             n
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29628ms" dur="10ms" fill="freeze"/>
+                     begin="30839ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29628ms" dur="10ms" fill="freeze"/>
+                     begin="30839ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29733ms" dur="10ms" fill="freeze"/>
+                     begin="30895ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="218.40000000000003" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1838,16 +1838,16 @@
               transform="translate(0, -1120.0000000000002)">
             e
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29733ms" dur="10ms" fill="freeze"/>
+                     begin="30895ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="218.40000000000003" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29733ms" dur="10ms" fill="freeze"/>
+                     begin="30895ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29849ms" dur="10ms" fill="freeze"/>
+                     begin="30989ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="226.80000000000004" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1856,16 +1856,16 @@
               transform="translate(0, -1120.0000000000002)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29849ms" dur="10ms" fill="freeze"/>
+                     begin="30989ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="226.80000000000004" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29849ms" dur="10ms" fill="freeze"/>
+                     begin="30989ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29894ms" dur="10ms" fill="freeze"/>
+                     begin="31059ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="235.20000000000005" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1874,16 +1874,16 @@
               transform="translate(0, -1120.0000000000002)">
             |
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29894ms" dur="10ms" fill="freeze"/>
+                     begin="31059ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="235.20000000000005" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29894ms" dur="10ms" fill="freeze"/>
+                     begin="31059ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="29934ms" dur="10ms" fill="freeze"/>
+                     begin="31111ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="243.60000000000005" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1892,16 +1892,16 @@
               transform="translate(0, -1120.0000000000002)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29934ms" dur="10ms" fill="freeze"/>
+                     begin="31111ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="243.60000000000005" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="29934ms" dur="10ms" fill="freeze"/>
+                     begin="31111ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="30004ms" dur="10ms" fill="freeze"/>
+                     begin="31185ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="252.00000000000006" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1910,16 +1910,16 @@
               transform="translate(0, -1120.0000000000002)">
             c
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30004ms" dur="10ms" fill="freeze"/>
+                     begin="31185ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="252.00000000000006" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30004ms" dur="10ms" fill="freeze"/>
+                     begin="31185ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="30072ms" dur="10ms" fill="freeze"/>
+                     begin="31248ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="260.40000000000003" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1928,16 +1928,16 @@
               transform="translate(0, -1120.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30072ms" dur="10ms" fill="freeze"/>
+                     begin="31248ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="260.40000000000003" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30072ms" dur="10ms" fill="freeze"/>
+                     begin="31248ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="30113ms" dur="10ms" fill="freeze"/>
+                     begin="31509ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="268.8" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1946,16 +1946,16 @@
               transform="translate(0, -1120.0000000000002)">
             w
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30113ms" dur="10ms" fill="freeze"/>
+                     begin="31509ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="268.8" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30113ms" dur="10ms" fill="freeze"/>
+                     begin="31509ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="30177ms" dur="10ms" fill="freeze"/>
+                     begin="31571ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="277.2" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1964,16 +1964,16 @@
               transform="translate(0, -1120.0000000000002)">
             s
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30177ms" dur="10ms" fill="freeze"/>
+                     begin="31571ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="277.2" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30177ms" dur="10ms" fill="freeze"/>
+                     begin="31571ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="30252ms" dur="10ms" fill="freeze"/>
+                     begin="31633ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="285.59999999999997" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -1982,16 +1982,16 @@
               transform="translate(0, -1120.0000000000002)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30252ms" dur="10ms" fill="freeze"/>
+                     begin="31633ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="285.59999999999997" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30252ms" dur="10ms" fill="freeze"/>
+                     begin="31633ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="30370ms" dur="10ms" fill="freeze"/>
+                     begin="31693ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="293.99999999999994" y="510.7999999999993" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2000,16 +2000,16 @@
               transform="translate(0, -1120.0000000000002)">
             y
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30370ms" dur="10ms" fill="freeze"/>
+                     begin="31693ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="293.99999999999994" y="496.7999999999993" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1120.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30370ms" dur="10ms" fill="freeze"/>
+                     begin="31693ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="30420ms" dur="10ms" fill="freeze"/>
+                     begin="31787ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="533.1999999999992" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2018,7 +2018,7 @@
               transform="translate(0, -1120.0000000000002)">
              _________________________________________
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30620ms" dur="50ms" fill="freeze"/>
+                     begin="31987ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="555.5999999999992" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2027,7 +2027,7 @@
               transform="translate(0, -1120.0000000000002)">
             / &quot;The best thing about a boolean is      \
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30640ms" dur="50ms" fill="freeze"/>
+                     begin="32007ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="577.9999999999992" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2036,7 +2036,7 @@
               transform="translate(0, -1120.0000000000002)">
             | even if you are wrong, you are only    |
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30660ms" dur="50ms" fill="freeze"/>
+                     begin="32027ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="600.3999999999992" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2045,7 +2045,7 @@
               transform="translate(0, -1120.0000000000002)">
             \ off by a bit.&quot;                          /
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30680ms" dur="50ms" fill="freeze"/>
+                     begin="32047ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="622.7999999999992" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2054,7 +2054,7 @@
               transform="translate(0, -1120.0000000000002)">
              -----------------------------------------
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30700ms" dur="50ms" fill="freeze"/>
+                     begin="32067ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="645.1999999999991" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2063,7 +2063,7 @@
               transform="translate(0, -1120.0000000000002)">
                     \   ^__^
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30720ms" dur="50ms" fill="freeze"/>
+                     begin="32087ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="667.5999999999991" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2072,7 +2072,7 @@
               transform="translate(0, -1120.0000000000002)">
                      \  (oo)\_______
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30740ms" dur="50ms" fill="freeze"/>
+                     begin="32107ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="689.9999999999991" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2081,7 +2081,7 @@
               transform="translate(0, -1120.0000000000002)">
                         (__)\       )\/\
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30760ms" dur="50ms" fill="freeze"/>
+                     begin="32127ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="712.3999999999991" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2090,7 +2090,7 @@
               transform="translate(0, -1120.0000000000002)">
                             ||----w |
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30780ms" dur="50ms" fill="freeze"/>
+                     begin="32147ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="734.799999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2099,7 +2099,7 @@
               transform="translate(0, -1120.0000000000002)">
                             ||     ||
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="30800ms" dur="50ms" fill="freeze"/>
+                     begin="32167ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2115,16 +2115,16 @@
               transform="translate(0, -1344.0000000000002)">
             .
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="33720ms" dur="10ms" fill="freeze"/>
+                     begin="35087ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="168.0" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="33720ms" dur="10ms" fill="freeze"/>
+                     begin="35087ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="33928ms" dur="10ms" fill="freeze"/>
+                     begin="35206ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="176.4" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2133,16 +2133,16 @@
               transform="translate(0, -1344.0000000000002)">
             /
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="33928ms" dur="10ms" fill="freeze"/>
+                     begin="35206ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="176.4" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="33928ms" dur="10ms" fill="freeze"/>
+                     begin="35206ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="33984ms" dur="10ms" fill="freeze"/>
+                     begin="35257ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2151,16 +2151,16 @@
               transform="translate(0, -1344.0000000000002)">
             d
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="33984ms" dur="10ms" fill="freeze"/>
+                     begin="35257ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="33984ms" dur="10ms" fill="freeze"/>
+                     begin="35257ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34051ms" dur="10ms" fill="freeze"/>
+                     begin="35317ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2169,16 +2169,16 @@
               transform="translate(0, -1344.0000000000002)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34051ms" dur="10ms" fill="freeze"/>
+                     begin="35317ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34051ms" dur="10ms" fill="freeze"/>
+                     begin="35317ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34156ms" dur="10ms" fill="freeze"/>
+                     begin="35387ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2187,16 +2187,16 @@
               transform="translate(0, -1344.0000000000002)">
             d
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34156ms" dur="10ms" fill="freeze"/>
+                     begin="35387ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34156ms" dur="10ms" fill="freeze"/>
+                     begin="35387ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34213ms" dur="10ms" fill="freeze"/>
+                     begin="35437ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2205,16 +2205,16 @@
               transform="translate(0, -1344.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34213ms" dur="10ms" fill="freeze"/>
+                     begin="35437ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34213ms" dur="10ms" fill="freeze"/>
+                     begin="35437ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34280ms" dur="10ms" fill="freeze"/>
+                     begin="35509ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="218.40000000000003" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2223,16 +2223,16 @@
               transform="translate(0, -1344.0000000000002)">
             j
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34280ms" dur="10ms" fill="freeze"/>
+                     begin="35509ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="218.40000000000003" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34280ms" dur="10ms" fill="freeze"/>
+                     begin="35509ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34350ms" dur="10ms" fill="freeze"/>
+                     begin="35555ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="226.80000000000004" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2241,16 +2241,16 @@
               transform="translate(0, -1344.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34350ms" dur="10ms" fill="freeze"/>
+                     begin="35555ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="226.80000000000004" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34350ms" dur="10ms" fill="freeze"/>
+                     begin="35555ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34405ms" dur="10ms" fill="freeze"/>
+                     begin="35621ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="235.20000000000005" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2259,16 +2259,16 @@
               transform="translate(0, -1344.0000000000002)">
             k
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34405ms" dur="10ms" fill="freeze"/>
+                     begin="35621ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="235.20000000000005" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34405ms" dur="10ms" fill="freeze"/>
+                     begin="35621ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34523ms" dur="10ms" fill="freeze"/>
+                     begin="35689ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="243.60000000000005" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2277,16 +2277,16 @@
               transform="translate(0, -1344.0000000000002)">
             e
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34523ms" dur="10ms" fill="freeze"/>
+                     begin="35689ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="243.60000000000005" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34523ms" dur="10ms" fill="freeze"/>
+                     begin="35689ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34587ms" dur="10ms" fill="freeze"/>
+                     begin="35802ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="252.00000000000006" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2295,16 +2295,16 @@
               transform="translate(0, -1344.0000000000002)">
             .
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34587ms" dur="10ms" fill="freeze"/>
+                     begin="35802ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="252.00000000000006" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34587ms" dur="10ms" fill="freeze"/>
+                     begin="35802ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34627ms" dur="10ms" fill="freeze"/>
+                     begin="35852ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="260.40000000000003" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2313,16 +2313,16 @@
               transform="translate(0, -1344.0000000000002)">
             p
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34627ms" dur="10ms" fill="freeze"/>
+                     begin="35852ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="260.40000000000003" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34627ms" dur="10ms" fill="freeze"/>
+                     begin="35852ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34688ms" dur="10ms" fill="freeze"/>
+                     begin="35893ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="268.8" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2331,16 +2331,16 @@
               transform="translate(0, -1344.0000000000002)">
             y
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34688ms" dur="10ms" fill="freeze"/>
+                     begin="35893ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="268.8" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34688ms" dur="10ms" fill="freeze"/>
+                     begin="35893ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34729ms" dur="10ms" fill="freeze"/>
+                     begin="35953ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="277.2" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2349,16 +2349,16 @@
               transform="translate(0, -1344.0000000000002)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34729ms" dur="10ms" fill="freeze"/>
+                     begin="35953ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="277.2" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34729ms" dur="10ms" fill="freeze"/>
+                     begin="35953ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34846ms" dur="10ms" fill="freeze"/>
+                     begin="36065ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="285.59999999999997" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2367,16 +2367,16 @@
               transform="translate(0, -1344.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34846ms" dur="10ms" fill="freeze"/>
+                     begin="36065ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="285.59999999999997" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34846ms" dur="10ms" fill="freeze"/>
+                     begin="36065ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="34913ms" dur="10ms" fill="freeze"/>
+                     begin="36135ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="293.99999999999994" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2385,16 +2385,16 @@
               transform="translate(0, -1344.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34913ms" dur="10ms" fill="freeze"/>
+                     begin="36135ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="293.99999999999994" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="34913ms" dur="10ms" fill="freeze"/>
+                     begin="36135ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="35002ms" dur="10ms" fill="freeze"/>
+                     begin="36202ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="302.3999999999999" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2403,16 +2403,16 @@
               transform="translate(0, -1344.0000000000002)">
             r
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35002ms" dur="10ms" fill="freeze"/>
+                     begin="36202ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="302.3999999999999" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35002ms" dur="10ms" fill="freeze"/>
+                     begin="36202ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="35044ms" dur="10ms" fill="freeze"/>
+                     begin="36263ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="310.7999999999999" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2421,16 +2421,16 @@
               transform="translate(0, -1344.0000000000002)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35044ms" dur="10ms" fill="freeze"/>
+                     begin="36263ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="310.7999999999999" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35044ms" dur="10ms" fill="freeze"/>
+                     begin="36263ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="35089ms" dur="10ms" fill="freeze"/>
+                     begin="36358ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="319.1999999999999" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2439,16 +2439,16 @@
               transform="translate(0, -1344.0000000000002)">
             n
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35089ms" dur="10ms" fill="freeze"/>
+                     begin="36358ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="319.1999999999999" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35089ms" dur="10ms" fill="freeze"/>
+                     begin="36358ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="35144ms" dur="10ms" fill="freeze"/>
+                     begin="36421ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="327.59999999999985" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2457,16 +2457,16 @@
               transform="translate(0, -1344.0000000000002)">
             d
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35144ms" dur="10ms" fill="freeze"/>
+                     begin="36421ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="327.59999999999985" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35144ms" dur="10ms" fill="freeze"/>
+                     begin="36421ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="35208ms" dur="10ms" fill="freeze"/>
+                     begin="36484ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="335.99999999999983" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2475,16 +2475,16 @@
               transform="translate(0, -1344.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35208ms" dur="10ms" fill="freeze"/>
+                     begin="36484ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="335.99999999999983" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35208ms" dur="10ms" fill="freeze"/>
+                     begin="36484ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="35321ms" dur="10ms" fill="freeze"/>
+                     begin="36545ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="344.3999999999998" y="539.919999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2493,16 +2493,16 @@
               transform="translate(0, -1344.0000000000002)">
             m
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35321ms" dur="10ms" fill="freeze"/>
+                     begin="36545ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="344.3999999999998" y="525.919999999999" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1344.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35321ms" dur="10ms" fill="freeze"/>
+                     begin="36545ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="35362ms" dur="10ms" fill="freeze"/>
+                     begin="36609ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="562.319999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2511,7 +2511,7 @@
               transform="translate(0, -1344.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35562ms" dur="50ms" fill="freeze"/>
+                     begin="36809ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="584.719999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2520,7 +2520,7 @@
               transform="translate(0, -1344.0000000000002)">
             🎭 DAD JOKE GENERATOR 9000™
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35582ms" dur="50ms" fill="freeze"/>
+                     begin="36829ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="607.119999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2529,7 +2529,7 @@
               transform="translate(0, -1344.0000000000002)">
             ==========================
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35602ms" dur="50ms" fill="freeze"/>
+                     begin="36849ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="629.519999999999" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2538,7 +2538,7 @@
               transform="translate(0, -1344.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35622ms" dur="50ms" fill="freeze"/>
+                     begin="36869ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="651.9199999999989" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2547,7 +2547,7 @@
               transform="translate(0, -1344.0000000000002)">
             Initializing humor protocols...
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35642ms" dur="50ms" fill="freeze"/>
+                     begin="36889ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="674.3199999999989" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2556,7 +2556,7 @@
               transform="translate(0, -1344.0000000000002)">
             Calibrating groan levels...
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35662ms" dur="50ms" fill="freeze"/>
+                     begin="36909ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="696.7199999999989" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2565,7 +2565,7 @@
               transform="translate(0, -1344.0000000000002)">
             Dad mode: ACTIVATED
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35682ms" dur="50ms" fill="freeze"/>
+                     begin="36929ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="719.1199999999989" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2574,7 +2574,7 @@
               transform="translate(0, -1344.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35702ms" dur="50ms" fill="freeze"/>
+                     begin="36949ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="741.5199999999988" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2583,7 +2583,7 @@
               transform="translate(0, -1344.0000000000002)">
             📢 &quot;Why don&#x27;t scientists trust atoms?&quot;
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35722ms" dur="50ms" fill="freeze"/>
+                     begin="36969ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="763.9199999999988" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2592,7 +2592,7 @@
               transform="translate(0, -1344.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35742ms" dur="50ms" fill="freeze"/>
+                     begin="36989ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="786.3199999999988" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2601,7 +2601,7 @@
               transform="translate(0, -1344.0000000000002)">
                 &quot;Because they make up everything!&quot;
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35762ms" dur="50ms" fill="freeze"/>
+                     begin="37009ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="808.7199999999988" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2610,7 +2610,7 @@
               transform="translate(0, -1344.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35782ms" dur="50ms" fill="freeze"/>
+                     begin="37029ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="831.1199999999988" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2619,7 +2619,7 @@
               transform="translate(0, -1344.0000000000002)">
             [Audience Reaction: 🙄😅🤦]
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35802ms" dur="50ms" fill="freeze"/>
+                     begin="37049ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="853.5199999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2628,7 +2628,7 @@
               transform="translate(0, -1344.0000000000002)">
             [Groan Meter: ████████████ 100%]
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35822ms" dur="50ms" fill="freeze"/>
+                     begin="37069ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="875.9199999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2637,7 +2637,7 @@
               transform="translate(0, -1344.0000000000002)">
             [Dad Points: +1000]
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="35842ms" dur="50ms" fill="freeze"/>
+                     begin="37089ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2653,16 +2653,16 @@
               transform="translate(0, -1568.0000000000002)">
             g
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="39762ms" dur="10ms" fill="freeze"/>
+                     begin="41009ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="168.0" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="39762ms" dur="10ms" fill="freeze"/>
+                     begin="41009ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40063ms" dur="10ms" fill="freeze"/>
+                     begin="41061ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="176.4" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2671,16 +2671,16 @@
               transform="translate(0, -1568.0000000000002)">
             i
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40063ms" dur="10ms" fill="freeze"/>
+                     begin="41061ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="176.4" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40063ms" dur="10ms" fill="freeze"/>
+                     begin="41061ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40116ms" dur="10ms" fill="freeze"/>
+                     begin="41124ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2689,16 +2689,16 @@
               transform="translate(0, -1568.0000000000002)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40116ms" dur="10ms" fill="freeze"/>
+                     begin="41124ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40116ms" dur="10ms" fill="freeze"/>
+                     begin="41124ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40165ms" dur="10ms" fill="freeze"/>
+                     begin="41450ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2707,16 +2707,16 @@
               transform="translate(0, -1568.0000000000002)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40165ms" dur="10ms" fill="freeze"/>
+                     begin="41450ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40165ms" dur="10ms" fill="freeze"/>
+                     begin="41450ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40208ms" dur="10ms" fill="freeze"/>
+                     begin="41518ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2725,16 +2725,16 @@
               transform="translate(0, -1568.0000000000002)">
             l
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40208ms" dur="10ms" fill="freeze"/>
+                     begin="41518ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40208ms" dur="10ms" fill="freeze"/>
+                     begin="41518ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40254ms" dur="10ms" fill="freeze"/>
+                     begin="41823ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2743,16 +2743,16 @@
               transform="translate(0, -1568.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40254ms" dur="10ms" fill="freeze"/>
+                     begin="41823ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40254ms" dur="10ms" fill="freeze"/>
+                     begin="41823ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40297ms" dur="10ms" fill="freeze"/>
+                     begin="41868ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="218.40000000000003" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2761,16 +2761,16 @@
               transform="translate(0, -1568.0000000000002)">
             g
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40297ms" dur="10ms" fill="freeze"/>
+                     begin="41868ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="218.40000000000003" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40297ms" dur="10ms" fill="freeze"/>
+                     begin="41868ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40414ms" dur="10ms" fill="freeze"/>
+                     begin="41932ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="226.80000000000004" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2779,16 +2779,16 @@
               transform="translate(0, -1568.0000000000002)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40414ms" dur="10ms" fill="freeze"/>
+                     begin="41932ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="226.80000000000004" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40414ms" dur="10ms" fill="freeze"/>
+                     begin="41932ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40464ms" dur="10ms" fill="freeze"/>
+                     begin="41991ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="235.20000000000005" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2797,16 +2797,16 @@
               transform="translate(0, -1568.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40464ms" dur="10ms" fill="freeze"/>
+                     begin="41991ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="235.20000000000005" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40464ms" dur="10ms" fill="freeze"/>
+                     begin="41991ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40512ms" dur="10ms" fill="freeze"/>
+                     begin="42042ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="243.60000000000005" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2815,16 +2815,16 @@
               transform="translate(0, -1568.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40512ms" dur="10ms" fill="freeze"/>
+                     begin="42042ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="243.60000000000005" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40512ms" dur="10ms" fill="freeze"/>
+                     begin="42042ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40573ms" dur="10ms" fill="freeze"/>
+                     begin="42098ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="252.00000000000006" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2833,16 +2833,16 @@
               transform="translate(0, -1568.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40573ms" dur="10ms" fill="freeze"/>
+                     begin="42098ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="252.00000000000006" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40573ms" dur="10ms" fill="freeze"/>
+                     begin="42098ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="40960ms" dur="10ms" fill="freeze"/>
+                     begin="42166ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="260.40000000000003" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2851,16 +2851,16 @@
               transform="translate(0, -1568.0000000000002)">
             n
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40960ms" dur="10ms" fill="freeze"/>
+                     begin="42166ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="260.40000000000003" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="40960ms" dur="10ms" fill="freeze"/>
+                     begin="42166ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41018ms" dur="10ms" fill="freeze"/>
+                     begin="42241ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="268.8" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2869,16 +2869,16 @@
               transform="translate(0, -1568.0000000000002)">
             e
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41018ms" dur="10ms" fill="freeze"/>
+                     begin="42241ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="268.8" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41018ms" dur="10ms" fill="freeze"/>
+                     begin="42241ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41077ms" dur="10ms" fill="freeze"/>
+                     begin="42335ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="277.2" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2887,16 +2887,16 @@
               transform="translate(0, -1568.0000000000002)">
             l
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41077ms" dur="10ms" fill="freeze"/>
+                     begin="42335ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="277.2" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41077ms" dur="10ms" fill="freeze"/>
+                     begin="42335ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41127ms" dur="10ms" fill="freeze"/>
+                     begin="42399ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="285.59999999999997" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2905,16 +2905,16 @@
               transform="translate(0, -1568.0000000000002)">
             i
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41127ms" dur="10ms" fill="freeze"/>
+                     begin="42399ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="285.59999999999997" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41127ms" dur="10ms" fill="freeze"/>
+                     begin="42399ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41187ms" dur="10ms" fill="freeze"/>
+                     begin="42443ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="293.99999999999994" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2923,16 +2923,16 @@
               transform="translate(0, -1568.0000000000002)">
             n
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41187ms" dur="10ms" fill="freeze"/>
+                     begin="42443ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="293.99999999999994" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41187ms" dur="10ms" fill="freeze"/>
+                     begin="42443ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41255ms" dur="10ms" fill="freeze"/>
+                     begin="42493ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="302.3999999999999" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2941,16 +2941,16 @@
               transform="translate(0, -1568.0000000000002)">
             e
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41255ms" dur="10ms" fill="freeze"/>
+                     begin="42493ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="302.3999999999999" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41255ms" dur="10ms" fill="freeze"/>
+                     begin="42493ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41308ms" dur="10ms" fill="freeze"/>
+                     begin="42557ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="310.7999999999999" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2959,16 +2959,16 @@
               transform="translate(0, -1568.0000000000002)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41308ms" dur="10ms" fill="freeze"/>
+                     begin="42557ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="310.7999999999999" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41308ms" dur="10ms" fill="freeze"/>
+                     begin="42557ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41363ms" dur="10ms" fill="freeze"/>
+                     begin="42632ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="319.1999999999999" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2977,16 +2977,16 @@
               transform="translate(0, -1568.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41363ms" dur="10ms" fill="freeze"/>
+                     begin="42632ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="319.1999999999999" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41363ms" dur="10ms" fill="freeze"/>
+                     begin="42632ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41418ms" dur="10ms" fill="freeze"/>
+                     begin="42687ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="327.59999999999985" y="681.0399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -2995,16 +2995,16 @@
               transform="translate(0, -1568.0000000000002)">
             5
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41418ms" dur="10ms" fill="freeze"/>
+                     begin="42687ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="327.59999999999985" y="667.0399999999987" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1568.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41418ms" dur="10ms" fill="freeze"/>
+                     begin="42687ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="41458ms" dur="10ms" fill="freeze"/>
+                     begin="42728ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="703.4399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3013,7 +3013,7 @@
               transform="translate(0, -1568.0000000000002)">
             e4f3a2b feat: added AI to prevent thermostat tampering
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41658ms" dur="50ms" fill="freeze"/>
+                     begin="42928ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="725.8399999999987" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3022,7 +3022,7 @@
               transform="translate(0, -1568.0000000000002)">
             9c8d7e6 fix: resolved infinite loop in coffee maker integration
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41678ms" dur="50ms" fill="freeze"/>
+                     begin="42948ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="748.2399999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3031,7 +3031,7 @@
               transform="translate(0, -1568.0000000000002)">
             a5b4c3d docs: explained why comments are like good jokes
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41698ms" dur="50ms" fill="freeze"/>
+                     begin="42968ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="770.6399999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3040,7 +3040,7 @@
               transform="translate(0, -1568.0000000000002)">
             7f6e5d4 refactor: optimized dad joke delivery pipeline
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41718ms" dur="50ms" fill="freeze"/>
+                     begin="42988ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="793.0399999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3049,7 +3049,7 @@
               transform="translate(0, -1568.0000000000002)">
             2a1b0c9 chore: updated dependencies (especially coffee)
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="41738ms" dur="50ms" fill="freeze"/>
+                     begin="43008ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3065,16 +3065,16 @@
               transform="translate(0, -1792.0000000000002)">
             c
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44158ms" dur="10ms" fill="freeze"/>
+                     begin="45428ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="168.0" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44158ms" dur="10ms" fill="freeze"/>
+                     begin="45428ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44212ms" dur="10ms" fill="freeze"/>
+                     begin="45495ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="176.4" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3083,16 +3083,16 @@
               transform="translate(0, -1792.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44212ms" dur="10ms" fill="freeze"/>
+                     begin="45495ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="176.4" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44212ms" dur="10ms" fill="freeze"/>
+                     begin="45495ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44294ms" dur="10ms" fill="freeze"/>
+                     begin="45606ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="184.8" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3101,16 +3101,16 @@
               transform="translate(0, -1792.0000000000002)">
             n
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44294ms" dur="10ms" fill="freeze"/>
+                     begin="45606ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="184.8" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44294ms" dur="10ms" fill="freeze"/>
+                     begin="45606ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44353ms" dur="10ms" fill="freeze"/>
+                     begin="45686ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="193.20000000000002" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3119,16 +3119,16 @@
               transform="translate(0, -1792.0000000000002)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44353ms" dur="10ms" fill="freeze"/>
+                     begin="45686ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="193.20000000000002" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44353ms" dur="10ms" fill="freeze"/>
+                     begin="45686ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44405ms" dur="10ms" fill="freeze"/>
+                     begin="45755ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="201.60000000000002" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3137,16 +3137,16 @@
               transform="translate(0, -1792.0000000000002)">
             a
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44405ms" dur="10ms" fill="freeze"/>
+                     begin="45755ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="201.60000000000002" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44405ms" dur="10ms" fill="freeze"/>
+                     begin="45755ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44469ms" dur="10ms" fill="freeze"/>
+                     begin="45821ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="210.00000000000003" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3155,16 +3155,16 @@
               transform="translate(0, -1792.0000000000002)">
             c
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44469ms" dur="10ms" fill="freeze"/>
+                     begin="45821ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="210.00000000000003" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44469ms" dur="10ms" fill="freeze"/>
+                     begin="45821ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44509ms" dur="10ms" fill="freeze"/>
+                     begin="45869ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="218.40000000000003" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3173,16 +3173,16 @@
               transform="translate(0, -1792.0000000000002)">
             t
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44509ms" dur="10ms" fill="freeze"/>
+                     begin="45869ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="218.40000000000003" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44509ms" dur="10ms" fill="freeze"/>
+                     begin="45869ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44619ms" dur="10ms" fill="freeze"/>
+                     begin="45943ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="226.80000000000004" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3191,16 +3191,16 @@
               transform="translate(0, -1792.0000000000002)">
              
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44619ms" dur="10ms" fill="freeze"/>
+                     begin="45943ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="226.80000000000004" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44619ms" dur="10ms" fill="freeze"/>
+                     begin="45943ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44733ms" dur="10ms" fill="freeze"/>
+                     begin="45994ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="235.20000000000005" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3209,16 +3209,16 @@
               transform="translate(0, -1792.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44733ms" dur="10ms" fill="freeze"/>
+                     begin="45994ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="235.20000000000005" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44733ms" dur="10ms" fill="freeze"/>
+                     begin="45994ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44800ms" dur="10ms" fill="freeze"/>
+                     begin="46040ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="243.60000000000005" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3227,16 +3227,16 @@
               transform="translate(0, -1792.0000000000002)">
             -
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44800ms" dur="10ms" fill="freeze"/>
+                     begin="46040ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="243.60000000000005" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44800ms" dur="10ms" fill="freeze"/>
+                     begin="46040ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44841ms" dur="10ms" fill="freeze"/>
+                     begin="46264ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="252.00000000000006" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3245,16 +3245,16 @@
               transform="translate(0, -1792.0000000000002)">
             i
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44841ms" dur="10ms" fill="freeze"/>
+                     begin="46264ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="252.00000000000006" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44841ms" dur="10ms" fill="freeze"/>
+                     begin="46264ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44901ms" dur="10ms" fill="freeze"/>
+                     begin="46335ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="260.40000000000003" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3263,16 +3263,16 @@
               transform="translate(0, -1792.0000000000002)">
             n
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44901ms" dur="10ms" fill="freeze"/>
+                     begin="46335ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="260.40000000000003" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44901ms" dur="10ms" fill="freeze"/>
+                     begin="46335ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="44957ms" dur="10ms" fill="freeze"/>
+                     begin="46452ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="268.8" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3281,16 +3281,16 @@
               transform="translate(0, -1792.0000000000002)">
             f
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44957ms" dur="10ms" fill="freeze"/>
+                     begin="46452ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="268.8" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="44957ms" dur="10ms" fill="freeze"/>
+                     begin="46452ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="45023ms" dur="10ms" fill="freeze"/>
+                     begin="46522ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="277.2" y="598.1599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3299,16 +3299,16 @@
               transform="translate(0, -1792.0000000000002)">
             o
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45023ms" dur="10ms" fill="freeze"/>
+                     begin="46522ms" dur="10ms" fill="freeze"/>
         </text>
 
         <rect x="277.2" y="584.1599999999986" width="8.4" 
               height="14" fill="#00ff00"
               opacity="0" transform="translate(0, -1792.0000000000002)">
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45023ms" dur="10ms" fill="freeze"/>
+                     begin="46522ms" dur="10ms" fill="freeze"/>
             <animate attributeName="opacity" from="1" to="0" 
-                     begin="45066ms" dur="10ms" fill="freeze"/>
+                     begin="46576ms" dur="10ms" fill="freeze"/>
         </rect>
 
         <text x="0" y="620.5599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3317,7 +3317,7 @@
               transform="translate(0, -1792.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45266ms" dur="50ms" fill="freeze"/>
+                     begin="46776ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="642.9599999999986" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3326,7 +3326,7 @@
               transform="translate(0, -1792.0000000000002)">
             📬 LET&#x27;S CONNECT!
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45286ms" dur="50ms" fill="freeze"/>
+                     begin="46796ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="665.3599999999985" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3335,7 +3335,7 @@
               transform="translate(0, -1792.0000000000002)">
             ================
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45306ms" dur="50ms" fill="freeze"/>
+                     begin="46816ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="687.7599999999985" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3344,7 +3344,7 @@
               transform="translate(0, -1792.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45326ms" dur="50ms" fill="freeze"/>
+                     begin="46836ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="710.1599999999985" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3353,7 +3353,7 @@
               transform="translate(0, -1792.0000000000002)">
             🐙 GitHub:   github.com/williamzujkowski
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45346ms" dur="50ms" fill="freeze"/>
+                     begin="46856ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="732.5599999999985" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3362,7 +3362,7 @@
               transform="translate(0, -1792.0000000000002)">
             💼 LinkedIn: linkedin.com/in/williamzujkowski
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45366ms" dur="50ms" fill="freeze"/>
+                     begin="46876ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="754.9599999999984" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3371,7 +3371,7 @@
               transform="translate(0, -1792.0000000000002)">
             📧 Email:    william@zujkowski.com
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45386ms" dur="50ms" fill="freeze"/>
+                     begin="46896ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="777.3599999999984" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3380,7 +3380,7 @@
               transform="translate(0, -1792.0000000000002)">
             🌐 Web:      williamzujkowski.com
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45406ms" dur="50ms" fill="freeze"/>
+                     begin="46916ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="799.7599999999984" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3389,7 +3389,7 @@
               transform="translate(0, -1792.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45426ms" dur="50ms" fill="freeze"/>
+                     begin="46936ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="822.1599999999984" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3398,7 +3398,7 @@
               transform="translate(0, -1792.0000000000002)">
             💡 Always happy to chat about:
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45446ms" dur="50ms" fill="freeze"/>
+                     begin="46956ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="844.5599999999984" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3407,7 +3407,7 @@
               transform="translate(0, -1792.0000000000002)">
                • Interesting projects
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45466ms" dur="50ms" fill="freeze"/>
+                     begin="46976ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="866.9599999999983" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3416,7 +3416,7 @@
               transform="translate(0, -1792.0000000000002)">
                • New technologies
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45486ms" dur="50ms" fill="freeze"/>
+                     begin="46996ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="889.3599999999983" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3425,7 +3425,7 @@
               transform="translate(0, -1792.0000000000002)">
                • The perfect coffee-to-code ratio
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45506ms" dur="50ms" fill="freeze"/>
+                     begin="47016ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="911.7599999999983" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3434,7 +3434,7 @@
               transform="translate(0, -1792.0000000000002)">
                • Why my kids don&#x27;t appreciate my jokes
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="45526ms" dur="50ms" fill="freeze"/>
+                     begin="47036ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="721.3599999999983" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3443,7 +3443,7 @@
               transform="translate(0, -2016.0000000000002)">
             
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="743.7599999999983" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3452,7 +3452,7 @@
               transform="translate(0, -2016.0000000000002)">
             ╔═══════════════════════════════════════════════════════════╗
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="766.1599999999983" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3461,7 +3461,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║                                                           ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="788.5599999999982" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3470,7 +3470,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║   Thanks for visiting! Remember:                          ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="810.9599999999982" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3479,7 +3479,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║                                                           ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="833.3599999999982" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3488,7 +3488,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║   &quot;Code like nobody&#x27;s watching,                           ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="855.7599999999982" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3497,7 +3497,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║    debug like everybody is.&quot;                             ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="878.1599999999981" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3506,7 +3506,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║                                                           ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="900.5599999999981" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3515,7 +3515,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║   Keep building awesome things! 🚀                        ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="922.9599999999981" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3524,7 +3524,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║                               - William                   ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="945.3599999999981" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3533,7 +3533,7 @@
               transform="translate(0, -2016.0000000000002)">
             ║                                                           ║
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
         <text x="0" y="967.7599999999981" font-family="Consolas, Monaco, 'Courier New', monospace" 
@@ -3542,48 +3542,48 @@
               transform="translate(0, -2016.0000000000002)">
             ╚═══════════════════════════════════════════════════════════╝
             <animate attributeName="opacity" from="0" to="1" 
-                     begin="48946ms" dur="50ms" fill="freeze"/>
+                     begin="50456ms" dur="50ms" fill="freeze"/>
         </text>
 
             <animateTransform attributeName="transform" type="translate"
                 from="0 0" to="0 -224.00000000000003"
-                begin="9188ms" dur="400ms"
+                begin="9391ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -224.00000000000003" to="0 -448.00000000000006"
-                begin="11547ms" dur="400ms"
+                begin="12080ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -448.00000000000006" to="0 -672.0000000000001"
-                begin="17047ms" dur="400ms"
+                begin="17580ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -672.0000000000001" to="0 -896.0000000000001"
-                begin="22547ms" dur="400ms"
+                begin="23080ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -896.0000000000001" to="0 -1120.0000000000002"
-                begin="28955ms" dur="400ms"
+                begin="29888ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -1120.0000000000002" to="0 -1344.0000000000002"
-                begin="33320ms" dur="400ms"
+                begin="34687ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -1344.0000000000002" to="0 -1568.0000000000002"
-                begin="39362ms" dur="400ms"
+                begin="40609ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -1568.0000000000002" to="0 -1792.0000000000002"
-                begin="43758ms" dur="400ms"
+                begin="45028ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -1792.0000000000002" to="0 -2016.0000000000002"
-                begin="48546ms" dur="400ms"
+                begin="50056ms" dur="400ms"
                 fill="freeze" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                 from="0 -2016.0000000000002" to="0 -2240.0000000000005"
-                begin="53946ms" dur="400ms"
+                begin="55456ms" dur="400ms"
                 fill="freeze" additive="sum"/></g>
 
         </g>

@@ -1,298 +1,1756 @@
-<svg width="800" height="600" 
-     xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        
-        <!-- Viewport clipping -->
-        <clipPath id="terminalViewport">
-            <rect x="0" y="40" width="800" 
-                  height="560"/>
-        </clipPath>
-        
-        <!-- Text glow filter -->
-        <filter id="textGlow">
-            <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
-            <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
-    </defs>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
     
-    <!-- Window -->
-    <rect width="800" height="600" 
-          rx="8" ry="8" fill="#300a24"/>
-    
-    <!-- Title bar -->
-    <rect width="800" height="40" rx="8" ry="8" fill="#2b2b2b"/>
-    <rect y="20" width="800" height="20" fill="#2b2b2b"/>
-    
-    <!-- Window controls -->
-    <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
-    <circle cx="40" cy="20" r="6" fill="#ffbd2e"/>
-    <circle cx="60" cy="20" r="6" fill="#27c93f"/>
-    
-    <!-- Title -->
-    <text x="400.0" y="25" font-family="Ubuntu Mono, Consolas, Monaco, 'Courier New', monospace" 
-          font-size="13" fill="#cccccc" text-anchor="middle">william@ubuntu:~</text>
-    
-    <!-- Terminal viewport -->
-    <g clip-path="url(#terminalViewport)">
-        <rect y="40" width="800" 
-              height="560" fill="#300a24"/>
-        
-        <!-- Terminal content area -->
-        <g id="terminal-content" transform="translate(10, 50)">
-            <!-- Dynamic content will be added here by JavaScript -->
-        </g>
-        
-        <!-- Cursor - always present but moves -->
-        <rect id="cursor" x="10" y="50" 
-              width="8.4" height="14" 
-              fill="#ffffff">
-            <animate attributeName="opacity" values="1;1;0;0" 
-                     dur="1000ms" repeatCount="indefinite"/>
-        </rect>
+    <!-- Blinking cursor -->
+    <g id="cursor">
+      <rect width="8" height="13" fill="#00ff00">
+        <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
+      </rect>
     </g>
     
-    <!-- JavaScript animation engine -->
-    <script type="text/javascript"><![CDATA[
+    <!-- Loading dots -->
+    <g id="loadingDots">
+      <circle cx="0" cy="0" r="2" fill="#d4d4d4">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="10" cy="0" r="2" fill="#d4d4d4">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="20" cy="0" r="2" fill="#d4d4d4">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Progress bar background -->
+    <rect id="progressBg" width="100" height="8" fill="#333333" rx="4"/>
+    
+    <!-- Terminal scanline effect -->
+    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="1" height="2">
+      <rect width="1" height="1" fill="transparent"/>
+      <rect y="1" width="1" height="1" fill="rgba(255,255,255,0.02)"/>
+    </pattern>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="10" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.6"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- CRT glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Text shadow for better readability -->
+    <filter id="textShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+      <feOffset dx="0" dy="1" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#shadow)">
+    
+    <!-- Window background -->
+    <rect x="0" y="0" width="800" height="600" 
+          rx="8" ry="8" 
+          fill="#0c0c0c"/>
+    
+    <!-- Terminal screen effect -->
+    <rect x="0" y="32" width="800" 
+          height="568" 
+          fill="url(#scanlines)" opacity="0.5"/>
+    
+    <!-- Title bar -->
+    <rect x="0" y="0" width="800" height="32" 
+          rx="8" ry="8" 
+          fill="#1a1a1a"/>
+    
+    <!-- Fix bottom corners -->
+    <rect x="0" y="16" width="800" 
+          height="16" fill="#1a1a1a"/>
+    
+    <!-- Window controls -->
+    <g id="window-controls">
+      <circle cx="20" cy="16" r="6" fill="#ff5f56"/>
+      <circle cx="40" cy="16" r="6" fill="#ffbd2e"/>
+      <circle cx="60" cy="16" r="6" fill="#27c93f"/>
+    </g>
+    
+    <!-- Window title -->
+    <text x="400" y="21" 
+          font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+          fill="#d4d4d4" text-anchor="middle">
+      william@dad-joke-hq: ~
+    </text>
+    
+    <!-- Define viewport clipping -->
+    <defs>
+      <clipPath id="terminalViewport">
+        <rect x="0" y="32" width="800" height="568"/>
+      </clipPath>
+    </defs>
+    
+    <!-- Terminal content with clipping -->
+    <g clip-path="url(#terminalViewport)">
+      <!-- Terminal background -->
+      <rect x="0" y="32" width="800" 
+            height="568" fill="#0c0c0c"/>
+      
+      <!-- Scrollable content -->
+      <g id="scrollContent" transform="translate(15, 47)">
+        
+    <g transform="translate(0, 0)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="0ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">w<animate attributeName="opacity" 
+                  from="0" to="1" begin="0ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity" 
+                  from="0" to="1" begin="100ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="200ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="300ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity" 
+                  from="0" to="1" begin="400ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="500ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="226.2" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="600ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
 
-// Terminal animation engine
-(function() {
-    'use strict';
-    
-    // Configuration
-    const config = {"fontSize": 14, "fontFamily": "Ubuntu Mono, Consolas, Monaco, 'Courier New', monospace", "lineHeight": 19.599999999999998, "charWidth": 8.4, "padding": 10, "promptColor": "#87d75f", "textColor": "#ffffff", "typingSpeedMin": 30, "typingSpeedMax": 90, "typingSpeedAvg": 50, "viewportHeight": 540};
-    const sequences = [{"type": "command", "prompt": "william@ubuntu:~$ ", "content": "whoami", "output": {"content": "william", "color": "#ffffff"}, "pause": 600}, {"type": "command", "prompt": "william@ubuntu:~$ ", "content": "finger william", "output": {"content": "Login: william         Name: William Zujkowski\nDirectory: /home/william        Shell: /bin/bash\nOn since Sun Jan 19 09:15 (EST) on pts/0 from 192.168.1.42\n\nPlan:\nSoftware Developer | Data Enthusiast | Professional Dad Joke Teller\n35 years of debugging life & code\nPowered by coffee \u2615 and curiosity \ud83d\udd0d", "color": "#ffffff"}, "pause": 1200}, {"type": "command", "prompt": "william@ubuntu:~$ ", "content": "cd /opt/jokes && ls -la", "output": {"content": "total 42\ndrwxr-xr-x  4 william william 4096 Jan 19 14:32 .\ndrwxr-xr-x 12 root    root    4096 Jan 10 10:15 ..\n-rwxr-xr-x  1 william william 2048 Jan 18 16:45 dadjoke\n-rw-r--r--  1 william william  512 Jan 18 16:45 dadjoke.conf\ndrwxr-xr-x  2 william william 4096 Jan 17 11:20 database\n-rwxr-xr-x  1 william william 1337 Jan 19 09:30 groan-meter\n-rw-r--r--  1 william william 8192 Jan 19 14:31 jokes.db\ndrwxr-xr-x  2 william william 4096 Jan 15 13:42 logs\n-rw-r--r--  1 william william  256 Jan 16 08:15 README.md", "color": "#ffffff"}, "pause": 1000}, {"type": "command", "prompt": "william@ubuntu:/opt/jokes$ ", "content": "./dadjoke --random", "output": {"content": "Loading joke database... [OK]\nSelecting random joke... [OK]\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n  DAD JOKE #0x2A (Groan Level: MAXIMUM)\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\nQ: Why don't scientists trust atoms?\nA: Because they make up everything!\n\nDelivered: 42,337 times\nEye rolls: 41,998 (99.2%)\nActual laughs: 339 (0.8%)", "color": "#87d75f"}, "pause": 2000}, {"type": "command", "prompt": "william@ubuntu:/opt/jokes$ ", "content": "ps aux | grep -E '(coffee|code|kids)' | head -5", "output": {"content": "william   1337  15.2  3.7 987654 321098 ?     Ssl  09:15  12:42 /usr/bin/coffee-daemon --strength=maximum\nwilliam   2048  28.5  5.2 876543 456789 pts/0 Sl+  09:16  23:51 /usr/bin/code --debug-life\nwilliam   3072   0.8  1.2 234567  98765 ?     S    09:45   0:42 /home/william/bin/kids-monitor --eye-roll-detection\nwilliam   4096   2.1  2.8 345678 234567 ?     Sl   10:30   1:15 /opt/smart-home/thermostat-guard --temp=72F --immutable\nwilliam  28451   0.0  0.0   9184   2316 pts/1 S+   14:38   0:00 grep --color=auto -E (coffee|code|kids)", "color": "#ffffff"}, "pause": 1200}, {"type": "command", "prompt": "william@ubuntu:/opt/jokes$ ", "content": "cat /proc/developer/stats", "output": {"content": "Developer Statistics for PID 1000 (william)\n============================================\nUptime: 35 years, 0 days, 0 hours\nCoffee consumed: 25,550 cups (2.0 cups/day avg)\nBugs fixed: 98,234\nBugs created: 98,233 (net positive!)\nStack Overflow visits: 142,857\nStack Overflow contributions: 1,337\nGit commits: 47,892\nMeaningful commit messages: 47,891\n\"Fixed typo\" commits: 1\nDad jokes told: \u221e\nKids who laughed: 0\nWife eye rolls: 12,775\nProjects started: 847\nProjects finished: 42\nRaspberry Pis owned: 17\nSmart home devices: 73\nDevices wife allowed: 72 (thermostat excluded)", "color": "#729fcf"}, "pause": 2500}, {"type": "command", "prompt": "william@ubuntu:/opt/jokes$ ", "content": "sudo systemctl status dad-mode.service", "output": {"content": "\u25cf dad-mode.service - Dad Mode Joke Delivery System\n     Loaded: loaded (/etc/systemd/system/dad-mode.service; enabled; vendor preset: enabled)\n     Active: active (running) since Sun 2025-01-19 09:15:42 EST; 5h 23min ago\n       Docs: man:dadjoke(8)\n   Main PID: 1337 (dad-joked)\n      Tasks: 4 (limit: 4915)\n     Memory: 42.0M\n        CPU: 13m 37s\n     CGroup: /system.slice/dad-mode.service\n             \u2514\u25001337 /usr/sbin/dad-joked --groan-level=maximum --timing=inopportune\n\nJan 19 14:32:15 ubuntu dad-joked[1337]: Joke delivered to child process 3456\nJan 19 14:32:16 ubuntu dad-joked[1337]: Eye roll detected from PID 3456\nJan 19 14:35:42 ubuntu dad-joked[1337]: Preparing context-appropriate pun...\nJan 19 14:35:43 ubuntu dad-joked[1337]: SUCCESS: Maximum groan achieved", "color": "#ffffff"}, "pause": 1800}, {"type": "command", "prompt": "william@ubuntu:/opt/jokes$ ", "content": "skill --list | sort -k3 -nr | head -10", "output": {"content": "SKILL                     LEVEL  PROGRESS  LAST_USED\nDad Jokes                  100   \u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593  2 min ago\nPython                      95   \u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593  today\nSQL/Databases               95   \u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593  today\nCoffee Brewing              92   \u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593  15 min ago\nJavaScript/TypeScript       90   \u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591  yesterday\nDebugging                   88   \u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591  always\nReact/Next.js              85   \u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2591  2 days ago\nDocker/Kubernetes          80   \u2593\u2593\u2593\u2593\u2593\u2593\u2591\u2591  last week\nThermostat Negotiation      5   \u2593\u2591\u2591\u2591\u2591\u2591\u2591\u2591  daily\nSinging in Shower           3   \u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591  better not", "color": "#87d75f"}, "pause": 1500}, {"type": "command", "prompt": "william@ubuntu:/opt/jokes$ ", "content": "fortune | cowsay -f tux", "output": {"content": " _________________________________________\n/ A SQL query goes into a bar, walks up   \\\n| to two tables and asks, \"Can I join     |\n\\ you?\"                                   /\n -----------------------------------------\n   \\\n    \\\n        .--.\n       |o_o |\n       |:_/ |\n      //   \\ \\\n     (|     | )\n    /'\\_   _/`\\\n    \\___)=(___/", "color": "#ffff00"}, "pause": 2000}, {"type": "command", "prompt": "william@ubuntu:/opt/jokes$ ", "content": "cd ~/projects && find . -name '*.joke' -type f | wc -l", "output": {"content": "1,337", "color": "#ffffff"}, "pause": 800}, {"type": "command", "prompt": "william@ubuntu:~/projects$ ", "content": "tail -f /var/log/family.log", "output": {"content": "2025-01-19 14:15:32 [INFO] Kid_1 requested snack\n2025-01-19 14:15:45 [INFO] Snack provided: apple slices\n2025-01-19 14:16:02 [WARN] Kid_2 attempting thermostat access\n2025-01-19 14:16:03 [ERROR] Access denied: Temperature is perfect at 72\u00b0F\n2025-01-19 14:18:15 [INFO] Wife suggested new smart home device\n2025-01-19 14:18:16 [INFO] Enthusiasm level: MAXIMUM\n2025-01-19 14:22:47 [DEBUG] Dad joke queued for dinner\n2025-01-19 14:30:12 [INFO] Family movie night initiated\n2025-01-19 14:30:13 [INFO] Popcorn.make() called successfully\n2025-01-19 14:38:55 [INFO] All processes sleeping peacefully\n^C", "color": "#ffffff"}, "pause": 2500}, {"type": "command", "prompt": "william@ubuntu:~/projects$ ", "content": "./groan-meter --analyze --last-joke", "output": {"content": "\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551          GROAN-O-METER\u2122 v3.14159             \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\nAnalyzing last joke delivery...\n\nJoke: \"I used to hate facial hair, but then it grew on me.\"\n\nRecipient Reactions:\n\u251c\u2500 Kid #1: Eye roll duration: 3.7 seconds\n\u251c\u2500 Kid #2: Audible groan detected (62 dB)\n\u251c\u2500 Kid #3: Facepalm registered\n\u2514\u2500 Wife: Smile suppression failed (corner lift: 2.3mm)\n\nOverall Score: 9.6/10 (LEGENDARY)\n\nAchievement Unlocked: \"Maximum Dad Energy\"", "color": "#87d75f"}, "pause": 2000}, {"type": "command", "prompt": "william@ubuntu:~/projects$ ", "content": "echo \"Thanks for visiting! May your code compile and your coffee be strong! \ud83d\ude80\"", "output": {"content": "Thanks for visiting! May your code compile and your coffee be strong! \ud83d\ude80", "color": "#87d75f"}, "pause": 2000}, {"type": "command", "prompt": "william@ubuntu:~/projects$ ", "content": "exit", "output": {"content": "logout\n\nSaving dad joke cache... done\nSyncing groan statistics... done\nBacking up family memories... done\n\nConnection closed.", "color": "#ffffff"}, "pause": 3000}];
-    
-    // Terminal state
-    const terminal = {
-        lines: [],           // Array of completed lines
-        currentLine: null,   // Current line element being typed
-        currentText: '',     // Current line text
-        cursorX: 0,          // Cursor position in characters
-        cursorY: 0,          // Cursor position in lines
-        totalHeight: 0,      // Total height of content
-        scrollOffset: 0,     // Current scroll offset
-        isTyping: false,     // Currently typing flag
-        sequenceIndex: 0,    // Current sequence being processed
-        startTime: Date.now()
-    };
-    
-    // Get DOM elements
-    const contentGroup = document.getElementById('terminal-content');
-    const cursor = document.getElementById('cursor');
-    
-    // Utility functions
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-    
-    function getTypingSpeed() {
-        const r = Math.random();
-        if (r < 0.1) {
-            // 10% chance of pause
-            return Math.floor(Math.random() * (500 - 200) + 200);
-        } else if (r < 0.3) {
-            // 20% chance of slow
-            return Math.floor(Math.random() * (config.typingSpeedMax - config.typingSpeedAvg) + config.typingSpeedAvg);
-        } else {
-            // 70% normal speed
-            return Math.floor(Math.random() * (config.typingSpeedAvg - config.typingSpeedMin) + config.typingSpeedMin);
-        }
-    }
-    
-    // Create a new text line element
-    function createLineElement(y, color) {
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('x', '0');
-        text.setAttribute('y', String(y + config.fontSize));
-        text.setAttribute('font-family', config.fontFamily);
-        text.setAttribute('font-size', String(config.fontSize));
-        text.setAttribute('fill', color || config.textColor);
-        text.setAttribute('filter', 'url(#textGlow)');
-        return text;
-    }
-    
-    // Update cursor position
-    function updateCursor(x, y) {
-        cursor.setAttribute('x', String(config.padding + x));
-        cursor.setAttribute('y', String(40 + config.padding + y));
-    }
-    
-    // Type a single character
-    async function typeCharacter(char) {
-        if (!terminal.currentLine) {
-            terminal.currentLine = createLineElement(terminal.cursorY * config.lineHeight, config.textColor);
-            contentGroup.appendChild(terminal.currentLine);
-        }
-        
-        terminal.currentText += char;
-        terminal.currentLine.textContent = terminal.currentText;
-        terminal.cursorX++;
-        
-        updateCursor(terminal.cursorX * config.charWidth, terminal.cursorY * config.lineHeight);
-        
-        await sleep(getTypingSpeed());
-    }
-    
-    // Type a complete string
-    async function typeText(text, color) {
-        terminal.currentLine = createLineElement(terminal.cursorY * config.lineHeight, color);
-        contentGroup.appendChild(terminal.currentLine);
-        terminal.currentText = '';
-        terminal.cursorX = 0;
-        
-        for (let i = 0; i < text.length; i++) {
-            terminal.currentText = text.substring(0, i + 1);
-            terminal.currentLine.textContent = terminal.currentText;
-            terminal.cursorX = i + 1;
-            
-            updateCursor(terminal.cursorX * config.charWidth, terminal.cursorY * config.lineHeight);
-            
-            await sleep(getTypingSpeed());
-        }
-    }
-    
-    // Print a line instantly (for output)
-    async function printLine(text, color) {
-        const line = createLineElement(terminal.cursorY * config.lineHeight, color);
-        line.textContent = text;
-        contentGroup.appendChild(line);
-        
-        terminal.lines.push(line);
-        terminal.currentLine = null;
-        terminal.currentText = '';
-        terminal.cursorX = 0;
-        terminal.cursorY++;
-        
-        // Check if we need to scroll
-        await checkScroll();
-        
-        updateCursor(0, terminal.cursorY * config.lineHeight);
-        
-        await sleep(20); // Small delay between output lines
-    }
-    
-    // Move to next line
-    async function newLine() {
-        if (terminal.currentLine) {
-            terminal.lines.push(terminal.currentLine);
-        }
-        
-        terminal.currentLine = null;
-        terminal.currentText = '';
-        terminal.cursorX = 0;
-        terminal.cursorY++;
-        
-        await checkScroll();
-        
-        updateCursor(0, terminal.cursorY * config.lineHeight);
-    }
-    
-    // Check and perform scrolling if needed
-    async function checkScroll() {
-        const visibleLines = Math.floor(config.viewportHeight / config.lineHeight);
-        
-        if (terminal.cursorY >= visibleLines) {
-            // Need to scroll
-            terminal.scrollOffset += config.lineHeight;
-            
-            // Animate the scroll
-            const currentTransform = contentGroup.getAttribute('transform');
-            const newTransform = `translate(${config.padding}, ${40 + config.padding - terminal.scrollOffset})`;
-            
-            // Simple scroll animation
-            contentGroup.setAttribute('transform', newTransform);
-            
-            await sleep(150); // Scroll animation time
-        }
-    }
-    
-    // Process a command sequence
-    async function processCommand(sequence) {
-        const prompt = sequence.prompt || '$ ';
-        const command = sequence.content || '';
-        
-        // Type prompt instantly
-        terminal.currentLine = createLineElement(terminal.cursorY * config.lineHeight, config.promptColor);
-        terminal.currentLine.textContent = prompt;
-        contentGroup.appendChild(terminal.currentLine);
-        terminal.currentText = prompt;
-        terminal.cursorX = prompt.length;
-        
-        updateCursor(terminal.cursorX * config.charWidth, terminal.cursorY * config.lineHeight);
-        
-        // Type command character by character
-        for (let i = 0; i < command.length; i++) {
-            terminal.currentText += command[i];
-            terminal.currentLine.textContent = terminal.currentText;
-            terminal.cursorX++;
-            
-            updateCursor(terminal.cursorX * config.charWidth, terminal.cursorY * config.lineHeight);
-            
-            await sleep(getTypingSpeed());
-        }
-        
-        // Move to next line after command
-        await newLine();
-        
-        // Process output if present
-        if (sequence.output) {
-            await sleep(200); // Small delay before output
-            
-            const outputLines = sequence.output.content.split('\n');
-            const outputColor = sequence.output.color || config.textColor;
-            
-            for (const line of outputLines) {
-                await printLine(line, outputColor);
-            }
-        }
-    }
-    
-    // Process all sequences
-    async function processSequences() {
-        for (const sequence of sequences) {
-            // Add initial delay if specified
-            if (sequence.delay) {
-                await sleep(sequence.delay);
-            }
-            
-            // Process based on type
-            switch (sequence.type) {
-                case 'command':
-                    await processCommand(sequence);
-                    break;
-                    
-                case 'text':
-                case 'output':
-                    const lines = sequence.content.split('\n');
-                    const color = sequence.color || config.textColor;
-                    for (const line of lines) {
-                        await printLine(line, color);
-                    }
-                    break;
-                    
-                case 'ascii':
-                    const asciiLines = sequence.content.split('\n');
-                    const asciiColor = sequence.color || config.textColor;
-                    for (const line of asciiLines) {
-                        await printLine(line, asciiColor);
-                    }
-                    break;
-            }
-            
-            // Pause after sequence
-            const pause = sequence.pause || 600;
-            await sleep(pause);
-        }
-    }
-    
-    // Start the animation
-    setTimeout(() => {
-        processSequences().catch(console.error);
-    }, 100);
-})();
+      <g transform="translate(0, 18.2)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="1000ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          william
+        </text>
+      </g>
 
-    ]]></script>
+    <g transform="translate(0, 36.4)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="1750ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="1750ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="1835.7142857142858ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="1921.4285714285713ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity" 
+                  from="0" to="1" begin="2007.142857142857ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="2092.8571428571427ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="2178.5714285714284ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="2264.285714285714ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">w<animate attributeName="opacity" 
+                  from="0" to="1" begin="2350ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="2435.714285714286ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="2521.4285714285716ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="2607.142857142857ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="2692.8571428571427ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="2778.5714285714284ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity" 
+                  from="0" to="1" begin="2864.285714285714ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="288.59999999999997" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="2950ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+      <g transform="translate(0, 54.599999999999994)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3450ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Login: william         Name: William Zujkowski
+        </text>
+      </g>
+
+      <g transform="translate(0, 72.8)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3500ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Directory: /home/william        Shell: /bin/bash
+        </text>
+      </g>
+
+      <g transform="translate(0, 91)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3550ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          On since Sun Jan 19 09:15 (EST) on pts/0 from 192.168.1.42
+        </text>
+      </g>
+
+      <g transform="translate(0, 109.2)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3600ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 127.4)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3650ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Plan:
+        </text>
+      </g>
+
+      <g transform="translate(0, 145.6)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3700ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Software Developer | Data Enthusiast | Professional Dad Joke Teller
+        </text>
+      </g>
+
+      <g transform="translate(0, 163.79999999999998)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3750ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          35 years of debugging life &amp; code
+        </text>
+      </g>
+
+      <g transform="translate(0, 181.99999999999997)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="3800ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Powered by coffee ☕ and curiosity 🔍
+        </text>
+      </g>
+
+    <g transform="translate(0, 200.19999999999996)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="5450ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="5450ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="5534.210526315789ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="5618.421052631579ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity" 
+                  from="0" to="1" begin="5702.631578947368ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="5786.842105263158ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity" 
+                  from="0" to="1" begin="5871.0526315789475ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="5955.263157894737ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity" 
+                  from="0" to="1" begin="6039.473684210527ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">j<animate attributeName="opacity" 
+                  from="0" to="1" begin="6123.684210526316ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="6207.894736842105ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity" 
+                  from="0" to="1" begin="6292.105263157895ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="6376.315789473684ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="6460.526315789473ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="6544.736842105263ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">&amp;<animate attributeName="opacity" 
+                  from="0" to="1" begin="6628.9473684210525ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">&amp;<animate attributeName="opacity" 
+                  from="0" to="1" begin="6713.157894736842ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="6797.368421052632ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="6881.578947368422ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="6965.789473684211ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="327.59999999999997" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="7050ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+      <g transform="translate(0, 218.39999999999995)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="7550ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          dadjoke  dadjoke.conf  database/  groan-meter  jokes.db  logs/  README.md
+        </text>
+      </g>
+
+    <g transform="translate(0, 236.59999999999994)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="8700ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">.<animate attributeName="opacity" 
+                  from="0" to="1" begin="8700ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity" 
+                  from="0" to="1" begin="8777.777777777777ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="8855.555555555555ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="8933.333333333334ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="9011.111111111111ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">j<animate attributeName="opacity" 
+                  from="0" to="1" begin="9088.888888888889ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="9166.666666666666ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity" 
+                  from="0" to="1" begin="9244.444444444445ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="9322.222222222223ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="9400ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="9477.777777777777ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="9555.555555555555ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="9633.333333333334ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="9711.111111111111ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="9788.888888888889ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="9866.666666666666ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="9944.444444444445ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity" 
+                  from="0" to="1" begin="10022.222222222223ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="319.8" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10100ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+      <g transform="translate(0, 254.79999999999993)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10600ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Loading joke database... [OK]
+        </text>
+      </g>
+
+      <g transform="translate(0, 272.99999999999994)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10650ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Selecting random joke... [OK]
+        </text>
+      </g>
+
+      <g transform="translate(0, 291.19999999999993)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10700ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 309.3999999999999)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10750ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        </text>
+      </g>
+
+      <g transform="translate(0, 327.5999999999999)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10800ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+            DAD JOKE #0x2A (Groan Level: MAXIMUM)
+        </text>
+      </g>
+
+      <g transform="translate(0, 345.7999999999999)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10850ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        </text>
+      </g>
+
+      <g transform="translate(0, 363.9999999999999)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10900ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 382.1999999999999)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="10950ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Q: Why don&apos;t scientists trust atoms?
+        </text>
+      </g>
+
+      <g transform="translate(0, 400.39999999999986)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="11000ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          A: Because they make up everything!
+        </text>
+      </g>
+
+      <g transform="translate(0, 418.59999999999985)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="11050ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 436.79999999999984)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="11100ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Delivered: 42,337 times | Eye rolls: 99.2%
+        </text>
+      </g>
+
+    <g transform="translate(0, 454.99999999999983)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="13750ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">p<animate attributeName="opacity" 
+                  from="0" to="1" begin="13750ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="13830ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="13910ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="13990ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity" 
+                  from="0" to="1" begin="14070ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">x<animate attributeName="opacity" 
+                  from="0" to="1" begin="14150ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="14230ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">|<animate attributeName="opacity" 
+                  from="0" to="1" begin="14310ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="14390ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity" 
+                  from="0" to="1" begin="14470ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="14550ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="14630ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity" 
+                  from="0" to="1" begin="14710ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="14790ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="14870ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="14950ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="15030ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="15110ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="15190ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="15270ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="335.4" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="15350ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+      <g transform="translate(0, 473.1999999999998)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="15850ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          william   1337  15.2  3.7 987654 321098 ?     Ssl  09:15  12:42 /usr/bin/coffee-daemon --strength=maximum
+        </text>
+      </g>
+
+      <g transform="translate(0, 491.3999999999998)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="15900ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          william   2048  28.5  5.2 876543 456789 pts/0 Sl+  09:16  23:51 /usr/bin/code --debug-life
+        </text>
+      </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="17250ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+    <g transform="translate(0, 418.5999999999998)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="17250ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="17250ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="17311.11111111111ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="17372.222222222223ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="17433.333333333332ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity" 
+                  from="0" to="1" begin="17494.444444444445ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity" 
+                  from="0" to="1" begin="17555.555555555555ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="17616.666666666668ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="17677.777777777777ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="17738.88888888889ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity" 
+                  from="0" to="1" begin="17800ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="17861.11111111111ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="17922.222222222223ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">v<animate attributeName="opacity" 
+                  from="0" to="1" begin="17983.333333333332ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="18044.444444444445ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="18105.555555555555ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="18166.666666666668ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity" 
+                  from="0" to="1" begin="18227.777777777777ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="18288.88888888889ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="18350ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity" 
+                  from="0" to="1" begin="18411.11111111111ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="18472.222222222223ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="18533.333333333332ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="18594.444444444445ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="18655.555555555555ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="18716.666666666668ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="18777.777777777777ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">|<animate attributeName="opacity" 
+                  from="0" to="1" begin="18838.88888888889ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="18900ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity" 
+                  from="0" to="1" begin="18961.11111111111ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="19022.222222222223ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="19083.333333333332ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="19144.444444444445ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="19205.555555555555ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="19266.666666666668ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">1<animate attributeName="opacity" 
+                  from="0" to="1" begin="19327.777777777777ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">0<animate attributeName="opacity" 
+                  from="0" to="1" begin="19388.88888888889ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="460.2" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="19450ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+      <g transform="translate(0, 436.7999999999998)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="19950ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Developer Statistics for PID 1000 (william)
+        </text>
+      </g>
+
+      <g transform="translate(0, 454.9999999999998)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20000ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          ============================================
+        </text>
+      </g>
+
+      <g transform="translate(0, 473.19999999999976)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20050ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Uptime: 35 years, 0 days, 0 hours
+        </text>
+      </g>
+
+      <g transform="translate(0, 491.39999999999975)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20100ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Coffee consumed: 25,550 cups (2.0 cups/day avg)
+        </text>
+      </g>
+
+      <g transform="translate(0, 509.59999999999974)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20150ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Bugs fixed: 98,234
+        </text>
+      </g>
+
+      <g transform="translate(0, 527.7999999999997)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20200ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Bugs created: 98,233 (net positive!)
+        </text>
+      </g>
+
+      <g transform="translate(0, 545.9999999999998)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20250ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Stack Overflow visits: 142,857
+        </text>
+      </g>
+
+      <g transform="translate(0, 564.1999999999998)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20300ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Dad jokes told: ∞
+        </text>
+      </g>
+
+      <g transform="translate(0, 582.3999999999999)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20350ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Kids who laughed: 0
+        </text>
+      </g>
+
+      <g transform="translate(0, 600.5999999999999)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="20400ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#729fcf" filter="url(#textShadow)">
+          Wife eye rolls: 12,775
+        </text>
+      </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="22550ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+    <g transform="translate(0, 527.8)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="22550ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="22550ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity" 
+                  from="0" to="1" begin="22623.684210526317ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="22697.36842105263ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="22771.052631578947ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="22844.736842105263ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="22918.42105263158ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">y<animate attributeName="opacity" 
+                  from="0" to="1" begin="22992.105263157893ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="23065.78947368421ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="23139.473684210527ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="23213.157894736843ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity" 
+                  from="0" to="1" begin="23286.842105263157ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="23360.526315789473ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="23434.21052631579ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="23507.894736842107ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="23581.57894736842ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="23655.263157894737ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="23728.947368421053ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="23802.63157894737ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="23876.315789473683ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity" 
+                  from="0" to="1" begin="23950ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="24023.684210526317ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="24097.368421052633ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="24171.052631578947ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="24244.736842105263ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="24318.42105263158ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="24392.105263157893ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity" 
+                  from="0" to="1" begin="24465.78947368421ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="24539.473684210527ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="24613.157894736843ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="24686.842105263157ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">.<animate attributeName="opacity" 
+                  from="0" to="1" begin="24760.526315789473ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="24834.21052631579ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="24907.894736842107ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="24981.57894736842ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">v<animate attributeName="opacity" 
+                  from="0" to="1" begin="25055.263157894737ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="25128.947368421053ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="25202.63157894737ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="25276.315789473683ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="475.79999999999995" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="25350ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="25850ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+      <g transform="translate(0, 455)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="25850ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          ● dad-mode.service - Dad Mode Joke Delivery System
+        </text>
+      </g>
+
+      <g transform="translate(0, 473.2)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="25900ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+               Loaded: loaded (/etc/systemd/system/dad-mode.service; enabled)
+        </text>
+      </g>
+
+      <g transform="translate(0, 491.4)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="25950ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+               Active: active (running) since Sun 2025-01-19 09:15:42 EST
+        </text>
+      </g>
+
+      <g transform="translate(0, 509.59999999999997)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="26000ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+             Main PID: 1337 (dad-joked)
+        </text>
+      </g>
+
+      <g transform="translate(0, 527.8)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="26050ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+               Memory: 42.0M
+        </text>
+      </g>
+
+      <g transform="translate(0, 546)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="26100ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 564.2)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="26150ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Jan 19 14:35:43 ubuntu dad-joked[1337]: SUCCESS: Maximum groan achieved
+        </text>
+      </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="28100ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+    <g transform="translate(0, 491.4000000000001)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="28100ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="28100ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity" 
+                  from="0" to="1" begin="28164.516129032258ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="28229.032258064515ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="28293.548387096773ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="28358.064516129034ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="28422.58064516129ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="28487.09677419355ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="28551.612903225807ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="28616.129032258064ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="28680.645161290322ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="28745.16129032258ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="28809.677419354837ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="28874.1935483871ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">|<animate attributeName="opacity" 
+                  from="0" to="1" begin="28938.709677419356ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="29003.225806451614ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity" 
+                  from="0" to="1" begin="29067.74193548387ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="29132.25806451613ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="29196.774193548386ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity" 
+                  from="0" to="1" begin="29261.290322580644ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="29325.8064516129ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">&quot;<animate attributeName="opacity" 
+                  from="0" to="1" begin="29390.322580645163ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">D<animate attributeName="opacity" 
+                  from="0" to="1" begin="29454.83870967742ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="29519.354838709678ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="29583.870967741936ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="29648.387096774193ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">J<animate attributeName="opacity" 
+                  from="0" to="1" begin="29712.90322580645ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="29777.41935483871ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity" 
+                  from="0" to="1" begin="29841.93548387097ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="29906.451612903227ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="29970.967741935485ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">&quot;<animate attributeName="opacity" 
+                  from="0" to="1" begin="30035.483870967742ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="421.2" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="30100ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="30600ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+      <g transform="translate(0, 418.6000000000001)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="30600ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Dad Jokes                  100   ████████  2 min ago
+        </text>
+      </g>
+
+    <g transform="translate(0, 436.80000000000007)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="31750ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="31750ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="31828.260869565216ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="31906.521739130436ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="31984.782608695652ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity" 
+                  from="0" to="1" begin="32063.043478260868ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="32141.304347826088ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="32219.565217391304ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="32297.82608695652ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">|<animate attributeName="opacity" 
+                  from="0" to="1" begin="32376.08695652174ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="32454.347826086956ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="32532.608695652172ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="32610.869565217392ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">w<animate attributeName="opacity" 
+                  from="0" to="1" begin="32689.130434782608ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="32767.391304347828ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="32845.65217391304ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">y<animate attributeName="opacity" 
+                  from="0" to="1" begin="32923.913043478264ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="33002.17391304348ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="33080.434782608696ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="33158.69565217391ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="33236.95652173913ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="33315.217391304344ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity" 
+                  from="0" to="1" begin="33393.47826086957ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">x<animate attributeName="opacity" 
+                  from="0" to="1" begin="33471.739130434784ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="358.8" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="33550ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+      <g transform="translate(0, 455.00000000000006)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34050ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+           _________________________________________
+        </text>
+      </g>
+
+      <g transform="translate(0, 473.20000000000005)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34100ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+          / A SQL query goes into a bar, walks up   \
+        </text>
+      </g>
+
+      <g transform="translate(0, 491.40000000000003)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34150ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+          | to two tables and asks, &quot;Can I join     |
+        </text>
+      </g>
+
+      <g transform="translate(0, 509.6)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34200ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+          \ you?&quot;                                   /
+        </text>
+      </g>
+
+      <g transform="translate(0, 527.8000000000001)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34250ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+           -----------------------------------------
+        </text>
+      </g>
+
+      <g transform="translate(0, 546.0000000000001)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34300ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+             \
+        </text>
+      </g>
+
+      <g transform="translate(0, 564.2000000000002)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34350ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+              \
+        </text>
+      </g>
+
+      <g transform="translate(0, 582.4000000000002)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34400ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+                  .--.
+        </text>
+      </g>
+
+      <g transform="translate(0, 600.6000000000003)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34450ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+                 |o_o |
+        </text>
+      </g>
+
+      <g transform="translate(0, 618.8000000000003)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34500ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+                 |:_/ |
+        </text>
+      </g>
+
+      <g transform="translate(0, 637.0000000000003)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34550ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+                //   \ \
+        </text>
+      </g>
+
+      <g transform="translate(0, 655.2000000000004)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34600ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+               (|     | )
+        </text>
+      </g>
+
+      <g transform="translate(0, 673.4000000000004)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34650ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+              /&apos;\_   _/`\
+        </text>
+      </g>
+
+      <g transform="translate(0, 691.6000000000005)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="34700ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffff00" filter="url(#textShadow)">
+              \___)=(___/
+        </text>
+      </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="37350ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+    <g transform="translate(0, 618.8000000000005)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="37350ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">.<animate attributeName="opacity" 
+                  from="0" to="1" begin="37350ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity" 
+                  from="0" to="1" begin="37418.57142857143ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity" 
+                  from="0" to="1" begin="37487.142857142855ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="37555.71428571428ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="37624.28571428572ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="37692.857142857145ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="37761.42857142857ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="37830ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity" 
+                  from="0" to="1" begin="37898.57142857143ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="37967.142857142855ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="38035.71428571428ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="38104.28571428572ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="38172.857142857145ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="38241.42857142857ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="38310ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="38378.57142857143ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="38447.142857142855ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="38515.71428571428ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="38584.28571428572ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="38652.857142857145ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">y<animate attributeName="opacity" 
+                  from="0" to="1" begin="38721.42857142857ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">z<animate attributeName="opacity" 
+                  from="0" to="1" begin="38790ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="38858.57142857143ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="38927.142857142855ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="38995.71428571428ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="39064.28571428572ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="39132.857142857145ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="39201.42857142857ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="39270ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="39338.57142857143ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity" 
+                  from="0" to="1" begin="39407.142857142855ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">j<animate attributeName="opacity" 
+                  from="0" to="1" begin="39475.71428571428ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="39544.28571428572ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity" 
+                  from="0" to="1" begin="39612.857142857145ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="39681.42857142857ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="452.4" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="39750ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="40250ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+      <g transform="translate(0, 546.0000000000006)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40250ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          ╔═══════════════════════════════════════════════╗
+        </text>
+      </g>
+
+      <g transform="translate(0, 564.2000000000006)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40300ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          ║          GROAN-O-METER™ v3.14159             ║
+        </text>
+      </g>
+
+      <g transform="translate(0, 582.4000000000007)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40350ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          ╚═══════════════════════════════════════════════╝
+        </text>
+      </g>
+
+      <g transform="translate(0, 600.6000000000007)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40400ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 618.8000000000008)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40450ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Analyzing: &quot;I used to hate facial hair, but then it grew on me.&quot;
+        </text>
+      </g>
+
+      <g transform="translate(0, 637.0000000000008)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40500ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 655.2000000000008)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40550ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Recipient Reactions:
+        </text>
+      </g>
+
+      <g transform="translate(0, 673.4000000000009)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40600ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          ├─ Kid #1: Eye roll duration: 3.7 seconds
+        </text>
+      </g>
+
+      <g transform="translate(0, 691.6000000000009)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40650ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          ├─ Kid #2: Audible groan detected (62 dB)
+        </text>
+      </g>
+
+      <g transform="translate(0, 709.800000000001)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40700ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          └─ Wife: Smile suppression failed
+        </text>
+      </g>
+
+      <g transform="translate(0, 728.000000000001)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40750ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 746.2000000000011)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="40800ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Overall Score: 9.6/10 (LEGENDARY)
+        </text>
+      </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="43450ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+    <g transform="translate(0, 673.4000000000011)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="43450ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="43450ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="43495.56962025316ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity" 
+                  from="0" to="1" begin="43541.13924050633ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="43586.70886075949ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="43632.27848101266ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">&quot;<animate attributeName="opacity" 
+                  from="0" to="1" begin="43677.84810126582ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">T<animate attributeName="opacity" 
+                  from="0" to="1" begin="43723.417721518985ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity" 
+                  from="0" to="1" begin="43768.987341772154ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="43814.556962025315ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="43860.126582278484ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity" 
+                  from="0" to="1" begin="43905.696202531646ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="43951.26582278481ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="43996.83544303798ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="44042.40506329114ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="44087.97468354431ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="44133.54430379747ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="44179.11392405063ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">v<animate attributeName="opacity" 
+                  from="0" to="1" begin="44224.6835443038ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="44270.25316455696ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="44315.82278481012ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="44361.39240506329ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="44406.962025316454ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="44452.53164556962ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="44498.101265822785ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity" 
+                  from="0" to="1" begin="44543.670886075946ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">!<animate attributeName="opacity" 
+                  from="0" to="1" begin="44589.240506329115ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="44634.81012658228ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">M<animate attributeName="opacity" 
+                  from="0" to="1" begin="44680.379746835446ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="44725.94936708861ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">y<animate attributeName="opacity" 
+                  from="0" to="1" begin="44771.51898734177ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="44817.08860759494ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">y<animate attributeName="opacity" 
+                  from="0" to="1" begin="44862.6582278481ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="44908.22784810127ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity" 
+                  from="0" to="1" begin="44953.79746835443ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="44999.36708860759ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="45044.93670886076ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="45090.50632911392ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="45136.07594936709ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="45181.645569620254ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="45227.215189873416ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="45272.784810126584ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="45318.354430379746ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="45363.92405063291ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity" 
+                  from="0" to="1" begin="45409.49367088608ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity" 
+                  from="0" to="1" begin="45455.06329113924ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="45500.63291139241ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity" 
+                  from="0" to="1" begin="45546.20253164557ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="45591.77215189873ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="45637.3417721519ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity" 
+                  from="0" to="1" begin="45682.91139240506ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="45728.48101265823ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity" 
+                  from="0" to="1" begin="45774.05063291139ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="45819.620253164554ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">y<animate attributeName="opacity" 
+                  from="0" to="1" begin="45865.18987341772ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="45910.759493670885ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity" 
+                  from="0" to="1" begin="45956.329113924054ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="46001.898734177215ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="46047.46835443038ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity" 
+                  from="0" to="1" begin="46093.037974683546ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="46138.60759493671ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="46184.17721518988ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">f<animate attributeName="opacity" 
+                  from="0" to="1" begin="46229.74683544304ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="46275.3164556962ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="46320.88607594937ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="46366.45569620253ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">b<animate attributeName="opacity" 
+                  from="0" to="1" begin="46412.02531645569ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="46457.59493670886ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="46503.16455696202ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity" 
+                  from="0" to="1" begin="46548.73417721519ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="46594.303797468354ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity" 
+                  from="0" to="1" begin="46639.87341772152ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity" 
+                  from="0" to="1" begin="46685.443037974685ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity" 
+                  from="0" to="1" begin="46731.012658227846ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity" 
+                  from="0" to="1" begin="46776.582278481015ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">!<animate attributeName="opacity" 
+                  from="0" to="1" begin="46822.15189873418ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity" 
+                  from="0" to="1" begin="46867.72151898734ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">�<animate attributeName="opacity" 
+                  from="0" to="1" begin="46913.29113924051ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">�<animate attributeName="opacity" 
+                  from="0" to="1" begin="46958.86075949367ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">&quot;<animate attributeName="opacity" 
+                  from="0" to="1" begin="47004.43037974684ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="795.6" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="47050ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="47550ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+      <g transform="translate(0, 600.6000000000012)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="47550ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#87d75f" filter="url(#textShadow)">
+          Thanks for visiting! May your code compile and your coffee be strong! 🚀
+        </text>
+      </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="49700ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+    <g transform="translate(0, 527.8000000000012)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="49700ms" dur="0.1s" fill="freeze"/>
+      
+      <!-- Prompt -->
+      <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+            fill="#00ff00" filter="url(#textShadow)">
+        william@dad-joke-hq:~$ 
+      </text>
+      
+      <!-- Command typing -->
+      <text x="179.4" font-family="Fira Code, Consolas, Monaco, monospace" 
+            font-size="13" fill="#d4d4d4" filter="url(#textShadow)">
+        <tspan opacity="0">e<animate attributeName="opacity" 
+                  from="0" to="1" begin="49700ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">x<animate attributeName="opacity" 
+                  from="0" to="1" begin="49800ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity" 
+                  from="0" to="1" begin="49900ms" 
+                  dur="0.05s" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity" 
+                  from="0" to="1" begin="50000ms" 
+                  dur="0.05s" fill="freeze"/></tspan>
+      </text>
+      
+      <!-- Cursor -->
+      <use href="#cursor" x="210.6" y="0" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="50100ms" dur="0.1s" fill="freeze"/>
+      </use>
+    </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="50600ms" dur="0.3s" fill="freeze" additive="sum"/>
+
+      <g transform="translate(0, 455.00000000000125)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="50600ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          logout
+        </text>
+      </g>
+
+      <g transform="translate(0, 473.20000000000124)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="50650ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 491.4000000000012)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="50700ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Saving dad joke cache... done
+        </text>
+      </g>
+
+      <g transform="translate(0, 509.6000000000012)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="50750ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Backing up family memories... done
+        </text>
+      </g>
+
+      <g transform="translate(0, 527.8000000000012)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="50800ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          
+        </text>
+      </g>
+
+      <g transform="translate(0, 546.0000000000013)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" 
+                 begin="50850ms" dur="0.1s" fill="freeze"/>
+        <text font-family="Fira Code, Consolas, Monaco, monospace" font-size="13" 
+              fill="#ffffff" filter="url(#textShadow)">
+          Connection closed.
+        </text>
+      </g>
+
+    <!-- Scroll animation -->
+    <animateTransform attributeName="transform" type="translate" 
+                      from="0 0" to="0 -91" 
+                      begin="54000ms" dur="0.3s" fill="freeze" additive="sum"/>
+      </g>
+    </g>
+  </g>
 </svg>

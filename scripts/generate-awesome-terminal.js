@@ -13,7 +13,7 @@ async function main() {
     
     // Read configuration
     console.log('📖 Reading terminal sequences...');
-    const configPath = path.join(process.cwd(), 'src', 'awesome-terminal-config.json');
+    const configPath = path.join(process.cwd(), 'src', 'awesome-terminal-config-jokes.json');
     const configContent = await fs.promises.readFile(configPath, 'utf-8');
     const config = JSON.parse(configContent);
     

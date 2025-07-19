@@ -10,7 +10,7 @@ import json
 # Add parent directory to path to import the generator
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from real_terminal_generator import RealTerminalSVGGenerator
+from fixed_terminal_generator import FixedTerminalSVGGenerator
 
 
 def main():
@@ -29,7 +29,7 @@ def main():
             config_data = json.load(f)
         
         # Generate SVG
-        generator = RealTerminalSVGGenerator(config_data)
+        generator = FixedTerminalSVGGenerator(config_data)
         svg = generator.generate()
         
         # Write output

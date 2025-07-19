@@ -1,6 +1,13 @@
 {
   "sequences": [
     {
+      "type": "command",
+      "content": "banner",
+      "typingDuration": 800,
+      "pause": 500,
+      "delay": 0
+    },
+    {
       "type": "ascii",
       "content": " _    _ _ _ _ _                 \n| |  | (_) | (_)                \n| |  | |_| | |_  __ _ _ __ ___  \n| |/\\| | | | | |/ _` | '_ ` _ \\ \n\\  /\\  / | | | | (_| | | | | | |\n \\/  \\/|_|_|_|_|\\__,_|_| |_| |_|\n                                \nSecurity Specialist | Home Automator | Dad Joke Distributor",
       "color": "#00ff00",

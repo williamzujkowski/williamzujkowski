@@ -1,0 +1,65 @@
+{
+  "config": {
+    "window": {
+      "width": 800,
+      "height": 600,
+      "title": "william@ubuntu:~",
+      "theme": "dark"
+    },
+    "terminal": {
+      "fontSize": 14,
+      "fontFamily": "Ubuntu Mono, Consolas, Monaco, 'Courier New', monospace",
+      "lineHeight": 1.4,
+      "padding": 10,
+      "cursorStyle": "block",
+      "prompt": "william@ubuntu:~$ "
+    },
+    "animation": {
+      "typingSpeed": {
+        "min": 40,
+        "max": 80,
+        "avg": 60
+      },
+      "scrollSpeed": 150,
+      "pauseBetweenSequences": 400
+    },
+    "colors": {
+      "background": "#300a24",
+      "text": "#ffffff",
+      "prompt": "#87d75f",
+      "cursor": "#ffffff"
+    }
+  },
+  "sequences": [
+    {
+      "type": "command",
+      "prompt": "william@ubuntu:~$ ",
+      "content": "echo \"Hello World\"",
+      "output": {
+        "content": "Hello World",
+        "color": "#ffffff"
+      },
+      "pause": 1000
+    },
+    {
+      "type": "command",
+      "prompt": "william@ubuntu:~$ ",
+      "content": "whoami",
+      "output": {
+        "content": "william",
+        "color": "#ffffff"
+      },
+      "pause": 1000
+    },
+    {
+      "type": "command",
+      "prompt": "william@ubuntu:~$ ",
+      "content": "date",
+      "output": {
+        "content": "Sun Jan 19 14:45:23 EST 2025",
+        "color": "#ffffff"
+      },
+      "pause": 2000
+    }
+  ]
+}

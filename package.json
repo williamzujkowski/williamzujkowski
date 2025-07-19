@@ -10,7 +10,8 @@
     "generate-svg": "node scripts/generate-svg.js",
     "generate-terminal": "node scripts/generate-svg-v2.js",
     "generate-awesome": "node scripts/generate-awesome-terminal.js",
-    "generate-unix": "node scripts/generate-unix-terminal.js"
+    "generate-unix": "node scripts/generate-unix-terminal.js",
+    "generate": "python3 scripts/generate-terminal-svg.py"
   },
   "repository": {
     "type": "git",

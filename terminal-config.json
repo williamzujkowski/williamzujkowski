@@ -1,0 +1,163 @@
+{
+  "config": {
+    "window": {
+      "width": 800,
+      "height": 600,
+      "title": "william@terminal:~",
+      "theme": "dark"
+    },
+    "terminal": {
+      "fontSize": 14,
+      "fontFamily": "Consolas, Monaco, 'Courier New', monospace",
+      "lineHeight": 1.6,
+      "padding": 20,
+      "cursorStyle": "block",
+      "prompt": "william@terminal:~$ "
+    },
+    "animation": {
+      "typingSpeed": {
+        "min": 40,
+        "max": 120,
+        "avg": 70
+      },
+      "scrollSpeed": 400,
+      "pauseBetweenSequences": 600
+    },
+    "colors": {
+      "background": "#0a0a0a",
+      "text": "#00ff00",
+      "prompt": "#00ff00",
+      "cursor": "#00ff00"
+    }
+  },
+  "sequences": [
+    {
+      "type": "ascii",
+      "content": "╔══════════════════════════════════════════════════════════════════╗\n║   __        _____ _     _     _               ____              ║\n║   \\ \\      / /_ _| |   | |   (_) __ _ _ __ __|_  /_   _         ║\n║    \\ \\ /\\ / / | || |   | |   | |/ _` | '_ ` _ \\| || | | |       ║\n║     \\ V  V /  | || |___| |___| | (_| | | | | | | || |_| |       ║\n║      \\_/\\_/  |___|_____|_____|_|\\__,_|_| |_| |_|___|\\__,_|      ║\n║                                                                  ║\n║              Welcome to my interactive terminal!                 ║\n╚══════════════════════════════════════════════════════════════════╝",
+      "color": "#00ffff",
+      "style": {"glow": true},
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "whoami",
+      "output": {
+        "content": "William Zujkowski\n├─ Software Developer & Dad Joke Enthusiast\n├─ 35 years of debugging life & code\n├─ Powered by coffee ☕ and curiosity 🔍\n└─ Making the world better, one commit at a time",
+        "color": "#00ff00"
+      },
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "cat about.txt",
+      "output": {
+        "content": "ABOUT ME\n========\n\n🚀 Full-stack developer with a passion for clean code\n📊 Data enthusiast who loves turning chaos into insights\n🎮 Raspberry Pi wizard building retro gaming magic\n🏠 Smart home automator (except the thermostat!)\n👨‍👧‍👦 Professional dad joke teller (kids' eye rolls included)\n\nI believe in:\n  • Writing code that my future self will thank me for\n  • Documentation that actually helps\n  • Tests that actually test things\n  • Coffee before commits",
+        "color": "#ffff00"
+      },
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "content": "skills --show-bars",
+      "output": {
+        "content": "TECHNICAL SKILLS\n================",
+        "color": "#00ffff"
+      },
+      "pause": 500
+    },
+    {
+      "type": "progress",
+      "label": "Python          ",
+      "progress": 0.95,
+      "duration": 1000,
+      "color": "#3776ab"
+    },
+    {
+      "type": "progress",
+      "label": "JavaScript/TS   ",
+      "progress": 0.90,
+      "duration": 1000,
+      "color": "#f7df1e"
+    },
+    {
+      "type": "progress",
+      "label": "SQL/Databases   ",
+      "progress": 0.95,
+      "duration": 1000,
+      "color": "#336791"
+    },
+    {
+      "type": "progress",
+      "label": "React/Next.js   ",
+      "progress": 0.85,
+      "duration": 1000,
+      "color": "#61dafb"
+    },
+    {
+      "type": "progress",
+      "label": "Docker/K8s      ",
+      "progress": 0.80,
+      "duration": 1000,
+      "color": "#2496ed"
+    },
+    {
+      "type": "progress",
+      "label": "Dad Jokes       ",
+      "progress": 1.0,
+      "duration": 1000,
+      "color": "#ff6b6b"
+    },
+    {
+      "type": "command",
+      "content": "./current-projects.sh",
+      "output": {
+        "content": "\n🚀 CURRENT PROJECTS\n==================\n\n📊 Personal Knowledge Graph System\n   Building a Neo4j-powered system to organize and connect ideas\n   Status: In Development | Stack: Python, Neo4j, React\n\n🎮 RetroPi Gaming Station\n   Custom Raspberry Pi build with 500+ classic games\n   Status: v2.0 Released | Kids' Approval: 100%\n\n🤖 AI-Powered Dad Joke Generator\n   Because the world needs more groans\n   Status: Complete | Groan Level: Maximum\n\n🏠 Smart Home Automation Hub\n   Everything connected except the thermostat (it's sacred)\n   Status: Ongoing | Wife Approval: Pending",
+        "color": "#00ff00"
+      },
+      "pause": 3000
+    },
+    {
+      "type": "command",
+      "content": "fortune | cowsay",
+      "output": {
+        "content": " _________________________________________\n/ \"The best thing about a boolean is      \\\n| even if you are wrong, you are only    |\n\\ off by a bit.\"                          /\n -----------------------------------------\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||",
+        "color": "#ffff00"
+      },
+      "pause": 2500
+    },
+    {
+      "type": "command",
+      "content": "./dad-joke.py --random",
+      "output": {
+        "content": "\n🎭 DAD JOKE GENERATOR 9000™\n==========================\n\nInitializing humor protocols...\nCalibrating groan levels...\nDad mode: ACTIVATED\n\n📢 \"Why don't scientists trust atoms?\"\n\n    \"Because they make up everything!\"\n\n[Audience Reaction: 🙄😅🤦]\n[Groan Meter: ████████████ 100%]\n[Dad Points: +1000]",
+        "color": "#00ff00"
+      },
+      "pause": 3500
+    },
+    {
+      "type": "command",
+      "content": "git log --oneline -5",
+      "output": {
+        "content": "e4f3a2b feat: added AI to prevent thermostat tampering\n9c8d7e6 fix: resolved infinite loop in coffee maker integration\na5b4c3d docs: explained why comments are like good jokes\n7f6e5d4 refactor: optimized dad joke delivery pipeline\n2a1b0c9 chore: updated dependencies (especially coffee)",
+        "color": "#ff9500"
+      },
+      "pause": 2000
+    },
+    {
+      "type": "command",
+      "content": "contact --info",
+      "output": {
+        "content": "\n📬 LET'S CONNECT!\n================\n\n🐙 GitHub:   github.com/williamzujkowski\n💼 LinkedIn: linkedin.com/in/williamzujkowski\n📧 Email:    william@zujkowski.com\n🌐 Web:      williamzujkowski.com\n\n💡 Always happy to chat about:\n   • Interesting projects\n   • New technologies\n   • The perfect coffee-to-code ratio\n   • Why my kids don't appreciate my jokes",
+        "color": "#00ffff"
+      },
+      "pause": 3000
+    },
+    {
+      "type": "ascii",
+      "content": "\n╔═══════════════════════════════════════════════════════════╗\n║                                                           ║\n║   Thanks for visiting! Remember:                          ║\n║                                                           ║\n║   \"Code like nobody's watching,                           ║\n║    debug like everybody is.\"                             ║\n║                                                           ║\n║   Keep building awesome things! 🚀                        ║\n║                               - William                   ║\n║                                                           ║\n╚═══════════════════════════════════════════════════════════╝",
+      "color": "#00ff00",
+      "style": {"glow": true},
+      "pause": 5000
+    }
+  ]
+}

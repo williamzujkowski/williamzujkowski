@@ -15,11 +15,13 @@ on:
       - svg_update
       - terminal_window_design
     paths:
+      - 'terminal-config.json'
       - 'src/terminal-config.json'
       - 'src/terminal-config-v2.json'
       - 'src/awesome-terminal-config.json'
       - 'src/unix-terminal-config.json'
       - 'scripts/**'
+      - 'terminal_svg_generator.py'
       - '.github/workflows/update-terminal-svg.yml'
 
 jobs:
@@ -48,8 +50,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
       - name: Generate SVG
-        run: npm run generate-unix
+        run: npm run generate
         env:
           NODE_ENV: production
       

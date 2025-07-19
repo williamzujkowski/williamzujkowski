@@ -18,7 +18,7 @@ def main():
     # Paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
-    config_path = os.path.join(root_dir, 'terminal-config.json')
+    config_path = os.path.join(root_dir, 'terminal-config-linux.json')
     output_path = os.path.join(root_dir, 'src', 'terminal.svg')
     
     try:

@@ -192,7 +192,7 @@ class TerminalSVGGenerator:
         
         # Generate prompt and command on the same line
         if command and not sequence.get('instant', False):
-            # Create typing animation elements
+            # Create typing animation elements with custom prompt
             typing_elements, end_time = self._create_typing_line(
                 prompt, command, self.state.current_y, self.state.current_time
             )

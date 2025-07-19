@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Terminal SVG Generator - Convert JSON configuration to animated terminal SVG
+Terminal SVG Generator - Fixed version with proper line-by-line scrolling
 """
 
 import json
@@ -21,7 +21,7 @@ class TerminalConfig:
     theme: str = "dark"
     font_size: int = 14
     font_family: str = "Consolas, Monaco, 'Courier New', monospace"
-    line_height: float = 1.5
+    line_height: float = 1.6
     padding: int = 20
     cursor_style: str = "block"
     prompt: str = "$ "
@@ -32,8 +32,8 @@ class TerminalConfig:
     typing_speed_min: int = 30
     typing_speed_max: int = 120
     typing_speed_avg: int = 60
-    scroll_speed: int = 300
-    pause_between_sequences: int = 500
+    scroll_speed: int = 200  # Faster for line-by-line
+    pause_between_sequences: int = 600
 
 
 @dataclass
@@ -43,12 +43,14 @@ class AnimationState:
     current_y: float = 0
     cursor_x: float = 0
     cursor_y: float = 0
-    scroll_offset: float = 0
+    total_scroll: float = 0
     line_height: float = 0
     char_width: float = 8.4
     viewport_height: float = 0
+    visible_lines: int = 0
     elements: List[str] = field(default_factory=list)
-    scroll_transforms: List[Tuple[int, float]] = field(default_factory=list)
+    scroll_animations: List[str] = field(default_factory=list)
+    line_count: int = 0
 
 
 class TerminalSVGGenerator:
@@ -104,6 +106,7 @@ class TerminalSVGGenerator:
         # Initialize state
         self.state.line_height = self.config.font_size * self.config.line_height
         self.state.viewport_height = self.config.height - 40 - (self.config.padding * 2)  # 40 for title bar
+        self.state.visible_lines = int(self.state.viewport_height / self.state.line_height)
         self.state.current_y = 0
         
         # Process all sequences
@@ -138,43 +141,67 @@ class TerminalSVGGenerator:
         # Add pause between sequences
         pause = sequence.get('pause', self.config.pause_between_sequences)
         self.state.current_time += pause
+    
+    def _add_line(self, content: str, x: float, color: str, instant: bool = True, 
+                  fade_in: bool = True, glow: bool = False, typing_elements: List[str] = None):
+        """Add a line of text and handle scrolling if needed"""
+        # Check if we need to scroll BEFORE adding the new line
+        if self.state.line_count >= self.state.visible_lines:
+            self._add_scroll_animation()
         
-        # Check if scrolling is needed
-        self._check_scroll()
+        # Add the line at the current Y position
+        if typing_elements:
+            # Add pre-generated typing elements
+            self.state.elements.extend(typing_elements)
+        else:
+            # Add a simple text element
+            text_elem = self._create_text_element(
+                content, x, self.state.current_y, color, 
+                self.state.current_time, instant=instant, fade_in=fade_in, glow=glow
+            )
+            self.state.elements.append(text_elem)
+        
+        # Move to next line position
+        self.state.current_y += self.state.line_height
+        self.state.line_count += 1
+    
+    def _add_scroll_animation(self):
+        """Add a scroll animation to move all content up by one line"""
+        # Calculate new total scroll
+        new_scroll = self.state.total_scroll + self.state.line_height
+        
+        # Create animation that moves everything up
+        scroll_anim = f'''
+        <animateTransform 
+            attributeName="transform" 
+            type="translate" 
+            from="0 {-self.state.total_scroll}" 
+            to="0 {-new_scroll}" 
+            begin="{self.state.current_time}ms" 
+            dur="{self.config.scroll_speed}ms" 
+            fill="freeze"/>'''
+        
+        self.state.scroll_animations.append(scroll_anim)
+        self.state.total_scroll = new_scroll
+        self.state.current_time += self.config.scroll_speed
     
     def _process_command(self, sequence: Dict):
         """Process a command sequence"""
         prompt = sequence.get('prompt', self.config.prompt)
         command = sequence.get('content', '')
         
-        # Add some spacing before command if not at start
-        if self.state.current_y > 0:
-            self.state.current_y += self.state.line_height * 0.3
-        
-        # Generate prompt
-        prompt_elem = self._create_text_element(
-            prompt, 0, self.state.current_y, 
-            self.config.prompt_color, self.state.current_time, instant=True
-        )
-        self.state.elements.append(prompt_elem)
-        
-        # Generate typed command
+        # Generate prompt and command on the same line
         if command and not sequence.get('instant', False):
-            typing_elements, end_time = self._create_typing_animation(
-                command, len(prompt) * self.state.char_width, 
-                self.state.current_y, self.config.text_color, self.state.current_time
+            # Create typing animation elements
+            typing_elements, end_time = self._create_typing_line(
+                prompt, command, self.state.current_y, self.state.current_time
             )
-            self.state.elements.extend(typing_elements)
+            self._add_line("", 0, self.config.text_color, typing_elements=typing_elements)
             self.state.current_time = end_time
-        elif command:
-            cmd_elem = self._create_text_element(
-                command, len(prompt) * self.state.char_width, 
-                self.state.current_y, self.config.text_color, 
-                self.state.current_time, instant=True
-            )
-            self.state.elements.append(cmd_elem)
-        
-        self.state.current_y += self.state.line_height
+        else:
+            # Instant display
+            full_line = prompt + command
+            self._add_line(full_line, 0, self.config.text_color, instant=True, fade_in=True)
         
         # Process output if present
         if 'output' in sequence:
@@ -188,49 +215,34 @@ class TerminalSVGGenerator:
         
         lines = content.split('\n')
         for line in lines:
-            text_elem = self._create_text_element(
-                line, 0, self.state.current_y, color, 
-                self.state.current_time, instant=True, fade_in=True
-            )
-            self.state.elements.append(text_elem)
-            self.state.current_y += self.state.line_height
+            self._add_line(line, 0, color, instant=True, fade_in=True)
             self.state.current_time += 20  # Small delay between lines
     
     def _process_ascii(self, sequence: Dict):
         """Process ASCII art sequence"""
         content = sequence.get('content', '')
         color = sequence.get('color', self.config.text_color)
-        
-        # Add spacing before ASCII art
-        if self.state.current_y > 0:
-            self.state.current_y += self.state.line_height * 0.5
+        glow = sequence.get('style', {}).get('glow', False)
         
         lines = content.split('\n')
         for line in lines:
-            text_elem = self._create_text_element(
-                line, 0, self.state.current_y, color, 
-                self.state.current_time, instant=True, fade_in=True,
-                glow=sequence.get('style', {}).get('glow', False)
-            )
-            self.state.elements.append(text_elem)
-            self.state.current_y += self.state.line_height
+            self._add_line(line, 0, color, instant=True, fade_in=True, glow=glow)
     
     def _process_clear(self, sequence: Dict):
         """Process clear screen sequence"""
         # Add clear animation
         clear_elem = f'''
         <rect x="-50" y="-50" width="{self.config.width + 100}" 
-              height="{self.state.current_y + self.state.viewport_height + 100}" 
-              fill="{self.config.background_color}" opacity="0"
-              transform="translate(0, {-self.state.scroll_offset})">
+              height="{self.state.current_y + 100}" 
+              fill="{self.config.background_color}" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
                      begin="{self.state.current_time}ms" dur="50ms" fill="freeze"/>
         </rect>'''
         self.state.elements.append(clear_elem)
         
-        # Reset position
+        # Reset position but keep scroll animations
         self.state.current_y = 0
-        self.state.scroll_offset = 0
+        self.state.line_count = 0
         self.state.current_time += 100
     
     def _process_progress(self, sequence: Dict):
@@ -240,24 +252,20 @@ class TerminalSVGGenerator:
         duration = sequence.get('duration', 2000)
         color = sequence.get('color', self.config.text_color)
         
-        # Add spacing
-        if self.state.current_y > 0:
-            self.state.current_y += self.state.line_height * 0.5
-        
-        # Label
+        # Add label if present
         if label:
-            label_elem = self._create_text_element(
-                label, 0, self.state.current_y, color, 
-                self.state.current_time, instant=True
-            )
-            self.state.elements.append(label_elem)
-            self.state.current_y += self.state.line_height
+            self._add_line(label, 0, color, instant=True, fade_in=True)
         
-        # Progress bar
+        # Create progress bar
         bar_width = 300
         bar_height = 10
+        
+        # Check if we need to scroll for the progress bar
+        if self.state.line_count >= self.state.visible_lines:
+            self._add_scroll_animation()
+        
         bar_elem = f'''
-        <g transform="translate(0, {self.state.current_y - self.state.scroll_offset})" opacity="0">
+        <g transform="translate(0, {self.state.current_y})" opacity="0">
             <animate attributeName="opacity" from="0" to="1" 
                      begin="{self.state.current_time}ms" dur="50ms" fill="freeze"/>
             
@@ -275,30 +283,15 @@ class TerminalSVGGenerator:
         </g>'''
         self.state.elements.append(bar_elem)
         
+        # Account for progress bar height
         self.state.current_y += bar_height + self.state.line_height
+        self.state.line_count += 1
         self.state.current_time += duration + 100
-    
-    def _check_scroll(self):
-        """Check if scrolling is needed and add scroll animation"""
-        if self.state.current_y > self.state.viewport_height - (self.state.line_height * 3):
-            # Calculate scroll amount
-            scroll_amount = min(
-                self.state.current_y - (self.state.line_height * 2),
-                self.state.line_height * 10
-            )
-            
-            # Store scroll transform
-            self.state.scroll_transforms.append((self.state.current_time, scroll_amount))
-            
-            # Update state
-            self.state.scroll_offset += scroll_amount
-            self.state.current_y -= scroll_amount
-            self.state.current_time += self.config.scroll_speed
     
     def _create_text_element(self, text: str, x: float, y: float, color: str, 
                             start_time: int, instant: bool = False, 
                             fade_in: bool = False, glow: bool = False) -> str:
-        """Create a text SVG element"""
+        """Create a text SVG element (no transform - handled by parent group)"""
         escaped_text = html.escape(text)
         y_pos = y + self.config.font_size  # Adjust for baseline
         
@@ -307,65 +300,73 @@ class TerminalSVGGenerator:
             opacity_anim = f'''
             <animate attributeName="opacity" from="0" to="1" 
                      begin="{start_time}ms" dur="50ms" fill="freeze"/>'''
-        elif not instant:
-            opacity_anim = f'''
-            <animate attributeName="opacity" from="0" to="1" 
-                     begin="{start_time}ms" dur="10ms" fill="freeze"/>'''
         
         filter_attr = 'filter="url(#textGlow)"' if not glow else 'filter="url(#enhancedGlow)"'
-        
-        # Apply scroll transform
-        transform = f'translate(0, {-self.state.scroll_offset})'
         
         return f'''
         <text x="{x}" y="{y_pos}" font-family="{self.config.font_family}" 
               font-size="{self.config.font_size}" fill="{color}" 
-              {filter_attr} opacity="{'0' if opacity_anim else '1'}"
-              transform="{transform}">
+              {filter_attr} opacity="{'0' if opacity_anim else '1'}">
             {escaped_text}{opacity_anim}
         </text>'''
     
-    def _create_typing_animation(self, text: str, start_x: float, y: float, 
-                                color: str, start_time: int) -> Tuple[List[str], int]:
-        """Create character-by-character typing animation"""
+    def _create_typing_line(self, prompt: str, command: str, y: float, 
+                           start_time: int) -> Tuple[List[str], int]:
+        """Create a complete line with typing animation"""
         elements = []
         current_time = start_time
-        x_offset = start_x
         
-        for char in text:
+        # Add prompt instantly
+        prompt_elem = self._create_text_element(
+            prompt, 0, y, self.config.prompt_color, current_time, instant=True
+        )
+        elements.append(prompt_elem)
+        
+        # Type command character by character
+        x_offset = len(prompt) * self.state.char_width
+        
+        for char in command:
             # Calculate typing speed
             speed = self._get_typing_speed()
             
             # Create character element
-            char_elem = self._create_text_element(
-                char, x_offset, y, color, current_time
-            )
+            char_elem = f'''
+            <text x="{x_offset}" y="{y + self.config.font_size}" 
+                  font-family="{self.config.font_family}" 
+                  font-size="{self.config.font_size}" fill="{self.config.text_color}" 
+                  filter="url(#textGlow)" opacity="0">
+                {html.escape(char)}
+                <animate attributeName="opacity" from="0" to="1" 
+                         begin="{current_time}ms" dur="10ms" fill="freeze"/>
+            </text>'''
             elements.append(char_elem)
             
             # Add cursor animation
-            cursor_elem = self._create_cursor_element(
-                x_offset, y, current_time, current_time + speed
-            )
+            cursor_elem = f'''
+            <rect x="{x_offset}" y="{y}" width="{self.state.char_width}" 
+                  height="{self.config.font_size}" fill="{self.config.cursor_color}"
+                  opacity="0">
+                <animate attributeName="opacity" from="0" to="1" 
+                         begin="{current_time}ms" dur="10ms" fill="freeze"/>
+                <animate attributeName="opacity" from="1" to="0" 
+                         begin="{current_time + speed}ms" dur="10ms" fill="freeze"/>
+            </rect>'''
             elements.append(cursor_elem)
             
             x_offset += self.state.char_width
             current_time += speed
         
-        return elements, current_time
-    
-    def _create_cursor_element(self, x: float, y: float, start: int, end: int) -> str:
-        """Create animated cursor element"""
-        transform = f'translate(0, {-self.state.scroll_offset})'
-        
-        return f'''
-        <rect x="{x}" y="{y}" width="{self.state.char_width}" 
-              height="{self.config.font_size}" fill="{self.config.cursor_color}"
-              opacity="0" transform="{transform}">
-            <animate attributeName="opacity" from="0" to="1" 
-                     begin="{start}ms" dur="10ms" fill="freeze"/>
-            <animate attributeName="opacity" from="1" to="0" 
-                     begin="{end}ms" dur="10ms" fill="freeze"/>
+        # Add final cursor
+        final_cursor = f'''
+        <rect x="{x_offset}" y="{y}" width="{self.state.char_width}" 
+              height="{self.config.font_size}" fill="{self.config.cursor_color}">
+            <animate attributeName="opacity" values="1;1;0;0" 
+                     dur="1060ms" repeatCount="indefinite"
+                     begin="{current_time}ms"/>
         </rect>'''
+        elements.append(final_cursor)
+        
+        return elements, current_time
     
     def _get_typing_speed(self) -> int:
         """Get randomized typing speed"""
@@ -379,21 +380,18 @@ class TerminalSVGGenerator:
     
     def _build_svg(self) -> str:
         """Build the final SVG string"""
-        # Create scroll group with all transforms
-        scroll_group = '<g id="scrollGroup">\n'
+        # Create content group with all elements
+        content_group = '<g id="terminalContent">\n'
         for element in self.state.elements:
-            scroll_group += element + '\n'
+            content_group += element + '\n'
+        content_group += '</g>\n'
         
-        # Add scroll animations
-        for i, (time, amount) in enumerate(self.state.scroll_transforms):
-            prev_total = sum(amt for _, amt in self.state.scroll_transforms[:i])
-            new_total = prev_total + amount
-            
-            scroll_group += f'''
-            <animateTransform attributeName="transform" type="translate"
-                from="0 {-prev_total}" to="0 {-new_total}"
-                begin="{time}ms" dur="{self.config.scroll_speed}ms"
-                fill="freeze" additive="sum"/>'''
+        # Create scroll group that wraps content
+        scroll_group = f'<g id="scrollGroup" transform="translate(0, 0)">\n{content_group}'
+        
+        # Add all scroll animations to the scroll group
+        for anim in self.state.scroll_animations:
+            scroll_group += anim + '\n'
         
         scroll_group += '</g>\n'
         
@@ -426,7 +424,7 @@ class TerminalSVGGenerator:
         <rect y="40" width="{self.config.width}" 
               height="{self.config.height - 40}" fill="{self.config.background_color}"/>
         
-        <!-- Terminal content -->
+        <!-- Terminal content with scrolling -->
         <g transform="translate({self.config.padding}, {40 + self.config.padding})">
             {scroll_group}
         </g>

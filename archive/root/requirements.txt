@@ -1,3 +1,0 @@
-github-readme-terminal>=0.0.3
-requests>=2.28.0
-Pillow>=9.3.0

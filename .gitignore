@@ -33,6 +33,10 @@ Thumbs.db
 *.log
 .env
 
+# Claude Code & Testing
+.claude/
+.playwright-mcp/
+
 # Node
 node_modules/
 coverage/

@@ -801,7 +801,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
-        📅 Thu Oct 2 00:02 EST 2025
+        📅 Thu Oct 2 00:09 EST 2025
       </text>
     </g>
 
@@ -1215,7 +1215,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   1337  99.9  5.0   ∞   ∞  ?  Ssl  Oct 2 00:02   ∞  /usr/bin/family --priority=realtime
+        william   1337  99.9  5.0   ∞   ∞  ?  Ssl  Oct 2 00:09   ∞  /usr/bin/family --priority=realtime
       </text>
     </g>
 
@@ -1226,7 +1226,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   2048  42.0  3.7   ∞   ∞  ?  Sl   Oct 2 00:02   ∞  /usr/bin/security-automation --mode=defensive
+        william   2048  42.0  3.7   ∞   ∞  ?  Sl   Oct 2 00:09   ∞  /usr/bin/security-automation --mode=defensive
       </text>
     </g>
 
@@ -1237,7 +1237,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   4096  15.2  2.1   ∞   ∞  ?  S    Oct 2 00:02   ∞  /usr/bin/home-assistant --smart-home
+        william   4096  15.2  2.1   ∞   ∞  ?  S    Oct 2 00:09   ∞  /usr/bin/home-assistant --smart-home
       </text>
     </g>
 
@@ -1248,7 +1248,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   8192  100   1.0   ∞   ∞  ?  R+   Oct 2 00:02   ∞  /usr/bin/dad-joke-daemon --interval=30s
+        william   8192  100   1.0   ∞   ∞  ?  R+   Oct 2 00:09   ∞  /usr/bin/dad-joke-daemon --interval=30s
       </text>
     </g>
 
@@ -1681,7 +1681,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  DAD JOKE OF THE DAY - Oct 2 00:02                     ║
+        ║  DAD JOKE OF THE DAY - Oct 2 00:09                     ║
       </text>
     </g>
 
@@ -1791,7 +1791,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  - Groan Level: ████████░░ 91%                       ║
+        ║  - Groan Level: ████████░░ 99%                       ║
       </text>
     </g>
 
@@ -1802,7 +1802,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  - Times Delivered: 50,853                           ║
+        ║  - Times Delivered: 19,238                           ║
       </text>
     </g>
 
@@ -1813,7 +1813,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  - Success Rate: 99% eye rolls                       ║
+        ║  - Success Rate: 98% eye rolls                       ║
       </text>
     </g>
 
@@ -2457,7 +2457,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        Thu Oct 2 00:02 EST 2025 dad-mode[1337]: ✓ Joke delivery successful
+        Thu Oct 2 00:09 EST 2025 dad-mode[1337]: ✓ Joke delivery successful
       </text>
     </g>
 
@@ -2468,7 +2468,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        Thu Oct 2 00:02 EST 2025 dad-mode[1337]: ✓ Maximum groan achieved
+        Thu Oct 2 00:09 EST 2025 dad-mode[1337]: ✓ Maximum groan achieved
       </text>
     </g>
 

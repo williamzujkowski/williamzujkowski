@@ -331,9 +331,9 @@ class AdvancedTerminalGenerator {
       <animate attributeName="opacity" to="0"
                begin="${typingEndTime}ms" dur="10ms" fill="freeze"/>
 
-      <!-- Cursor moves immediately when each character appears -->
+      <!-- Cursor moves WITH each character appearing -->
       ${command.split('').map((char, i) => {
-        const moveTime = startTime + (i * charDuration);
+        const moveTime = startTime + (i * charDuration); // Move WITH character
         const fromX = promptWidth + (i * charWidth);
         const toX = promptWidth + ((i + 1) * charWidth);
         return `<animate attributeName="x"

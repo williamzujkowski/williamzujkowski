@@ -272,23 +272,23 @@ class AdvancedTerminalGenerator {
     <!-- Command line ${lineIndex} -->
     <g id="line-${lineIndex}" transform="translate(0, ${y})">
       <!-- Prompt appears immediately -->
-      <text font-family="${terminal.fontFamily}" font-size="${terminal.fontSize}" 
-            fill="${terminal.promptColor}" filter="url(#textGlow)" opacity="0">
+      <text font-family="${terminal.fontFamily}" font-size="${terminal.fontSize}"
+            fill="${terminal.promptColor}" filter="url(#textGlow)" xml:space="preserve" opacity="0">
         ${this.escapeXml(prompt)}
-        <animate attributeName="opacity" from="0" to="1" 
+        <animate attributeName="opacity" from="0" to="1"
                  begin="${startTime}ms" dur="10ms" fill="freeze"/>
       </text>
-      
+
       <!-- Command with character-by-character typing -->
-      <text x="${promptWidth}" font-family="${terminal.fontFamily}" 
-            font-size="${terminal.fontSize}" fill="${terminal.textColor}" filter="url(#textGlow)">
+      <text x="${promptWidth}" font-family="${terminal.fontFamily}"
+            font-size="${terminal.fontSize}" fill="${terminal.textColor}" filter="url(#textGlow)" xml:space="preserve">
         ${command.split('').map((char, i) => {
           const charStart = startTime + (i * charDuration);
-          return `<tspan opacity="0">${this.escapeXml(char)}<animate attributeName="opacity" 
+          return `<tspan opacity="0">${this.escapeXml(char)}<animate attributeName="opacity"
                   from="0" to="1" begin="${charStart}ms" dur="10ms" fill="freeze"/></tspan>`;
         }).join('')}
       </text>
-      
+
       <!-- Typing cursor -->
       ${this.generateCursor(prompt, command, startTime, typingDuration, terminal)}
     </g>`;
@@ -298,11 +298,11 @@ class AdvancedTerminalGenerator {
     return `
     <!-- Output line ${lineIndex} -->
     <g id="line-${lineIndex}" transform="translate(0, ${y})" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" 
+      <animate attributeName="opacity" from="0" to="1"
                begin="${startTime}ms" dur="10ms" fill="freeze"/>
-      
-      <text font-family="${terminal.fontFamily}" font-size="${terminal.fontSize}" 
-            fill="${color}" filter="url(#textGlow)">
+
+      <text font-family="${terminal.fontFamily}" font-size="${terminal.fontSize}"
+            fill="${color}" filter="url(#textGlow)" xml:space="preserve">
         ${this.escapeXml(content)}
       </text>
     </g>`;

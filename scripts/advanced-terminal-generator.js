@@ -312,39 +312,33 @@ class AdvancedTerminalGenerator {
     const promptWidth = this.getTextWidth(prompt, terminal.fontSize);
     const charWidth = terminal.fontSize * 0.6;
     const cursorY = -terminal.fontSize * 0.85;
+    const charDuration = typingDuration / command.length;
     const typingEndTime = startTime + typingDuration;
-    
-    // Generate cursor positions for smooth movement
-    const positions = [];
-    for (let i = 0; i <= command.length; i++) {
-      positions.push({
-        x: promptWidth + (i * charWidth),
-        time: startTime + (i * (typingDuration / command.length))
-      });
-    }
-    
+
     return `
     <!-- Cursor -->
     <rect x="${promptWidth}" y="${cursorY}" width="${charWidth}" height="${terminal.fontSize}"
           fill="${terminal.cursorColor}" opacity="0">
       <!-- Show cursor when line appears -->
-      <animate attributeName="opacity" from="0" to="1" 
+      <animate attributeName="opacity" from="0" to="1"
                begin="${startTime}ms" dur="10ms" fill="freeze"/>
-      
+
       <!-- Blinking animation -->
-      <animate attributeName="opacity" values="1;1;0;0" dur="1s" 
+      <animate attributeName="opacity" values="1;1;0;0" dur="1s"
                begin="${startTime}ms" end="${typingEndTime}ms" repeatCount="indefinite"/>
-      
+
       <!-- Hide cursor after typing -->
-      <animate attributeName="opacity" to="0" 
+      <animate attributeName="opacity" to="0"
                begin="${typingEndTime}ms" dur="10ms" fill="freeze"/>
-      
-      <!-- Smooth cursor movement -->
-      ${positions.slice(0, -1).map((pos, i) => {
-        const nextPos = positions[i + 1];
-        return `<animate attributeName="x" 
-                 from="${pos.x}" to="${nextPos.x}"
-                 begin="${pos.time}ms" dur="${nextPos.time - pos.time}ms"
+
+      <!-- Cursor moves immediately when each character appears -->
+      ${command.split('').map((char, i) => {
+        const moveTime = startTime + (i * charDuration);
+        const fromX = promptWidth + (i * charWidth);
+        const toX = promptWidth + ((i + 1) * charWidth);
+        return `<animate attributeName="x"
+                 from="${fromX}" to="${toX}"
+                 begin="${moveTime}ms" dur="10ms"
                  fill="freeze"/>`;
       }).join('')}
     </rect>`;

@@ -138,9 +138,9 @@ Kids Impressed: 0 (work in progress)`,
 ║                                                        ║
 ╠════════════════════════════════════════════════════════╣
 ║  Stats:                                                ║
-║  - Groan Level: ████████░░ ${(Math.floor(Math.random() * 20 + 80) + '%').padEnd(22)}║
-║  - Times Delivered: ${Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(35)}║
-║  - Success Rate: ${(Math.floor(Math.random() * 5 + 95) + '% eye rolls').padEnd(38)}║
+║  ${'- Groan Level: ████████░░ ' + (Math.floor(Math.random() * 20 + 80) + '%').padEnd(26)}║
+║  ${'- Times Delivered: ' + Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(33)}║
+║  ${'- Success Rate: ' + (Math.floor(Math.random() * 5 + 95) + '% eye rolls').padEnd(36)}║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#ff79c6',
       pause: 3000

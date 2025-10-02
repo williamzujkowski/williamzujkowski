@@ -30,10 +30,10 @@ async function generateDynamicTerminal() {
     },
     {
       type: 'output',
-      content: `╔═══════════════════════════════════════════════════════════╗
-║  🚀 WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}            ║
-║  ⚡ Powered by coffee, dad jokes & late-night debugging  ║
-╚═══════════════════════════════════════════════════════════╝`,
+      content: `╔════════════════════════════════════════════════════════╗
+║  WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}                 ║
+║  Powered by coffee, dad jokes & late-night debugging  ║
+╚════════════════════════════════════════════════════════╝`,
       color: '#00ff9f',
       pause: 1200
     },
@@ -47,7 +47,7 @@ async function generateDynamicTerminal() {
     {
       type: 'output',
       content: `📅 ${content.timestamp}`,
-      color: '#00d4ff',
+      color: '#50fa7b',
       pause: 800
     },
     {
@@ -127,22 +127,21 @@ Kids Impressed: 0 (work in progress)`,
     },
     {
       type: 'output',
-      content: `
-╔══════════════════════════════════════════════════════════════╗
-║  🎭 DAD JOKE OF THE DAY  ${content.timestamp.slice(4, 16).padEnd(18)} ║
-║  Category: ${(content.joke.category || 'classic').toUpperCase().padEnd(48)} ║
-╠══════════════════════════════════════════════════════════════╣
-║                                                              ║
-║  Q: ${content.joke.q.padEnd(58)} ║
-║                                                              ║
-║  A: ${content.joke.a.padEnd(58)} ║
-║                                                              ║
-╠══════════════════════════════════════════════════════════════╣
-║  📊 Stats:                                                   ║
-║  • Groan Level: ████████░░ ${Math.floor(Math.random() * 20 + 80)}%                           ║
-║  • Times Delivered: ${Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(39)} ║
-║  • Success Rate: ${Math.floor(Math.random() * 5 + 95)}% eye rolls                           ║
-╚══════════════════════════════════════════════════════════════╝`,
+      content: `╔════════════════════════════════════════════════════════╗
+║  DAD JOKE OF THE DAY - ${content.timestamp.slice(4, 16).padEnd(24)}║
+║  Category: ${(content.joke.category || 'classic').toUpperCase().padEnd(42)}║
+╠════════════════════════════════════════════════════════╣
+║                                                        ║
+║  Q: ${content.joke.q.replace(/[^\x00-\x7F]/g, '').slice(0, 48).padEnd(48)}║
+║                                                        ║
+║  A: ${content.joke.a.replace(/[^\x00-\x7F]/g, '').slice(0, 48).padEnd(48)}║
+║                                                        ║
+╠════════════════════════════════════════════════════════╣
+║  Stats:                                                ║
+║  - Groan Level: ████████░░ ${Math.floor(Math.random() * 20 + 80)}%                  ║
+║  - Times Delivered: ${Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(31)}║
+║  - Success Rate: ${Math.floor(Math.random() * 5 + 95)}% eye rolls              ║
+╚════════════════════════════════════════════════════════╝`,
       color: '#ff79c6',
       pause: 3000
     },
@@ -155,14 +154,14 @@ Kids Impressed: 0 (work in progress)`,
     },
     {
       type: 'output',
-      content: ` ___________________________________________
-/ 💡 Pro Tip:                             \\
-|                                          |
-| "There are only two hard things in      |
-| Computer Science: cache invalidation,   |
-| naming things, and off-by-one errors."  |
-\\                                         /
- -------------------------------------------
+      content: ` _________________________________________
+/ Pro Tip:                                \\
+|                                         |
+| "There are only two hard things in     |
+| Computer Science: cache invalidation,  |
+| naming things, and off-by-one errors." |
+\\                                        /
+ -----------------------------------------
    \\
     \\
         .--.\n       |o_o |
@@ -206,19 +205,18 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
     },
     {
       type: 'output',
-      content: `
-╔════════════════════════════════════════════════════════╗
+      content: `╔════════════════════════════════════════════════════════╗
 ║                                                        ║
-║  👋 Thanks for visiting!                               ║
+║  Thanks for visiting!                                  ║
 ║                                                        ║
 ║  May your:                                             ║
-║    • Code compile without warnings 🟢                  ║
-║    • Tests pass on first try ✅                        ║
-║    • Bugs be easily reproducible 🐛                    ║
-║    • Coffee stay hot ☕                                 ║
-║    • Git conflicts be minimal 🔀                       ║
+║    - Code compile without warnings                     ║
+║    - Tests pass on first try                           ║
+║    - Bugs be easily reproducible                       ║
+║    - Coffee stay hot                                   ║
+║    - Git conflicts be minimal                          ║
 ║                                                        ║
-║  See you in the commits! 🚀                            ║
+║  See you in the commits!                               ║
 ║                                                        ║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#50fa7b',

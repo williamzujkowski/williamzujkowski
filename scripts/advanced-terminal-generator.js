@@ -361,12 +361,10 @@ class AdvancedTerminalGenerator {
 
   generateFilters() {
     return `
-    <!-- Enhanced text glow with neon effect -->
+    <!-- Subtle text glow for crisp readability -->
     <filter id="textGlow">
-      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
-      <feGaussianBlur stdDeviation="2" result="coloredBlur2"/>
+      <feGaussianBlur stdDeviation="0.3" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur2"/>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>

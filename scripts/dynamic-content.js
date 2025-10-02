@@ -185,10 +185,10 @@ class DynamicContentGenerator {
   }
 
   /**
-   * Calculate uptime in years based on birth year (1990)
+   * Calculate uptime in years based on birth year (1982)
    */
   calculateUptime(currentDate) {
-    const birthYear = 1990;
+    const birthYear = 1982;
     const age = currentDate.getFullYear() - birthYear;
     return age;
   }
@@ -198,7 +198,7 @@ class DynamicContentGenerator {
    */
   generateStats(date) {
     const uptime = this.calculateUptime(date);
-    const daysAlive = Math.floor((date - new Date(1990, 0, 1)) / (1000 * 60 * 60 * 24));
+    const daysAlive = Math.floor((date - new Date(1982, 3, 8)) / (1000 * 60 * 60 * 24));
     const coffeeConsumed = Math.floor(daysAlive * 2.1); // ~2 cups per day
     const bugsFixed = Math.floor(daysAlive * 2.7);
     const stackOverflowVisits = Math.floor(bugsFixed * 1.5);

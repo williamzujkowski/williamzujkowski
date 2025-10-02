@@ -23,15 +23,31 @@ async function generateDynamicTerminal() {
     {
       type: 'command',
       prompt: 'william@dad-joke-hq:~$ ',
-      content: 'date',
-      typingDuration: 400,
-      pause: 300,
+      content: 'cat /etc/motd',
+      typingDuration: 800,
+      pause: 400,
       delay: 100
     },
     {
       type: 'output',
-      content: content.timestamp,
-      color: '#87d75f',
+      content: `╔═══════════════════════════════════════════════════════════╗
+║  🚀 WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}            ║
+║  ⚡ Powered by coffee, dad jokes & late-night debugging  ║
+╚═══════════════════════════════════════════════════════════╝`,
+      color: '#00ff9f',
+      pause: 1200
+    },
+    {
+      type: 'command',
+      prompt: 'william@dad-joke-hq:~$ ',
+      content: 'date',
+      typingDuration: 400,
+      pause: 300
+    },
+    {
+      type: 'output',
+      content: `📅 ${content.timestamp}`,
+      color: '#00d4ff',
       pause: 800
     },
     {
@@ -105,40 +121,48 @@ Kids Impressed: 0 (work in progress)`,
     {
       type: 'command',
       prompt: 'william@dad-joke-hq:~$ ',
-      content: './dad-joke --random',
-      typingDuration: 1400,
+      content: './dad-joke --random --format=fancy',
+      typingDuration: 2000,
       pause: 500
     },
     {
       type: 'output',
-      content: `┌─────────────────────────────────────────────────┐
-│  🎯 DAD JOKE OF THE DAY                         │
-│  Generated: ${content.timestamp.slice(4, 16)}                │
-└─────────────────────────────────────────────────┘
-
-Q: ${content.joke.q}
-
-A: ${content.joke.a}
-
-[ Groan Level: ████████░░ 80% ]
-[ Delivered: ${Math.floor(Math.random() * 50000 + 10000).toLocaleString()} times ]`,
-      color: '#87d75f',
-      pause: 2500
+      content: `
+╔══════════════════════════════════════════════════════════════╗
+║  🎭 DAD JOKE OF THE DAY  ${content.timestamp.slice(4, 16).padEnd(18)} ║
+║  Category: ${(content.joke.category || 'classic').toUpperCase().padEnd(48)} ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║  Q: ${content.joke.q.padEnd(58)} ║
+║                                                              ║
+║  A: ${content.joke.a.padEnd(58)} ║
+║                                                              ║
+╠══════════════════════════════════════════════════════════════╣
+║  📊 Stats:                                                   ║
+║  • Groan Level: ████████░░ ${Math.floor(Math.random() * 20 + 80)}%                           ║
+║  • Times Delivered: ${Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(39)} ║
+║  • Success Rate: ${Math.floor(Math.random() * 5 + 95)}% eye rolls                           ║
+╚══════════════════════════════════════════════════════════════╝`,
+      color: '#ff79c6',
+      pause: 3000
     },
     {
       type: 'command',
       prompt: 'william@dad-joke-hq:~$ ',
-      content: 'fortune | cowsay -f tux',
-      typingDuration: 1800,
+      content: 'fortune | cowsay -f tux | lolcat',
+      typingDuration: 2200,
       pause: 500
     },
     {
       type: 'output',
-      content: ` ________________________________________
-/ "The best thing about a Boolean is    \\
-| even if you are wrong, you are only   |
-\\ off by a bit."                        /
- ----------------------------------------
+      content: ` ___________________________________________
+/ 💡 Pro Tip:                             \\
+|                                          |
+| "There are only two hard things in      |
+| Computer Science: cache invalidation,   |
+| naming things, and off-by-one errors."  |
+\\                                         /
+ -------------------------------------------
    \\
     \\
         .--.\n       |o_o |
@@ -147,8 +171,8 @@ A: ${content.joke.a}
      (|     | )
     /'\\_   _/\`\\
     \\___)=(___/`,
-      color: '#ffff00',
-      pause: 2000
+      color: '#bd93f9',
+      pause: 2200
     },
     {
       type: 'command',
@@ -176,15 +200,29 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
     {
       type: 'command',
       prompt: 'william@dad-joke-hq:~$ ',
-      content: 'echo "Thanks for visiting! May your code compile and your tests pass! 🚀"',
-      typingDuration: 3000,
+      content: 'cat /etc/goodbye.txt',
+      typingDuration: 1600,
       pause: 500
     },
     {
       type: 'output',
-      content: 'Thanks for visiting! May your code compile and your tests pass! 🚀',
-      color: '#87d75f',
-      pause: 2000
+      content: `
+╔════════════════════════════════════════════════════════╗
+║                                                        ║
+║  👋 Thanks for visiting!                               ║
+║                                                        ║
+║  May your:                                             ║
+║    • Code compile without warnings 🟢                  ║
+║    • Tests pass on first try ✅                        ║
+║    • Bugs be easily reproducible 🐛                    ║
+║    • Coffee stay hot ☕                                 ║
+║    • Git conflicts be minimal 🔀                       ║
+║                                                        ║
+║  See you in the commits! 🚀                            ║
+║                                                        ║
+╚════════════════════════════════════════════════════════╝`,
+      color: '#50fa7b',
+      pause: 2500
     }
   ];
 
@@ -193,11 +231,18 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
   const generator = new AdvancedTerminalGenerator();
 
   // Customize terminal config for better aesthetics
-  generator.config.window.width = 900;
-  generator.config.window.height = 650;
-  generator.config.window.titleBar.title = 'william@dad-joke-hq:~';
-  generator.config.terminal.fontSize = 15;
-  generator.config.terminal.lineHeight = 1.5;
+  generator.config.window.width = 1000;  // Wider for better readability
+  generator.config.window.height = 700;  // Taller for more content
+  generator.config.window.backgroundColor = '#0a0e27';
+  generator.config.window.borderRadius = 12;
+  generator.config.window.titleBar.title = '🚀 william@dad-joke-hq:~';
+  generator.config.window.titleBar.height = 40;
+  generator.config.window.titleBar.backgroundColor = '#151b2e';
+  generator.config.terminal.fontSize = 14;
+  generator.config.terminal.lineHeight = 1.6;
+  generator.config.terminal.backgroundColor = '#0a0e27';
+  generator.config.terminal.promptColor = '#00ff9f';
+  generator.config.terminal.cursorColor = '#00ff41';
 
   const svgContent = generator.generateTerminal(sequences);
 

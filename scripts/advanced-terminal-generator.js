@@ -4,32 +4,32 @@ class AdvancedTerminalGenerator {
       window: {
         width: 800,
         height: 600,
-        backgroundColor: '#0c0c0c',
-        borderRadius: 8,
+        backgroundColor: '#0a0e27',  // Darker, richer background
+        borderRadius: 12,  // Smoother corners
         shadow: true,
         titleBar: {
-          height: 32,
-          backgroundColor: '#1a1a1a',
-          title: 'william@ubuntu:~',
-          titleColor: '#d4d4d4',
+          height: 36,  // Slightly taller for better proportions
+          backgroundColor: '#151b2e',  // Matching dark theme
+          title: 'william@dad-joke-hq:~',
+          titleColor: '#e0e6ed',  // Brighter title
           buttons: {
-            close: '#ff5f56',
+            close: '#ff5f57',
             minimize: '#ffbd2e',
-            maximize: '#27c93f'
+            maximize: '#28ca42'
           }
         }
       },
       terminal: {
-        padding: 15,
-        fontFamily: 'Ubuntu Mono, Consolas, Monaco, monospace',
+        padding: 20,  // More breathing room
+        fontFamily: 'JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace',
         fontSize: 14,
-        lineHeight: 1.4,
-        textColor: '#ffffff',
-        cursorColor: '#ffffff',
-        backgroundColor: '#300a24',
-        prompt: 'william@ubuntu:~$ ',
-        promptColor: '#87d75f',
-        scrollDuration: 100 // Faster, more terminal-like scrolling
+        lineHeight: 1.5,  // Better readability
+        textColor: '#e4e4e4',  // Slightly softer white
+        cursorColor: '#00ff41',  // Matrix green cursor
+        backgroundColor: '#0a0e27',  // Match window background
+        prompt: 'william@dad-joke-hq:~$ ',
+        promptColor: '#00ff9f',  // Cyan/green neon
+        scrollDuration: 100
       }
     };
   }
@@ -361,25 +361,37 @@ class AdvancedTerminalGenerator {
 
   generateFilters() {
     return `
-    <!-- Text glow filter -->
+    <!-- Enhanced text glow with neon effect -->
     <filter id="textGlow">
-      <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="2" result="coloredBlur2"/>
       <feMerge>
+        <feMergeNode in="coloredBlur2"/>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    
-    <!-- Window shadow -->
+
+    <!-- Window shadow with depth -->
     <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
-      <feOffset dx="0" dy="10" result="offsetblur"/>
-      <feFlood flood-color="#000000" flood-opacity="0.6"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="15" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.8"/>
       <feComposite in2="offsetblur" operator="in"/>
       <feMerge>
         <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
+    </filter>
+
+    <!-- CRT scanline effect -->
+    <filter id="crt">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.8" numOctaves="1" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="desaturatedNoise"/>
+      <feComponentTransfer in="desaturatedNoise" result="theNoise">
+        <feFuncA type="table" tableValues="0 0 0.05 0"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="theNoise" mode="screen"/>
     </filter>`;
   }
 

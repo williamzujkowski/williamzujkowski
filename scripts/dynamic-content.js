@@ -9,63 +9,128 @@ class DynamicContentGenerator {
     this.techJokes = [
       {
         q: "Why do programmers prefer dark mode?",
-        a: "Because light attracts bugs!"
+        a: "Because light attracts bugs! 🐛💡",
+        category: "classic"
       },
       {
         q: "Why did the developer go broke?",
-        a: "Because he used up all his cache!"
+        a: "Because he used up all his cache! 💰💸",
+        category: "money"
       },
       {
         q: "How many programmers does it take to change a light bulb?",
-        a: "None. It's a hardware problem!"
+        a: "None. It's a hardware problem! 💡🔧",
+        category: "classic"
       },
       {
         q: "Why do Java developers wear glasses?",
-        a: "Because they don't C#!"
+        a: "Because they don't C#! 👓☕",
+        category: "languages"
       },
       {
         q: "What's a programmer's favorite hangout place?",
-        a: "Foo Bar!"
+        a: "Foo Bar! 🍺🎯",
+        category: "classic"
       },
       {
         q: "Why did the database administrator leave his wife?",
-        a: "She had one-to-many relationships!"
+        a: "She had one-to-many relationships! 💔📊",
+        category: "databases"
       },
       {
         q: "What do you call 8 hobbits?",
-        a: "A hobbyte!"
+        a: "A hobbyte! 🧙‍♂️💾",
+        category: "geek"
       },
       {
         q: "How do you comfort a JavaScript bug?",
-        a: "You console it!"
+        a: "You console it! 🪲🖥️",
+        category: "javascript"
       },
       {
         q: "Why was the function sad after a break up?",
-        a: "It had no closure!"
+        a: "It had no closure! 💔➡️",
+        category: "javascript"
       },
       {
         q: "What's the object-oriented way to become wealthy?",
-        a: "Inheritance!"
+        a: "Inheritance! 💰🏰",
+        category: "oop"
       },
       {
         q: "Why did the Python data scientist get arrested?",
-        a: "He was caught trying to import pandas illegally!"
+        a: "He was caught trying to import pandas illegally! 🐼🚨",
+        category: "python"
       },
       {
         q: "What did the router say to the doctor?",
-        a: "It hurts when IP!"
+        a: "It hurts when IP! 🌐💉",
+        category: "networking"
       },
       {
         q: "Why do programmers always mix up Halloween and Christmas?",
-        a: "Because Oct 31 == Dec 25!"
+        a: "Because Oct 31 == Dec 25! 🎃🎄",
+        category: "classic"
       },
       {
         q: "What's a pirate's favorite programming language?",
-        a: "You'd think it's R, but their first love is the C!"
+        a: "You'd think it's R, but their first love is the C! 🏴‍☠️⚓",
+        category: "languages"
       },
       {
         q: "Why did the developer get stuck in the shower?",
-        a: "The shampoo bottle said: Lather, Rinse, Repeat!"
+        a: "The shampoo bottle said: Lather, Rinse, Repeat! 🚿🔁",
+        category: "loops"
+      },
+      {
+        q: "What's the best thing about a Boolean?",
+        a: "Even if you're wrong, you're only off by a bit! 0️⃣1️⃣",
+        category: "logic"
+      },
+      {
+        q: "Why do programmers hate nature?",
+        a: "Too many bugs! 🐛🌳",
+        category: "classic"
+      },
+      {
+        q: "What's a programmer's favorite exercise?",
+        a: "Git push! Then git pull! 💪🏋️",
+        category: "git"
+      },
+      {
+        q: "Why did the AI break up with the ML model?",
+        a: "It found someone with better parameters! 🤖💔",
+        category: "ai"
+      },
+      {
+        q: "How do you generate a random string?",
+        a: "Put a fresh intern in front of vim and ask them to exit! 😅",
+        category: "vim"
+      },
+      {
+        q: "What's a SQL query's favorite music?",
+        a: "Hip-Hop! Because it's all about the JOINS! 🎵🔗",
+        category: "databases"
+      },
+      {
+        q: "Why was the JavaScript developer sad?",
+        a: "Because they didn't Node how to Express themselves! 😢🟢",
+        category: "javascript"
+      },
+      {
+        q: "What did the DNS say to the browser?",
+        a: "I'll resolve this for you! 🌐✅",
+        category: "networking"
+      },
+      {
+        q: "Why don't backenddevelopers like beaches?",
+        a: "Too many shells and not enough servers! 🏖️🖥️",
+        category: "backend"
+      },
+      {
+        q: "What's Thanos' favorite data structure?",
+        a: "A perfectly balanced binary tree! ⚖️🌳",
+        category: "data-structures"
       }
     ];
   }

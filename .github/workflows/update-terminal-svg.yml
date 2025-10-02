@@ -1,33 +1,21 @@
 name: Update Terminal SVG
 
 on:
-  # Run hourly
+  # Run daily at midnight EST (5 AM UTC)
   schedule:
-    - cron: '0 * * * *'
-  
+    - cron: '0 5 * * *'
+
   # Allow manual trigger
   workflow_dispatch:
-  
-  # Run on push to test
+
+  # Run on push to generator scripts
   push:
     branches:
       - main
-      - svg_update
-      - terminal_window_design
     paths:
-      - 'terminal-config.json'
-      - 'terminal-config-linux.json'
-      - 'terminal-jokes-config.json'
-      - 'src/terminal-config.json'
-      - 'src/terminal-config-v2.json'
-      - 'src/awesome-terminal-config.json'
-      - 'src/awesome-terminal-config-jokes.json'
-      - 'src/terminal-config-fixed.json'
-      - 'src/unix-terminal-config.json'
-      - 'scripts/**'
-      - 'terminal_svg_generator.py'
-      - 'real_terminal_generator.py'
-      - 'fixed_terminal_generator.py'
+      - 'scripts/dynamic-content.js'
+      - 'scripts/dynamic-terminal-generator.js'
+      - 'scripts/advanced-terminal-generator.js'
       - '.github/workflows/update-terminal-svg.yml'
 
 jobs:
@@ -55,16 +43,12 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
-      
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      
-      - name: Generate SVG
+
+      - name: Generate Dynamic Terminal SVG
         run: npm run generate
         env:
           NODE_ENV: production
+          TZ: 'America/New_York'
       
       - name: Check for changes
         id: check_changes
@@ -80,6 +64,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: 'src/terminal.svg'
-          message: 'chore: update terminal.svg [skip ci]'
+          message: 'chore: update terminal with daily joke and fresh stats [skip ci]'
           default_author: github_actions
           push: true

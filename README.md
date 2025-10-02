@@ -1,7 +1,7 @@
 ![Terminal](./src/terminal.svg)
 
 <p align="center">
-  <em>🔄 This terminal updates hourly with animated typing effects!</em>
+  <em>✨ This terminal updates <strong>daily</strong> with fresh jokes, real-time stats, and accurate timestamps!</em>
 </p>
 
 ---

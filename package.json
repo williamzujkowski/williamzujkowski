@@ -7,13 +7,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint scripts/**/*.js",
-    "generate-svg": "node scripts/generate-svg.js",
-    "generate-terminal": "node scripts/generate-svg-v2.js",
-    "generate-awesome": "node scripts/generate-awesome-terminal.js",
-    "generate-unix": "node scripts/generate-unix-terminal.js",
-    "generate-fixed": "node scripts/generate-fixed-terminal.js",
-    "generate-optimized": "node scripts/generate-optimized-terminal.js",
-    "generate": "node scripts/generate-advanced-terminal.js"
+    "generate": "node scripts/dynamic-terminal-generator.js",
+    "generate:legacy": "node scripts/generate-advanced-terminal.js"
   },
   "repository": {
     "type": "git",

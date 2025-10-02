@@ -27,7 +27,7 @@ william@dad-joke-hq:~$ whoami --verbose
 ```yaml
 name: William Zujkowski
 role: Senior Security Specialist & Family CTO
-uptime: 35+ years
+uptime: 43+ years
 shell: /bin/dad-jokes
 packages_installed:
   - python3-security-tools

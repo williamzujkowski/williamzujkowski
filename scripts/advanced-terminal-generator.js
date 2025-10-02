@@ -331,14 +331,16 @@ class AdvancedTerminalGenerator {
       <animate attributeName="opacity" to="0"
                begin="${typingEndTime}ms" dur="10ms" fill="freeze"/>
 
-      <!-- Cursor moves WITH each character appearing -->
-      ${command.split('').map((char, i) => {
-        const moveTime = startTime + (i * charDuration); // Move WITH character
-        const fromX = promptWidth + (i * charWidth);
-        const toX = promptWidth + ((i + 1) * charWidth);
+      <!-- Cursor moves to next position BEFORE character appears -->
+      ${command.split('').slice(1).map((char, idx) => {
+        const i = idx + 1; // Actual character index (1, 2, 3, ...)
+        const charAppearTime = startTime + (i * charDuration);
+        const moveTime = charAppearTime - 5; // Move 5ms BEFORE character appears
+        const fromX = promptWidth + ((i - 1) * charWidth);
+        const toX = promptWidth + (i * charWidth);
         return `<animate attributeName="x"
                  from="${fromX}" to="${toX}"
-                 begin="${moveTime}ms" dur="10ms"
+                 begin="${moveTime}ms" dur="1ms"
                  fill="freeze"/>`;
       }).join('')}
     </rect>`;

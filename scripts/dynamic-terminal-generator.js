@@ -31,7 +31,7 @@ async function generateDynamicTerminal() {
     {
       type: 'output',
       content: `╔════════════════════════════════════════════════════════╗
-║  WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}                 ║
+║  WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}${' '.repeat(23)}║
 ║  Powered by coffee, dad jokes & late-night debugging  ║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#00ff9f',
@@ -128,19 +128,19 @@ Kids Impressed: 0 (work in progress)`,
     {
       type: 'output',
       content: `╔════════════════════════════════════════════════════════╗
-║  DAD JOKE OF THE DAY - ${content.timestamp.slice(4, 16).padEnd(24)}║
-║  Category: ${(content.joke.category || 'classic').toUpperCase().padEnd(42)}║
+║  DAD JOKE OF THE DAY - ${content.timestamp.slice(4, 16).padEnd(32)}║
+║  Category: ${(content.joke.category || 'classic').toUpperCase().padEnd(44)}║
 ╠════════════════════════════════════════════════════════╣
 ║                                                        ║
-║  Q: ${content.joke.q.replace(/[^\x00-\x7F]/g, '').slice(0, 48).padEnd(48)}║
+║  Q: ${content.joke.q.replace(/[^\x00-\x7F]/g, '').slice(0, 51).padEnd(51)}║
 ║                                                        ║
-║  A: ${content.joke.a.replace(/[^\x00-\x7F]/g, '').slice(0, 48).padEnd(48)}║
+║  A: ${content.joke.a.replace(/[^\x00-\x7F]/g, '').slice(0, 51).padEnd(51)}║
 ║                                                        ║
 ╠════════════════════════════════════════════════════════╣
 ║  Stats:                                                ║
-║  - Groan Level: ████████░░ ${Math.floor(Math.random() * 20 + 80)}%                  ║
-║  - Times Delivered: ${Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(31)}║
-║  - Success Rate: ${Math.floor(Math.random() * 5 + 95)}% eye rolls              ║
+║  - Groan Level: ████████░░ ${(Math.floor(Math.random() * 20 + 80) + '%').padEnd(22)}║
+║  - Times Delivered: ${Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(35)}║
+║  - Success Rate: ${(Math.floor(Math.random() * 5 + 95) + '% eye rolls').padEnd(38)}║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#ff79c6',
       pause: 3000

@@ -214,6 +214,84 @@ class DynamicContentGenerator {
   }
 
   /**
+   * Get sequence rotation (0, 1, 2) based on date
+   * Day 0: Core + Easter Egg (telnet towel)
+   * Day 1: DevOps rotation (git log, docker, sudo)
+   * Day 2: Network rotation (ping, curl, top)
+   */
+  getSequenceRotation(date) {
+    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+    return dayOfYear % 3;
+  }
+
+  /**
+   * Generate git log commits (10 total, rotate 5 per day)
+   */
+  generateGitLog(date) {
+    const allCommits = [
+      { hash: '7f3a9b2', msg: 'feat: add terminal rotation system', time: '3 hours ago' },
+      { hash: 'c5e8d41', msg: 'fix: resolve docker network conflicts', time: '5 hours ago' },
+      { hash: '9a1b6f7', msg: 'docs: update API documentation', time: '8 hours ago' },
+      { hash: '2d4c8e9', msg: 'refactor: optimize database queries', time: '12 hours ago' },
+      { hash: 'b8f7a3c', msg: 'chore: update dependencies to latest', time: '1 day ago' },
+      { hash: 'e4a9c2d', msg: 'feat: implement dark mode toggle', time: '2 days ago' },
+      { hash: '6c7f1b8', msg: 'test: add integration test suite', time: '2 days ago' },
+      { hash: 'a3d5e9f', msg: 'fix: patch security vulnerabilities', time: '3 days ago' },
+      { hash: '1f8b4c6', msg: 'feat: add WebSocket support', time: '4 days ago' },
+      { hash: '5e2a7d9', msg: 'style: apply consistent formatting', time: '5 days ago' }
+    ];
+
+    // Rotate 5 commits per day deterministically
+    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+    const startIndex = (dayOfYear % 2) * 5;
+    return allCommits.slice(startIndex, startIndex + 5);
+  }
+
+  /**
+   * Generate docker containers (7 total, show 3 per day)
+   */
+  generateDockerContainers(date) {
+    const allContainers = [
+      { id: 'f3a9c7b2', image: 'nginx:alpine', status: 'Up 3 hours', ports: '0.0.0.0:80->80/tcp' },
+      { id: 'e8d4c1a5', image: 'postgres:15', status: 'Up 2 days', ports: '0.0.0.0:5432->5432/tcp' },
+      { id: 'b7f9a3e8', image: 'redis:7-alpine', status: 'Up 5 hours', ports: '0.0.0.0:6379->6379/tcp' },
+      { id: 'c2d8e6f1', image: 'node:20-slim', status: 'Up 1 hour', ports: '0.0.0.0:3000->3000/tcp' },
+      { id: 'a5f7c9d3', image: 'mongo:7', status: 'Up 12 hours', ports: '0.0.0.0:27017->27017/tcp' },
+      { id: 'd1e8b4a6', image: 'grafana/grafana', status: 'Up 3 days', ports: '0.0.0.0:3001->3000/tcp' },
+      { id: 'f9c3a7e2', image: 'traefik:latest', status: 'Up 1 day', ports: '0.0.0.0:443->443/tcp' }
+    ];
+
+    // Rotate 3 containers per day deterministically
+    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+    const startIndex = (dayOfYear % 3) * 2;
+    return allContainers.slice(startIndex, Math.min(startIndex + 3, allContainers.length));
+  }
+
+  /**
+   * Generate network ping statistics (dynamic values)
+   */
+  generateNetworkStats(date) {
+    // Use date as seed for consistent but varied stats
+    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+    const seed = dayOfYear % 100;
+
+    const minMs = 12 + (seed % 8);
+    const avgMs = minMs + 3 + (seed % 5);
+    const maxMs = avgMs + 5 + (seed % 10);
+    const packetLoss = seed % 10 === 0 ? 1 : 0; // 10% chance of 1% loss
+
+    return {
+      packets_sent: 5,
+      packets_received: 5 - packetLoss,
+      packet_loss: packetLoss,
+      min_ms: minMs.toFixed(3),
+      avg_ms: avgMs.toFixed(3),
+      max_ms: maxMs.toFixed(3),
+      mdev_ms: (1.2 + (seed % 3) * 0.3).toFixed(3)
+    };
+  }
+
+  /**
    * Generate complete dynamic content for terminal
    */
   async generateContent() {
@@ -221,12 +299,20 @@ class DynamicContentGenerator {
     const joke = this.getJokeOfDay(currentTime);
     const stats = this.generateStats(currentTime);
     const timestamp = this.formatDateTime(currentTime);
+    const rotation = this.getSequenceRotation(currentTime);
+    const gitLog = this.generateGitLog(currentTime);
+    const dockerContainers = this.generateDockerContainers(currentTime);
+    const networkStats = this.generateNetworkStats(currentTime);
 
     return {
       timestamp,
       joke,
       stats,
-      currentTime
+      currentTime,
+      rotation,
+      gitLog,
+      dockerContainers,
+      networkStats
     };
   }
 }

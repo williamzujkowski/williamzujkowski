@@ -332,12 +332,11 @@ class AdvancedTerminalGenerator {
                begin="${typingEndTime}ms" dur="10ms" fill="freeze"/>
 
       <!-- Cursor moves to next position BEFORE character appears -->
-      ${command.split('').slice(1).map((char, idx) => {
-        const i = idx + 1; // Actual character index (1, 2, 3, ...)
-        const charAppearTime = startTime + (i * charDuration);
+      ${command.split('').map((char, idx) => {
+        const charAppearTime = startTime + (idx * charDuration);
         const moveTime = charAppearTime - 5; // Move 5ms BEFORE character appears
-        const fromX = promptWidth + ((i - 1) * charWidth);
-        const toX = promptWidth + (i * charWidth);
+        const fromX = promptWidth + ((idx > 0 ? idx - 1 : 0) * charWidth);
+        const toX = promptWidth + (idx * charWidth);
         return `<animate attributeName="x"
                  from="${fromX}" to="${toX}"
                  begin="${moveTime}ms" dur="1ms"
@@ -357,11 +356,29 @@ class AdvancedTerminalGenerator {
 
   generateFilters() {
     return `
-    <!-- Subtle text glow for crisp readability -->
-    <filter id="textGlow">
-      <feGaussianBlur stdDeviation="0.3" result="coloredBlur"/>
+    <!-- 3-Layer Phosphor Glow Filter -->
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- Layer 1: Core glow (tight) -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.2" result="coreBlur"/>
+
+      <!-- Layer 2: Medium glow with green phosphor tint -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="mediumBlur"/>
+      <feColorMatrix in="mediumBlur" type="matrix" result="greenGlow"
+        values="0 0 0 0 0
+                0 1 0 0 0.3
+                0 0 0 0 0
+                0 0 0 1 0"/>
+
+      <!-- Layer 3: Outer halo (subtle) -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="outerBlur"/>
+
+      <!-- Composite all layers with screen blend mode -->
+      <feBlend in="coreBlur" in2="greenGlow" mode="screen" result="layer12"/>
+      <feBlend in="layer12" in2="outerBlur" mode="screen" result="allLayers"/>
+
+      <!-- Merge with original text on top -->
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="allLayers"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
@@ -434,6 +451,48 @@ class AdvancedTerminalGenerator {
 
   getTextWidth(text, fontSize) {
     return text.length * (fontSize * 0.6);
+  }
+
+  /**
+   * Calculate realistic typing delays for each character
+   * @param {string} text - The text to calculate delays for
+   * @param {number} baseSpeed - Base typing speed in milliseconds (default: 150)
+   * @returns {number[]} - Array of delays in milliseconds for each character
+   */
+  calculateRealisticDelays(text, baseSpeed = 150) {
+    const delays = [];
+    let charsSinceThinkingPause = 0;
+    const nextThinkingPause = Math.floor(Math.random() * 8) + 8; // Random between 8-15 chars
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      let delay = baseSpeed;
+
+      // Add ±40% random variation to base speed
+      const variation = (Math.random() * 0.8 - 0.4) * baseSpeed; // -40% to +40%
+      delay += variation;
+
+      // Longer pauses at spaces (+100-300ms)
+      if (char === ' ') {
+        delay += Math.random() * 200 + 100; // +100 to +300ms
+      }
+
+      // Longer pauses at punctuation (+50-200ms)
+      if (['.', ',', '!', '?', ':', ';'].includes(char)) {
+        delay += Math.random() * 150 + 50; // +50 to +200ms
+      }
+
+      // Random "thinking pauses" every 8-15 characters
+      charsSinceThinkingPause++;
+      if (charsSinceThinkingPause >= nextThinkingPause) {
+        delay += Math.random() * 300 + 200; // +200 to +500ms thinking pause
+        charsSinceThinkingPause = 0;
+      }
+
+      delays.push(Math.round(delay));
+    }
+
+    return delays;
   }
 }
 

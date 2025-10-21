@@ -335,8 +335,8 @@ class AdvancedTerminalGenerator {
       ${command.split('').map((char, idx) => {
         const charAppearTime = startTime + (idx * charDuration);
         const moveTime = charAppearTime - 5; // Move 5ms BEFORE character appears
-        const fromX = promptWidth + ((idx > 0 ? idx - 1 : 0) * charWidth);
-        const toX = promptWidth + (idx * charWidth);
+        const fromX = promptWidth + (idx * charWidth);
+        const toX = promptWidth + ((idx + 1) * charWidth);
         return `<animate attributeName="x"
                  from="${fromX}" to="${toX}"
                  begin="${moveTime}ms" dur="1ms"

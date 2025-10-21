@@ -216,8 +216,9 @@ async function generateDynamicTerminal() {
     {
       type: 'output',
       content: `╔════════════════════════════════════════════════════════╗
+║                                                        ║
 ║  WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}${' '.repeat(23)}║
-║  Powered by coffee, dad jokes & late-night debugging  ║
+║  Powered by coffee, dad jokes & late-night debugging${' '}║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#00ff9f',
       pause: 1200
@@ -313,6 +314,7 @@ Kids Impressed: 0 (work in progress)`,
     {
       type: 'output',
       content: `╔════════════════════════════════════════════════════════╗
+║                                                        ║
 ║  DAD JOKE OF THE DAY - ${content.timestamp.slice(4, 16).padEnd(32)}║
 ║  Category: ${(content.joke.category || 'classic').toUpperCase().padEnd(44)}║
 ╠════════════════════════════════════════════════════════╣
@@ -323,9 +325,10 @@ Kids Impressed: 0 (work in progress)`,
 ║                                                        ║
 ╠════════════════════════════════════════════════════════╣
 ║  Stats:                                                ║
-║  ${'- Groan Level: ████████░░ ' + (Math.floor(Math.random() * 20 + 80) + '%').padEnd(26)}║
-║  ${'- Times Delivered: ' + Math.floor(Math.random() * 50000 + 10000).toLocaleString().padEnd(33)}║
-║  ${'- Success Rate: ' + (Math.floor(Math.random() * 5 + 95) + '% eye rolls').padEnd(36)}║
+║  ${('- Groan Level: ████████░░ ' + (Math.floor(Math.random() * 20 + 80) + '%')).padEnd(54)}  ║
+║  ${('- Times Delivered: ' + Math.floor(Math.random() * 50000 + 10000).toLocaleString()).padEnd(54)}  ║
+║  ${('- Success Rate: ' + (Math.floor(Math.random() * 5 + 95) + '% eye rolls')).padEnd(54)}  ║
+║                                                        ║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#ff79c6',
       pause: 2000  // Optimized: 3000ms → 2000ms (save 1s)
@@ -467,7 +470,7 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
   generator.config.window.titleBar.height = 40;
   generator.config.window.titleBar.backgroundColor = '#151b2e';
   generator.config.terminal.fontSize = 14;
-  generator.config.terminal.lineHeight = 1.6;
+  generator.config.terminal.lineHeight = 1.8;
   generator.config.terminal.backgroundColor = '#0a0e27';
   generator.config.terminal.promptColor = '#00ff9f';
   generator.config.terminal.cursorColor = '#00ff41';

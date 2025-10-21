@@ -331,10 +331,10 @@ class AdvancedTerminalGenerator {
       <animate attributeName="opacity" to="0"
                begin="${typingEndTime}ms" dur="10ms" fill="freeze"/>
 
-      <!-- Cursor moves to next position BEFORE character appears -->
+      <!-- Cursor moves to next position AFTER character appears -->
       ${command.split('').map((char, idx) => {
         const charAppearTime = startTime + (idx * charDuration);
-        const moveTime = charAppearTime - 5; // Move 5ms BEFORE character appears
+        const moveTime = charAppearTime + 10; // Move AFTER character appears (10ms = char appear duration)
         const fromX = promptWidth + (idx * charWidth);
         const toX = promptWidth + ((idx + 1) * charWidth);
         return `<animate attributeName="x"

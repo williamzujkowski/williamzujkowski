@@ -218,7 +218,7 @@ async function generateDynamicTerminal() {
       content: `╔════════════════════════════════════════════════════════╗
 ║                                                        ║
 ║  WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}${' '.repeat(23)}║
-║  Powered by coffee, dad jokes & late-night debugging${' '}║
+║  Powered by coffee, dad jokes & late-night debugging${' '.repeat(3)}║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#00ff9f',
       pause: 1200
@@ -325,9 +325,9 @@ Kids Impressed: 0 (work in progress)`,
 ║                                                        ║
 ╠════════════════════════════════════════════════════════╣
 ║  Stats:                                                ║
-║  ${('- Groan Level: ████████░░ ' + (Math.floor(Math.random() * 20 + 80) + '%')).padEnd(54)}  ║
-║  ${('- Times Delivered: ' + Math.floor(Math.random() * 50000 + 10000).toLocaleString()).padEnd(54)}  ║
-║  ${('- Success Rate: ' + (Math.floor(Math.random() * 5 + 95) + '% eye rolls')).padEnd(54)}  ║
+║  ${('- Groan Level: ████████░░ ' + (Math.floor(Math.random() * 20 + 80) + '%')).padEnd(52)}  ║
+║  ${('- Times Delivered: ' + Math.floor(Math.random() * 50000 + 10000).toLocaleString()).padEnd(52)}  ║
+║  ${('- Success Rate: ' + (Math.floor(Math.random() * 5 + 95) + '% eye rolls')).padEnd(52)}  ║
 ║                                                        ║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#ff79c6',

@@ -35,38 +35,6 @@ current_obsession: "Making SVG animations do things they weren't designed for"
 ```
 </details>
 
-## 📦 Featured Projects
-
-<table>
-<tr>
-<td width="50%">
-
-### [🎨 Neo-Brutalist 11ty Theme](https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme)
-Experimental static site theme with bold typography and unconventional design patterns
-
-**Stack:** 11ty • HTML • CSS
-
-</td>
-<td width="50%">
-
-### [🔒 MCP Standards Server](https://github.com/williamzujkowski/mcp-standards-server)
-Model Context Protocol server for NIST 800-53r5 compliance and code analysis
-
-**Stack:** MCP • Security • Automation
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [📋 LLM Development Standards](https://github.com/williamzujkowski/standards)
-Battle-tested development standards and project templates for AI-assisted workflows
-
-**Stack:** TypeScript • Best Practices
-
-</td>
-<td width="50%">
-
 ### [🖥️ This Profile](https://github.com/williamzujkowski/williamzujkowski)
 Dynamic SVG terminal with daily joke rotation, live stats, and smooth animations
 

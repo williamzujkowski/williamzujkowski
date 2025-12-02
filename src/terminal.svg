@@ -572,7 +572,7 @@
           type="translate"
           from="20 -1409.6"
           to="20 -1434.8"
-          begin="40500ms"
+          begin="41300ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -580,7 +580,7 @@
           type="translate"
           from="20 -1434.8"
           to="20 -1460"
-          begin="40550ms"
+          begin="41350ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -588,7 +588,7 @@
           type="translate"
           from="20 -1460"
           to="20 -1485.2"
-          begin="40600ms"
+          begin="41400ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -596,7 +596,7 @@
           type="translate"
           from="20 -1485.2"
           to="20 -1510.4"
-          begin="40650ms"
+          begin="42450ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -604,7 +604,7 @@
           type="translate"
           from="20 -1510.4"
           to="20 -1535.6"
-          begin="40700ms"
+          begin="42500ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -612,7 +612,7 @@
           type="translate"
           from="20 -1535.6"
           to="20 -1560.8"
-          begin="40750ms"
+          begin="42550ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -620,7 +620,7 @@
           type="translate"
           from="20 -1560.8"
           to="20 -1586"
-          begin="40800ms"
+          begin="42600ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -628,7 +628,7 @@
           type="translate"
           from="20 -1586"
           to="20 -1611.2"
-          begin="40850ms"
+          begin="42650ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -636,7 +636,7 @@
           type="translate"
           from="20 -1611.2"
           to="20 -1636.4"
-          begin="40900ms"
+          begin="42700ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -644,7 +644,7 @@
           type="translate"
           from="20 -1636.4"
           to="20 -1661.6"
-          begin="40950ms"
+          begin="42750ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -652,7 +652,7 @@
           type="translate"
           from="20 -1661.6"
           to="20 -1686.8"
-          begin="43200ms"
+          begin="42800ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -660,7 +660,7 @@
           type="translate"
           from="20 -1686.8"
           to="20 -1712"
-          begin="46010ms"
+          begin="42850ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -668,7 +668,7 @@
           type="translate"
           from="20 -1712"
           to="20 -1737.2"
-          begin="46060ms"
+          begin="42900ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -676,7 +676,7 @@
           type="translate"
           from="20 -1737.2"
           to="20 -1762.4"
-          begin="47910ms"
+          begin="42950ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -684,7 +684,7 @@
           type="translate"
           from="20 -1762.4"
           to="20 -1787.6"
-          begin="50020ms"
+          begin="43000ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -692,7 +692,7 @@
           type="translate"
           from="20 -1787.6"
           to="20 -1812.8"
-          begin="50070ms"
+          begin="43050ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -700,7 +700,7 @@
           type="translate"
           from="20 -1812.8"
           to="20 -1838"
-          begin="50120ms"
+          begin="43100ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -708,7 +708,7 @@
           type="translate"
           from="20 -1838"
           to="20 -1863.2"
-          begin="50170ms"
+          begin="46150ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -716,7 +716,7 @@
           type="translate"
           from="20 -1863.2"
           to="20 -1888.4"
-          begin="50220ms"
+          begin="48460ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -724,7 +724,7 @@
           type="translate"
           from="20 -1888.4"
           to="20 -1913.6"
-          begin="50270ms"
+          begin="50110ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -732,7 +732,7 @@
           type="translate"
           from="20 -1913.6"
           to="20 -1938.8"
-          begin="50320ms"
+          begin="50160ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -740,7 +740,7 @@
           type="translate"
           from="20 -1938.8"
           to="20 -1964"
-          begin="50370ms"
+          begin="50210ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -748,7 +748,7 @@
           type="translate"
           from="20 -1964"
           to="20 -1989.2"
-          begin="52620ms"
+          begin="50260ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -756,7 +756,7 @@
           type="translate"
           from="20 -1989.2"
           to="20 -2014.4"
-          begin="52670ms"
+          begin="50310ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -764,7 +764,7 @@
           type="translate"
           from="20 -2014.4"
           to="20 -2039.6"
-          begin="52720ms"
+          begin="50360ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -772,7 +772,7 @@
           type="translate"
           from="20 -2039.6"
           to="20 -2064.8"
-          begin="52770ms"
+          begin="50410ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -780,7 +780,7 @@
           type="translate"
           from="20 -2064.8"
           to="20 -2090"
-          begin="52820ms"
+          begin="50460ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -788,7 +788,7 @@
           type="translate"
           from="20 -2090"
           to="20 -2115.2"
-          begin="52870ms"
+          begin="50510ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -796,7 +796,7 @@
           type="translate"
           from="20 -2115.2"
           to="20 -2140.4"
-          begin="52920ms"
+          begin="50560ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -804,7 +804,7 @@
           type="translate"
           from="20 -2140.4"
           to="20 -2165.6"
-          begin="52970ms"
+          begin="50610ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -812,7 +812,7 @@
           type="translate"
           from="20 -2165.6"
           to="20 -2190.8"
-          begin="53020ms"
+          begin="50660ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -820,7 +820,7 @@
           type="translate"
           from="20 -2190.8"
           to="20 -2216"
-          begin="53070ms"
+          begin="50710ms"
           dur="100ms"
           fill="freeze"/>
         <animateTransform
@@ -828,31 +828,7 @@
           type="translate"
           from="20 -2216"
           to="20 -2241.2"
-          begin="53120ms"
-          dur="100ms"
-          fill="freeze"/>
-        <animateTransform
-          attributeName="transform"
-          type="translate"
-          from="20 -2241.2"
-          to="20 -2266.4"
-          begin="53170ms"
-          dur="100ms"
-          fill="freeze"/>
-        <animateTransform
-          attributeName="transform"
-          type="translate"
-          from="20 -2266.4"
-          to="20 -2291.6"
-          begin="53220ms"
-          dur="100ms"
-          fill="freeze"/>
-        <animateTransform
-          attributeName="transform"
-          type="translate"
-          from="20 -2291.6"
-          to="20 -2316.8"
-          begin="53270ms"
+          begin="50760ms"
           dur="100ms"
           fill="freeze"/>
         
@@ -1062,7 +1038,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
-        📅 Mon Dec 1 00:10 EST 2025
+        📅 Tue Dec 2 00:04 EST 2025
       </text>
     </g>
 
@@ -1281,7 +1257,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#729fcf" filter="url(#textGlow)" xml:space="preserve">
-        Uptime: 43 years (15,943 days)
+        Uptime: 43 years (15,944 days)
       </text>
     </g>
 
@@ -1476,7 +1452,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   1337  99.9  5.0   ∞   ∞  ?  Ssl  Dec 1 00:10   ∞  /usr/bin/family --priority=realtime
+        william   1337  99.9  5.0   ∞   ∞  ?  Ssl  Dec 2 00:04   ∞  /usr/bin/family --priority=realtime
       </text>
     </g>
 
@@ -1487,7 +1463,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   2048  42.0  3.7   ∞   ∞  ?  Sl   Dec 1 00:10   ∞  /usr/bin/security-automation --mode=defensive
+        william   2048  42.0  3.7   ∞   ∞  ?  Sl   Dec 2 00:04   ∞  /usr/bin/security-automation --mode=defensive
       </text>
     </g>
 
@@ -1498,7 +1474,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   4096  15.2  2.1   ∞   ∞  ?  S    Dec 1 00:10   ∞  /usr/bin/home-assistant --smart-home
+        william   4096  15.2  2.1   ∞   ∞  ?  S    Dec 2 00:04   ∞  /usr/bin/home-assistant --smart-home
       </text>
     </g>
 
@@ -1509,7 +1485,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        william   8192  100   1.0   ∞   ∞  ?  R+   Dec 1 00:10   ∞  /usr/bin/dad-joke-daemon --interval=30s
+        william   8192  100   1.0   ∞   ∞  ?  R+   Dec 2 00:04   ∞  /usr/bin/dad-joke-daemon --interval=30s
       </text>
     </g>
 
@@ -1691,7 +1667,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#729fcf" filter="url(#textGlow)" xml:space="preserve">
-        Coffee Consumed: 33,480 cups
+        Coffee Consumed: 33,482 cups
       </text>
     </g>
 
@@ -1702,7 +1678,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#729fcf" filter="url(#textGlow)" xml:space="preserve">
-        Bugs Fixed: 43,046
+        Bugs Fixed: 43,048
       </text>
     </g>
 
@@ -1713,7 +1689,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#729fcf" filter="url(#textGlow)" xml:space="preserve">
-        Bugs Created: 43,045 (improving!)
+        Bugs Created: 43,047 (improving!)
       </text>
     </g>
 
@@ -1724,7 +1700,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#729fcf" filter="url(#textGlow)" xml:space="preserve">
-        Stack Overflow Visits: 64,569
+        Stack Overflow Visits: 64,572
       </text>
     </g>
 
@@ -1953,7 +1929,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  DAD JOKE OF THE DAY - Dec 1 00:10                     ║
+        ║  DAD JOKE OF THE DAY - Dec 2 00:04                     ║
       </text>
     </g>
 
@@ -1964,7 +1940,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  Category: PYTHON                                      ║
+        ║  Category: NETWORKING                                  ║
       </text>
     </g>
 
@@ -1997,7 +1973,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  Q: Why did the Python data scientist get arrested?    ║
+        ║  Q: What did the router say to the doctor?             ║
       </text>
     </g>
 
@@ -2019,7 +1995,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  A: He was caught trying to import pandas illegally!   ║
+        ║  A: It hurts when IP!                                  ║
       </text>
     </g>
 
@@ -2063,7 +2039,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  - Groan Level: ████████░░ 96%                         ║
+        ║  - Groan Level: ████████░░ 98%                         ║
       </text>
     </g>
 
@@ -2074,7 +2050,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  - Times Delivered: 32,623                             ║
+        ║  - Times Delivered: 57,829                             ║
       </text>
     </g>
 
@@ -2085,7 +2061,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║  - Success Rate: 99% eye rolls                         ║
+        ║  - Success Rate: 98% eye rolls                         ║
       </text>
     </g>
 
@@ -2740,7 +2716,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        Mon Dec 1 00:10 EST 2025 dad-mode[1337]: ✓ Joke delivery successful
+        Tue Dec 2 00:04 EST 2025 dad-mode[1337]: ✓ Joke delivery successful
       </text>
     </g>
 
@@ -2751,7 +2727,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        Mon Dec 1 00:10 EST 2025 dad-mode[1337]: ✓ Maximum groan achieved
+        Tue Dec 2 00:04 EST 2025 dad-mode[1337]: ✓ Maximum groan achieved
       </text>
     </g>
 
@@ -2886,27 +2862,36 @@
       <!-- Command with character-by-character typing -->
       <text x="193.20000000000002" font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace"
             font-size="14" fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        <tspan opacity="0">p<animate attributeName="opacity"
-                  from="0" to="1" begin="38700ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity"
-                  from="0" to="1" begin="38770ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
-                  from="0" to="1" begin="38840ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity"
-                  from="0" to="1" begin="38910ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="38980ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity"
-                  from="0" to="1" begin="39050ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity"
-                  from="0" to="1" begin="39120ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="39190ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">5<animate attributeName="opacity"
-                  from="0" to="1" begin="39260ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="39330ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity"
-                  from="0" to="1" begin="39400ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity"
-                  from="0" to="1" begin="39470ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity"
-                  from="0" to="1" begin="39540ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity"
-                  from="0" to="1" begin="39610ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity"
-                  from="0" to="1" begin="39680ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">b<animate attributeName="opacity"
-                  from="0" to="1" begin="39750ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">.<animate attributeName="opacity"
-                  from="0" to="1" begin="39820ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity"
-                  from="0" to="1" begin="39890ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity"
-                  from="0" to="1" begin="39960ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity"
-                  from="0" to="1" begin="40030ms" dur="10ms" fill="freeze"/></tspan>
+        <tspan opacity="0">t<animate attributeName="opacity"
+                  from="0" to="1" begin="38700ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
+                  from="0" to="1" begin="38768.96551724138ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity"
+                  from="0" to="1" begin="38837.93103448276ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
+                  from="0" to="1" begin="38906.89655172414ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
+                  from="0" to="1" begin="38975.862068965514ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity"
+                  from="0" to="1" begin="39044.8275862069ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
+                  from="0" to="1" begin="39113.793103448275ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity"
+                  from="0" to="1" begin="39182.75862068965ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity"
+                  from="0" to="1" begin="39251.724137931036ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">w<animate attributeName="opacity"
+                  from="0" to="1" begin="39320.68965517241ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
+                  from="0" to="1" begin="39389.65517241379ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity"
+                  from="0" to="1" begin="39458.620689655174ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">.<animate attributeName="opacity"
+                  from="0" to="1" begin="39527.58620689655ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">b<animate attributeName="opacity"
+                  from="0" to="1" begin="39596.55172413793ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity"
+                  from="0" to="1" begin="39665.51724137931ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity"
+                  from="0" to="1" begin="39734.48275862069ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
+                  from="0" to="1" begin="39803.44827586207ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity"
+                  from="0" to="1" begin="39872.41379310345ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
+                  from="0" to="1" begin="39941.379310344826ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
+                  from="0" to="1" begin="40010.34482758621ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity"
+                  from="0" to="1" begin="40079.31034482759ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity"
+                  from="0" to="1" begin="40148.275862068964ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity"
+                  from="0" to="1" begin="40217.24137931035ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity"
+                  from="0" to="1" begin="40286.206896551725ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity"
+                  from="0" to="1" begin="40355.1724137931ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity"
+                  from="0" to="1" begin="40424.137931034486ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">.<animate attributeName="opacity"
+                  from="0" to="1" begin="40493.10344827586ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
+                  from="0" to="1" begin="40562.06896551724ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity"
+                  from="0" to="1" begin="40631.03448275862ms" dur="10ms" fill="freeze"/></tspan>
       </text>
 
       <!-- Typing cursor -->
@@ -2920,11 +2905,11 @@
 
       <!-- Blinking animation -->
       <animate attributeName="opacity" values="1;1;0;0" dur="1s"
-               begin="38700ms" end="40100ms" repeatCount="indefinite"/>
+               begin="38700ms" end="40700ms" repeatCount="indefinite"/>
 
       <!-- Hide cursor after typing -->
       <animate attributeName="opacity" to="0"
-               begin="40100ms" dur="10ms" fill="freeze"/>
+               begin="40700ms" dur="10ms" fill="freeze"/>
 
       <!-- Cursor moves to next position AFTER character appears -->
       <animate attributeName="x"
@@ -2932,61 +2917,88 @@
                  begin="38710ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="201.60000000000002" to="210.00000000000003"
-                 begin="38780ms" dur="1ms"
+                 begin="38778.96551724138ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="210.00000000000003" to="218.40000000000003"
-                 begin="38850ms" dur="1ms"
+                 begin="38847.93103448276ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="218.40000000000003" to="226.8"
-                 begin="38920ms" dur="1ms"
+                 begin="38916.89655172414ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="226.8" to="235.20000000000002"
-                 begin="38990ms" dur="1ms"
+                 begin="38985.862068965514ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="235.20000000000002" to="243.60000000000002"
-                 begin="39060ms" dur="1ms"
+                 begin="39054.8275862069ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="243.60000000000002" to="252.00000000000003"
-                 begin="39130ms" dur="1ms"
+                 begin="39123.793103448275ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="252.00000000000003" to="260.40000000000003"
-                 begin="39200ms" dur="1ms"
+                 begin="39192.75862068965ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="260.40000000000003" to="268.8"
-                 begin="39270ms" dur="1ms"
+                 begin="39261.724137931036ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="268.8" to="277.20000000000005"
-                 begin="39340ms" dur="1ms"
+                 begin="39330.68965517241ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="277.20000000000005" to="285.6"
-                 begin="39410ms" dur="1ms"
+                 begin="39399.65517241379ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="285.6" to="294"
-                 begin="39480ms" dur="1ms"
+                 begin="39468.620689655174ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="294" to="302.40000000000003"
-                 begin="39550ms" dur="1ms"
+                 begin="39537.58620689655ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="302.40000000000003" to="310.8"
-                 begin="39620ms" dur="1ms"
+                 begin="39606.55172413793ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="310.8" to="319.20000000000005"
-                 begin="39690ms" dur="1ms"
+                 begin="39675.51724137931ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="319.20000000000005" to="327.6"
-                 begin="39760ms" dur="1ms"
+                 begin="39744.48275862069ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="327.6" to="336"
-                 begin="39830ms" dur="1ms"
+                 begin="39813.44827586207ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="336" to="344.40000000000003"
-                 begin="39900ms" dur="1ms"
+                 begin="39882.41379310345ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="344.40000000000003" to="352.8"
-                 begin="39970ms" dur="1ms"
+                 begin="39951.379310344826ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="352.8" to="361.20000000000005"
-                 begin="40040ms" dur="1ms"
+                 begin="40020.34482758621ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="361.20000000000005" to="369.6"
+                 begin="40089.31034482759ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="369.6" to="378"
+                 begin="40158.275862068964ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="378" to="386.40000000000003"
+                 begin="40227.24137931035ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="386.40000000000003" to="394.80000000000007"
+                 begin="40296.206896551725ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="394.80000000000007" to="403.20000000000005"
+                 begin="40365.1724137931ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="403.20000000000005" to="411.6"
+                 begin="40434.137931034486ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="411.6" to="420"
+                 begin="40503.10344827586ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="420" to="428.40000000000003"
+                 begin="40572.06896551724ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="428.40000000000003" to="436.80000000000007"
+                 begin="40641.03448275862ms" dur="1ms"
                  fill="freeze"/>
     </rect>
     </g>
@@ -2994,385 +3006,231 @@
     <!-- Output line 82 -->
     <g id="line-82" transform="translate(0, 2066.4)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40610ms" dur="10ms" fill="freeze"/>
+               begin="41410ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        PING github.com (140.82.113.4): 56 data bytes
+            fill="#6272a4" filter="url(#textGlow)" xml:space="preserve">
+        Trying 176.9.53.173...
       </text>
     </g>
 
     <!-- Output line 83 -->
     <g id="line-83" transform="translate(0, 2091.6)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40660ms" dur="10ms" fill="freeze"/>
+               begin="41460ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        64 bytes from 140.82.113.4: icmp_seq=0 ttl=52 time=15.000 ms
+            fill="#6272a4" filter="url(#textGlow)" xml:space="preserve">
+        Connected to towel.blinkenlights.nl.
       </text>
     </g>
 
     <!-- Output line 84 -->
     <g id="line-84" transform="translate(0, 2116.7999999999997)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40710ms" dur="10ms" fill="freeze"/>
+               begin="41510ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        64 bytes from 140.82.113.4: icmp_seq=1 ttl=52 time=18.000 ms
+            fill="#6272a4" filter="url(#textGlow)" xml:space="preserve">
+        Escape character is &apos;^]&apos;.
       </text>
     </g>
 
     <!-- Output line 85 -->
     <g id="line-85" transform="translate(0, 2142)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40760ms" dur="10ms" fill="freeze"/>
+               begin="42560ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        64 bytes from 140.82.113.4: icmp_seq=2 ttl=52 time=19.200 ms
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+        
       </text>
     </g>
 
     <!-- Output line 86 -->
     <g id="line-86" transform="translate(0, 2167.2)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40810ms" dur="10ms" fill="freeze"/>
+               begin="42610ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        64 bytes from 140.82.113.4: icmp_seq=3 ttl=52 time=17.200 ms
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+                            .-.
       </text>
     </g>
 
     <!-- Output line 87 -->
     <g id="line-87" transform="translate(0, 2192.4)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40860ms" dur="10ms" fill="freeze"/>
+               begin="42660ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        64 bytes from 140.82.113.4: icmp_seq=4 ttl=52 time=28.000 ms
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+                           /   \
       </text>
     </g>
 
     <!-- Output line 88 -->
     <g id="line-88" transform="translate(0, 2217.6)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40910ms" dur="10ms" fill="freeze"/>
+               begin="42710ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+                  .-.     | SW |
       </text>
     </g>
 
     <!-- Output line 89 -->
     <g id="line-89" transform="translate(0, 2242.7999999999997)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="40960ms" dur="10ms" fill="freeze"/>
+               begin="42760ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        --- github.com ping statistics ---
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+                 /   \    |____|-.
       </text>
     </g>
 
     <!-- Output line 90 -->
     <g id="line-90" transform="translate(0, 2268)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="41010ms" dur="10ms" fill="freeze"/>
+               begin="42810ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        5 packets transmitted, 5 packets received, 0% packet loss
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+            .===|  S  |===|       |===================.
       </text>
     </g>
 
     <!-- Output line 91 -->
     <g id="line-91" transform="translate(0, 2293.2)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="41060ms" dur="10ms" fill="freeze"/>
+               begin="42860ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#8be9fd" filter="url(#textGlow)" xml:space="preserve">
-        round-trip min/avg/max/stddev = 15.000/18.000/28.000/1.800 ms
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+             .-|  T  |-.  | A New |  ________________ \
       </text>
     </g>
 
-    <!-- Command line 92 -->
-    <g id="line-92" transform="translate(0, 2318.4)">
-      <!-- Prompt appears immediately -->
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#00ff9f" filter="url(#textGlow)" xml:space="preserve" opacity="0">
-        william@dad-joke-hq:~$ 
-        <animate attributeName="opacity" from="0" to="1"
-                 begin="43310ms" dur="10ms" fill="freeze"/>
-      </text>
-
-      <!-- Command with character-by-character typing -->
-      <text x="193.20000000000002" font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace"
-            font-size="14" fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        <tspan opacity="0">c<animate attributeName="opacity"
-                  from="0" to="1" begin="43310ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity"
-                  from="0" to="1" begin="43358.88888888889ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity"
-                  from="0" to="1" begin="43407.77777777778ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">l<animate attributeName="opacity"
-                  from="0" to="1" begin="43456.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="43505.555555555555ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity"
-                  from="0" to="1" begin="43554.444444444445ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity"
-                  from="0" to="1" begin="43603.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="43652.22222222222ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity"
-                  from="0" to="1" begin="43701.11111111111ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity"
-                  from="0" to="1" begin="43750ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity"
-                  from="0" to="1" begin="43798.88888888889ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity"
-                  from="0" to="1" begin="43847.77777777778ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity"
-                  from="0" to="1" begin="43896.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">:<animate attributeName="opacity"
-                  from="0" to="1" begin="43945.555555555555ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity"
-                  from="0" to="1" begin="43994.444444444445ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity"
-                  from="0" to="1" begin="44043.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">i<animate attributeName="opacity"
-                  from="0" to="1" begin="44092.22222222222ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity"
-                  from="0" to="1" begin="44141.11111111111ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity"
-                  from="0" to="1" begin="44190ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
-                  from="0" to="1" begin="44238.88888888889ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity"
-                  from="0" to="1" begin="44287.77777777778ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity"
-                  from="0" to="1" begin="44336.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">z<animate attributeName="opacity"
-                  from="0" to="1" begin="44385.555555555555ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity"
-                  from="0" to="1" begin="44434.444444444445ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity"
-                  from="0" to="1" begin="44483.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity"
-                  from="0" to="1" begin="44532.22222222222ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">j<animate attributeName="opacity"
-                  from="0" to="1" begin="44581.11111111111ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity"
-                  from="0" to="1" begin="44630ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">k<animate attributeName="opacity"
-                  from="0" to="1" begin="44678.88888888889ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
-                  from="0" to="1" begin="44727.77777777778ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">.<animate attributeName="opacity"
-                  from="0" to="1" begin="44776.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity"
-                  from="0" to="1" begin="44825.555555555555ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity"
-                  from="0" to="1" begin="44874.444444444445ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">m<animate attributeName="opacity"
-                  from="0" to="1" begin="44923.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">/<animate attributeName="opacity"
-                  from="0" to="1" begin="44972.22222222222ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="45021.11111111111ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">|<animate attributeName="opacity"
-                  from="0" to="1" begin="45070ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="45118.88888888889ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity"
-                  from="0" to="1" begin="45167.77777777778ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
-                  from="0" to="1" begin="45216.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity"
-                  from="0" to="1" begin="45265.555555555555ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity"
-                  from="0" to="1" begin="45314.444444444445ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="45363.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity"
-                  from="0" to="1" begin="45412.22222222222ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">1<animate attributeName="opacity"
-                  from="0" to="1" begin="45461.11111111111ms" dur="10ms" fill="freeze"/></tspan>
-      </text>
-
-      <!-- Typing cursor -->
-      
-    <!-- Cursor -->
-    <rect x="193.20000000000002" y="-11.9" width="8.4" height="14"
-          fill="#00ff41" opacity="0">
-      <!-- Show cursor when line appears -->
+    <!-- Output line 92 -->
+    <g id="line-92" transform="translate(0, 2318.4)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="43310ms" dur="10ms" fill="freeze"/>
+               begin="42910ms" dur="10ms" fill="freeze"/>
 
-      <!-- Blinking animation -->
-      <animate attributeName="opacity" values="1;1;0;0" dur="1s"
-               begin="43310ms" end="45510ms" repeatCount="indefinite"/>
-
-      <!-- Hide cursor after typing -->
-      <animate attributeName="opacity" to="0"
-               begin="45510ms" dur="10ms" fill="freeze"/>
-
-      <!-- Cursor moves to next position AFTER character appears -->
-      <animate attributeName="x"
-                 from="193.20000000000002" to="201.60000000000002"
-                 begin="43320ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="201.60000000000002" to="210.00000000000003"
-                 begin="43368.88888888889ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="210.00000000000003" to="218.40000000000003"
-                 begin="43417.77777777778ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="218.40000000000003" to="226.8"
-                 begin="43466.666666666664ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="226.8" to="235.20000000000002"
-                 begin="43515.555555555555ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="235.20000000000002" to="243.60000000000002"
-                 begin="43564.444444444445ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="243.60000000000002" to="252.00000000000003"
-                 begin="43613.333333333336ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="252.00000000000003" to="260.40000000000003"
-                 begin="43662.22222222222ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="260.40000000000003" to="268.8"
-                 begin="43711.11111111111ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="268.8" to="277.20000000000005"
-                 begin="43760ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="277.20000000000005" to="285.6"
-                 begin="43808.88888888889ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="285.6" to="294"
-                 begin="43857.77777777778ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="294" to="302.40000000000003"
-                 begin="43906.666666666664ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="302.40000000000003" to="310.8"
-                 begin="43955.555555555555ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="310.8" to="319.20000000000005"
-                 begin="44004.444444444445ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="319.20000000000005" to="327.6"
-                 begin="44053.333333333336ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="327.6" to="336"
-                 begin="44102.22222222222ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="336" to="344.40000000000003"
-                 begin="44151.11111111111ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="344.40000000000003" to="352.8"
-                 begin="44200ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="352.8" to="361.20000000000005"
-                 begin="44248.88888888889ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="361.20000000000005" to="369.6"
-                 begin="44297.77777777778ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="369.6" to="378"
-                 begin="44346.666666666664ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="378" to="386.40000000000003"
-                 begin="44395.555555555555ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="386.40000000000003" to="394.80000000000007"
-                 begin="44444.444444444445ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="394.80000000000007" to="403.20000000000005"
-                 begin="44493.333333333336ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="403.20000000000005" to="411.6"
-                 begin="44542.22222222222ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="411.6" to="420"
-                 begin="44591.11111111111ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="420" to="428.40000000000003"
-                 begin="44640ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="428.40000000000003" to="436.80000000000007"
-                 begin="44688.88888888889ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="436.80000000000007" to="445.20000000000005"
-                 begin="44737.77777777778ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="445.20000000000005" to="453.6"
-                 begin="44786.666666666664ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="453.6" to="462"
-                 begin="44835.555555555555ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="462" to="470.4"
-                 begin="44884.444444444445ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="470.4" to="478.80000000000007"
-                 begin="44933.333333333336ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="478.80000000000007" to="487.20000000000005"
-                 begin="44982.22222222222ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="487.20000000000005" to="495.6"
-                 begin="45031.11111111111ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="495.6" to="504"
-                 begin="45080ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="504" to="512.4"
-                 begin="45128.88888888889ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="512.4" to="520.8000000000001"
-                 begin="45177.77777777778ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="520.8000000000001" to="529.2"
-                 begin="45226.666666666664ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="529.2" to="537.6"
-                 begin="45275.555555555555ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="537.6" to="546"
-                 begin="45324.444444444445ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="546" to="554.4"
-                 begin="45373.333333333336ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="554.4" to="562.8000000000001"
-                 begin="45422.22222222222ms" dur="1ms"
-                 fill="freeze"/><animate attributeName="x"
-                 from="562.8000000000001" to="571.2"
-                 begin="45471.11111111111ms" dur="1ms"
-                 fill="freeze"/>
-    </rect>
+      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+            ( (|  A  | )  | Hope |  \XXXXXXXXXXXXXXX| )
+      </text>
     </g>
 
     <!-- Output line 93 -->
     <g id="line-93" transform="translate(0, 2343.6)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="46120ms" dur="10ms" fill="freeze"/>
+               begin="42960ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        Why did the Python data scientist get arrested?
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+             `-|  R  |-&apos;  |_______|  `&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;`-&apos;
       </text>
     </g>
 
     <!-- Output line 94 -->
     <g id="line-94" transform="translate(0, 2368.7999999999997)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="46170ms" dur="10ms" fill="freeze"/>
+               begin="43010ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        He was caught trying to import pandas illegally! 🐼🚨
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+                 \___/
       </text>
     </g>
 
-    <!-- Command line 95 -->
-    <g id="line-95" transform="translate(0, 2394)">
+    <!-- Output line 95 -->
+    <g id="line-95" transform="translate(0, 2394)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+               begin="43060ms" dur="10ms" fill="freeze"/>
+
+      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+        
+      </text>
+    </g>
+
+    <!-- Output line 96 -->
+    <g id="line-96" transform="translate(0, 2419.2)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+               begin="43110ms" dur="10ms" fill="freeze"/>
+
+      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+            &quot;May the Source be with you!&quot; - Obi-Wan Kerneli
+      </text>
+    </g>
+
+    <!-- Output line 97 -->
+    <g id="line-97" transform="translate(0, 2444.4)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+               begin="43160ms" dur="10ms" fill="freeze"/>
+
+      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+        
+      </text>
+    </g>
+
+    <!-- Output line 98 -->
+    <g id="line-98" transform="translate(0, 2469.6)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1"
+               begin="43210ms" dur="10ms" fill="freeze"/>
+
+      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
+            fill="#ffb86c" filter="url(#textGlow)" xml:space="preserve">
+        Connection closed by foreign host.
+      </text>
+    </g>
+
+    <!-- Command line 99 -->
+    <g id="line-99" transform="translate(0, 2494.7999999999997)">
       <!-- Prompt appears immediately -->
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#00ff9f" filter="url(#textGlow)" xml:space="preserve" opacity="0">
         william@dad-joke-hq:~$ 
         <animate attributeName="opacity" from="0" to="1"
-                 begin="48020ms" dur="10ms" fill="freeze"/>
+                 begin="46260ms" dur="10ms" fill="freeze"/>
       </text>
 
       <!-- Command with character-by-character typing -->
       <text x="193.20000000000002" font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace"
             font-size="14" fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        <tspan opacity="0">t<animate attributeName="opacity"
-                  from="0" to="1" begin="48020ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity"
-                  from="0" to="1" begin="48108.88888888889ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">p<animate attributeName="opacity"
-                  from="0" to="1" begin="48197.77777777778ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="48286.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity"
-                  from="0" to="1" begin="48375.555555555555ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">b<animate attributeName="opacity"
-                  from="0" to="1" begin="48464.444444444445ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
-                  from="0" to="1" begin="48553.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">1<animate attributeName="opacity"
-                  from="0" to="1" begin="48642.22222222222ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="48731.11111111111ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">|<animate attributeName="opacity"
-                  from="0" to="1" begin="48820ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="48908.88888888889ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity"
-                  from="0" to="1" begin="48997.77777777778ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
-                  from="0" to="1" begin="49086.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity"
-                  from="0" to="1" begin="49175.555555555555ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity"
-                  from="0" to="1" begin="49264.444444444445ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
-                  from="0" to="1" begin="49353.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">-<animate attributeName="opacity"
-                  from="0" to="1" begin="49442.22222222222ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">8<animate attributeName="opacity"
-                  from="0" to="1" begin="49531.11111111111ms" dur="10ms" fill="freeze"/></tspan>
+        <tspan opacity="0">e<animate attributeName="opacity"
+                  from="0" to="1" begin="46260ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">c<animate attributeName="opacity"
+                  from="0" to="1" begin="46326.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">h<animate attributeName="opacity"
+                  from="0" to="1" begin="46393.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity"
+                  from="0" to="1" begin="46460ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
+                  from="0" to="1" begin="46526.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">&quot;<animate attributeName="opacity"
+                  from="0" to="1" begin="46593.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">E<animate attributeName="opacity"
+                  from="0" to="1" begin="46660ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">a<animate attributeName="opacity"
+                  from="0" to="1" begin="46726.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">s<animate attributeName="opacity"
+                  from="0" to="1" begin="46793.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">t<animate attributeName="opacity"
+                  from="0" to="1" begin="46860ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
+                  from="0" to="1" begin="46926.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">r<animate attributeName="opacity"
+                  from="0" to="1" begin="46993.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
+                  from="0" to="1" begin="47060ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">e<animate attributeName="opacity"
+                  from="0" to="1" begin="47126.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity"
+                  from="0" to="1" begin="47193.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">g<animate attributeName="opacity"
+                  from="0" to="1" begin="47260ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
+                  from="0" to="1" begin="47326.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">f<animate attributeName="opacity"
+                  from="0" to="1" begin="47393.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">o<animate attributeName="opacity"
+                  from="0" to="1" begin="47460ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">u<animate attributeName="opacity"
+                  from="0" to="1" begin="47526.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">n<animate attributeName="opacity"
+                  from="0" to="1" begin="47593.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">d<animate attributeName="opacity"
+                  from="0" to="1" begin="47660ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">!<animate attributeName="opacity"
+                  from="0" to="1" begin="47726.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0"> <animate attributeName="opacity"
+                  from="0" to="1" begin="47793.333333333336ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">�<animate attributeName="opacity"
+                  from="0" to="1" begin="47860ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">�<animate attributeName="opacity"
+                  from="0" to="1" begin="47926.666666666664ms" dur="10ms" fill="freeze"/></tspan><tspan opacity="0">&quot;<animate attributeName="opacity"
+                  from="0" to="1" begin="47993.333333333336ms" dur="10ms" fill="freeze"/></tspan>
       </text>
 
       <!-- Typing cursor -->
@@ -3382,167 +3240,117 @@
           fill="#00ff41" opacity="0">
       <!-- Show cursor when line appears -->
       <animate attributeName="opacity" from="0" to="1"
-               begin="48020ms" dur="10ms" fill="freeze"/>
+               begin="46260ms" dur="10ms" fill="freeze"/>
 
       <!-- Blinking animation -->
       <animate attributeName="opacity" values="1;1;0;0" dur="1s"
-               begin="48020ms" end="49620ms" repeatCount="indefinite"/>
+               begin="46260ms" end="48060ms" repeatCount="indefinite"/>
 
       <!-- Hide cursor after typing -->
       <animate attributeName="opacity" to="0"
-               begin="49620ms" dur="10ms" fill="freeze"/>
+               begin="48060ms" dur="10ms" fill="freeze"/>
 
       <!-- Cursor moves to next position AFTER character appears -->
       <animate attributeName="x"
                  from="193.20000000000002" to="201.60000000000002"
-                 begin="48030ms" dur="1ms"
+                 begin="46270ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="201.60000000000002" to="210.00000000000003"
-                 begin="48118.88888888889ms" dur="1ms"
+                 begin="46336.666666666664ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="210.00000000000003" to="218.40000000000003"
-                 begin="48207.77777777778ms" dur="1ms"
+                 begin="46403.333333333336ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="218.40000000000003" to="226.8"
-                 begin="48296.666666666664ms" dur="1ms"
+                 begin="46470ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="226.8" to="235.20000000000002"
-                 begin="48385.555555555555ms" dur="1ms"
+                 begin="46536.666666666664ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="235.20000000000002" to="243.60000000000002"
-                 begin="48474.444444444445ms" dur="1ms"
+                 begin="46603.333333333336ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="243.60000000000002" to="252.00000000000003"
-                 begin="48563.333333333336ms" dur="1ms"
+                 begin="46670ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="252.00000000000003" to="260.40000000000003"
-                 begin="48652.22222222222ms" dur="1ms"
+                 begin="46736.666666666664ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="260.40000000000003" to="268.8"
-                 begin="48741.11111111111ms" dur="1ms"
+                 begin="46803.333333333336ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="268.8" to="277.20000000000005"
-                 begin="48830ms" dur="1ms"
+                 begin="46870ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="277.20000000000005" to="285.6"
-                 begin="48918.88888888889ms" dur="1ms"
+                 begin="46936.666666666664ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="285.6" to="294"
-                 begin="49007.77777777778ms" dur="1ms"
+                 begin="47003.333333333336ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="294" to="302.40000000000003"
-                 begin="49096.666666666664ms" dur="1ms"
+                 begin="47070ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="302.40000000000003" to="310.8"
-                 begin="49185.555555555555ms" dur="1ms"
+                 begin="47136.666666666664ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="310.8" to="319.20000000000005"
-                 begin="49274.444444444445ms" dur="1ms"
+                 begin="47203.333333333336ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="319.20000000000005" to="327.6"
-                 begin="49363.333333333336ms" dur="1ms"
+                 begin="47270ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="327.6" to="336"
-                 begin="49452.22222222222ms" dur="1ms"
+                 begin="47336.666666666664ms" dur="1ms"
                  fill="freeze"/><animate attributeName="x"
                  from="336" to="344.40000000000003"
-                 begin="49541.11111111111ms" dur="1ms"
+                 begin="47403.333333333336ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="344.40000000000003" to="352.8"
+                 begin="47470ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="352.8" to="361.20000000000005"
+                 begin="47536.666666666664ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="361.20000000000005" to="369.6"
+                 begin="47603.333333333336ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="369.6" to="378"
+                 begin="47670ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="378" to="386.40000000000003"
+                 begin="47736.666666666664ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="386.40000000000003" to="394.80000000000007"
+                 begin="47803.333333333336ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="394.80000000000007" to="403.20000000000005"
+                 begin="47870ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="403.20000000000005" to="411.6"
+                 begin="47936.666666666664ms" dur="1ms"
+                 fill="freeze"/><animate attributeName="x"
+                 from="411.6" to="420"
+                 begin="48003.333333333336ms" dur="1ms"
                  fill="freeze"/>
     </rect>
-    </g>
-
-    <!-- Output line 96 -->
-    <g id="line-96" transform="translate(0, 2419.2)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1"
-               begin="50130ms" dur="10ms" fill="freeze"/>
-
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        top - 0:10  up 43 years, load avg: 0.42, 0.37, 0.31
-      </text>
-    </g>
-
-    <!-- Output line 97 -->
-    <g id="line-97" transform="translate(0, 2444.4)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1"
-               begin="50180ms" dur="10ms" fill="freeze"/>
-
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        Tasks: 342 total,   2 running, 340 sleeping
-      </text>
-    </g>
-
-    <!-- Output line 98 -->
-    <g id="line-98" transform="translate(0, 2469.6)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1"
-               begin="50230ms" dur="10ms" fill="freeze"/>
-
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        %Cpu(s): 15.2 us,  3.7 sy,  0.0 ni, 80.1 id,  0.5 wa
-      </text>
-    </g>
-
-    <!-- Output line 99 -->
-    <g id="line-99" transform="translate(0, 2494.7999999999997)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1"
-               begin="50280ms" dur="10ms" fill="freeze"/>
-
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        MiB Mem : 32768.0 total, 16384.2 free,  8192.5 used,  8191.3 buff/cache
-      </text>
     </g>
 
     <!-- Output line 100 -->
     <g id="line-100" transform="translate(0, 2520)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="50330ms" dur="10ms" fill="freeze"/>
+               begin="48570ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        
+            fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
+        Easter egg found! 🥚
       </text>
     </g>
 
     <!-- Output line 101 -->
     <g id="line-101" transform="translate(0, 2545.2)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="50380ms" dur="10ms" fill="freeze"/>
-
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-          PID USER      PR  NI    VIRT    RES  %CPU %MEM     TIME+ COMMAND
-      </text>
-    </g>
-
-    <!-- Output line 102 -->
-    <g id="line-102" transform="translate(0, 2570.4)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1"
-               begin="50430ms" dur="10ms" fill="freeze"/>
-
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-         1337 william   20   0  999999  42000  99.9  5.0   ∞:∞.∞ dad-joked
-      </text>
-    </g>
-
-    <!-- Output line 103 -->
-    <g id="line-103" transform="translate(0, 2595.6)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1"
-               begin="50480ms" dur="10ms" fill="freeze"/>
-
-      <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
-            fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-         2048 william   20   0  888888  32000  42.0  3.7   ∞:∞.∞ family
-      </text>
-    </g>
-
-    <!-- Output line 104 -->
-    <g id="line-104" transform="translate(0, 2620.7999999999997)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1"
-               begin="52730ms" dur="10ms" fill="freeze"/>
+               begin="50220ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3550,10 +3358,10 @@
       </text>
     </g>
 
-    <!-- Output line 105 -->
-    <g id="line-105" transform="translate(0, 2646)" opacity="0">
+    <!-- Output line 102 -->
+    <g id="line-102" transform="translate(0, 2570.4)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="52780ms" dur="10ms" fill="freeze"/>
+               begin="50270ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3561,10 +3369,10 @@
       </text>
     </g>
 
-    <!-- Output line 106 -->
-    <g id="line-106" transform="translate(0, 2671.2)" opacity="0">
+    <!-- Output line 103 -->
+    <g id="line-103" transform="translate(0, 2595.6)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="52830ms" dur="10ms" fill="freeze"/>
+               begin="50320ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3572,10 +3380,10 @@
       </text>
     </g>
 
-    <!-- Output line 107 -->
-    <g id="line-107" transform="translate(0, 2696.4)" opacity="0">
+    <!-- Output line 104 -->
+    <g id="line-104" transform="translate(0, 2620.7999999999997)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="52880ms" dur="10ms" fill="freeze"/>
+               begin="50370ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3583,10 +3391,10 @@
       </text>
     </g>
 
-    <!-- Output line 108 -->
-    <g id="line-108" transform="translate(0, 2721.6)" opacity="0">
+    <!-- Output line 105 -->
+    <g id="line-105" transform="translate(0, 2646)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="52930ms" dur="10ms" fill="freeze"/>
+               begin="50420ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3594,10 +3402,10 @@
       </text>
     </g>
 
-    <!-- Output line 109 -->
-    <g id="line-109" transform="translate(0, 2746.7999999999997)" opacity="0">
+    <!-- Output line 106 -->
+    <g id="line-106" transform="translate(0, 2671.2)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="52980ms" dur="10ms" fill="freeze"/>
+               begin="50470ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3605,10 +3413,10 @@
       </text>
     </g>
 
-    <!-- Output line 110 -->
-    <g id="line-110" transform="translate(0, 2772)" opacity="0">
+    <!-- Output line 107 -->
+    <g id="line-107" transform="translate(0, 2696.4)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53030ms" dur="10ms" fill="freeze"/>
+               begin="50520ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3616,10 +3424,10 @@
       </text>
     </g>
 
-    <!-- Output line 111 -->
-    <g id="line-111" transform="translate(0, 2797.2)" opacity="0">
+    <!-- Output line 108 -->
+    <g id="line-108" transform="translate(0, 2721.6)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53080ms" dur="10ms" fill="freeze"/>
+               begin="50570ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3627,10 +3435,10 @@
       </text>
     </g>
 
-    <!-- Output line 112 -->
-    <g id="line-112" transform="translate(0, 2822.4)" opacity="0">
+    <!-- Output line 109 -->
+    <g id="line-109" transform="translate(0, 2746.7999999999997)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53130ms" dur="10ms" fill="freeze"/>
+               begin="50620ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3638,10 +3446,10 @@
       </text>
     </g>
 
-    <!-- Output line 113 -->
-    <g id="line-113" transform="translate(0, 2847.6)" opacity="0">
+    <!-- Output line 110 -->
+    <g id="line-110" transform="translate(0, 2772)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53180ms" dur="10ms" fill="freeze"/>
+               begin="50670ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3649,10 +3457,10 @@
       </text>
     </g>
 
-    <!-- Output line 114 -->
-    <g id="line-114" transform="translate(0, 2872.7999999999997)" opacity="0">
+    <!-- Output line 111 -->
+    <g id="line-111" transform="translate(0, 2797.2)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53230ms" dur="10ms" fill="freeze"/>
+               begin="50720ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3660,10 +3468,10 @@
       </text>
     </g>
 
-    <!-- Output line 115 -->
-    <g id="line-115" transform="translate(0, 2898)" opacity="0">
+    <!-- Output line 112 -->
+    <g id="line-112" transform="translate(0, 2822.4)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53280ms" dur="10ms" fill="freeze"/>
+               begin="50770ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3671,10 +3479,10 @@
       </text>
     </g>
 
-    <!-- Output line 116 -->
-    <g id="line-116" transform="translate(0, 2923.2)" opacity="0">
+    <!-- Output line 113 -->
+    <g id="line-113" transform="translate(0, 2847.6)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53330ms" dur="10ms" fill="freeze"/>
+               begin="50820ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
@@ -3682,10 +3490,10 @@
       </text>
     </g>
 
-    <!-- Output line 117 -->
-    <g id="line-117" transform="translate(0, 2948.4)" opacity="0">
+    <!-- Output line 114 -->
+    <g id="line-114" transform="translate(0, 2872.7999999999997)" opacity="0">
       <animate attributeName="opacity" from="0" to="1"
-               begin="53380ms" dur="10ms" fill="freeze"/>
+               begin="50870ms" dur="10ms" fill="freeze"/>
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">

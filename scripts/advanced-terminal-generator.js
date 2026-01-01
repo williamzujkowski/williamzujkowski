@@ -266,7 +266,7 @@ class AdvancedTerminalGenerator {
 
   generateCommandLine(lineIndex, y, prompt, command, startTime, typingDuration, terminal) {
     const promptWidth = this.getTextWidth(prompt, terminal.fontSize);
-    const charDuration = typingDuration / command.length;
+    const charDuration = command.length > 0 ? typingDuration / command.length : 0;
     
     return `
     <!-- Command line ${lineIndex} -->

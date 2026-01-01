@@ -2,7 +2,7 @@
   "name": "williamzujkowski",
   "version": "1.0.0",
   "description": "Automated SVG terminal generator for GitHub profile README",
-  "main": "scripts/generate-svg.js",
+  "main": "scripts/dynamic-terminal-generator.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",

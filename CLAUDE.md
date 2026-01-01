@@ -15,13 +15,11 @@ This is a **GitHub Profile README repository** (`williamzujkowski/williamzujkows
   - `dynamic-terminal-generator.js` - Main generator with real-time content
   - `dynamic-content.js` - Time API integration and joke rotation
   - `advanced-terminal-generator.js` - Core SVG animation engine
-  - `config-reader.js` - Configuration utilities
-  - `schema-validator.js` - JSON schema validation
+  - `national-day-provider.js` - 366-day fun/awareness day database
 - **.github/** - GitHub Actions automation
-  - `workflows/update-terminal-svg.yml` - Daily automated updates (midnight EST)
-  - `schema/terminal-config.schema.json` - JSON validation schema
+  - `workflows/update-terminal-svg.yml` - Automated updates every 6 hours
 - **.archive/** - Archived legacy files (old static generators and configs)
-- **package.json** - Node.js dependencies (ajv, axios, jest)
+- **package.json** - Node.js dependencies (axios, jest)
 - Git-based version control for tracking changes
 
 ## Development Standards
@@ -155,12 +153,11 @@ The terminal animation system generates **dynamic, daily-updating content** usin
 - `dynamic-terminal-generator.js` - Main generator with dynamic content creation
 - `dynamic-content.js` - Real-time World Time API integration, joke rotation, stats generation
 - `advanced-terminal-generator.js` - Core SVG animation engine (scrolling, typing, cursor)
-- `config-reader.js` - Configuration utilities
-- `schema-validator.js` - AJV-based JSON schema validation
+- `national-day-provider.js` - 366-day database of fun/awareness days
 
 **How It Works**:
 1. Fetches accurate time from World Time API (America/New_York timezone)
-2. Selects daily joke based on day-of-year (deterministic rotation through 15 tech jokes)
+2. Selects daily joke based on day-of-year (deterministic rotation through 25 tech jokes)
 3. Calculates dynamic stats (uptime, coffee consumed, bugs fixed, etc.)
 4. Generates terminal sequences with real content
 5. Creates animated SVG with typing effects and scrolling
@@ -170,7 +167,7 @@ The terminal animation system generates **dynamic, daily-updating content** usin
 
 - **Dynamic Daily Content**:
   - Real-time accurate timestamps from World Time API
-  - 15 rotating tech dad jokes (deterministic by day)
+  - 25 rotating tech dad jokes (deterministic by day)
   - Dynamic statistics that update based on current date
   - Fresh content guaranteed every day
 
@@ -185,7 +182,7 @@ The terminal animation system generates **dynamic, daily-updating content** usin
   - Window shadow effects
   - Custom title bar: "william@dad-joke-hq:~"
   - Monospace Ubuntu Mono font
-  - Enhanced 900x650px viewport
+  - Enhanced 1000x700px viewport
 
 - **Animation System**:
   - Frame-based animation with precise timing
@@ -242,7 +239,7 @@ The system generates fresh content each run:
 
 1. **Time API** - Fetches accurate time from `worldtimeapi.org/api/timezone/America/New_York`
 2. **Joke Rotation** - Selects joke using: `dayOfYear % totalJokes` (ensures same joke all day)
-3. **Dynamic Stats** - Calculates from base year (1990):
+3. **Dynamic Stats** - Calculates from birth year (1982):
    - Coffee consumed: `days alive * 2.1 cups/day`
    - Bugs fixed: `days alive * 2.7`
    - Stack Overflow visits: `bugs fixed * 1.5`
@@ -250,23 +247,22 @@ The system generates fresh content each run:
 
 ### Testing
 
-Test files are located in `__tests__/`:
-- `config-reader.test.js` - Configuration loading tests
-- `schema-validator.test.js` - JSON schema validation tests
-- `__tests__/fixtures/` - Test fixtures (valid/invalid configs)
+Test infrastructure is configured via `jest.config.js`. Tests should be placed in `__tests__/` directory.
 
 ```bash
-# Run all tests with coverage
+# Run tests
 npm test
 
 # Watch mode for development
 npm run test:watch
 ```
 
+**Note**: Core modules (dynamic-content.js, dynamic-terminal-generator.js, etc.) currently lack test coverage. See GitHub issue #9 for tracking.
+
 ### Automation
 
 GitHub Actions workflow (`.github/workflows/update-terminal-svg.yml`):
-- **Schedule**: Runs daily at midnight EST (`0 5 * * *` UTC)
+- **Schedule**: Runs every 6 hours (`0 5,11,17,23 * * *` UTC = midnight, 6am, noon, 6pm EST)
 - **Triggers**: Also runs on pushes to generator scripts
 - **Process**:
   1. Checks out repository
@@ -276,7 +272,7 @@ GitHub Actions workflow (`.github/workflows/update-terminal-svg.yml`):
   5. Commits updated SVG if changed: `"chore: update terminal with daily joke and fresh stats [skip ci]"`
   6. Pushes to main branch
 
-**Why it works**: Dynamic content (timestamps, date-based stats) ensures SVG changes daily, triggering automatic commits.
+**Why it works**: Dynamic content (timestamps, date-based stats, national days) ensures SVG stays fresh with up to 4 updates daily.
 
 ### Best Practices
 
@@ -284,7 +280,7 @@ GitHub Actions workflow (`.github/workflows/update-terminal-svg.yml`):
 2. **Test Locally**: Always run `npm run generate` before pushing generator changes
 3. **API Reliability**: World Time API has fallback to system time if unavailable
 4. **Animation Length**: Current total ~60-70 seconds - good for engagement
-5. **Viewport Size**: 900x650px shows ~25 lines - plan sequences accordingly
+5. **Viewport Size**: 1000x700px shows ~28 lines - plan sequences accordingly
 6. **Stats Accuracy**: Update birth year in `dynamic-content.js` if needed for accurate age calculation
 
 ## Additional Resources

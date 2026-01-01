@@ -6,6 +6,10 @@ const { NationalDayProvider } = require('./national-day-provider');
  * Fetches real-time data and rotates through jokes/content
  */
 class DynamicContentGenerator {
+  // Birth date constant for uptime and stats calculations
+  static BIRTH_DATE = new Date(1982, 3, 8); // April 8, 1982
+  static BIRTH_YEAR = 1982;
+
   constructor() {
     this.nationalDayProvider = new NationalDayProvider();
     this.techJokes = [
@@ -125,7 +129,7 @@ class DynamicContentGenerator {
         category: "networking"
       },
       {
-        q: "Why don't backenddevelopers like beaches?",
+        q: "Why don't backend developers like beaches?",
         a: "Too many shells and not enough servers! 🏖️🖥️",
         category: "backend"
       },
@@ -135,6 +139,15 @@ class DynamicContentGenerator {
         category: "data-structures"
       }
     ];
+  }
+
+  /**
+   * Calculate day of year (1-366) for a given date
+   * @param {Date} date - The date to calculate day of year for
+   * @returns {number} Day of year (1-366)
+   */
+  getDayOfYear(date) {
+    return Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
   }
 
   /**
@@ -164,8 +177,7 @@ class DynamicContentGenerator {
    * Get joke for the day (deterministic based on date)
    */
   getJokeOfDay(date) {
-    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-    const index = dayOfYear % this.techJokes.length;
+    const index = this.getDayOfYear(date) % this.techJokes.length;
     return this.techJokes[index];
   }
 
@@ -187,12 +199,10 @@ class DynamicContentGenerator {
   }
 
   /**
-   * Calculate uptime in years based on birth year (1982)
+   * Calculate uptime in years based on birth year
    */
   calculateUptime(currentDate) {
-    const birthYear = 1982;
-    const age = currentDate.getFullYear() - birthYear;
-    return age;
+    return currentDate.getFullYear() - DynamicContentGenerator.BIRTH_YEAR;
   }
 
   /**
@@ -200,7 +210,7 @@ class DynamicContentGenerator {
    */
   generateStats(date) {
     const uptime = this.calculateUptime(date);
-    const daysAlive = Math.floor((date - new Date(1982, 3, 8)) / (1000 * 60 * 60 * 24));
+    const daysAlive = Math.floor((date - DynamicContentGenerator.BIRTH_DATE) / (1000 * 60 * 60 * 24));
     const coffeeConsumed = Math.floor(daysAlive * 2.1); // ~2 cups per day
     const bugsFixed = Math.floor(daysAlive * 2.7);
     const stackOverflowVisits = Math.floor(bugsFixed * 1.5);
@@ -222,8 +232,7 @@ class DynamicContentGenerator {
    * Day 2: Network rotation (ping, curl, top)
    */
   getSequenceRotation(date) {
-    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-    return dayOfYear % 3;
+    return this.getDayOfYear(date) % 3;
   }
 
   /**
@@ -244,8 +253,7 @@ class DynamicContentGenerator {
     ];
 
     // Rotate 5 commits per day deterministically
-    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-    const startIndex = (dayOfYear % 2) * 5;
+    const startIndex = (this.getDayOfYear(date) % 2) * 5;
     return allCommits.slice(startIndex, startIndex + 5);
   }
 
@@ -264,8 +272,7 @@ class DynamicContentGenerator {
     ];
 
     // Rotate 3 containers per day deterministically
-    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-    const startIndex = (dayOfYear % 3) * 2;
+    const startIndex = (this.getDayOfYear(date) % 3) * 2;
     return allContainers.slice(startIndex, Math.min(startIndex + 3, allContainers.length));
   }
 
@@ -273,9 +280,8 @@ class DynamicContentGenerator {
    * Generate network ping statistics (dynamic values)
    */
   generateNetworkStats(date) {
-    // Use date as seed for consistent but varied stats
-    const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-    const seed = dayOfYear % 100;
+    // Use day of year as seed for consistent but varied stats
+    const seed = this.getDayOfYear(date) % 100;
 
     const minMs = 12 + (seed % 8);
     const avgMs = minMs + 3 + (seed % 5);

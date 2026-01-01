@@ -348,9 +348,9 @@ Kids Impressed: 0 (work in progress)`,
 ║                                                        ║
 ╠════════════════════════════════════════════════════════╣
 ║  Stats:                                                ║
-║  ${('- Groan Level: ████████░░ ' + (Math.floor(Math.random() * 20 + 80) + '%')).padEnd(52)}  ║
-║  ${('- Times Delivered: ' + Math.floor(Math.random() * 50000 + 10000).toLocaleString()).padEnd(52)}  ║
-║  ${('- Success Rate: ' + (Math.floor(Math.random() * 5 + 95) + '% eye rolls')).padEnd(52)}  ║
+║  ${('- Groan Level: ████████░░ ' + (80 + (content.rotation * 7)) + '%').padEnd(52)}  ║
+║  ${('- Times Delivered: ' + (10000 + content.stats.daysAlive % 40000).toLocaleString()).padEnd(52)}  ║
+║  ${('- Success Rate: ' + (95 + (content.rotation * 2)) + '% eye rolls').padEnd(52)}  ║
 ║                                                        ║
 ╚════════════════════════════════════════════════════════╝`,
       color: '#ff79c6',

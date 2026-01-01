@@ -417,22 +417,6 @@ class NationalDayProvider {
       desc: 'Make it count!'
     };
   }
-
-  /**
-   * Get all days in the database
-   * @returns {Object} All days indexed by MM-DD
-   */
-  getAllDays() {
-    return this.days;
-  }
-
-  /**
-   * Get the count of days in the database
-   * @returns {number} Number of days defined
-   */
-  getDayCount() {
-    return Object.keys(this.days).length;
-  }
 }
 
 module.exports = { NationalDayProvider };

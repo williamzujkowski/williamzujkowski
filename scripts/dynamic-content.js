@@ -2,56 +2,6 @@ const axios = require('axios');
 const { NationalDayProvider } = require('./national-day-provider');
 
 /**
- * Session timer for progressive timestamps in terminal output
- * Tracks elapsed time and advances the clock naturally
- */
-class SessionTimer {
-  constructor(startTime) {
-    this.startTime = new Date(startTime);
-    this.elapsed = 0; // milliseconds elapsed in "session"
-  }
-
-  /**
-   * Get current session time and advance the clock
-   * @param {number} advanceMs - How many ms to advance after returning
-   * @returns {Date} Current session time
-   */
-  getTime(advanceMs = 0) {
-    const current = new Date(this.startTime.getTime() + this.elapsed);
-    this.elapsed += advanceMs;
-    return current;
-  }
-
-  /**
-   * Format time as HH:MM:SS
-   */
-  formatTime(date) {
-    return date.toLocaleTimeString('en-US', {
-      hour12: false,
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      timeZone: 'America/New_York'
-    });
-  }
-
-  /**
-   * Format full timestamp for display
-   */
-  formatTimestamp(date) {
-    return date.toLocaleString('en-US', {
-      weekday: 'short',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      timeZone: 'America/New_York',
-      timeZoneName: 'short'
-    });
-  }
-}
-
-/**
  * Dynamic content generator for terminal SVG
  * Fetches real-time data and rotates through jokes/content
  */
@@ -348,7 +298,6 @@ class DynamicContentGenerator {
    */
   async generateContent() {
     const currentTime = await this.fetchAccurateTime();
-    const sessionTimer = new SessionTimer(currentTime);
     const nationalDay = this.nationalDayProvider.getNationalDay(currentTime);
     const joke = this.getJokeOfDay(currentTime);
     const stats = this.generateStats(currentTime);
@@ -363,7 +312,6 @@ class DynamicContentGenerator {
       joke,
       stats,
       currentTime,
-      sessionTimer,
       nationalDay,
       rotation,
       gitLog,

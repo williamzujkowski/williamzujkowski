@@ -452,48 +452,6 @@ class AdvancedTerminalGenerator {
   getTextWidth(text, fontSize) {
     return text.length * (fontSize * 0.6);
   }
-
-  /**
-   * Calculate realistic typing delays for each character
-   * @param {string} text - The text to calculate delays for
-   * @param {number} baseSpeed - Base typing speed in milliseconds (default: 150)
-   * @returns {number[]} - Array of delays in milliseconds for each character
-   */
-  calculateRealisticDelays(text, baseSpeed = 150) {
-    const delays = [];
-    let charsSinceThinkingPause = 0;
-    const nextThinkingPause = Math.floor(Math.random() * 8) + 8; // Random between 8-15 chars
-
-    for (let i = 0; i < text.length; i++) {
-      const char = text[i];
-      let delay = baseSpeed;
-
-      // Add ±40% random variation to base speed
-      const variation = (Math.random() * 0.8 - 0.4) * baseSpeed; // -40% to +40%
-      delay += variation;
-
-      // Longer pauses at spaces (+100-300ms)
-      if (char === ' ') {
-        delay += Math.random() * 200 + 100; // +100 to +300ms
-      }
-
-      // Longer pauses at punctuation (+50-200ms)
-      if (['.', ',', '!', '?', ':', ';'].includes(char)) {
-        delay += Math.random() * 150 + 50; // +50 to +200ms
-      }
-
-      // Random "thinking pauses" every 8-15 characters
-      charsSinceThinkingPause++;
-      if (charsSinceThinkingPause >= nextThinkingPause) {
-        delay += Math.random() * 300 + 200; // +200 to +500ms thinking pause
-        charsSinceThinkingPause = 0;
-      }
-
-      delays.push(Math.round(delay));
-    }
-
-    return delays;
-  }
 }
 
 module.exports = AdvancedTerminalGenerator;

@@ -6,9 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint scripts/**/*.js",
-    "generate": "node scripts/dynamic-terminal-generator.js",
-    "generate:legacy": "node scripts/generate-advanced-terminal.js"
+    "generate": "node scripts/dynamic-terminal-generator.js"
   },
   "repository": {
     "type": "git",
@@ -23,12 +21,9 @@
   },
   "homepage": "https://github.com/williamzujkowski/williamzujkowski#readme",
   "dependencies": {
-    "ajv": "^8.17.1",
     "axios": "^1.10.0"
   },
   "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "eslint": "^9.31.0",
     "jest": "^29.7.0"
   }
 }

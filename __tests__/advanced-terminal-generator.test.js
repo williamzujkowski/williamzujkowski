@@ -122,6 +122,12 @@ describe('AdvancedTerminalGenerator', () => {
       expect(svg).toContain('xmlns="http://www.w3.org/2000/svg"');
     });
 
+    test('throws error for non-array input', () => {
+      expect(() => generator.generateTerminal(null)).toThrow('sequences must be an array');
+      expect(() => generator.generateTerminal('invalid')).toThrow('sequences must be an array');
+      expect(() => generator.generateTerminal({})).toThrow('sequences must be an array');
+    });
+
     test('SVG has correct dimensions', () => {
       const svg = generator.generateTerminal(simpleSequences);
       expect(svg).toContain(`width="${generator.config.window.width}"`);

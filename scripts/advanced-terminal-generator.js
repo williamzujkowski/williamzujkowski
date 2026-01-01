@@ -35,11 +35,16 @@ class AdvancedTerminalGenerator {
   }
 
   generateTerminal(sequences) {
+    // Input validation
+    if (!Array.isArray(sequences)) {
+      throw new Error('sequences must be an array');
+    }
+
     const { window, terminal } = this.config;
     const lineHeight = terminal.fontSize * terminal.lineHeight;
     const viewportHeight = window.height - window.titleBar.height - (terminal.padding * 2);
     const maxVisibleLines = Math.floor(viewportHeight / lineHeight);
-    
+
     // Process all sequences and create a complete animation timeline
     const { frames, totalDuration } = this.createAnimationFrames(sequences, terminal, maxVisibleLines);
     

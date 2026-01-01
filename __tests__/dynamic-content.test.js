@@ -322,6 +322,22 @@ describe('DynamicContentGenerator', () => {
       expect(stats1.avg_ms).toBe(stats2.avg_ms);
       expect(stats1.max_ms).toBe(stats2.max_ms);
     });
+
+    test('packet_loss is 1 when seed % 10 === 0', () => {
+      // Jan 10 = day 10, seed = 10 % 100 = 10, 10 % 10 === 0
+      const date = new Date(2024, 0, 10);
+      const stats = generator.generateNetworkStats(date);
+      expect(stats.packet_loss).toBe(1);
+      expect(stats.packets_received).toBe(4);
+    });
+
+    test('packet_loss is 0 when seed % 10 !== 0', () => {
+      // Jan 15 = day 15, seed = 15 % 100 = 15, 15 % 10 !== 0
+      const date = new Date(2024, 0, 15);
+      const stats = generator.generateNetworkStats(date);
+      expect(stats.packet_loss).toBe(0);
+      expect(stats.packets_received).toBe(5);
+    });
   });
 
   describe('fetchAccurateTime', () => {

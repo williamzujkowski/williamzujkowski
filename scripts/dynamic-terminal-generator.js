@@ -5,6 +5,7 @@ const path = require('path');
 const AdvancedTerminalGenerator = require('./advanced-terminal-generator');
 const DynamicContentGenerator = require('./dynamic-content');
 const { createDoubleBox, createRoundedBox, createTitledBox } = require('./box-generator');
+const { DEFAULT_PROMPT, COLORS, TYPING, PAUSE, WINDOW } = require('./constants');
 
 /**
  * Build DevOps sequence (Day 1 rotation)
@@ -22,7 +23,7 @@ function buildDevOpsSequences(content) {
   return [
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'git log --oneline -5',
       typingDuration: 1400,
       pause: 400
@@ -30,12 +31,12 @@ function buildDevOpsSequences(content) {
     {
       type: 'output',
       content: gitCommits,
-      color: '#f1fa8c',
+      color: COLORS.YELLOW,
       pause: 1800
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'docker ps --format "table {{.ID}}\\t{{.Image}}\\t{{.Status}}\\t{{.Ports}}"',
       typingDuration: 2400,
       pause: 500
@@ -44,12 +45,12 @@ function buildDevOpsSequences(content) {
       type: 'output',
       content: `CONTAINER ID  IMAGE                 STATUS           PORTS
 ${dockerRows}`,
-      color: '#8be9fd',
+      color: COLORS.CYAN,
       pause: 2000
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'sudo make me a sandwich',
       typingDuration: 1600,
       pause: 400
@@ -61,7 +62,7 @@ Making sandwich...
 🥪 Sandwich created successfully!
 Ingredients: dad-jokes, coffee, code
 Quality: Premium (as always)`,
-      color: '#50fa7b',
+      color: COLORS.GREEN,
       pause: 1800
     }
   ];
@@ -77,7 +78,7 @@ function buildNetworkSequences(content) {
   return [
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'ping -c 5 github.com',
       typingDuration: 1400,
       pause: 400
@@ -94,12 +95,12 @@ function buildNetworkSequences(content) {
 --- github.com ping statistics ---
 ${stats.packets_sent} packets transmitted, ${stats.packets_received} packets received, ${stats.packet_loss}% packet loss
 round-trip min/avg/max/stddev = ${stats.min_ms}/${stats.avg_ms}/${stats.max_ms}/${stats.mdev_ms} ms`,
-      color: '#8be9fd',
+      color: COLORS.CYAN,
       pause: 2000
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'curl -s https://icanhazdadjoke.com/ | head -1',
       typingDuration: 2200,
       pause: 500
@@ -108,12 +109,12 @@ round-trip min/avg/max/stddev = ${stats.min_ms}/${stats.avg_ms}/${stats.max_ms}/
       type: 'output',
       content: `${content.joke.q}
 ${content.joke.a}`,
-      color: '#ff79c6',
+      color: COLORS.PINK,
       pause: 1600
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'top -bn1 | head -8',
       typingDuration: 1600,
       pause: 400
@@ -128,7 +129,7 @@ MiB Mem : 32768.0 total, 16384.2 free,  8192.5 used,  8191.3 buff/cache
   PID USER      PR  NI    VIRT    RES  %CPU %MEM     TIME+ COMMAND
  1337 william   20   0  999999  42000  99.9  5.0   ∞:∞.∞ dad-joked
  2048 william   20   0  888888  32000  42.0  3.7   ∞:∞.∞ family`,
-      color: '#ffffff',
+      color: COLORS.WHITE,
       pause: 2000
     }
   ];
@@ -142,7 +143,7 @@ function buildEasterEggSequences(content) {
   return [
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'telnet towel.blinkenlights.nl',
       typingDuration: 2000,
       pause: 600
@@ -152,7 +153,7 @@ function buildEasterEggSequences(content) {
       content: `Trying 176.9.53.173...
 Connected to towel.blinkenlights.nl.
 Escape character is '^]'.`,
-      color: '#6272a4',
+      color: COLORS.COMMENT,
       pause: 800
     },
     {
@@ -171,12 +172,12 @@ Escape character is '^]'.`,
     "May the Source be with you!" - Obi-Wan Kerneli
 
 Connection closed by foreign host.`,
-      color: '#ffb86c',
+      color: COLORS.ORANGE,
       pause: 2800
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'echo "Easter egg found! 🥚"',
       typingDuration: 1800,
       pause: 400
@@ -184,7 +185,7 @@ Connection closed by foreign host.`,
     {
       type: 'output',
       content: 'Easter egg found! 🥚',
-      color: '#50fa7b',
+      color: COLORS.GREEN,
       pause: 1400
     }
   ];
@@ -209,7 +210,7 @@ async function generateDynamicTerminal() {
   const coreSequences = [
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'cat /etc/motd',
       typingDuration: 800,
       pause: 400,
@@ -223,13 +224,13 @@ async function generateDynamicTerminal() {
         'Powered by coffee, dad jokes & late-night debugging',
         ''
       ]),
-      color: '#00ff9f',
+      color: COLORS.NEON_GREEN,
       pause: 1200
     },
     // National Day sequence - shows fun/awareness day for today
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'curl -s https://whatday.today/api | jq .today',
       typingDuration: 1600,
       pause: 300
@@ -245,12 +246,12 @@ async function generateDynamicTerminal() {
           `  "${desc}"`
         ]);
       })(),
-      color: '#f1fa8c',
+      color: COLORS.YELLOW,
       pause: 1000
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'date',
       typingDuration: 400,
       pause: 300
@@ -258,12 +259,12 @@ async function generateDynamicTerminal() {
     {
       type: 'output',
       content: `📅 ${content.timestamp}`,
-      color: '#50fa7b',
+      color: COLORS.GREEN,
       pause: 800
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'whoami',
       typingDuration: 500,
       pause: 300
@@ -271,12 +272,12 @@ async function generateDynamicTerminal() {
     {
       type: 'output',
       content: 'william',
-      color: '#ffffff',
+      color: COLORS.WHITE,
       pause: 600
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'cat /etc/profile',
       typingDuration: 1200,
       pause: 400
@@ -289,12 +290,12 @@ Role: Senior Security Specialist & Family CTO
 Uptime: ${content.stats.uptime} years (${content.stats.daysAlive.toLocaleString()} days)
 Shell: /bin/dad-jokes
 Status: ☕ Powered by coffee and curiosity`,
-      color: '#729fcf',
+      color: COLORS.BLUE,
       pause: 1500
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'ps aux | grep "life.*processes"',
       typingDuration: 2000,
       pause: 500
@@ -305,12 +306,12 @@ Status: ☕ Powered by coffee and curiosity`,
 william   2048  42.0  3.7   ∞   ∞  ?  Sl   ${content.timestamp.slice(4, 16)}  ∞  /usr/bin/security-automation --mode=defensive
 william   4096  15.2  2.1   ∞   ∞  ?  S    ${content.timestamp.slice(4, 16)}  ∞  /usr/bin/home-assistant --smart-home
 william   8192  100   1.0   ∞   ∞  ?  R+   ${content.timestamp.slice(4, 16)}  ∞  /usr/bin/dad-joke-daemon --interval=30s`,
-      color: '#ffffff',
+      color: COLORS.WHITE,
       pause: 1800
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'cat /proc/developer/stats',
       typingDuration: 1800,
       pause: 500
@@ -326,12 +327,12 @@ Bugs Created: ${content.stats.bugsCreated.toLocaleString()} (improving!)
 Stack Overflow Visits: ${content.stats.stackOverflowVisits.toLocaleString()}
 Dad Jokes Told: ∞
 Kids Impressed: 0 (work in progress)`,
-      color: '#729fcf',
+      color: COLORS.BLUE,
       pause: 2000
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: './dad-joke --random --format=fancy',
       typingDuration: 2000,
       pause: 500
@@ -364,12 +365,12 @@ Kids Impressed: 0 (work in progress)`,
           separatorAfter: [2, 7]
         });
       })(),
-      color: '#ff79c6',
+      color: COLORS.PINK,
       pause: 2000
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'fortune | cowsay -f tux | lolcat',
       typingDuration: 2200,
       pause: 500
@@ -392,12 +393,12 @@ Kids Impressed: 0 (work in progress)`,
      (|     | )
     /'\\_   _/\`\\
     \\___)=(___/`,
-      color: '#bd93f9',
+      color: COLORS.PURPLE,
       pause: 1500  // Optimized: 2200ms → 1500ms (save 0.7s)
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'systemctl status dad-mode.service',
       typingDuration: 2400,
       pause: 500
@@ -415,12 +416,12 @@ Kids Impressed: 0 (work in progress)`,
 
 ${content.timestamp} dad-mode[1337]: ✓ Joke delivery successful
 ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
-      color: '#ffffff',
+      color: COLORS.WHITE,
       pause: 2000
     },
     {
       type: 'command',
-      prompt: 'william@dad-joke-hq:~$ ',
+      prompt: DEFAULT_PROMPT,
       content: 'cat /etc/goodbye.txt',
       typingDuration: 1600,
       pause: 500
@@ -441,7 +442,7 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
         'See you in the commits!',
         ''
       ]),
-      color: '#50fa7b',
+      color: COLORS.GREEN,
       pause: 1800
     }
   ];
@@ -496,30 +497,34 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
   const generator = new AdvancedTerminalGenerator();
 
   // Customize terminal config for better aesthetics
-  generator.config.window.width = 1000;  // Wider for better readability
-  generator.config.window.height = 700;  // Taller for more content
-  generator.config.window.backgroundColor = '#0a0e27';
-  generator.config.window.borderRadius = 12;
-  generator.config.window.titleBar.title = '🚀 william@dad-joke-hq:~';
+  generator.config.window.width = WINDOW.WIDTH;
+  generator.config.window.height = WINDOW.HEIGHT;
+  generator.config.window.backgroundColor = COLORS.BACKGROUND;
+  generator.config.window.borderRadius = WINDOW.BORDER_RADIUS;
+  generator.config.window.titleBar.title = WINDOW.TITLE;
   generator.config.window.titleBar.height = 40;
-  generator.config.window.titleBar.backgroundColor = '#151b2e';
+  generator.config.window.titleBar.backgroundColor = COLORS.TITLE_BAR_BG;
   generator.config.terminal.fontSize = 14;
   generator.config.terminal.lineHeight = 1.8;
-  generator.config.terminal.backgroundColor = '#0a0e27';
-  generator.config.terminal.promptColor = '#00ff9f';
-  generator.config.terminal.cursorColor = '#00ff41';
+  generator.config.terminal.backgroundColor = COLORS.BACKGROUND;
+  generator.config.terminal.promptColor = COLORS.NEON_GREEN;
+  generator.config.terminal.cursorColor = COLORS.MATRIX_GREEN;
 
   const svgContent = generator.generateTerminal(sequences);
 
-  // Write to file
+  // Write to file with error handling
   const outputPath = path.join(process.cwd(), 'src', 'terminal.svg');
   const outputDir = path.dirname(outputPath);
 
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
-  }
+  try {
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
 
-  await fs.promises.writeFile(outputPath, svgContent, 'utf-8');
+    await fs.promises.writeFile(outputPath, svgContent, 'utf-8');
+  } catch (error) {
+    throw new Error(`Failed to write SVG to ${outputPath}: ${error.message}`);
+  }
 
   console.log('✅ Dynamic terminal SVG generated successfully!');
   console.log(`📍 Output: ${outputPath}`);

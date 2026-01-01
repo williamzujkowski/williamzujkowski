@@ -1,5 +1,15 @@
+/**
+ * Advanced Terminal Generator - Creates animated SVG terminal simulations
+ * with realistic typing effects, scrolling behavior, and CRT visual effects.
+ * @class
+ */
 class AdvancedTerminalGenerator {
+  /**
+   * Creates a new AdvancedTerminalGenerator instance with default configuration.
+   * @constructor
+   */
   constructor() {
+    /** @type {Object} Terminal configuration */
     this.config = {
       window: {
         width: 800,
@@ -34,6 +44,19 @@ class AdvancedTerminalGenerator {
     };
   }
 
+  /**
+   * Generates an animated SVG terminal from a sequence of commands and outputs.
+   * @param {Array<Object>} sequences - Array of sequence objects defining terminal content
+   * @param {string} sequences[].type - Sequence type: 'command', 'output', or 'ascii'
+   * @param {string} [sequences[].prompt] - Command prompt text (for command type)
+   * @param {string} sequences[].content - The text content to display
+   * @param {number} [sequences[].typingDuration] - Duration for typing animation (ms)
+   * @param {string} [sequences[].color] - Text color (for output type)
+   * @param {number} [sequences[].pause] - Pause after sequence (ms)
+   * @param {number} [sequences[].delay] - Initial delay before sequence (ms)
+   * @returns {string} Complete SVG markup string
+   * @throws {Error} If sequences is not an array
+   */
   generateTerminal(sequences) {
     // Input validation
     if (!Array.isArray(sequences)) {
@@ -64,6 +87,14 @@ class AdvancedTerminalGenerator {
     return svg;
   }
 
+  /**
+   * Creates animation frames from terminal sequences for SVG animation.
+   * Handles scrolling, typing, and output display timing.
+   * @param {Array<Object>} sequences - Terminal content sequences
+   * @param {Object} terminal - Terminal configuration
+   * @param {number} maxVisibleLines - Maximum lines visible in viewport
+   * @returns {{frames: Array<Object>, totalDuration: number, finalBuffer: Array}} Animation data
+   */
   createAnimationFrames(sequences, terminal, maxVisibleLines) {
     let currentTime = 0;
     const frames = [];
@@ -181,6 +212,15 @@ class AdvancedTerminalGenerator {
     return { frames, totalDuration: currentTime, finalBuffer: buffer };
   }
 
+  /**
+   * Generates the terminal content area including viewport and scroll container.
+   * @param {Object} window - Window configuration
+   * @param {Object} terminal - Terminal configuration
+   * @param {Array<Object>} frames - Animation frames
+   * @param {number} maxVisibleLines - Maximum visible lines
+   * @param {number} lineHeight - Height of each line in pixels
+   * @returns {string} SVG markup for terminal content
+   */
   generateTerminalContent(window, terminal, frames, maxVisibleLines, lineHeight) {
     const contentY = window.titleBar.height + terminal.padding;
     const viewportHeight = window.height - window.titleBar.height;
@@ -207,6 +247,12 @@ class AdvancedTerminalGenerator {
     </g>`;
   }
 
+  /**
+   * Generates SVG animateTransform elements for scroll animations.
+   * @param {Array<Object>} frames - Animation frames (filters for scroll type)
+   * @param {Object} terminal - Terminal configuration
+   * @returns {string} SVG animation markup for scrolling
+   */
   generateScrollAnimations(frames, terminal) {
     const scrollFrames = frames.filter(f => f.type === 'scroll');
     const lineHeight = Math.round(terminal.fontSize * terminal.lineHeight * 10) / 10; // Round to 1 decimal
@@ -230,6 +276,14 @@ class AdvancedTerminalGenerator {
     }).join('');
   }
 
+  /**
+   * Generates all terminal line elements from animation frames.
+   * @param {Array<Object>} frames - Animation frames
+   * @param {Object} terminal - Terminal configuration
+   * @param {number} maxVisibleLines - Maximum visible lines
+   * @param {number} lineHeight - Height of each line in pixels
+   * @returns {string} SVG markup for all terminal lines
+   */
   generateAllLines(frames, terminal, maxVisibleLines, lineHeight) {
     const lines = [];
     const processedLines = new Map();
@@ -269,6 +323,17 @@ class AdvancedTerminalGenerator {
       .join('\n');
   }
 
+  /**
+   * Generates a command line with typing animation.
+   * @param {number} lineIndex - Line index in terminal buffer
+   * @param {number} y - Y position in pixels
+   * @param {string} prompt - Command prompt text
+   * @param {string} command - Command text to type
+   * @param {number} startTime - Animation start time in ms
+   * @param {number} typingDuration - Total typing duration in ms
+   * @param {Object} terminal - Terminal configuration
+   * @returns {string} SVG markup for command line
+   */
   generateCommandLine(lineIndex, y, prompt, command, startTime, typingDuration, terminal) {
     const promptWidth = this.getTextWidth(prompt, terminal.fontSize);
     const charDuration = command.length > 0 ? typingDuration / command.length : 0;
@@ -299,6 +364,16 @@ class AdvancedTerminalGenerator {
     </g>`;
   }
 
+  /**
+   * Generates an output line with fade-in animation.
+   * @param {number} lineIndex - Line index in terminal buffer
+   * @param {number} y - Y position in pixels
+   * @param {string} content - Output text content
+   * @param {string} color - Text color
+   * @param {number} startTime - Animation start time in ms
+   * @param {Object} terminal - Terminal configuration
+   * @returns {string} SVG markup for output line
+   */
   generateOutputLine(lineIndex, y, content, color, startTime, terminal) {
     return `
     <!-- Output line ${lineIndex} -->
@@ -313,6 +388,15 @@ class AdvancedTerminalGenerator {
     </g>`;
   }
 
+  /**
+   * Generates an animated blinking cursor that follows typing.
+   * @param {string} prompt - Command prompt text
+   * @param {string} command - Command being typed
+   * @param {number} startTime - Animation start time in ms
+   * @param {number} typingDuration - Total typing duration in ms
+   * @param {Object} terminal - Terminal configuration
+   * @returns {string} SVG markup for cursor animation
+   */
   generateCursor(prompt, command, startTime, typingDuration, terminal) {
     const promptWidth = this.getTextWidth(prompt, terminal.fontSize);
     const charWidth = terminal.fontSize * 0.6;
@@ -350,6 +434,10 @@ class AdvancedTerminalGenerator {
     </rect>`;
   }
 
+  /**
+   * Generates SVG defs section with patterns.
+   * @returns {string} SVG pattern definitions
+   */
   generateDefs() {
     return `
     <!-- Terminal scanline effect -->
@@ -359,6 +447,11 @@ class AdvancedTerminalGenerator {
     </pattern>`;
   }
 
+  /**
+   * Generates SVG filter definitions for visual effects.
+   * Includes text glow, window shadow, and CRT scanline effects.
+   * @returns {string} SVG filter definitions
+   */
   generateFilters() {
     return `
     <!-- 3-Layer Phosphor Glow Filter -->
@@ -411,6 +504,11 @@ class AdvancedTerminalGenerator {
     </filter>`;
   }
 
+  /**
+   * Generates the window background rectangle.
+   * @param {Object} window - Window configuration
+   * @returns {string} SVG markup for window background
+   */
   generateWindow(window) {
     return `
     <!-- Window background -->
@@ -419,6 +517,11 @@ class AdvancedTerminalGenerator {
           fill="${window.backgroundColor}"/>`;
   }
 
+  /**
+   * Generates the window title bar with controls and title text.
+   * @param {Object} window - Window configuration
+   * @returns {string} SVG markup for title bar
+   */
   generateTitleBar(window) {
     return `
     <!-- Title bar -->
@@ -445,6 +548,11 @@ class AdvancedTerminalGenerator {
     </text>`;
   }
 
+  /**
+   * Escapes special XML characters to prevent SVG parsing errors.
+   * @param {string} text - Text to escape
+   * @returns {string} XML-safe escaped text
+   */
   escapeXml(text) {
     return text
       .replace(/&/g, '&amp;')
@@ -454,6 +562,12 @@ class AdvancedTerminalGenerator {
       .replace(/'/g, '&apos;');
   }
 
+  /**
+   * Calculates approximate text width for monospace font.
+   * @param {string} text - Text to measure
+   * @param {number} fontSize - Font size in pixels
+   * @returns {number} Approximate width in pixels
+   */
   getTextWidth(text, fontSize) {
     return text.length * (fontSize * 0.6);
   }

@@ -65,6 +65,36 @@ describe('BoxGenerator', () => {
     test('handles exact length', () => {
       expect(truncateToWidth('Hello', 5)).toBe('Hello');
     });
+
+    test('handles string that just fits with room for ellipsis', () => {
+      // Test string that fits exactly within maxWidth (no truncation needed)
+      const result = truncateToWidth('ABCDEFG', 10);
+      expect(result).toBe('ABCDEFG');
+      expect(getDisplayWidth(result)).toBe(7);
+    });
+
+    test('handles string at truncation boundary', () => {
+      // String is 11 chars, maxWidth 10, needs truncation
+      // Early check: getDisplayWidth('ABCDEFGHIJK') = 11 > 10, enters loop
+      // Loop stops when width + charWidth + 3 > maxWidth
+      const result = truncateToWidth('ABCDEFGHIJK', 10);
+      expect(result).toBe('ABCDEFG...');
+      expect(getDisplayWidth(result)).toBeLessThanOrEqual(10);
+    });
+
+    test('handles empty string', () => {
+      expect(truncateToWidth('', 10)).toBe('');
+    });
+
+    test('handles emoji that would exceed width', () => {
+      // Total width: 'Hello' (5) + '🎉' (2) + 'World!' (6) = 13
+      // maxWidth: 12, so 13 > 12 triggers truncation
+      const result = truncateToWidth('Hello🎉World!', 12);
+      // In loop: after 'Hello🎉W' (width=8), 'o' would be 8+1+3=12 <= 12, fits
+      // After adding 'o' (width=9), 'r' would be 9+1+3=13 > 12, truncate
+      expect(result).toBe('Hello🎉Wo...');
+      expect(getDisplayWidth(result)).toBeLessThanOrEqual(12);
+    });
   });
 
   describe('createDoubleBox', () => {

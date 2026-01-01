@@ -426,4 +426,156 @@ describe('AdvancedTerminalGenerator', () => {
       expect(outputFrames.length).toBe(3);
     });
   });
+
+  describe('command scroll trigger', () => {
+    test('creates scroll frame before command when viewport is full', () => {
+      // Fill viewport with output first, then add a command
+      const sequences = [];
+
+      // Add enough output lines to fill the viewport
+      for (let i = 0; i < 5; i++) {
+        sequences.push({
+          type: 'output',
+          content: `Line ${i}`,
+          color: '#ffffff',
+          pause: 100
+        });
+      }
+
+      // Add a command after viewport is full - this should trigger scroll
+      sequences.push({
+        type: 'command',
+        prompt: 'user@host:~$ ',
+        content: 'ls -la',
+        typingDuration: 500,
+        pause: 200
+      });
+
+      // Use small viewport (3 lines) to ensure scrolling triggers
+      const result = generator.createAnimationFrames(
+        sequences,
+        generator.config.terminal,
+        3
+      );
+
+      // Should have scroll frames
+      const scrollFrames = result.frames.filter(f => f.type === 'scroll');
+      expect(scrollFrames.length).toBeGreaterThan(0);
+
+      // Should have command frames
+      const commandFrames = result.frames.filter(f => f.type === 'add-command');
+      expect(commandFrames.length).toBe(1);
+    });
+
+    test('scroll frame appears before command frame in timeline', () => {
+      const sequences = [];
+
+      // Fill viewport
+      for (let i = 0; i < 10; i++) {
+        sequences.push({
+          type: 'output',
+          content: `Output ${i}`,
+          color: '#ffffff',
+          pause: 50
+        });
+      }
+
+      // Add command that triggers scroll
+      sequences.push({
+        type: 'command',
+        prompt: '$ ',
+        content: 'test',
+        typingDuration: 500,
+        pause: 100
+      });
+
+      const result = generator.createAnimationFrames(
+        sequences,
+        generator.config.terminal,
+        5
+      );
+
+      // Find the last scroll before the command
+      const frames = result.frames;
+      const commandFrame = frames.find(f => f.type === 'add-command');
+      const scrollBeforeCommand = frames.filter(
+        f => f.type === 'scroll' && f.time <= commandFrame.time
+      );
+
+      expect(scrollBeforeCommand.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('scroll animation accumulation', () => {
+    test('generates scroll animations with accumulated offsets', () => {
+      // Create many lines to trigger multiple scrolls
+      const sequences = [];
+      for (let i = 0; i < 40; i++) {
+        sequences.push({
+          type: 'output',
+          content: `Line ${i}`,
+          color: '#ffffff',
+          pause: 50
+        });
+      }
+
+      // Use smaller viewport height to ensure scrolling is triggered
+      generator.config.window.height = 150;
+
+      const svg = generator.generateTerminal(sequences);
+
+      // Should contain animateTransform elements for scrolling
+      expect(svg).toContain('animateTransform');
+      expect(svg).toContain('type="translate"');
+    });
+
+    test('scroll coordinates change progressively', () => {
+      const sequences = [];
+      for (let i = 0; i < 15; i++) {
+        sequences.push({
+          type: 'output',
+          content: `Line ${i}`,
+          color: '#ffffff',
+          pause: 50
+        });
+      }
+
+      // Use a small viewport to force many scrolls
+      generator.config.window.height = 200;
+
+      const result = generator.createAnimationFrames(
+        sequences,
+        generator.config.terminal,
+        5
+      );
+
+      const scrollFrames = result.frames.filter(f => f.type === 'scroll');
+
+      // Multiple scroll frames should exist
+      expect(scrollFrames.length).toBeGreaterThan(1);
+
+      // Each scroll should increment bufferStart
+      for (let i = 1; i < scrollFrames.length; i++) {
+        expect(scrollFrames[i].bufferStart).toBeGreaterThan(scrollFrames[i-1].bufferStart);
+      }
+    });
+
+    test('generateScrollAnimations produces valid SVG transform strings', () => {
+      const frames = [
+        { type: 'scroll', time: 100, scrollLines: 1 },
+        { type: 'scroll', time: 200, scrollLines: 1 },
+        { type: 'scroll', time: 300, scrollLines: 1 }
+      ];
+
+      const animations = generator.generateScrollAnimations(frames, generator.config.terminal);
+
+      // Should contain multiple animateTransform elements
+      expect(animations).toContain('animateTransform');
+      expect(animations).toContain('from=');
+      expect(animations).toContain('to=');
+      expect(animations).toContain('begin="100ms"');
+      expect(animations).toContain('begin="200ms"');
+      expect(animations).toContain('begin="300ms"');
+    });
+  });
 });

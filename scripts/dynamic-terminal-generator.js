@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const AdvancedTerminalGenerator = require('./advanced-terminal-generator');
 const DynamicContentGenerator = require('./dynamic-content');
+const { createDoubleBox, createRoundedBox, createTitledBox } = require('./box-generator');
 
 /**
  * Build DevOps sequence (Day 1 rotation)
@@ -216,11 +217,12 @@ async function generateDynamicTerminal() {
     },
     {
       type: 'output',
-      content: `╔════════════════════════════════════════════════════════╗
-║                                                        ║
-║  WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}${' '.repeat(23)}║
-║  Powered by coffee, dad jokes & late-night debugging${' '.repeat(3)}║
-╚════════════════════════════════════════════════════════╝`,
+      content: createDoubleBox([
+        '',
+        `WILLIAM'S DEV TERMINAL v${new Date().getFullYear()}.${(new Date().getMonth() + 1).toString().padStart(2, '0')}`,
+        'Powered by coffee, dad jokes & late-night debugging',
+        ''
+      ]),
       color: '#00ff9f',
       pause: 1200
     },
@@ -238,10 +240,10 @@ async function generateDynamicTerminal() {
         const day = content.nationalDay;
         const name = day.name.length > 32 ? day.name.substring(0, 29) + '...' : day.name;
         const desc = day.desc.length > 38 ? day.desc.substring(0, 35) + '...' : day.desc;
-        return `╭────────────────────────────────────────────────╮
-│ ${day.emoji} Today is ${name.padEnd(35)}│
-│   "${desc}"${' '.repeat(Math.max(0, 38 - desc.length))}│
-╰────────────────────────────────────────────────╯`;
+        return createRoundedBox([
+          `${day.emoji} Today is ${name}`,
+          `  "${desc}"`
+        ]);
       })(),
       color: '#f1fa8c',
       pause: 1000
@@ -336,25 +338,34 @@ Kids Impressed: 0 (work in progress)`,
     },
     {
       type: 'output',
-      content: `╔════════════════════════════════════════════════════════╗
-║                                                        ║
-║  DAD JOKE OF THE DAY - ${content.timestamp.slice(4, 16).padEnd(32)}║
-║  Category: ${(content.joke.category || 'classic').toUpperCase().padEnd(44)}║
-╠════════════════════════════════════════════════════════╣
-║                                                        ║
-║  Q: ${content.joke.q.replace(/[^\x00-\x7F]/g, '').slice(0, 51).padEnd(51)}║
-║                                                        ║
-║  A: ${content.joke.a.replace(/[^\x00-\x7F]/g, '').slice(0, 51).padEnd(51)}║
-║                                                        ║
-╠════════════════════════════════════════════════════════╣
-║  Stats:                                                ║
-║  ${('- Groan Level: ████████░░ ' + (80 + (content.rotation * 7)) + '%').padEnd(52)}  ║
-║  ${('- Times Delivered: ' + (10000 + content.stats.daysAlive % 40000).toLocaleString()).padEnd(52)}  ║
-║  ${('- Success Rate: ' + (95 + (content.rotation * 2)) + '% eye rolls').padEnd(52)}  ║
-║                                                        ║
-╚════════════════════════════════════════════════════════╝`,
+      content: (() => {
+        // Strip emojis from joke text for consistent box alignment
+        const cleanQ = content.joke.q.replace(/[^\x00-\x7F]/g, '');
+        const cleanA = content.joke.a.replace(/[^\x00-\x7F]/g, '');
+        const { createAsciiBox } = require('./box-generator');
+        return createAsciiBox({
+          style: 'double',
+          width: 58,
+          lines: [
+            '',
+            `DAD JOKE OF THE DAY - ${content.timestamp.slice(4, 16)}`,
+            `Category: ${(content.joke.category || 'classic').toUpperCase()}`,
+            '',
+            `Q: ${cleanQ}`,
+            '',
+            `A: ${cleanA}`,
+            '',
+            'Stats:',
+            `- Groan Level: ████████░░ ${80 + (content.rotation * 7)}%`,
+            `- Times Delivered: ${(10000 + content.stats.daysAlive % 40000).toLocaleString()}`,
+            `- Success Rate: ${95 + (content.rotation * 2)}% eye rolls`,
+            ''
+          ],
+          separatorAfter: [2, 7]
+        });
+      })(),
       color: '#ff79c6',
-      pause: 2000  // Optimized: 3000ms → 2000ms (save 1s)
+      pause: 2000
     },
     {
       type: 'command',
@@ -416,22 +427,22 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
     },
     {
       type: 'output',
-      content: `╔════════════════════════════════════════════════════════╗
-║                                                        ║
-║  Thanks for visiting!                                  ║
-║                                                        ║
-║  May your:                                             ║
-║    - Code compile without warnings                     ║
-║    - Tests pass on first try                           ║
-║    - Bugs be easily reproducible                       ║
-║    - Coffee stay hot                                   ║
-║    - Git conflicts be minimal                          ║
-║                                                        ║
-║  See you in the commits!                               ║
-║                                                        ║
-╚════════════════════════════════════════════════════════╝`,
+      content: createDoubleBox([
+        '',
+        'Thanks for visiting!',
+        '',
+        'May your:',
+        '  - Code compile without warnings',
+        '  - Tests pass on first try',
+        '  - Bugs be easily reproducible',
+        '  - Coffee stay hot',
+        '  - Git conflicts be minimal',
+        '',
+        'See you in the commits!',
+        ''
+      ]),
       color: '#50fa7b',
-      pause: 1800  // Optimized: 2500ms → 1800ms (save 0.7s)
+      pause: 1800
     }
   ];
 

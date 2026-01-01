@@ -1,9 +1,9 @@
 name: Update Terminal SVG
 
 on:
-  # Run daily at midnight EST (5 AM UTC)
+  # Run every 6 hours: midnight, 6am, noon, 6pm EST (adjust for UTC)
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 5,11,17,23 * * *'
 
   # Allow manual trigger
   workflow_dispatch:
@@ -16,6 +16,7 @@ on:
       - 'scripts/dynamic-content.js'
       - 'scripts/dynamic-terminal-generator.js'
       - 'scripts/advanced-terminal-generator.js'
+      - 'scripts/national-day-provider.js'
       - '.github/workflows/update-terminal-svg.yml'
 
 jobs:

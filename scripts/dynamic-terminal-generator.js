@@ -200,6 +200,7 @@ async function generateDynamicTerminal() {
   const content = await contentGen.generateContent();
 
   console.log(`📅 Current time: ${content.timestamp}`);
+  console.log(`🎉 Today is: ${content.nationalDay.emoji} ${content.nationalDay.name} - ${content.nationalDay.desc}`);
   console.log(`😄 Today's joke: ${content.joke.q}`);
   console.log(`🔄 Rotation: Day ${content.rotation} (${['Core+Easter', 'DevOps', 'Network'][content.rotation]})`);
 
@@ -222,6 +223,28 @@ async function generateDynamicTerminal() {
 ╚════════════════════════════════════════════════════════╝`,
       color: '#00ff9f',
       pause: 1200
+    },
+    // National Day sequence - shows fun/awareness day for today
+    {
+      type: 'command',
+      prompt: 'william@dad-joke-hq:~$ ',
+      content: 'curl -s https://whatday.today/api | jq .today',
+      typingDuration: 1600,
+      pause: 300
+    },
+    {
+      type: 'output',
+      content: (() => {
+        const day = content.nationalDay;
+        const name = day.name.length > 32 ? day.name.substring(0, 29) + '...' : day.name;
+        const desc = day.desc.length > 38 ? day.desc.substring(0, 35) + '...' : day.desc;
+        return `╭────────────────────────────────────────────────╮
+│ ${day.emoji} Today is ${name.padEnd(35)}│
+│   "${desc}"${' '.repeat(Math.max(0, 38 - desc.length))}│
+╰────────────────────────────────────────────────╯`;
+      })(),
+      color: '#f1fa8c',
+      pause: 1000
     },
     {
       type: 'command',
@@ -492,6 +515,7 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
   console.log(`📊 Sequences: ${sequences.length}`);
   console.log(`⏱️  Animation features:`);
   console.log('   - Real-time accurate timestamps');
+  console.log('   - Daily national/fun day display');
   console.log('   - Daily rotating tech jokes');
   console.log('   - Dynamic statistics');
   console.log('   - Smooth animations and scrolling');

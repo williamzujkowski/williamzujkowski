@@ -1,4 +1,6 @@
 const AdvancedTerminalGenerator = require('../scripts/advanced-terminal-generator');
+const { escapeXml, getTextWidth } = require('../scripts/terminal-line-renderer');
+const { generateDefs, generateFilters } = require('../scripts/svg-effects');
 
 describe('AdvancedTerminalGenerator', () => {
   let generator;
@@ -45,55 +47,55 @@ describe('AdvancedTerminalGenerator', () => {
 
   describe('escapeXml', () => {
     test('escapes ampersand', () => {
-      expect(generator.escapeXml('A & B')).toBe('A &amp; B');
+      expect(escapeXml('A & B')).toBe('A &amp; B');
     });
 
     test('escapes less than', () => {
-      expect(generator.escapeXml('A < B')).toBe('A &lt; B');
+      expect(escapeXml('A < B')).toBe('A &lt; B');
     });
 
     test('escapes greater than', () => {
-      expect(generator.escapeXml('A > B')).toBe('A &gt; B');
+      expect(escapeXml('A > B')).toBe('A &gt; B');
     });
 
     test('escapes double quotes', () => {
-      expect(generator.escapeXml('A "B" C')).toBe('A &quot;B&quot; C');
+      expect(escapeXml('A "B" C')).toBe('A &quot;B&quot; C');
     });
 
     test('escapes single quotes', () => {
-      expect(generator.escapeXml("A 'B' C")).toBe('A &apos;B&apos; C');
+      expect(escapeXml("A 'B' C")).toBe('A &apos;B&apos; C');
     });
 
     test('escapes multiple special characters', () => {
-      expect(generator.escapeXml('<script>alert("test")</script>'))
+      expect(escapeXml('<script>alert("test")</script>'))
         .toBe('&lt;script&gt;alert(&quot;test&quot;)&lt;/script&gt;');
     });
 
     test('handles empty string', () => {
-      expect(generator.escapeXml('')).toBe('');
+      expect(escapeXml('')).toBe('');
     });
 
     test('handles string with no special characters', () => {
-      expect(generator.escapeXml('Hello World')).toBe('Hello World');
+      expect(escapeXml('Hello World')).toBe('Hello World');
     });
   });
 
   describe('getTextWidth', () => {
     test('returns 0 for empty string', () => {
-      expect(generator.getTextWidth('', 14)).toBe(0);
+      expect(getTextWidth('', 14)).toBe(0);
     });
 
     test('calculates width based on character count', () => {
       const text = 'Hello';
       const fontSize = 14;
-      const width = generator.getTextWidth(text, fontSize);
+      const width = getTextWidth(text, fontSize);
       expect(width).toBe(text.length * fontSize * 0.6);
     });
 
     test('increases with font size', () => {
       const text = 'Test';
-      const small = generator.getTextWidth(text, 12);
-      const large = generator.getTextWidth(text, 16);
+      const small = getTextWidth(text, 12);
+      const large = getTextWidth(text, 16);
       expect(large).toBeGreaterThan(small);
     });
   });
@@ -279,7 +281,7 @@ describe('AdvancedTerminalGenerator', () => {
 
   describe('generateDefs', () => {
     test('returns scanline pattern', () => {
-      const defs = generator.generateDefs();
+      const defs = generateDefs();
       expect(defs).toContain('id="scanlines"');
       expect(defs).toContain('patternUnits="userSpaceOnUse"');
     });
@@ -287,18 +289,18 @@ describe('AdvancedTerminalGenerator', () => {
 
   describe('generateFilters', () => {
     test('includes text glow filter', () => {
-      const filters = generator.generateFilters();
+      const filters = generateFilters();
       expect(filters).toContain('id="textGlow"');
       expect(filters).toContain('feGaussianBlur');
     });
 
     test('includes shadow filter', () => {
-      const filters = generator.generateFilters();
+      const filters = generateFilters();
       expect(filters).toContain('id="shadow"');
     });
 
     test('includes CRT filter', () => {
-      const filters = generator.generateFilters();
+      const filters = generateFilters();
       expect(filters).toContain('id="crt"');
       expect(filters).toContain('feTurbulence');
     });

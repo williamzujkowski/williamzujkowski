@@ -1,0 +1,71 @@
+{# Reusable terminal output components for Nunjucks #}
+{# Adapted from PROJECT_PLAN Jinja2 macros to Nunjucks syntax #}
+
+{# Shell prompt macro - creates formatted command prompt #}
+{% macro prompt(user='william', host='homelab', path='~', symbol='$') -%}
+{{ user | fg('green') | bold }}@{{ host | fg('green') }}:{{ path | fg('blue') | bold }}{{ symbol }}
+{%- endmacro %}
+
+{# Info row for neofetch-style output #}
+{% macro info_row(label, value, label_color='cyan') -%}
+{{ label | fg(label_color) | bold }}: {{ value }}
+{%- endmacro %}
+
+{# Color palette display - shows terminal colors #}
+{% macro color_palette() -%}
+{% for c in ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'] -%}
+{{ '   ' | bg(c) }}
+{%- endfor %}
+{% for c in ['bright_black', 'bright_red', 'bright_green', 'bright_yellow', 'bright_blue', 'bright_magenta', 'bright_cyan', 'bright_white'] -%}
+{{ '   ' | bg(c) }}
+{%- endfor %}
+{%- endmacro %}
+
+{# Separator line with optional label #}
+{% macro separator(width=56, char='─', label=none) -%}
+{% if label -%}
+{% set left = ((width - label | displaywidth - 4) / 2) | int %}
+{% set right = width - label | displaywidth - 4 - left %}
+{{ char | repeat(left) }} {{ label }} {{ char | repeat(right) }}
+{%- else -%}
+{{ char | repeat(width) }}
+{%- endif %}
+{%- endmacro %}
+
+{# Timestamp in terminal format #}
+{% macro timestamp(date) -%}
+[{{ date | dim }}]
+{%- endmacro %}
+
+{# Command output header #}
+{% macro output_header(title, icon='') -%}
+{{ icon }} {{ title | fg('yellow') | bold }}
+{%- endmacro %}
+
+{# Status indicator #}
+{% macro status(state, text) -%}
+{% if state == 'success' -%}
+{{ '✓' | fg('green') }} {{ text }}
+{%- elif state == 'error' -%}
+{{ '✗' | fg('red') }} {{ text }}
+{%- elif state == 'warning' -%}
+{{ '!' | fg('yellow') }} {{ text }}
+{%- elif state == 'info' -%}
+{{ 'ℹ' | fg('cyan') }} {{ text }}
+{%- else -%}
+{{ '●' | fg('white') }} {{ text }}
+{%- endif %}
+{%- endmacro %}
+
+{# Key-value pair with aligned values #}
+{% macro kv_pair(key, value, key_width=15, key_color='purple') -%}
+{{ key | pad(key_width) | fg(key_color) }}{{ value }}
+{%- endmacro %}
+
+{# Progress bar #}
+{% macro progress_bar(current, total, width=20, filled='█', empty='░') -%}
+{% set percent = ((current / total) * 100) | int %}
+{% set filled_count = ((current / total) * width) | int %}
+{% set empty_count = width - filled_count %}
+[{{ filled | repeat(filled_count) | fg('green') }}{{ empty | repeat(empty_count) | dim }}] {{ percent }}%
+{%- endmacro %}

@@ -1,0 +1,19 @@
+{# Neofetch-style system info block #}
+{# Context: user, host, os, kernel, uptime, packages, shell, de, terminal, coffee, bugs, commits #}
+{% from "base/macros.njk" import info_row, separator, color_palette %}
+
+{{ user | fg('green') | bold }}@{{ host | fg('green') | bold }}
+{{ separator(user | length + host | length + 1, '─') }}
+{{ info_row('OS', os) }}
+{{ info_row('Kernel', kernel) }}
+{{ info_row('Uptime', uptime) }}
+{{ info_row('Packages', packages) }}
+{{ info_row('Shell', shell) }}
+{{ info_row('DE', de) }}
+{{ info_row('Terminal', terminal) }}
+{{ separator(40, '─') }}
+{{ info_row('Coffee', coffee ~ ' cups', 'yellow') }}
+{{ info_row('Bugs Fixed', bugs ~ ' (and counting)', 'purple') }}
+{{ info_row('Commits', commits, 'cyan') }}
+{{ separator(40) }}
+{{ color_palette() }}

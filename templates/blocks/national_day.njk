@@ -1,0 +1,13 @@
+{# National day block template #}
+{# Context: day = { name: string, desc: string, emoji: string }, date: string #}
+{% from "base/macros.njk" import prompt, info_row, status %}
+
+{{ prompt() }}curl -s https://nationaldaycalendar.com/api/{{ date }} | jq
+{
+  {{ '"name"' | fg('cyan') }}: {{ ('"' ~ day.name ~ '"') | fg('green') }},
+  {{ '"description"' | fg('cyan') }}: {{ ('"' ~ day.desc ~ '"') | fg('green') }},
+  {{ '"emoji"' | fg('cyan') }}: {{ ('"' ~ day.emoji ~ '"') | fg('yellow') }}
+}
+
+{{ status('info', 'Today is ' ~ day.emoji ~ ' ' ~ day.name ~ '!') }}
+{{ day.desc | dim }}

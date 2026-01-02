@@ -1,0 +1,13 @@
+{# Dad joke block template #}
+{# Context: joke = { q: string, a: string, category: string } #}
+{% from "base/macros.njk" import prompt, status %}
+
+{{ prompt() }}curl -s https://api.dad-jokes.local/random | jq
+{
+  {{ '"question"' | fg('cyan') }}: {{ ('"' ~ joke.q ~ '"') | fg('green') }},
+  {{ '"answer"' | fg('cyan') }}: {{ ('"' ~ joke.a ~ '"') | fg('green') }},
+  {{ '"category"' | fg('cyan') }}: {{ ('"' ~ joke.category ~ '"') | fg('yellow') }}
+}
+
+{% set joke_lines = [joke.q, '', joke.a] %}
+{{ joke_lines | roundedbox(48) }}

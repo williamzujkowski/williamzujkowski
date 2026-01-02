@@ -1,0 +1,60 @@
+# National/Fun days database
+# Schema: name (string), desc (string), emoji (string)
+# Key format: MM-DD (month-day)
+# Note: Full 366-day database in scripts/national-day-provider.js
+# This file can be used for overrides or new entries
+
+"01-01":
+  name: "Public Domain Day"
+  desc: "Works entering the public domain"
+  emoji: "📚"
+
+"01-21":
+  name: "National Hugging Day"
+  desc: "Embrace those you love"
+  emoji: "🤗"
+
+"02-14":
+  name: "Valentine's Day"
+  desc: "Celebrate love and affection"
+  emoji: "❤️"
+
+"03-14":
+  name: "Pi Day"
+  desc: "Celebrating mathematical constant pi"
+  emoji: "🥧"
+
+"04-01":
+  name: "April Fools' Day"
+  desc: "Pranks and practical jokes"
+  emoji: "🃏"
+
+"05-04":
+  name: "Star Wars Day"
+  desc: "May the Fourth be with you"
+  emoji: "⭐"
+
+"06-28":
+  name: "CAPS LOCK DAY"
+  desc: "CELEBRATE BY TYPING IN ALL CAPS"
+  emoji: "🔠"
+
+"07-04":
+  name: "Independence Day (US)"
+  desc: "American Independence celebration"
+  emoji: "🇺🇸"
+
+"09-13":
+  name: "Programmers' Day"
+  desc: "Day 256 - celebrate coders"
+  emoji: "👨‍💻"
+
+"10-31":
+  name: "Halloween"
+  desc: "Spooky season celebration"
+  emoji: "🎃"
+
+"12-25":
+  name: "Christmas Day"
+  desc: "Holiday celebration"
+  emoji: "🎄"

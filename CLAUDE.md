@@ -12,21 +12,31 @@ GitHub Profile README repository (`williamzujkowski/williamzujkowski`) - display
 | Animation engine | `scripts/advanced-terminal-generator.js` |
 | Viewport | 1000x700px (~28 visible lines) |
 | Updates | Every 6 hours via GitHub Actions |
-| Tests | 191 passing, 99.54% statement coverage |
+| Tests | 292 passing, 95.89% statement coverage |
 
 ## Repository Structure
 
 ```
 scripts/
-  dynamic-terminal-generator.js  # Main SVG generator entry point (376 lines)
-  dynamic-content.js             # Time API, 25 jokes, stats, national days
-  advanced-terminal-generator.js # Core SVG animation engine (330 lines)
-  terminal-sequences.js          # Rotation sequence builders (DevOps/Network/Easter)
-  terminal-line-renderer.js      # Line rendering and cursor animations
+  dynamic-terminal-generator.js  # Main SVG generator entry point
+  dynamic-content.js             # Time API, jokes, stats, national days
+  advanced-terminal-generator.js # Core SVG animation engine
+  terminal-sequences.js          # Rotation sequence builders
+  terminal-line-renderer.js      # Line rendering with styled text support
   svg-effects.js                 # SVG filters and visual effects
   national-day-provider.js       # 366-day fun/awareness day database
   constants.js                   # Centralized colors, timing, dimensions
   box-generator.js               # ASCII box drawing utilities
+  template-engine.js             # Nunjucks templating with custom filters
+  content-loader.js              # YAML content loading with caching
+  markup-parser.js               # [[style]] markup to SVG tspan conversion
+  template-context.js            # Template render context builder
+templates/
+  base/macros.njk                # Reusable terminal components
+  blocks/*.njk                   # Block templates (dad_joke, national_day, etc.)
+content/
+  jokes.yaml                     # Externalized joke database
+  national_days.yaml             # Externalized national days
 src/
   terminal.svg                   # Generated output (auto-updated)
 __tests__/                       # Jest tests for all modules
@@ -39,7 +49,7 @@ __tests__/                       # Jest tests for all modules
 ```bash
 npm install          # Install dependencies
 npm run generate     # Generate SVG locally
-npm test             # Run 191 tests
+npm test             # Run 292 tests
 npm run test:watch   # Watch mode
 ```
 

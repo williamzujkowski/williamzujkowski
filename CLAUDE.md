@@ -90,13 +90,17 @@ GitHub Actions (`.github/workflows/update-terminal-svg.yml`):
 - This is public-facing personal brand representation
 - Legacy files in `.archive/` should not be used
 
-## Standards
+## Coding Standards
 
-Follow conventional commits: `type(scope): subject`
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation
-- `refactor`: Code restructuring
-- `chore`: Maintenance
+See `coding_standards.md` for full policies. Key rules for this repo:
 
-Reference: https://github.com/williamzujkowski/standards
+| Rule | Application |
+|------|-------------|
+| Time Authority | Use America/New_York (implemented via World Time API) |
+| Deterministic outputs | Joke rotation uses `dayOfYear % 25` - no randomness |
+| File size ≤400 lines | Target for refactoring (see #25) |
+| Function size ≤50 lines | Keep helpers focused |
+| No secrets in logs | No sensitive data in SVG output |
+| Test → observe → record | Run `npm test` after changes |
+
+**Commits**: `type(scope): subject` - feat, fix, docs, refactor, chore

@@ -5,6 +5,8 @@
  * @module terminal-line-renderer
  */
 
+const { parseMarkup, hasMarkup, stripMarkup } = require('./markup-parser');
+
 /**
  * Escapes special XML characters to prevent SVG parsing errors.
  * @param {string} text - Text to escape
@@ -115,16 +117,48 @@ function generateCommandLine(lineIndex, y, prompt, command, startTime, typingDur
 }
 
 /**
+ * Generates styled text with multiple tspan elements from StyledSpan array.
+ * @param {Array<Object>} spans - Array of StyledSpan objects from parseMarkup
+ * @param {Object} terminal - Terminal configuration
+ * @param {string} defaultColor - Default color for unstyled text
+ * @returns {string} SVG tspan elements
+ */
+function generateStyledText(spans, terminal, defaultColor) {
+  return spans.map(span => {
+    const color = span.fg || defaultColor;
+    const opacity = span.dim ? 0.6 : 1;
+    const fontWeight = span.bold ? 'bold' : 'normal';
+    const text = escapeXml(span.text);
+
+    // Build style attributes
+    const attrs = [`fill="${color}"`];
+    if (span.bold) attrs.push(`font-weight="${fontWeight}"`);
+    if (span.dim) attrs.push(`opacity="${opacity}"`);
+
+    return `<tspan ${attrs.join(' ')}>${text}</tspan>`;
+  }).join('');
+}
+
+/**
  * Generates an output line with fade-in animation.
+ * Supports both plain text and [[style]] markup.
  * @param {number} lineIndex - Line index in terminal buffer
  * @param {number} y - Y position in pixels
- * @param {string} content - Output text content
- * @param {string} color - Text color
+ * @param {string} content - Output text content (may contain markup)
+ * @param {string} color - Default text color
  * @param {number} startTime - Animation start time in ms
  * @param {Object} terminal - Terminal configuration
  * @returns {string} SVG markup for output line
  */
 function generateOutputLine(lineIndex, y, content, color, startTime, terminal) {
+  // Check if content has [[style]] markup
+  const textContent = hasMarkup(content)
+    ? generateStyledText(parseMarkup(content), terminal, color)
+    : escapeXml(content);
+
+  // For styled content, we don't apply the default fill at the text level
+  const textFill = hasMarkup(content) ? '' : `fill="${color}"`;
+
   return `
     <!-- Output line ${lineIndex} -->
     <g id="line-${lineIndex}" transform="translate(0, ${y})" opacity="0">
@@ -132,8 +166,8 @@ function generateOutputLine(lineIndex, y, content, color, startTime, terminal) {
                begin="${startTime}ms" dur="10ms" fill="freeze"/>
 
       <text font-family="${terminal.fontFamily}" font-size="${terminal.fontSize}"
-            fill="${color}" filter="url(#textGlow)" xml:space="preserve">
-        ${escapeXml(content)}
+            ${textFill} filter="url(#textGlow)" xml:space="preserve">
+        ${textContent}
       </text>
     </g>`;
 }
@@ -190,5 +224,6 @@ module.exports = {
   generateAllLines,
   generateCommandLine,
   generateOutputLine,
+  generateStyledText,
   generateCursor
 };

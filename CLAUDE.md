@@ -12,7 +12,7 @@ GitHub Profile README repository (`williamzujkowski/williamzujkowski`) - display
 | Animation engine | `scripts/advanced-terminal-generator.js` |
 | Viewport | 1000x700px (~28 visible lines) |
 | Updates | Every 6 hours via GitHub Actions |
-| Tests | 292 passing, 95.89% statement coverage |
+| Tests | 336 passing, 94.14% statement coverage |
 
 ## Repository Structure
 
@@ -31,6 +31,7 @@ scripts/
   content-loader.js              # YAML content loading with caching
   markup-parser.js               # [[style]] markup to SVG tspan conversion
   template-context.js            # Template render context builder
+  template-sequence-builder.js   # Template-driven sequence generation
 templates/
   base/macros.njk                # Reusable terminal components
   blocks/*.njk                   # Block templates (dad_joke, national_day, etc.)
@@ -49,7 +50,7 @@ __tests__/                       # Jest tests for all modules
 ```bash
 npm install          # Install dependencies
 npm run generate     # Generate SVG locally
-npm test             # Run 292 tests
+npm test             # Run 336 tests
 npm run test:watch   # Watch mode
 ```
 
@@ -62,6 +63,10 @@ npm run test:watch   # Watch mode
 5. GitHub Actions commits if SVG changed
 
 ## Key Configuration
+
+**Feature Flags**:
+- `USE_TEMPLATES=true` - Enable Nunjucks template-based content generation (experimental)
+- Default: Legacy inline content generation
 
 **Constants** (`scripts/constants.js`):
 - `COLORS` - Dracula theme palette

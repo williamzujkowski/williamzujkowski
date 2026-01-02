@@ -150,6 +150,12 @@ class TerminalTemplateEngine {
     this.env.addFilter('json', (obj) => {
       return JSON.stringify(obj, null, 2);
     });
+
+    // String slice filter (Python-style slice syntax)
+    this.env.addFilter('slice', (str, start, end) => {
+      if (typeof str !== 'string') return '';
+      return str.slice(start, end);
+    });
   }
 
   /**

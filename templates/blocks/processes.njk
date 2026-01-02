@@ -1,0 +1,8 @@
+{# Process list output from ps aux #}
+{# Context: timestamp (time string slice) #}
+{% set time = timestamp[4:16] if timestamp else 'Jan  1 00:00' %}
+
+{{ 'william' | fg('green') }}   1337  99.9  5.0   inf   inf  ?  Ssl  {{ time }}  inf  /usr/bin/{{ 'family' | fg('cyan') }} --priority=realtime
+{{ 'william' | fg('green') }}   2048  42.0  3.7   inf   inf  ?  Sl   {{ time }}  inf  /usr/bin/{{ 'security-automation' | fg('cyan') }} --mode=defensive
+{{ 'william' | fg('green') }}   4096  15.2  2.1   inf   inf  ?  S    {{ time }}  inf  /usr/bin/{{ 'home-assistant' | fg('cyan') }} --smart-home
+{{ 'william' | fg('green') }}   8192  100   1.0   inf   inf  ?  R+   {{ time }}  inf  /usr/bin/{{ 'dad-joke-daemon' | fg('cyan') }} --interval=30s

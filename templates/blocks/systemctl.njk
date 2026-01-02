@@ -1,0 +1,15 @@
+{# Systemctl status output for dad-mode service #}
+{# Context: timestamp #}
+{% from "base/macros.njk" import status %}
+
+{{ status('success', '') }}{{ 'dad-mode.service' | fg('cyan') | bold }} - Professional Dad Joke Delivery
+     {{ 'Loaded:' | fg('purple') }} loaded (/etc/systemd/dad-mode.service; {{ 'enabled' | fg('green') }})
+     {{ 'Active:' | fg('purple') }} {{ 'active (running)' | fg('green') }} since birth
+   {{ 'Main PID:' | fg('purple') }} 1337 (dad-joked)
+      {{ 'Tasks:' | fg('purple') }} inf
+     {{ 'Memory:' | fg('purple') }} 42.0M (worth it)
+     {{ 'CGroup:' | fg('purple') }} /system.slice/dad-mode.service
+             {{ '`-1337 /usr/sbin/dad-joked --quality=premium' | dim }}
+
+{{ timestamp }} dad-mode[1337]: {{ status('success', 'Joke delivery successful') }}
+{{ timestamp }} dad-mode[1337]: {{ status('success', 'Maximum groan achieved') }}

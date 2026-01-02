@@ -1,0 +1,10 @@
+{# Developer profile from /etc/profile #}
+{# Context: stats = { uptime, daysAlive }, timestamp #}
+{% from "base/macros.njk" import info_row %}
+
+# William Zujkowski - Developer Profile
+# =======================================
+{{ info_row('Role', 'Senior Security Specialist & Family CTO') }}
+{{ info_row('Uptime', stats.uptime ~ ' years (' ~ stats.daysAlive ~ ' days)') }}
+{{ info_row('Shell', '/bin/dad-jokes') }}
+{{ info_row('Status', 'Powered by coffee and curiosity', 'yellow') }}

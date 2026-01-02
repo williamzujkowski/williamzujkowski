@@ -11,6 +11,14 @@ const {
   buildNetworkSequences,
   buildEasterEggSequences
 } = require('./terminal-sequences');
+const { buildTemplateSequences } = require('./template-sequence-builder');
+
+/**
+ * Feature flag for template-based content generation.
+ * Set USE_TEMPLATES=true to enable Nunjucks template rendering.
+ * @type {boolean}
+ */
+const USE_TEMPLATES = process.env.USE_TEMPLATES === 'true';
 
 /**
  * Generate dynamic terminal sequences based on current date/time and jokes
@@ -26,9 +34,21 @@ async function generateDynamicTerminal() {
   console.log(`🎉 Today is: ${content.nationalDay.emoji} ${content.nationalDay.name} - ${content.nationalDay.desc}`);
   console.log(`😄 Today's joke: ${content.joke.q}`);
   console.log(`🔄 Rotation: Day ${content.rotation} (${['Core+Easter', 'DevOps', 'Network'][content.rotation]})`);
+  console.log(`📝 Template mode: ${USE_TEMPLATES ? 'ENABLED' : 'disabled (legacy)'}`);
 
   // Build core sequences (common to all rotations)
-  const coreSequences = [
+  // Use template-based sequences when USE_TEMPLATES is enabled
+  const coreSequences = USE_TEMPLATES
+    ? buildTemplateSequences(content)
+    : buildLegacyCoreSequences(content);
+
+  /**
+   * Build legacy core sequences (original inline implementation).
+   * @param {Object} content - Dynamic content from generator
+   * @returns {Array<Object>} Terminal sequences
+   */
+  function buildLegacyCoreSequences(content) {
+    return [
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,
@@ -266,7 +286,8 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
       color: COLORS.GREEN,
       pause: 1800
     }
-  ];
+    ];
+  }
 
   // Add rotation-specific sequences based on day
   let rotationSequences = [];

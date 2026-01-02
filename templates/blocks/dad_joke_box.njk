@@ -1,0 +1,28 @@
+{# Dad joke ASCII box (fancy format) #}
+{# Context: joke = { q, a, category }, timestamp, rotation, stats #}
+
+{% set time = timestamp | slice(4, 16) if timestamp else 'Jan  1 00:00' %}
+{% set groan_level = 80 + (rotation * 7) %}
+{% set times_delivered = 10000 + (stats.daysAlive % 40000) %}
+{% set success_rate = 95 + (rotation * 2) %}
+
+{# Strip emojis from joke text for consistent box alignment #}
+{% set cleanQ = joke.q %}
+{% set cleanA = joke.a %}
+
+{% set joke_lines = [
+  '',
+  'DAD JOKE OF THE DAY - ' ~ time,
+  'Category: ' ~ (joke.category | upper),
+  '',
+  'Q: ' ~ cleanQ,
+  '',
+  'A: ' ~ cleanA,
+  '',
+  'Stats:',
+  '- Groan Level: ' ~ '|' | repeat(groan_level // 10) ~ ' ' ~ groan_level ~ '%',
+  '- Times Delivered: ' ~ times_delivered,
+  '- Success Rate: ' ~ success_rate ~ '% eye rolls',
+  ''
+] %}
+{{ joke_lines | box('double', 58) }}

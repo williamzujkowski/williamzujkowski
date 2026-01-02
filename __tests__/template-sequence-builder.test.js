@@ -8,6 +8,7 @@ const {
   buildMotdSequence,
   buildNationalDaySequence,
   buildProfileSequence,
+  buildProcessesSequence,
   buildStatsSequence,
   buildDadJokeSequence,
   buildFortuneSequence,
@@ -151,6 +152,33 @@ describe('TemplateSequenceBuilder', () => {
     it('uses BLUE color', () => {
       const sequences = buildProfileSequence(mockContent, engine);
       expect(sequences[1].color).toBe(COLORS.BLUE);
+    });
+  });
+
+  describe('buildProcessesSequence', () => {
+    it('creates processes sequence with ps command', () => {
+      const sequences = buildProcessesSequence(mockContent, engine);
+
+      expect(sequences).toHaveLength(2);
+      expect(sequences[0].content).toContain('ps aux');
+      expect(sequences[0].content).toContain('grep');
+    });
+
+    it('uses WHITE color', () => {
+      const sequences = buildProcessesSequence(mockContent, engine);
+      expect(sequences[1].color).toBe(COLORS.WHITE);
+    });
+
+    it('includes process names', () => {
+      const sequences = buildProcessesSequence(mockContent, engine);
+      expect(sequences[1].content).toContain('family');
+      expect(sequences[1].content).toContain('dad-joke-daemon');
+    });
+
+    it('uses extra long typing duration', () => {
+      const sequences = buildProcessesSequence(mockContent, engine);
+      expect(sequences[0].typingDuration).toBe(TYPING.EXTRA_LONG);
+      expect(sequences[1].pause).toBe(PAUSE.EXTRA);
     });
   });
 

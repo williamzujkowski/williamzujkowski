@@ -112,6 +112,23 @@ function buildProfileSequence(content, engine) {
 }
 
 /**
+ * Build process list sequence.
+ * @param {Object} content - Dynamic content from generator
+ * @param {Object} engine - Template engine instance
+ * @returns {Array<Object>} Terminal sequences
+ */
+function buildProcessesSequence(content, engine) {
+  return buildTemplateSequence({
+    command: 'ps aux | grep "life.*processes"',
+    templateName: 'blocks/processes.njk',
+    context: { timestamp: content.timestamp },
+    color: COLORS.WHITE,
+    typingDuration: TYPING.EXTRA_LONG,
+    pause: PAUSE.EXTRA
+  }, engine);
+}
+
+/**
  * Build developer stats sequence.
  * @param {Object} content - Dynamic content from generator
  * @param {Object} engine - Template engine instance
@@ -250,23 +267,8 @@ function buildTemplateSequences(content) {
     // Profile info
     ...buildProfileSequence(content, engine),
 
-    // Process list (simple output for now)
-    {
-      type: 'command',
-      prompt: DEFAULT_PROMPT,
-      content: 'ps aux | grep "life.*processes"',
-      typingDuration: TYPING.EXTRA_LONG,
-      pause: PAUSE.MINIMAL
-    },
-    {
-      type: 'output',
-      content: `william   1337  99.9  5.0   \u221E   \u221E  ?  Ssl  ${content.timestamp.slice(4, 16)}  \u221E  /usr/bin/family --priority=realtime
-william   2048  42.0  3.7   \u221E   \u221E  ?  Sl   ${content.timestamp.slice(4, 16)}  \u221E  /usr/bin/security-automation --mode=defensive
-william   4096  15.2  2.1   \u221E   \u221E  ?  S    ${content.timestamp.slice(4, 16)}  \u221E  /usr/bin/home-assistant --smart-home
-william   8192  100   1.0   \u221E   \u221E  ?  R+   ${content.timestamp.slice(4, 16)}  \u221E  /usr/bin/dad-joke-daemon --interval=30s`,
-      color: COLORS.WHITE,
-      pause: PAUSE.EXTRA
-    },
+    // Process list
+    ...buildProcessesSequence(content, engine),
 
     // Developer stats
     ...buildStatsSequence(content, engine),
@@ -292,6 +294,7 @@ module.exports = {
   buildMotdSequence,
   buildNationalDaySequence,
   buildProfileSequence,
+  buildProcessesSequence,
   buildStatsSequence,
   buildDadJokeSequence,
   buildFortuneSequence,

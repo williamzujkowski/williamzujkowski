@@ -18,9 +18,12 @@ GitHub Profile README repository (`williamzujkowski/williamzujkowski`) - display
 
 ```
 scripts/
-  dynamic-terminal-generator.js  # Main SVG generator entry point
+  dynamic-terminal-generator.js  # Main SVG generator entry point (376 lines)
   dynamic-content.js             # Time API, 25 jokes, stats, national days
-  advanced-terminal-generator.js # Core SVG animation engine
+  advanced-terminal-generator.js # Core SVG animation engine (330 lines)
+  terminal-sequences.js          # Rotation sequence builders (DevOps/Network/Easter)
+  terminal-line-renderer.js      # Line rendering and cursor animations
+  svg-effects.js                 # SVG filters and visual effects
   national-day-provider.js       # 366-day fun/awareness day database
   constants.js                   # Centralized colors, timing, dimensions
   box-generator.js               # ASCII box drawing utilities
@@ -98,7 +101,7 @@ See `coding_standards.md` for full policies. Key rules for this repo:
 |------|-------------|
 | Time Authority | Use America/New_York (implemented via World Time API) |
 | Deterministic outputs | Joke rotation uses `dayOfYear % 25` - no randomness |
-| File size ≤400 lines | Target for refactoring (see #25) |
+| File size ≤400 lines | All code files now compliant |
 | Function size ≤50 lines | Keep helpers focused |
 | No secrets in logs | No sensitive data in SVG output |
 | Test → observe → record | Run `npm test` after changes |

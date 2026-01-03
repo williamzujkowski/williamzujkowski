@@ -5,7 +5,7 @@ const path = require('path');
 const AdvancedTerminalGenerator = require('./advanced-terminal-generator');
 const DynamicContentGenerator = require('./dynamic-content');
 const { createDoubleBox, createRoundedBox } = require('./box-generator');
-const { DEFAULT_PROMPT, COLORS, WINDOW } = require('./constants');
+const { DEFAULT_PROMPT, COLORS, WINDOW, ANIMATION } = require('./constants');
 const {
   buildDevOpsSequences,
   buildNetworkSequences,
@@ -320,7 +320,7 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
 
   const sequences = [...coreStart, ...rotationSequences, ...coreEnd];
 
-  // Validate total animation duration (target: under 50s)
+  // Validate total animation duration (target: comfortable reading)
   const calculateAnimationDuration = (sequences) => {
     let totalDuration = 0;
     sequences.forEach(seq => {
@@ -334,11 +334,11 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
   };
 
   const animationDuration = calculateAnimationDuration(sequences);
-  console.log(`⏱️  Total animation duration: ${animationDuration.toFixed(1)}s (target: <50s)`);
+  console.log(`⏱️  Total animation duration: ${animationDuration.toFixed(1)}s (target: <${ANIMATION.MAX_DURATION_SECONDS}s)`);
   console.log(`📦 Total sequences: ${sequences.length} (${coreStart.length} core + ${rotationSequences.length} rotation + ${coreEnd.length} ending)`);
 
-  if (animationDuration > 50) {
-    console.warn(`⚠️  WARNING: Animation duration (${animationDuration.toFixed(1)}s) exceeds 50s target!`);
+  if (animationDuration > ANIMATION.MAX_DURATION_SECONDS) {
+    console.warn(`⚠️  WARNING: Animation duration (${animationDuration.toFixed(1)}s) exceeds ${ANIMATION.MAX_DURATION_SECONDS}s target!`);
   }
 
   // Generate SVG

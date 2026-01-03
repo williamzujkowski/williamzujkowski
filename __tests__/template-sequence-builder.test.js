@@ -70,12 +70,26 @@ describe('TemplateSequenceBuilder', () => {
       const sequences = buildTemplateSequence({
         command: 'test',
         templateName: 'blocks/goodbye.njk',
-        context: {}
+        context: {},
+        dynamicPause: false  // Test with fixed pause
       }, engine);
 
       expect(sequences[0].typingDuration).toBe(TYPING.STANDARD);
       expect(sequences[1].color).toBe(COLORS.WHITE);
       expect(sequences[1].pause).toBe(PAUSE.SHORT);
+    });
+
+    it('calculates dynamic pause based on content length', () => {
+      const sequences = buildTemplateSequence({
+        command: 'test',
+        templateName: 'blocks/goodbye.njk',
+        context: {},
+        dynamicPause: true
+      }, engine);
+
+      // Dynamic pause should be between MIN and MAX
+      expect(sequences[1].pause).toBeGreaterThanOrEqual(800);
+      expect(sequences[1].pause).toBeLessThanOrEqual(5000);
     });
 
     it('uses prompt from DEFAULT_PROMPT', () => {
@@ -174,10 +188,12 @@ describe('TemplateSequenceBuilder', () => {
       expect(sequences[1].content).toContain('dad-joked');
     });
 
-    it('uses extended typing duration matching legacy', () => {
+    it('uses extended typing duration with dynamic pause', () => {
       const sequences = buildProcessesSequence(mockContent, engine);
       expect(sequences[0].typingDuration).toBe(TYPING.EXTENDED);  // 2000ms
-      expect(sequences[1].pause).toBe(PAUSE.DRAMATIC);            // 1800ms
+      // Dynamic pause based on content length
+      expect(sequences[1].pause).toBeGreaterThanOrEqual(800);
+      expect(sequences[1].pause).toBeLessThanOrEqual(5000);
     });
   });
 
@@ -194,10 +210,12 @@ describe('TemplateSequenceBuilder', () => {
       expect(sequences[1].color).toBe(COLORS.BLUE);
     });
 
-    it('uses slow timing values matching legacy', () => {
+    it('uses slow typing duration with dynamic pause', () => {
       const sequences = buildStatsSequence(mockContent, engine);
       expect(sequences[0].typingDuration).toBe(TYPING.SLOW);       // 1800ms
-      expect(sequences[1].pause).toBe(PAUSE.EMPHASIS);             // 2000ms
+      // Dynamic pause based on content length
+      expect(sequences[1].pause).toBeGreaterThanOrEqual(800);
+      expect(sequences[1].pause).toBeLessThanOrEqual(5000);
     });
   });
 

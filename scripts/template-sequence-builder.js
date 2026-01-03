@@ -6,7 +6,7 @@
 
 const { TerminalTemplateEngine } = require('./template-engine');
 const { buildContext } = require('./template-context');
-const { COLORS, DEFAULT_PROMPT, TYPING, PAUSE } = require('./constants');
+const { COLORS, DEFAULT_PROMPT, TYPING, PAUSE, calculateReadingPause } = require('./constants');
 
 /**
  * Build a command sequence with template-rendered output.
@@ -16,7 +16,8 @@ const { COLORS, DEFAULT_PROMPT, TYPING, PAUSE } = require('./constants');
  * @param {Object} options.context - Template context
  * @param {string} [options.color] - Output color (default: WHITE)
  * @param {number} [options.typingDuration] - Typing duration in ms
- * @param {number} [options.pause] - Pause after output in ms
+ * @param {number} [options.pause] - Pause after output in ms (overridden if dynamicPause=true)
+ * @param {boolean} [options.dynamicPause] - Calculate pause based on content length
  * @param {Object} engine - Template engine instance
  * @returns {Array<Object>} Command and output sequences
  */
@@ -27,10 +28,15 @@ function buildTemplateSequence(options, engine) {
     context,
     color = COLORS.WHITE,
     typingDuration = TYPING.STANDARD,
-    pause = PAUSE.SHORT
+    pause = PAUSE.SHORT,
+    dynamicPause = true  // Default to dynamic pause for comfortable reading
   } = options;
 
   const content = engine.render(templateName, context);
+  const trimmedContent = content.trim();
+
+  // Calculate pause based on content length if dynamic, otherwise use provided value
+  const outputPause = dynamicPause ? calculateReadingPause(trimmedContent) : pause;
 
   return [
     {
@@ -42,9 +48,9 @@ function buildTemplateSequence(options, engine) {
     },
     {
       type: 'output',
-      content: content.trim(),
+      content: trimmedContent,
       color,
-      pause
+      pause: outputPause
     }
   ];
 }
@@ -272,40 +278,50 @@ function buildTemplateSequences(content) {
     ...buildNationalDaySequence(content, engine),
 
     // Dad log - funnier than plain 'date' command
-    {
-      type: 'command',
-      prompt: DEFAULT_PROMPT,
-      content: 'cat /var/log/dad.log | tail -4',
-      typingDuration: TYPING.QUICK,
-      pause: PAUSE.MINIMAL
-    },
-    {
-      type: 'output',
-      content: `[INFO]  Coffee levels: CRITICAL - refilling...
+    ...(() => {
+      const dadLogContent = `[INFO]  Coffee levels: CRITICAL - refilling...
 [WARN]  Kids detected in kitchen, engaging snack protocols
 [DEBUG] Attempting to find matching socks... timeout
-[INFO]  Dad joke #${Math.floor(content.stats.daysAlive * 0.7).toLocaleString()} deployed successfully`,
-      color: COLORS.YELLOW,
-      pause: PAUSE.QUICK
-    },
+[INFO]  Dad joke #${Math.floor(content.stats.daysAlive * 0.7).toLocaleString()} deployed successfully`;
+      return [
+        {
+          type: 'command',
+          prompt: DEFAULT_PROMPT,
+          content: 'cat /var/log/dad.log | tail -4',
+          typingDuration: TYPING.QUICK,
+          pause: PAUSE.MINIMAL
+        },
+        {
+          type: 'output',
+          content: dadLogContent,
+          color: COLORS.YELLOW,
+          pause: calculateReadingPause(dadLogContent)
+        }
+      ];
+    })(),
 
     // Funny aliases - more interesting than redundant 'whoami'
-    {
-      type: 'command',
-      prompt: DEFAULT_PROMPT,
-      content: 'alias | head -4',
-      typingDuration: TYPING.INSTANT,
-      pause: PAUSE.MINIMAL
-    },
-    {
-      type: 'output',
-      content: `alias yolo='git push --force'
+    ...(() => {
+      const aliasContent = `alias yolo='git push --force'
 alias fix='git commit -m "fixed it"'
 alias coffee='break && brew'
-alias monday='sudo shutdown -h now'`,
-      color: COLORS.CYAN,
-      pause: PAUSE.BRIEF
-    },
+alias monday='sudo shutdown -h now'`;
+      return [
+        {
+          type: 'command',
+          prompt: DEFAULT_PROMPT,
+          content: 'alias | head -4',
+          typingDuration: TYPING.INSTANT,
+          pause: PAUSE.MINIMAL
+        },
+        {
+          type: 'output',
+          content: aliasContent,
+          color: COLORS.CYAN,
+          pause: calculateReadingPause(aliasContent)
+        }
+      ];
+    })(),
 
     // Profile info
     ...buildProfileSequence(content, engine),

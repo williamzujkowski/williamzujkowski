@@ -166,9 +166,39 @@ const TIME = {
  * Animation timing targets
  */
 const ANIMATION = {
-  MAX_DURATION_SECONDS: 50,     // Target max animation length
-  WARNING_THRESHOLD: 45         // Warn when approaching max
+  MAX_DURATION_SECONDS: 90,     // Target max animation length (comfortable reading)
+  WARNING_THRESHOLD: 80         // Warn when approaching max
 };
+
+// ============================================================================
+// READING SPEED CONFIGURATION
+// ============================================================================
+
+/**
+ * Reading speed parameters for calculating pause durations
+ * Based on typical technical content reading rates
+ */
+const READING = {
+  CHARS_PER_SECOND: 14,         // ~175 WPM for technical content (comfortable)
+  MIN_PAUSE_MS: 800,            // Minimum pause even for short content
+  MAX_PAUSE_MS: 4500,           // Maximum pause for very long content
+  BASE_PAUSE_MS: 300            // Base pause added to calculated time
+};
+
+/**
+ * Calculate appropriate pause duration based on content length
+ * @param {string} content - The text content to calculate reading time for
+ * @returns {number} Pause duration in milliseconds
+ */
+function calculateReadingPause(content) {
+  if (!content) return READING.MIN_PAUSE_MS;
+
+  const charCount = content.replace(/\[\[.*?\]\]/g, '').length; // Strip markup
+  const readingTimeMs = (charCount / READING.CHARS_PER_SECOND) * 1000;
+  const totalPause = readingTimeMs + READING.BASE_PAUSE_MS;
+
+  return Math.max(READING.MIN_PAUSE_MS, Math.min(READING.MAX_PAUSE_MS, totalPause));
+}
 
 // ============================================================================
 // BOX DIMENSIONS
@@ -210,6 +240,10 @@ module.exports = {
 
   // Animation
   ANIMATION,
+
+  // Reading speed
+  READING,
+  calculateReadingPause,
 
   // Box dimensions
   BOX

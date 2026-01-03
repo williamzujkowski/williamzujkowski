@@ -14,7 +14,7 @@ GitHub Profile README repository (`williamzujkowski/williamzujkowski`) - display
 | Template engine | `scripts/template-engine.js` (Nunjucks) |
 | Viewport | 1000x700px (~28 visible lines) |
 | Updates | Every 6 hours via GitHub Actions |
-| Tests | 469 passing, 97%+ statement coverage |
+| Tests | 476 passing, 97%+ statement coverage |
 | Animation target | ~90s (dynamic reading-based pauses) |
 
 ## Repository Structure
@@ -53,7 +53,7 @@ __tests__/                       # Jest tests for all modules
 ```bash
 npm install          # Install dependencies
 npm run generate     # Generate SVG locally (uses template mode)
-npm test             # Run 469 tests
+npm test             # Run 476 tests
 npm run test:watch   # Watch mode
 ```
 
@@ -110,11 +110,96 @@ this.techJokes.push({ q: "Question?", a: "Punchline!" });
 **Add national days** - Edit `scripts/national-day-provider.js` (366 entries, indexed by day-of-year).
 
 **Modify rotation sequences** - Edit `scripts/terminal-sequences.js`:
-- `buildDevOpsSequences` - Git blame, Docker, sudo sandwich
+- `buildDevOpsSequences` - Git blame, Docker, npm install, sudo sandwich
 - `buildNetworkSequences` - Ping jokes, curl, top
 - `buildEasterEggSequences` - Telnet Star Wars ASCII
 
 Always run `npm run generate` to preview before committing.
+
+## Template Authoring Guide
+
+Templates use [Nunjucks](https://mozilla.github.io/nunjucks/) (Jinja2-compatible). Create new blocks in `templates/blocks/`.
+
+### Template Structure
+
+```nunjucks
+{# Comment describing the template #}
+{# Context: variables you expect to receive #}
+
+{% set local_var = some_calculation %}
+
+{{ content | filter }}
+```
+
+### Available Filters
+
+| Filter | Usage | Description |
+|--------|-------|-------------|
+| `box` | `lines \| box('double', 56)` | ASCII box (styles: double, single, rounded) |
+| `doublebox` | `lines \| doublebox(56)` | Double-line box |
+| `roundedbox` | `lines \| roundedbox(48)` | Rounded corners box |
+| `fg` | `text \| fg('green')` | Set foreground color |
+| `bold` | `text \| bold` | Bold text |
+| `dim` | `text \| dim` | Dimmed text |
+| `center` | `text \| center(40)` | Center text in width |
+| `pad` | `text \| pad(20, 'left')` | Pad text (left/right/center) |
+| `truncate` | `text \| truncate(30)` | Truncate to max width |
+| `wrap` | `text \| wrap(50, '  ')` | Word wrap with indent |
+| `repeat` | `char \| repeat(10)` | Repeat string N times |
+| `slice` | `str \| slice(0, 10)` | Python-style string slice |
+
+### Available Colors (Dracula Theme)
+
+Access via `COLORS` global or use color names in `fg()` filter:
+- `YELLOW`, `CYAN`, `GREEN`, `PINK`, `PURPLE`, `WHITE`, `ORANGE`
+- `BLUE`, `NEON_GREEN`, `MATRIX_GREEN`, `COMMENT`
+
+### Context Variables
+
+Templates receive these from `buildContext()`:
+
+```javascript
+{
+  user: 'william',
+  host: 'dad-joke-hq',
+  timestamp: 'Sat Jan 3 00:00 EST 2026',
+  joke: { q, a, category },
+  nationalDay: { name, desc, emoji },
+  stats: { uptime, daysAlive, coffeeConsumed, bugsFixed, bugsCreated, stackOverflowVisits },
+  rotation: 0-2,
+  rotationName: 'Core+Easter' | 'DevOps' | 'Network'
+}
+```
+
+### Macros (templates/base/macros.njk)
+
+```nunjucks
+{% from 'base/macros.njk' import prompt, info_row, status, progress_bar %}
+
+{{ prompt('william', 'homelab', '~', '$') }}
+{{ info_row('OS', 'DadOS 2026.01') }}
+{{ status('success', 'Build complete') }}
+{{ progress_bar(75, 100, 20) }}
+```
+
+### Adding a New Sequence
+
+1. Create template: `templates/blocks/your_block.njk`
+2. Add builder in `scripts/template-sequence-builder.js`:
+```javascript
+function buildYourSequence(content, engine) {
+  return buildTemplateSequence({
+    command: 'your-command --flags',
+    templateName: 'blocks/your_block.njk',
+    context: { /* variables for template */ },
+    color: COLORS.CYAN,
+    typingDuration: TYPING.MEDIUM,
+    pause: PAUSE.STANDARD
+  }, engine);
+}
+```
+3. Add to sequence array in `buildTemplateSequences()` or rotation builders
+4. Export function and add tests
 
 ## Automation Details
 

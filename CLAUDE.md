@@ -7,12 +7,15 @@ GitHub Profile README repository (`williamzujkowski/williamzujkowski`) - display
 | Item | Value |
 |------|-------|
 | Main output | `src/terminal.svg` (embedded in README.md) |
-| Generator | `scripts/dynamic-terminal-generator.js` |
+| Generator | `scripts/dynamic-terminal-generator.js` (entry point) |
+| Sequence Builder | `scripts/template-sequence-builder.js` (primary) |
 | Content logic | `scripts/dynamic-content.js` |
 | Animation engine | `scripts/advanced-terminal-generator.js` |
+| Template engine | `scripts/template-engine.js` (Nunjucks) |
 | Viewport | 1000x700px (~28 visible lines) |
 | Updates | Every 6 hours via GitHub Actions |
-| Tests | 336 passing, 94.14% statement coverage |
+| Tests | 469 passing, 97%+ statement coverage |
+| Animation target | ~90s (dynamic reading-based pauses) |
 
 ## Repository Structure
 
@@ -49,8 +52,8 @@ __tests__/                       # Jest tests for all modules
 
 ```bash
 npm install          # Install dependencies
-npm run generate     # Generate SVG locally
-npm test             # Run 336 tests
+npm run generate     # Generate SVG locally (uses template mode)
+npm test             # Run 469 tests
 npm run test:watch   # Watch mode
 ```
 
@@ -64,15 +67,20 @@ npm run test:watch   # Watch mode
 
 ## Key Configuration
 
-**Feature Flags**:
-- `USE_TEMPLATES=true` - Enable Nunjucks template-based content generation (experimental)
-- Default: Legacy inline content generation
+**Generator Mode**:
+- Template mode is the DEFAULT and ONLY supported mode
+- Uses Nunjucks templates in `templates/blocks/*.njk`
+- Dynamic reading-based pauses via `calculateReadingPause()`
+- Legacy inline generation is DEPRECATED (do not use `USE_TEMPLATES=false`)
 
 **Constants** (`scripts/constants.js`):
 - `COLORS` - Dracula theme palette
-- `TYPING` - Animation durations (INSTANT=50ms to EXTRA_LONG=2500ms)
+- `TYPING` - Animation durations (INSTANT=400ms to EXTRA_LONG=2400ms)
 - `PAUSE` - Delays between sequences
+- `READING` - Reading speed parameters (14 chars/sec, 800-4500ms pause range)
+- `TERMINAL` - Padding (12px), font size (14px), line height (1.8)
 - `WINDOW` - Viewport dimensions (1000x700)
+- `ANIMATION` - Max duration target (90s)
 
 **Terminal sequences** use this structure:
 ```javascript
@@ -82,14 +90,29 @@ npm run test:watch   # Watch mode
 
 ## Modifying Content
 
+**Add/edit terminal blocks** - Edit templates in `templates/blocks/*.njk`:
+- `motd.njk` - Welcome banner
+- `neofetch.njk` - System info display
+- `dad_joke_box.njk` - Joke display with ASCII box
+- `htop.njk` - Process display with progress bars
+- `fortune.njk` - Cowsay tux output
+- etc.
+
 **Add jokes** - Edit `scripts/dynamic-content.js`:
 ```javascript
 this.techJokes.push({ q: "Question?", a: "Punchline!" });
 ```
 
-**Change appearance** - Edit `scripts/dynamic-terminal-generator.js` or use constants from `constants.js`.
+**Change timing/colors** - Edit `scripts/constants.js` (COLORS, TYPING, PAUSE, READING).
+
+**Change terminal padding** - Edit `TERMINAL.PADDING` in `scripts/constants.js`.
 
 **Add national days** - Edit `scripts/national-day-provider.js` (366 entries, indexed by day-of-year).
+
+**Modify rotation sequences** - Edit `scripts/terminal-sequences.js`:
+- `buildDevOpsSequences` - Git blame, Docker, sudo sandwich
+- `buildNetworkSequences` - Ping jokes, curl, top
+- `buildEasterEggSequences` - Telnet Star Wars ASCII
 
 Always run `npm run generate` to preview before committing.
 

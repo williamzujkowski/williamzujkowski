@@ -15,10 +15,10 @@ const { buildTemplateSequences } = require('./template-sequence-builder');
 
 /**
  * Feature flag for template-based content generation.
- * Set USE_TEMPLATES=true to enable Nunjucks template rendering.
+ * Template mode is now the DEFAULT - use USE_LEGACY=true to use deprecated legacy mode.
  * @type {boolean}
  */
-const USE_TEMPLATES = process.env.USE_TEMPLATES === 'true';
+const USE_TEMPLATES = process.env.USE_LEGACY !== 'true';
 
 /**
  * Generate dynamic terminal sequences based on current date/time and jokes
@@ -34,10 +34,10 @@ async function generateDynamicTerminal() {
   console.log(`🎉 Today is: ${content.nationalDay.emoji} ${content.nationalDay.name} - ${content.nationalDay.desc}`);
   console.log(`😄 Today's joke: ${content.joke.q}`);
   console.log(`🔄 Rotation: Day ${content.rotation} (${['Core+Easter', 'DevOps', 'Network'][content.rotation]})`);
-  console.log(`📝 Template mode: ${USE_TEMPLATES ? 'ENABLED' : 'disabled (legacy)'}`);
+  console.log(`📝 Generator mode: ${USE_TEMPLATES ? 'template (default)' : 'LEGACY (deprecated)'}`);
 
   // Build core sequences (common to all rotations)
-  // Use template-based sequences when USE_TEMPLATES is enabled
+  // Template mode is the default; legacy mode is deprecated
   const coreSequences = USE_TEMPLATES
     ? buildTemplateSequences(content)
     : buildLegacyCoreSequences(content);

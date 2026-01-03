@@ -4,6 +4,7 @@ const {
   getTextWidth,
   generateAllLines
 } = require('./terminal-line-renderer');
+const { TERMINAL: TERMINAL_CONFIG } = require('./constants');
 
 /**
  * Advanced Terminal Generator - Creates animated SVG terminal simulations
@@ -37,15 +38,16 @@ class AdvancedTerminalGenerator {
         }
       },
       terminal: {
-        padding: 20,  // More breathing room
+        padding: TERMINAL_CONFIG.PADDING,  // From constants.js (12px = typical terminal)
+        paddingTop: TERMINAL_CONFIG.PADDING_TOP,  // Top padding below title bar
         fontFamily: 'JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace',
-        fontSize: 14,
-        lineHeight: 1.5,  // Better readability
+        fontSize: TERMINAL_CONFIG.FONT_SIZE,
+        lineHeight: TERMINAL_CONFIG.LINE_HEIGHT,
         textColor: '#e4e4e4',  // Slightly softer white
-        cursorColor: '#00ff41',  // Matrix green cursor
-        backgroundColor: '#0a0e27',  // Match window background
+        cursorColor: TERMINAL_CONFIG.CURSOR_COLOR,
+        backgroundColor: TERMINAL_CONFIG.BACKGROUND_COLOR,
         prompt: 'william@dad-joke-hq:~$ ',
-        promptColor: '#00ff9f',  // Cyan/green neon
+        promptColor: TERMINAL_CONFIG.PROMPT_COLOR,
         scrollDuration: 100
       }
     };
@@ -72,7 +74,9 @@ class AdvancedTerminalGenerator {
 
     const { window, terminal } = this.config;
     const lineHeight = terminal.fontSize * terminal.lineHeight;
-    const viewportHeight = window.height - window.titleBar.height - (terminal.padding * 2);
+    // Use paddingTop for top, padding for bottom (or use padding for both if paddingTop not set)
+    const topPadding = terminal.paddingTop || terminal.padding;
+    const viewportHeight = window.height - window.titleBar.height - topPadding - terminal.padding;
     const maxVisibleLines = Math.floor(viewportHeight / lineHeight);
 
     // Process all sequences and create a complete animation timeline
@@ -229,7 +233,7 @@ class AdvancedTerminalGenerator {
    * @returns {string} SVG markup for terminal content
    */
   generateTerminalContent(window, terminal, frames, maxVisibleLines, lineHeight) {
-    const contentY = window.titleBar.height + terminal.padding;
+    const contentY = window.titleBar.height + (terminal.paddingTop || terminal.padding);
     const viewportHeight = window.height - window.titleBar.height;
     
     return `
@@ -312,11 +316,11 @@ class AdvancedTerminalGenerator {
     <rect x="0" y="16" width="${window.width}" height="16" 
           fill="${window.titleBar.backgroundColor}"/>
     
-    <!-- Window controls -->
+    <!-- Window controls (aligned with terminal padding) -->
     <g id="window-controls">
-      <circle cx="20" cy="16" r="6" fill="${window.titleBar.buttons.close}"/>
-      <circle cx="40" cy="16" r="6" fill="${window.titleBar.buttons.minimize}"/>
-      <circle cx="60" cy="16" r="6" fill="${window.titleBar.buttons.maximize}"/>
+      <circle cx="${this.config.terminal.padding + 2}" cy="16" r="6" fill="${window.titleBar.buttons.close}"/>
+      <circle cx="${this.config.terminal.padding + 22}" cy="16" r="6" fill="${window.titleBar.buttons.minimize}"/>
+      <circle cx="${this.config.terminal.padding + 42}" cy="16" r="6" fill="${window.titleBar.buttons.maximize}"/>
     </g>
     
     <!-- Window title -->

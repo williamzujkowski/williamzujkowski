@@ -125,6 +125,8 @@ const TITLE_BAR = {
 const TERMINAL = {
   FONT_SIZE: 14,
   LINE_HEIGHT: 1.8,
+  PADDING: 12,              // Left/right padding (12px = typical terminal)
+  PADDING_TOP: 8,           // Top padding below title bar
   BACKGROUND_COLOR: COLORS.BACKGROUND,
   PROMPT_COLOR: COLORS.NEON_GREEN,
   CURSOR_COLOR: COLORS.MATRIX_GREEN

@@ -1,60 +1,1470 @@
-# National/Fun days database
-# Schema: name (string), desc (string), emoji (string)
+# National/Fun Days Database
+# Full 366-day database for terminal generator
+# Schema: name (max 25 chars), emoji (string), desc (max 22 chars)
 # Key format: MM-DD (month-day)
-# Note: Full 366-day database in scripts/national-day-provider.js
-# This file can be used for overrides or new entries
 
-"01-01":
-  name: "Public Domain Day"
-  desc: "Works entering the public domain"
-  emoji: "📚"
-
-"01-21":
-  name: "National Hugging Day"
-  desc: "Embrace those you love"
+01-01:
+  desc: "Fresh start awaits!"
+  emoji: "🎉"
+  name: "New Year's Day"
+01-02:
+  desc: "Celebrate sci-fi!"
+  emoji: "🚀"
+  name: "Science Fiction Day"
+01-03:
+  desc: "Catch those Zzzs"
+  emoji: "😴"
+  name: "Festival of Sleep Day"
+01-04:
+  desc: "Test your knowledge!"
+  emoji: "🧠"
+  name: "Trivia Day"
+01-05:
+  desc: "Appreciate our birds"
+  emoji: "🐦"
+  name: "Bird Day"
+01-06:
+  desc: "Stay cozy today"
   emoji: "🤗"
-
-"02-14":
-  name: "Valentine's Day"
-  desc: "Celebrate love and affection"
-  emoji: "❤️"
-
-"03-14":
-  name: "Pi Day"
-  desc: "Celebrating mathematical constant pi"
+  name: "Cuddle Up Day"
+01-07:
+  desc: "Geology rocks!"
+  emoji: "🪨"
+  name: "Old Rock Day"
+01-08:
+  desc: "Relax and unwind"
+  emoji: "🛁"
+  name: "Bubble Bath Day"
+01-09:
+  desc: "Shocking fun!"
+  emoji: "⚡"
+  name: "Static Electricity Day"
+01-10:
+  desc: "Water your plants!"
+  emoji: "🪴"
+  name: "Houseplant Awareness"
+01-11:
+  desc: "Name origin time!"
+  emoji: "📛"
+  name: "Learn Your Name Day"
+01-12:
+  desc: "Thanks pharmacists!"
+  emoji: "💊"
+  name: "Pharmacist Day"
+01-13:
+  desc: "Debug with ducks!"
+  emoji: "🦆"
+  name: "Rubber Ducky Day"
+01-14:
+  desc: "Pets in costumes!"
+  emoji: "🐕"
+  name: "Dress Up Your Pet Day"
+01-15:
+  desc: "Knowledge is free!"
+  emoji: "📚"
+  name: "Wikipedia Day"
+01-16:
+  desc: "Dragons are cool!"
+  emoji: "🐉"
+  name: "Appreciate a Dragon"
+01-17:
+  desc: "Spice it up!"
+  emoji: "🌶"
+  name: "Hot Heads Chili Day"
+01-18:
+  desc: "Words, terms, vocab!"
+  emoji: "📖"
+  name: "Thesaurus Day"
+01-19:
+  desc: "Pop some corn!"
+  emoji: "🍿"
+  name: "Popcorn Day"
+01-20:
+  desc: "Love the penguins!"
+  emoji: "🐧"
+  name: "Penguin Awareness Day"
+01-21:
+  desc: "Share a hug today"
+  emoji: "🤗"
+  name: "Hugging Day"
+01-22:
+  desc: "Meow back at them!"
+  emoji: "🐱"
+  name: "Answer Your Cat Day"
+01-23:
+  desc: "Not Pi, actual pie!"
   emoji: "🥧"
-
-"04-01":
-  name: "April Fools' Day"
-  desc: "Pranks and practical jokes"
+  name: "Pie Day"
+01-24:
+  desc: "Say something nice!"
+  emoji: "💬"
+  name: "Compliment Day"
+01-25:
+  desc: "Or is it not?"
+  emoji: "🔄"
+  name: "Opposite Day"
+01-26:
+  desc: "G'day mate!"
+  emoji: "🦘"
+  name: "Australia Day"
+01-27:
+  desc: "Cake time!"
+  emoji: "🍫"
+  name: "Chocolate Cake Day"
+01-28:
+  desc: "Protect your data!"
+  emoji: "🔒"
+  name: "Data Privacy Day"
+01-29:
+  desc: "Solve something!"
+  emoji: "🧩"
+  name: "Puzzle Day"
+01-30:
+  desc: "Flaky goodness!"
+  emoji: "🥐"
+  name: "Croissant Day"
+01-31:
+  desc: "yaD drawkcaB!"
+  emoji: "⏪"
+  name: "Backward Day"
+02-01:
+  desc: "Update passwords!"
+  emoji: "🔑"
+  name: "Change Your Password"
+02-02:
+  desc: "Shadow or spring?"
+  emoji: "🦫"
+  name: "Groundhog Day"
+02-03:
+  desc: "Veggie dessert!"
+  emoji: "🥕"
+  name: "Carrot Cake Day"
+02-04:
+  desc: "Support awareness"
+  emoji: "🎗"
+  name: "World Cancer Day"
+02-05:
+  desc: "Spread the love!"
+  emoji: "🍫"
+  name: "Nutella Day"
+02-06:
+  desc: "Fro-yo time!"
+  emoji: "🍦"
+  name: "Frozen Yogurt Day"
+02-07:
+  desc: "2.71828... math!"
+  emoji: "🔢"
+  name: "e Day"
+02-08:
+  desc: "Go fly a kite!"
+  emoji: "🪁"
+  name: "Kite Flying Day"
+02-09:
+  desc: "Pizza party!"
+  emoji: "🍕"
+  name: "Pizza Day"
+02-10:
+  desc: "Stay dry!"
+  emoji: "☂"
+  name: "Umbrella Day"
+02-11:
+  desc: "Create something!"
+  emoji: "💡"
+  name: "Inventors Day"
+02-12:
+  desc: "Evolution rocks!"
+  emoji: "🧬"
+  name: "Darwin Day"
+02-13:
+  desc: "Tune in!"
+  emoji: "📻"
+  name: "Radio Day"
+02-14:
+  desc: "Spread the love!"
+  emoji: "❤"
+  name: "Valentine's Day"
+02-15:
+  desc: "Self-love day!"
+  emoji: "💪"
+  name: "Singles Awareness Day"
+02-16:
+  desc: "Help a grump!"
+  emoji: "😤"
+  name: "Do a Grouch a Favor"
+02-17:
+  desc: "Be kind today!"
+  emoji: "💝"
+  name: "Random Acts Kindness"
+02-18:
+  desc: "Power up!"
+  emoji: "🔋"
+  name: "Battery Day"
+02-19:
+  desc: "Minty fresh!"
+  emoji: "🍫"
+  name: "Chocolate Mint Day"
+02-20:
+  desc: "Pets are family!"
+  emoji: "🐾"
+  name: "Love Your Pet Day"
+02-21:
+  desc: "Stack em high!"
+  emoji: "🥞"
+  name: "Pancake Day"
+02-22:
+  desc: "Take a walk!"
+  emoji: "🐕"
+  name: "Walking the Dog Day"
+02-23:
+  desc: "Learn online!"
+  emoji: "💻"
+  name: "Digital Learning Day"
+02-24:
+  desc: "Crunch time!"
+  emoji: "🌮"
+  name: "Tortilla Chip Day"
+02-25:
+  desc: "Soup's on!"
+  emoji: "🥣"
+  name: "Clam Chowder Day"
+02-26:
+  desc: "Go nuts!"
+  emoji: "🥜"
+  name: "Pistachio Day"
+02-27:
+  desc: "Save the bears!"
+  emoji: "🐻"
+  name: "Polar Bear Day"
+02-28:
+  desc: "Nap anywhere!"
+  emoji: "💤"
+  name: "Public Sleeping Day"
+02-29:
+  desc: "Leap year bonus!"
+  emoji: "🐸"
+  name: "Leap Day"
+03-01:
+  desc: "Spread it!"
+  emoji: "🥜"
+  name: "Peanut Butter Day"
+03-02:
+  desc: "Clean the attic!"
+  emoji: "📦"
+  name: "Old Stuff Day"
+03-03:
+  desc: "Protect wildlife!"
+  emoji: "🦁"
+  name: "World Wildlife Day"
+03-04:
+  desc: "Write good... well!"
+  emoji: "📝"
+  name: "Grammar Day"
+03-05:
+  desc: "Cheesy goodness!"
+  emoji: "🧀"
+  name: "Cheese Doodle Day"
+03-06:
+  desc: "Twist, lick, dunk!"
+  emoji: "🍪"
+  name: "Oreo Cookie Day"
+03-07:
+  desc: "Breakfast champ!"
+  emoji: "🥣"
+  name: "Cereal Day"
+03-08:
+  desc: "Celebrate women!"
+  emoji: "👩"
+  name: "Women's Day"
+03-09:
+  desc: "Move on!"
+  emoji: "✌"
+  name: "Get Over It Day"
+03-10:
+  desc: "MAR10 Day!"
+  emoji: "🎮"
+  name: "Mario Day"
+03-11:
+  desc: "Pipes matter!"
+  emoji: "🔧"
+  name: "World Plumbing Day"
+03-12:
+  desc: "Get planting!"
+  emoji: "🌸"
+  name: "Plant a Flower Day"
+03-13:
+  desc: "Power nap time!"
+  emoji: "😴"
+  name: "Napping Day"
+03-14:
+  desc: "3.14159... math!"
+  emoji: "🥧"
+  name: "Pi Day"
+03-15:
+  desc: "Beware!"
+  emoji: "🗡"
+  name: "Ides of March"
+03-16:
+  desc: "Pandas are cute!"
+  emoji: "🐼"
+  name: "Panda Day"
+03-17:
+  desc: "Luck of Irish!"
+  emoji: "☘"
+  name: "St. Patrick's Day"
+03-18:
+  desc: "Cringe together!"
+  emoji: "😬"
+  name: "Awkward Moments Day"
+03-19:
+  desc: "Laugh out loud!"
+  emoji: "😂"
+  name: "Let's Laugh Day"
+03-20:
+  desc: "Tell a tale!"
+  emoji: "📖"
+  name: "World Storytelling Day"
+03-21:
+  desc: "Rhyme time!"
+  emoji: "✍"
+  name: "World Poetry Day"
+03-22:
+  desc: "Save water!"
+  emoji: "💧"
+  name: "World Water Day"
+03-23:
+  desc: "Puppy love!"
+  emoji: "🐶"
+  name: "Puppy Day"
+03-24:
+  desc: "Health awareness"
+  emoji: "🏥"
+  name: "World TB Day"
+03-25:
+  desc: "Waffle time!"
+  emoji: "🧇"
+  name: "Waffle Day"
+03-26:
+  desc: "Epilepsy awareness"
+  emoji: "💜"
+  name: "Purple Day"
+03-27:
+  desc: "Drama time!"
+  emoji: "🎭"
+  name: "World Theatre Day"
+03-28:
+  desc: "Skewer it!"
+  emoji: "🍡"
+  name: "Something on a Stick"
+03-29:
+  desc: "Honor veterans"
+  emoji: "🎖"
+  name: "Vietnam Veterans Day"
+03-30:
+  desc: "Write on!"
+  emoji: "✏"
+  name: "Pencil Day"
+03-31:
+  desc: "Back it up!"
+  emoji: "💾"
+  name: "World Backup Day"
+04-01:
+  desc: "Prank responsibly!"
   emoji: "🃏"
-
-"05-04":
-  name: "Star Wars Day"
-  desc: "May the Fourth be with you"
+  name: "April Fools Day"
+04-02:
+  desc: "Autism awareness"
+  emoji: "🧩"
+  name: "World Autism Day"
+04-03:
+  desc: "Look up!"
+  emoji: "🌈"
+  name: "Find a Rainbow Day"
+04-04:
+  desc: "Get your citrus!"
+  emoji: "🍊"
+  name: "Vitamin C Day"
+04-05:
+  desc: "Navigate old way!"
+  emoji: "🗺"
+  name: "Read a Road Map Day"
+04-06:
+  desc: "Pasta perfection!"
+  emoji: "🍝"
+  name: "Carbonara Day"
+04-07:
+  desc: "Stay healthy!"
+  emoji: "💚"
+  name: "World Health Day"
+04-08:
+  desc: "Visit the zoo!"
+  emoji: "🦒"
+  name: "Zoo Lovers Day"
+04-09:
+  desc: "Be magical!"
+  emoji: "🦄"
+  name: "Unicorn Day"
+04-10:
+  desc: "Hug your sibling!"
+  emoji: "👫"
+  name: "Siblings Day"
+04-11:
+  desc: "Love your pet!"
+  emoji: "🐾"
+  name: "Pet Day"
+04-12:
+  desc: "Melty goodness!"
+  emoji: "🧀"
+  name: "Grilled Cheese Day"
+04-13:
+  desc: "Word up!"
+  emoji: "🔤"
+  name: "Scrabble Day"
+04-14:
+  desc: "Smart swimmers!"
+  emoji: "🐬"
+  name: "Dolphin Day"
+04-15:
+  desc: "File on time!"
+  emoji: "📊"
+  name: "Tax Day"
+04-16:
+  desc: "PJs all day!"
+  emoji: "🛏"
+  name: "Wear Pajamas Day"
+04-17:
+  desc: "Five seven five!"
+  emoji: "🌸"
+  name: "Haiku Poetry Day"
+04-18:
+  desc: "Preserve history!"
+  emoji: "🏛"
+  name: "World Heritage Day"
+04-19:
+  desc: "Flavor boost!"
+  emoji: "🧄"
+  name: "Garlic Day"
+04-20:
+  desc: "Ni hao!"
+  emoji: "🀄"
+  name: "Chinese Language Day"
+04-21:
+  desc: "Kid at heart!"
+  emoji: "🎨"
+  name: "Kindergarten Day"
+04-22:
+  desc: "Save our planet!"
+  emoji: "🌍"
+  name: "Earth Day"
+04-23:
+  desc: "Read a book!"
+  emoji: "📚"
+  name: "World Book Day"
+04-24:
+  desc: "Genetics matter!"
+  emoji: "🧬"
+  name: "DNA Day"
+04-25:
+  desc: "Waddle waddle!"
+  emoji: "🐧"
+  name: "Penguin Day"
+04-26:
+  desc: "Twisted treat!"
+  emoji: "🥨"
+  name: "Pretzel Day"
+04-27:
+  desc: "Once upon a time"
+  emoji: "📖"
+  name: "Tell a Story Day"
+04-28:
+  desc: "Be a hero!"
+  emoji: "🦸"
+  name: "Superhero Day"
+04-29:
+  desc: "Dance it out!"
+  emoji: "💃"
+  name: "International Dance"
+04-30:
+  desc: "Truth time!"
+  emoji: "🤞"
+  name: "Honesty Day"
+05-01:
+  desc: "Spring is here!"
+  emoji: "🌷"
+  name: "May Day"
+05-02:
+  desc: "Secure accounts!"
+  emoji: "🔐"
+  name: "Password Day"
+05-03:
+  desc: "Free press!"
+  emoji: "📰"
+  name: "Press Freedom Day"
+05-04:
+  desc: "May the 4th!"
   emoji: "⭐"
-
-"06-28":
-  name: "CAPS LOCK DAY"
-  desc: "CELEBRATE BY TYPING IN ALL CAPS"
-  emoji: "🔠"
-
-"07-04":
-  name: "Independence Day (US)"
-  desc: "American Independence celebration"
-  emoji: "🇺🇸"
-
-"09-13":
-  name: "Programmers' Day"
-  desc: "Day 256 - celebrate coders"
-  emoji: "👨‍💻"
-
-"10-31":
-  name: "Halloween"
-  desc: "Spooky season celebration"
+  name: "Star Wars Day"
+05-05:
+  desc: "Fiesta time!"
+  emoji: "🎉"
+  name: "Cinco de Mayo"
+05-06:
+  desc: "Eat what you want!"
+  emoji: "🍰"
+  name: "No Diet Day"
+05-07:
+  desc: "Explore space!"
+  emoji: "🛸"
+  name: "Space Day"
+05-08:
+  desc: "Help others!"
+  emoji: "🏥"
+  name: "World Red Cross Day"
+05-09:
+  desc: "RIP lost socks"
+  emoji: "🧦"
+  name: "Lost Sock Memorial"
+05-10:
+  desc: "Tidy up!"
+  emoji: "🧹"
+  name: "Clean Your Room Day"
+05-11:
+  desc: "Enter the zone!"
+  emoji: "👁"
+  name: "Twilight Zone Day"
+05-12:
+  desc: "Rhyme time!"
+  emoji: "📝"
+  name: "Limerick Day"
+05-13:
+  desc: "Hop to it!"
+  emoji: "🐸"
+  name: "Frog Jumping Day"
+05-14:
+  desc: "Cluck cluck!"
+  emoji: "🐔"
+  name: "Dance Like Chicken"
+05-15:
+  desc: "Chip chip hooray!"
+  emoji: "🍪"
+  name: "Chocolate Chip Day"
+05-16:
+  desc: "Life stories!"
+  emoji: "✍"
+  name: "Biographers Day"
+05-17:
+  desc: "Stay connected!"
+  emoji: "📡"
+  name: "World Telecom Day"
+05-18:
+  desc: "Visit a museum!"
+  emoji: "🏛"
+  name: "Museum Day"
+05-19:
+  desc: "Rawr!"
+  emoji: "🦖"
+  name: "Dinosaur Day"
+05-20:
+  desc: "Save the bees!"
+  emoji: "🐝"
+  name: "World Bee Day"
+05-21:
+  desc: "Find your zen"
+  emoji: "🧘"
+  name: "World Meditation Day"
+05-22:
+  desc: "Elementary!"
+  emoji: "🔍"
+  name: "Sherlock Holmes Day"
+05-23:
+  desc: "Slow and steady!"
+  emoji: "🐢"
+  name: "World Turtle Day"
+05-24:
+  desc: "Seek and find!"
+  emoji: "🗺"
+  name: "Scavenger Hunt Day"
+05-25:
+  desc: "Don't panic!"
+  emoji: "🛀"
+  name: "Towel Day"
+05-26:
+  desc: "Let it fly!"
+  emoji: "✈"
+  name: "Paper Airplane Day"
+05-27:
+  desc: "SPF up!"
+  emoji: "☀"
+  name: "Sun Screen Day"
+05-28:
+  desc: "Burger time!"
+  emoji: "🍔"
+  name: "Hamburger Day"
+05-29:
+  desc: "Biscuit bliss!"
+  emoji: "🍪"
+  name: "Biscuit Day"
+05-30:
+  desc: "Help them grow!"
+  emoji: "🌺"
+  name: "Water a Flower Day"
+05-31:
+  desc: "Breathe easy!"
+  emoji: "🚭"
+  name: "World No Tobacco Day"
+06-01:
+  desc: "Got milk?"
+  emoji: "🥛"
+  name: "World Milk Day"
+06-02:
+  desc: "Ice cream time!"
+  emoji: "🍫"
+  name: "Rocky Road Day"
+06-03:
+  desc: "Say it again!"
+  emoji: "🔁"
+  name: "Repeat Day"
+06-04:
+  desc: "Say cheese!"
+  emoji: "🧀"
+  name: "Cheese Day"
+06-05:
+  desc: "Go green!"
+  emoji: "🌳"
+  name: "World Environment Day"
+06-06:
+  desc: "Up and down!"
+  emoji: "🪀"
+  name: "Yo-Yo Day"
+06-07:
+  desc: "Rewind time!"
+  emoji: "📼"
+  name: "VCR Day"
+06-08:
+  desc: "Save our seas!"
+  emoji: "🌊"
+  name: "World Oceans Day"
+06-09:
+  desc: "Quack quack!"
+  emoji: "🦆"
+  name: "Donald Duck Day"
+06-10:
+  desc: "Chill out!"
+  emoji: "🧊"
+  name: "Iced Tea Day"
+06-11:
+  desc: "Amaize-ing!"
+  emoji: "🌽"
+  name: "Corn on the Cob Day"
+06-12:
+  desc: "Classic romance!"
+  emoji: "🌹"
+  name: "Red Rose Day"
+06-13:
+  desc: "Stitch it up!"
+  emoji: "🧵"
+  name: "Sewing Machine Day"
+06-14:
+  desc: "Donate blood!"
+  emoji: "🩸"
+  name: "World Blood Donor Day"
+06-15:
+  desc: "Snap nature!"
+  emoji: "📷"
+  name: "Nature Photography"
+06-16:
+  desc: "Eat your greens!"
+  emoji: "🥕"
+  name: "Fresh Veggies Day"
+06-17:
+  desc: "Veggie power!"
+  emoji: "🥦"
+  name: "Eat Your Veggies Day"
+06-18:
+  desc: "Al fresco dining!"
+  emoji: "🧺"
+  name: "Picnic Day"
+06-19:
+  desc: "Freedom Day!"
+  emoji: "✊"
+  name: "Juneteenth"
+06-20:
+  desc: "Support refugees"
+  emoji: "🌍"
+  name: "World Refugee Day"
+06-21:
+  desc: "Longest day!"
+  emoji: "☀"
+  name: "Summer Solstice"
+06-22:
+  desc: "Save rainforests!"
+  emoji: "🌴"
+  name: "World Rainforest Day"
+06-23:
+  desc: "Clack clack!"
+  emoji: "⌨"
+  name: "Typewriter Day"
+06-24:
+  desc: "Truth is out there"
+  emoji: "🛸"
+  name: "UFO Day"
+06-25:
+  desc: "Vivid viewing!"
+  emoji: "📺"
+  name: "Color TV Day"
+06-26:
+  desc: "Looking good!"
+  emoji: "💇"
+  name: "Beautician Day"
+06-27:
+  desc: "Shade it up!"
+  emoji: "🕶"
+  name: "Sunglasses Day"
+06-28:
+  desc: "Stay covered!"
+  emoji: "🛡"
+  name: "Insurance Awareness"
+06-29:
+  desc: "Spread hugs!"
+  emoji: "🤗"
+  name: "Hug Holiday"
+06-30:
+  desc: "Post it!"
+  emoji: "📱"
+  name: "Social Media Day"
+07-01:
+  desc: "Happy Canada!"
+  emoji: "🍁"
+  name: "Canada Day"
+07-02:
+  desc: "Believe!"
+  emoji: "👽"
+  name: "World UFO Day"
+07-03:
+  desc: "Wafer thin!"
+  emoji: "🍫"
+  name: "Chocolate Wafer Day"
+07-04:
+  desc: "USA celebration!"
+  emoji: "🎆"
+  name: "Independence Day"
+07-05:
+  desc: "Beach time!"
+  emoji: "👙"
+  name: "Bikini Day"
+07-06:
+  desc: "Finger lickin!"
+  emoji: "🍗"
+  name: "Fried Chicken Day"
+07-07:
+  desc: "Chocoholic day!"
+  emoji: "🍫"
+  name: "Chocolate Day"
+07-08:
+  desc: "Game on!"
+  emoji: "🎮"
+  name: "Video Games Day"
+07-09:
+  desc: "Sweet treats!"
+  emoji: "🍪"
+  name: "Sugar Cookie Day"
+07-10:
+  desc: "Tropical vibes!"
+  emoji: "🍹"
+  name: "Pina Colada Day"
+07-11:
+  desc: "Brain freeze!"
+  emoji: "🥤"
+  name: "Free Slurpee Day"
+07-12:
+  desc: "Keep it simple!"
+  emoji: "🧘"
+  name: "Simplicity Day"
+07-13:
+  desc: "Fry-day!"
+  emoji: "🍟"
+  name: "French Fries Day"
+07-14:
+  desc: "Vive la France!"
+  emoji: "🇫🇷"
+  name: "Bastille Day"
+07-15:
+  desc: "Share kindness!"
+  emoji: "🎁"
+  name: "Give Something Away"
+07-16:
+  desc: "Ssssensational!"
+  emoji: "🐍"
+  name: "World Snake Day"
+07-17:
+  desc: "Express yourself!"
+  emoji: "😀"
+  name: "World Emoji Day"
+07-18:
+  desc: "Scoop it up!"
+  emoji: "🍨"
+  name: "Ice Cream Day"
+07-19:
+  desc: "Cheers!"
+  emoji: "🍹"
+  name: "Daiquiri Day"
+07-20:
+  desc: "One small step!"
+  emoji: "🌙"
+  name: "Moon Day"
+07-21:
+  desc: "Guilty pleasures!"
+  emoji: "🍿"
+  name: "Junk Food Day"
+07-22:
+  desc: "Swing and relax!"
+  emoji: "🏝"
+  name: "Hammock Day"
+07-23:
+  desc: "Classic flavor!"
+  emoji: "🍦"
+  name: "Vanilla Ice Cream Day"
+07-24:
+  desc: "Salt, shot, lime!"
+  emoji: "🥃"
+  name: "Tequila Day"
+07-25:
+  desc: "Thank your admin!"
+  emoji: "🖥"
+  name: "System Admin Day"
+07-26:
+  desc: "Family love!"
+  emoji: "👨"
+  name: "Aunt and Uncle Day"
+07-27:
+  desc: "Slainte!"
+  emoji: "🥃"
+  name: "Scotch Whisky Day"
+07-28:
+  desc: "Health awareness"
+  emoji: "💛"
+  name: "World Hepatitis Day"
+07-29:
+  desc: "Layers of yum!"
+  emoji: "🍝"
+  name: "Lasagna Day"
+07-30:
+  desc: "Creamy delight!"
+  emoji: "🍰"
+  name: "Cheesecake Day"
+07-31:
+  desc: "Wizarding world!"
+  emoji: "🧙"
+  name: "Harry Potter Day"
+08-01:
+  desc: "Thanks Tim!"
+  emoji: "🌐"
+  name: "World Wide Web Day"
+08-02:
+  desc: "Sandwiched!"
+  emoji: "🍦"
+  name: "Ice Cream Sandwich Day"
+08-03:
+  desc: "Juicy goodness!"
+  emoji: "🍉"
+  name: "Watermelon Day"
+08-04:
+  desc: "Cookie monster!"
+  emoji: "🍪"
+  name: "Chocolate Chip Cookie"
+08-05:
+  desc: "Hard at work!"
+  emoji: "🐕"
+  name: "Work Like a Dog Day"
+08-06:
+  desc: "Wiggle wiggle!"
+  emoji: "🦶"
+  name: "Wiggle Your Toes Day"
+08-07:
+  desc: "Guiding light!"
+  emoji: "🏠"
+  name: "Lighthouse Day"
+08-08:
+  desc: "Purr-fect day!"
+  emoji: "🐱"
+  name: "Cat Day"
+08-09:
+  desc: "Get reading!"
+  emoji: "📚"
+  name: "Book Lovers Day"
+08-10:
+  desc: "Chill vibes only"
+  emoji: "🛋"
+  name: "Lazy Day"
+08-11:
+  desc: "Drop the beat!"
+  emoji: "🎤"
+  name: "Hip Hop Day"
+08-12:
+  desc: "Protect elephants!"
+  emoji: "🐘"
+  name: "World Elephant Day"
+08-13:
+  desc: "Lefty pride!"
+  emoji: "✋"
+  name: "Left Handers Day"
+08-14:
+  desc: "Orange dream!"
+  emoji: "🍊"
+  name: "Creamsicle Day"
+08-15:
+  desc: "Take it easy!"
+  emoji: "😌"
+  name: "Relaxation Day"
+08-16:
+  desc: "Make them laugh!"
+  emoji: "😄"
+  name: "Tell a Joke Day"
+08-17:
+  desc: "Lucky kitties!"
+  emoji: "🐈"
+  name: "Black Cat Day"
+08-18:
+  desc: "Rhyme crimes!"
+  emoji: "📝"
+  name: "Bad Poetry Day"
+08-19:
+  desc: "Snap away!"
+  emoji: "📸"
+  name: "World Photo Day"
+08-20:
+  desc: "When life gives..."
+  emoji: "🍋"
+  name: "Lemonade Day"
+08-21:
+  desc: "Honor elders!"
+  emoji: "👴"
+  name: "Senior Citizens Day"
+08-22:
+  desc: "Under the pillow!"
+  emoji: "🧚"
+  name: "Tooth Fairy Day"
+08-23:
+  desc: "Feel the breeze!"
+  emoji: "💨"
+  name: "Ride the Wind Day"
+08-24:
+  desc: "Waffle wonder!"
+  emoji: "🧇"
+  name: "Waffle Day"
+08-25:
+  desc: "Split decision!"
+  emoji: "🍌"
+  name: "Banana Split Day"
+08-26:
+  desc: "Man's best friend!"
+  emoji: "🐕"
+  name: "Dog Day"
+08-27:
+  desc: "Why not?"
+  emoji: "🤷"
+  name: "Just Because Day"
+08-28:
+  desc: "Dapper day!"
+  emoji: "🎀"
+  name: "Bow Tie Day"
+08-29:
+  desc: "Press start!"
+  emoji: "🕹"
+  name: "Video Games Day"
+08-30:
+  desc: "Sun and sand!"
+  emoji: "🏖"
+  name: "Beach Day"
+08-31:
+  desc: "Dine al fresco!"
+  emoji: "🌳"
+  name: "Eat Outside Day"
+09-01:
+  desc: "Plant protein!"
+  emoji: "🥢"
+  name: "Tofu Day"
+09-02:
+  desc: "Peace day!"
+  emoji: "🕊"
+  name: "VJ Day"
+09-03:
+  desc: "Look up!"
+  emoji: "🏙"
+  name: "Skyscraper Day"
+09-04:
+  desc: "Nature matters!"
+  emoji: "🦌"
+  name: "Wildlife Day"
+09-05:
+  desc: "Classic pie!"
+  emoji: "🍕"
+  name: "Cheese Pizza Day"
+09-06:
+  desc: "Book time!"
+  emoji: "📖"
+  name: "Read a Book Day"
+09-07:
+  desc: "Cheers!"
+  emoji: "🍺"
+  name: "Beer Lovers Day"
+09-08:
+  desc: "Reading matters!"
+  emoji: "📚"
+  name: "Literacy Day"
+09-09:
+  desc: "Hug a bear!"
+  emoji: "🧸"
+  name: "Teddy Bear Day"
+09-10:
+  desc: "You matter!"
+  emoji: "💚"
+  name: "World Suicide Prev"
+09-11:
+  desc: "Never forget"
+  emoji: "🕯"
+  name: "Remembrance Day"
+09-12:
+  desc: "Level up!"
+  emoji: "🎮"
+  name: "Video Games Day"
+09-13:
+  desc: "Day 256!"
+  emoji: "💻"
+  name: "Programmer's Day"
+09-14:
+  desc: "Donut miss it!"
+  emoji: "🍩"
+  name: "Cream Filled Donut"
+09-15:
+  desc: "Open source!"
+  emoji: "🐧"
+  name: "Software Freedom Day"
+09-16:
+  desc: "Holy guac!"
+  emoji: "🥑"
+  name: "Guacamole Day"
+09-17:
+  desc: "We the people!"
+  emoji: "📜"
+  name: "Constitution Day"
+09-18:
+  desc: "Cheese please!"
+  emoji: "🍔"
+  name: "Cheeseburger Day"
+09-19:
+  desc: "Arrr matey!"
+  emoji: "🏴"
+  name: "Talk Like Pirate Day"
+09-20:
+  desc: "Extra pepperoni!"
+  emoji: "🍕"
+  name: "Pepperoni Pizza Day"
+09-21:
+  desc: "World peace!"
+  emoji: "☮"
+  name: "Peace Day"
+09-22:
+  desc: "Ride a bike!"
+  emoji: "🚲"
+  name: "Car Free Day"
+09-23:
+  desc: "Fall begins!"
+  emoji: "🍂"
+  name: "Autumn Equinox"
+09-24:
+  desc: "Use commas!"
+  emoji: "❗"
+  name: "Punctuation Day"
+09-25:
+  desc: "POW BAM ZOOM!"
+  emoji: "📔"
+  name: "Comic Book Day"
+09-26:
+  desc: "Flapjack time!"
+  emoji: "🥞"
+  name: "Pancake Day"
+09-27:
+  desc: "Recycle it!"
+  emoji: "🥫"
+  name: "Crush a Can Day"
+09-28:
+  desc: "FOSS rules!"
+  emoji: "🔓"
+  name: "Software Freedom Day"
+09-29:
+  desc: "Caffeine time!"
+  emoji: "☕"
+  name: "Coffee Day"
+09-30:
+  desc: "Listen in!"
+  emoji: "🎙"
+  name: "Podcast Day"
+10-01:
+  desc: "Go green!"
+  emoji: "🥗"
+  name: "World Vegetarian Day"
+10-02:
+  desc: "Be the change!"
+  emoji: "☮"
+  name: "Gandhi Jayanti"
+10-03:
+  desc: "Tech heroes!"
+  emoji: "👨"
+  name: "Techies Day"
+10-04:
+  desc: "Taco bout it!"
+  emoji: "🌮"
+  name: "Taco Day"
+10-05:
+  desc: "Thanks teachers!"
+  emoji: "👩"
+  name: "World Teachers Day"
+10-06:
+  desc: "10/6 party!"
+  emoji: "🎩"
+  name: "Mad Hatter Day"
+10-07:
+  desc: "Keep smiling!"
+  emoji: "😊"
+  name: "World Smile Day"
+10-08:
+  desc: "Eight arms!"
+  emoji: "🐙"
+  name: "Octopus Day"
+10-09:
+  desc: "Viking explorer!"
+  emoji: "⛵"
+  name: "Leif Erikson Day"
+10-10:
+  desc: "Mind matters!"
+  emoji: "🧠"
+  name: "Mental Health Day"
+10-11:
+  desc: "Be yourself!"
+  emoji: "🏳"
+  name: "Coming Out Day"
+10-12:
+  desc: "Cajun cooking!"
+  emoji: "🍲"
+  name: "Gumbo Day"
+10-13:
+  desc: "Women in STEM!"
+  emoji: "👩"
+  name: "Ada Lovelace Day"
+10-14:
+  desc: "Rock that dome!"
+  emoji: "👨"
+  name: "Be Bald and Free"
+10-15:
+  desc: "Fun-gi day!"
+  emoji: "🍄"
+  name: "Mushroom Day"
+10-16:
+  desc: "Thanks boss!"
+  emoji: "💼"
+  name: "Boss's Day"
+10-17:
+  desc: "Carb loading!"
+  emoji: "🍝"
+  name: "Pasta Day"
+10-18:
+  desc: "Sweet tooth!"
+  emoji: "🧁"
+  name: "Chocolate Cupcake"
+10-19:
+  desc: "Reflect today"
+  emoji: "🤔"
+  name: "Evaluate Your Life"
+10-20:
+  desc: "Bone health!"
+  emoji: "🦴"
+  name: "World Osteoporosis"
+10-21:
+  desc: "An apple a day!"
+  emoji: "🍎"
+  name: "Apple Day"
+10-22:
+  desc: "CRUISE CONTROL!"
+  emoji: "⌨"
+  name: "Caps Lock Day"
+10-23:
+  desc: "6.022 x 10^23!"
+  emoji: "🔬"
+  name: "Mole Day"
+10-24:
+  desc: "Global unity!"
+  emoji: "🌍"
+  name: "United Nations Day"
+10-25:
+  desc: "Indulge today!"
+  emoji: "🍔"
+  name: "Greasy Foods Day"
+10-26:
+  desc: "Gourd vibes!"
   emoji: "🎃"
-
-"12-25":
-  name: "Christmas Day"
-  desc: "Holiday celebration"
+  name: "Pumpkin Day"
+10-27:
+  desc: "Not unlucky!"
+  emoji: "🐈"
+  name: "Black Cat Day"
+10-28:
+  desc: "Cocoa bliss!"
+  emoji: "🍫"
+  name: "Chocolate Day"
+10-29:
+  desc: "Log on!"
+  emoji: "🌐"
+  name: "Internet Day"
+10-30:
+  desc: "Check it off!"
+  emoji: "✅"
+  name: "Checklist Day"
+10-31:
+  desc: "Spooky szn!"
+  emoji: "🎃"
+  name: "Halloween"
+11-01:
+  desc: "Plant power!"
+  emoji: "🌱"
+  name: "World Vegan Day"
+11-02:
+  desc: "Honor ancestors"
+  emoji: "💀"
+  name: "Day of the Dead"
+11-03:
+  desc: "Stack it up!"
+  emoji: "🥪"
+  name: "Sandwich Day"
+11-04:
+  desc: "Sweet treats!"
+  emoji: "🍬"
+  name: "Candy Day"
+11-05:
+  desc: "Remember!"
+  emoji: "🎆"
+  name: "Guy Fawkes Day"
+11-06:
+  desc: "Jazz it up!"
+  emoji: "🎷"
+  name: "Saxophone Day"
+11-07:
+  desc: "Bear hugs!"
+  emoji: "🐻"
+  name: "Hug a Bear Day"
+11-08:
+  desc: "Science rules!"
+  emoji: "🔬"
+  name: "STEM Day"
+11-09:
+  desc: "Embrace chaos!"
+  emoji: "🌀"
+  name: "Chaos Never Dies Day"
+11-10:
+  desc: "Sunny day!"
+  emoji: "🐸"
+  name: "Sesame Street Day"
+11-11:
+  desc: "Honor veterans!"
+  emoji: "🎖"
+  name: "Veterans Day"
+11-12:
+  desc: "Cheers to you!"
+  emoji: "🍻"
+  name: "Happy Hour Day"
+11-13:
+  desc: "Be kind!"
+  emoji: "💝"
+  name: "World Kindness Day"
+11-14:
+  desc: "Health aware!"
+  emoji: "💙"
+  name: "World Diabetes Day"
+11-15:
+  desc: "Toss it!"
+  emoji: "🧊"
+  name: "Clean Out Fridge Day"
+11-16:
+  desc: "Push buttons!"
+  emoji: "🔘"
+  name: "Button Day"
+11-17:
+  desc: "Clean up feeds!"
+  emoji: "👋"
+  name: "Unfriend Day"
+11-18:
+  desc: "Oh boy!"
+  emoji: "🐭"
+  name: "Mickey Mouse Day"
+11-19:
+  desc: "Girl power!"
+  emoji: "♀"
+  name: "Women's Day"
+11-20:
+  desc: "For the kids!"
+  emoji: "👶"
+  name: "Children's Day"
+11-21:
+  desc: "Say hello!"
+  emoji: "👋"
+  name: "World Hello Day"
+11-22:
+  desc: "Road trip!"
+  emoji: "🚗"
+  name: "Go For a Ride Day"
+11-23:
+  desc: "Quick caffeine!"
+  emoji: "☕"
+  name: "Espresso Day"
+11-24:
+  desc: "Life is good!"
+  emoji: "🎉"
+  name: "Celebrate Life Day"
+11-25:
+  desc: "Gift time!"
+  emoji: "🛒"
+  name: "Shopping Reminder"
+11-26:
+  desc: "Let them eat!"
+  emoji: "🎂"
+  name: "Cake Day"
+11-27:
+  desc: "Gobble gobble!"
+  emoji: "🦃"
+  name: "Thanksgiving Day"
+11-28:
+  desc: "Breakfast win!"
+  emoji: "🍞"
+  name: "French Toast Day"
+11-29:
+  desc: "Send e-cards!"
+  emoji: "📧"
+  name: "Electronic Greetings"
+11-30:
+  desc: "Stay secure!"
+  emoji: "🔒"
+  name: "Computer Security"
+12-01:
+  desc: "Awareness!"
+  emoji: "🎗"
+  name: "World AIDS Day"
+12-02:
+  desc: "Shop online!"
+  emoji: "💻"
+  name: "Cyber Monday"
+12-03:
+  desc: "Inclusion!"
+  emoji: "♿"
+  name: "Disability Day"
+12-04:
+  desc: "Bake cookies!"
+  emoji: "🍪"
+  name: "Cookie Day"
+12-05:
+  desc: "Give back!"
+  emoji: "🤝"
+  name: "Volunteer Day"
+12-06:
+  desc: "Quick heat!"
+  emoji: "📻"
+  name: "Microwave Oven Day"
+12-07:
+  desc: "Pen to paper!"
+  emoji: "✉"
+  name: "Letter Writing Day"
+12-08:
+  desc: "Time travel!"
+  emoji: "⏰"
+  name: "Pretend to be Time"
+12-09:
+  desc: "Send cards!"
   emoji: "🎄"
+  name: "Christmas Card Day"
+12-10:
+  desc: "Rights for all!"
+  emoji: "✊"
+  name: "Human Rights Day"
+12-11:
+  desc: "There's an app!"
+  emoji: "📱"
+  name: "App Day"
+12-12:
+  desc: "Build one!"
+  emoji: "🏠"
+  name: "Gingerbread House"
+12-13:
+  desc: "String along!"
+  emoji: "🎻"
+  name: "Violin Day"
+12-14:
+  desc: "Go bananas!"
+  emoji: "🐵"
+  name: "Monkey Day"
+12-15:
+  desc: "Herd cats!"
+  emoji: "🐱"
+  name: "Cat Herders Day"
+12-16:
+  desc: "Dip it!"
+  emoji: "🍫"
+  name: "Chocolate Covered Day"
+12-17:
+  desc: "First flight!"
+  emoji: "✈"
+  name: "Wright Brothers Day"
+12-18:
+  desc: "Wear it proud!"
+  emoji: "🧥"
+  name: "Ugly Sweater Day"
+12-19:
+  desc: "Sweet crunch!"
+  emoji: "🍬"
+  name: "Hard Candy Day"
+12-20:
+  desc: "Wine time!"
+  emoji: "🍷"
+  name: "Sangria Day"
+12-21:
+  desc: "Shortest day!"
+  emoji: "❄"
+  name: "Winter Solstice"
+12-22:
+  desc: "Numbers rock!"
+  emoji: "🔢"
+  name: "Mathematics Day"
+12-23:
+  desc: "Feats of strength!"
+  emoji: "🎄"
+  name: "Festivus"
+12-24:
+  desc: "Santa's coming!"
+  emoji: "🎅"
+  name: "Christmas Eve"
+12-25:
+  desc: "Merry Christmas!"
+  emoji: "🎄"
+  name: "Christmas Day"
+12-26:
+  desc: "Unwrap more!"
+  emoji: "🎁"
+  name: "Boxing Day"
+12-27:
+  desc: "Animal friends!"
+  emoji: "🦁"
+  name: "Visit the Zoo Day"
+12-28:
+  desc: "Deal the cards!"
+  emoji: "🃏"
+  name: "Card Playing Day"
+12-29:
+  desc: "Year's end near!"
+  emoji: "⏰"
+  name: "Tick Tock Day"
+12-30:
+  desc: "Sizzle!"
+  emoji: "🥓"
+  name: "Bacon Day"
+12-31:
+  desc: "Ring it in!"
+  emoji: "🎊"
+  name: "New Year's Eve"
+

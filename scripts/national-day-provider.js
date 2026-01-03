@@ -1,422 +1,75 @@
 /**
  * National Day Provider
- * Provides fun/awareness day information for each day of the year
- * Used by the dynamic terminal generator for daily variety
+ * Provides fun/awareness day information for each day of the year.
+ * Loads data from content/national_days.yaml.
+ * @module national-day-provider
  */
 
+const { YamlContentLoader } = require('./content-loader');
+
+/**
+ * Default fallback day when no data is found.
+ */
+const DEFAULT_DAY = {
+  name: 'Awesome Day',
+  emoji: '✨',
+  desc: 'Make it count!'
+};
+
+/**
+ * Provider for national/fun day information.
+ * Uses YAML data file for 366-day coverage.
+ */
 class NationalDayProvider {
-  constructor() {
-    // Key format: 'MM-DD' (zero-padded)
-    // Each entry: { name: string (max 25 chars), emoji: string, desc: string (max 22 chars) }
-    this.days = {
-      // January
-      '01-01': { name: 'New Year\'s Day', emoji: '🎉', desc: 'Fresh start awaits!' },
-      '01-02': { name: 'Science Fiction Day', emoji: '🚀', desc: 'Celebrate sci-fi!' },
-      '01-03': { name: 'Festival of Sleep Day', emoji: '😴', desc: 'Catch those Zzzs' },
-      '01-04': { name: 'Trivia Day', emoji: '🧠', desc: 'Test your knowledge!' },
-      '01-05': { name: 'Bird Day', emoji: '🐦', desc: 'Appreciate our birds' },
-      '01-06': { name: 'Cuddle Up Day', emoji: '🤗', desc: 'Stay cozy today' },
-      '01-07': { name: 'Old Rock Day', emoji: '🪨', desc: 'Geology rocks!' },
-      '01-08': { name: 'Bubble Bath Day', emoji: '🛁', desc: 'Relax and unwind' },
-      '01-09': { name: 'Static Electricity Day', emoji: '⚡', desc: 'Shocking fun!' },
-      '01-10': { name: 'Houseplant Awareness', emoji: '🪴', desc: 'Water your plants!' },
-      '01-11': { name: 'Learn Your Name Day', emoji: '📛', desc: 'Name origin time!' },
-      '01-12': { name: 'Pharmacist Day', emoji: '💊', desc: 'Thanks pharmacists!' },
-      '01-13': { name: 'Rubber Ducky Day', emoji: '🦆', desc: 'Debug with ducks!' },
-      '01-14': { name: 'Dress Up Your Pet Day', emoji: '🐕', desc: 'Pets in costumes!' },
-      '01-15': { name: 'Wikipedia Day', emoji: '📚', desc: 'Knowledge is free!' },
-      '01-16': { name: 'Appreciate a Dragon', emoji: '🐉', desc: 'Dragons are cool!' },
-      '01-17': { name: 'Hot Heads Chili Day', emoji: '🌶', desc: 'Spice it up!' },
-      '01-18': { name: 'Thesaurus Day', emoji: '📖', desc: 'Words, terms, vocab!' },
-      '01-19': { name: 'Popcorn Day', emoji: '🍿', desc: 'Pop some corn!' },
-      '01-20': { name: 'Penguin Awareness Day', emoji: '🐧', desc: 'Love the penguins!' },
-      '01-21': { name: 'Hugging Day', emoji: '🤗', desc: 'Share a hug today' },
-      '01-22': { name: 'Answer Your Cat Day', emoji: '🐱', desc: 'Meow back at them!' },
-      '01-23': { name: 'Pie Day', emoji: '🥧', desc: 'Not Pi, actual pie!' },
-      '01-24': { name: 'Compliment Day', emoji: '💬', desc: 'Say something nice!' },
-      '01-25': { name: 'Opposite Day', emoji: '🔄', desc: 'Or is it not?' },
-      '01-26': { name: 'Australia Day', emoji: '🦘', desc: 'G\'day mate!' },
-      '01-27': { name: 'Chocolate Cake Day', emoji: '🍫', desc: 'Cake time!' },
-      '01-28': { name: 'Data Privacy Day', emoji: '🔒', desc: 'Protect your data!' },
-      '01-29': { name: 'Puzzle Day', emoji: '🧩', desc: 'Solve something!' },
-      '01-30': { name: 'Croissant Day', emoji: '🥐', desc: 'Flaky goodness!' },
-      '01-31': { name: 'Backward Day', emoji: '⏪', desc: 'yaD drawkcaB!' },
-
-      // February
-      '02-01': { name: 'Change Your Password', emoji: '🔑', desc: 'Update passwords!' },
-      '02-02': { name: 'Groundhog Day', emoji: '🦫', desc: 'Shadow or spring?' },
-      '02-03': { name: 'Carrot Cake Day', emoji: '🥕', desc: 'Veggie dessert!' },
-      '02-04': { name: 'World Cancer Day', emoji: '🎗', desc: 'Support awareness' },
-      '02-05': { name: 'Nutella Day', emoji: '🍫', desc: 'Spread the love!' },
-      '02-06': { name: 'Frozen Yogurt Day', emoji: '🍦', desc: 'Fro-yo time!' },
-      '02-07': { name: 'e Day', emoji: '🔢', desc: '2.71828... math!' },
-      '02-08': { name: 'Kite Flying Day', emoji: '🪁', desc: 'Go fly a kite!' },
-      '02-09': { name: 'Pizza Day', emoji: '🍕', desc: 'Pizza party!' },
-      '02-10': { name: 'Umbrella Day', emoji: '☂', desc: 'Stay dry!' },
-      '02-11': { name: 'Inventors Day', emoji: '💡', desc: 'Create something!' },
-      '02-12': { name: 'Darwin Day', emoji: '🧬', desc: 'Evolution rocks!' },
-      '02-13': { name: 'Radio Day', emoji: '📻', desc: 'Tune in!' },
-      '02-14': { name: 'Valentine\'s Day', emoji: '❤', desc: 'Spread the love!' },
-      '02-15': { name: 'Singles Awareness Day', emoji: '💪', desc: 'Self-love day!' },
-      '02-16': { name: 'Do a Grouch a Favor', emoji: '😤', desc: 'Help a grump!' },
-      '02-17': { name: 'Random Acts Kindness', emoji: '💝', desc: 'Be kind today!' },
-      '02-18': { name: 'Battery Day', emoji: '🔋', desc: 'Power up!' },
-      '02-19': { name: 'Chocolate Mint Day', emoji: '🍫', desc: 'Minty fresh!' },
-      '02-20': { name: 'Love Your Pet Day', emoji: '🐾', desc: 'Pets are family!' },
-      '02-21': { name: 'Pancake Day', emoji: '🥞', desc: 'Stack em high!' },
-      '02-22': { name: 'Walking the Dog Day', emoji: '🐕', desc: 'Take a walk!' },
-      '02-23': { name: 'Digital Learning Day', emoji: '💻', desc: 'Learn online!' },
-      '02-24': { name: 'Tortilla Chip Day', emoji: '🌮', desc: 'Crunch time!' },
-      '02-25': { name: 'Clam Chowder Day', emoji: '🥣', desc: 'Soup\'s on!' },
-      '02-26': { name: 'Pistachio Day', emoji: '🥜', desc: 'Go nuts!' },
-      '02-27': { name: 'Polar Bear Day', emoji: '🐻', desc: 'Save the bears!' },
-      '02-28': { name: 'Public Sleeping Day', emoji: '💤', desc: 'Nap anywhere!' },
-      '02-29': { name: 'Leap Day', emoji: '🐸', desc: 'Leap year bonus!' },
-
-      // March
-      '03-01': { name: 'Peanut Butter Day', emoji: '🥜', desc: 'Spread it!' },
-      '03-02': { name: 'Old Stuff Day', emoji: '📦', desc: 'Clean the attic!' },
-      '03-03': { name: 'World Wildlife Day', emoji: '🦁', desc: 'Protect wildlife!' },
-      '03-04': { name: 'Grammar Day', emoji: '📝', desc: 'Write good... well!' },
-      '03-05': { name: 'Cheese Doodle Day', emoji: '🧀', desc: 'Cheesy goodness!' },
-      '03-06': { name: 'Oreo Cookie Day', emoji: '🍪', desc: 'Twist, lick, dunk!' },
-      '03-07': { name: 'Cereal Day', emoji: '🥣', desc: 'Breakfast champ!' },
-      '03-08': { name: 'Women\'s Day', emoji: '👩', desc: 'Celebrate women!' },
-      '03-09': { name: 'Get Over It Day', emoji: '✌', desc: 'Move on!' },
-      '03-10': { name: 'Mario Day', emoji: '🎮', desc: 'MAR10 Day!' },
-      '03-11': { name: 'World Plumbing Day', emoji: '🔧', desc: 'Pipes matter!' },
-      '03-12': { name: 'Plant a Flower Day', emoji: '🌸', desc: 'Get planting!' },
-      '03-13': { name: 'Napping Day', emoji: '😴', desc: 'Power nap time!' },
-      '03-14': { name: 'Pi Day', emoji: '🥧', desc: '3.14159... math!' },
-      '03-15': { name: 'Ides of March', emoji: '🗡', desc: 'Beware!' },
-      '03-16': { name: 'Panda Day', emoji: '🐼', desc: 'Pandas are cute!' },
-      '03-17': { name: 'St. Patrick\'s Day', emoji: '☘', desc: 'Luck of Irish!' },
-      '03-18': { name: 'Awkward Moments Day', emoji: '😬', desc: 'Cringe together!' },
-      '03-19': { name: 'Let\'s Laugh Day', emoji: '😂', desc: 'Laugh out loud!' },
-      '03-20': { name: 'World Storytelling Day', emoji: '📖', desc: 'Tell a tale!' },
-      '03-21': { name: 'World Poetry Day', emoji: '✍', desc: 'Rhyme time!' },
-      '03-22': { name: 'World Water Day', emoji: '💧', desc: 'Save water!' },
-      '03-23': { name: 'Puppy Day', emoji: '🐶', desc: 'Puppy love!' },
-      '03-24': { name: 'World TB Day', emoji: '🏥', desc: 'Health awareness' },
-      '03-25': { name: 'Waffle Day', emoji: '🧇', desc: 'Waffle time!' },
-      '03-26': { name: 'Purple Day', emoji: '💜', desc: 'Epilepsy awareness' },
-      '03-27': { name: 'World Theatre Day', emoji: '🎭', desc: 'Drama time!' },
-      '03-28': { name: 'Something on a Stick', emoji: '🍡', desc: 'Skewer it!' },
-      '03-29': { name: 'Vietnam Veterans Day', emoji: '🎖', desc: 'Honor veterans' },
-      '03-30': { name: 'Pencil Day', emoji: '✏', desc: 'Write on!' },
-      '03-31': { name: 'World Backup Day', emoji: '💾', desc: 'Back it up!' },
-
-      // April
-      '04-01': { name: 'April Fools Day', emoji: '🃏', desc: 'Prank responsibly!' },
-      '04-02': { name: 'World Autism Day', emoji: '🧩', desc: 'Autism awareness' },
-      '04-03': { name: 'Find a Rainbow Day', emoji: '🌈', desc: 'Look up!' },
-      '04-04': { name: 'Vitamin C Day', emoji: '🍊', desc: 'Get your citrus!' },
-      '04-05': { name: 'Read a Road Map Day', emoji: '🗺', desc: 'Navigate old way!' },
-      '04-06': { name: 'Carbonara Day', emoji: '🍝', desc: 'Pasta perfection!' },
-      '04-07': { name: 'World Health Day', emoji: '💚', desc: 'Stay healthy!' },
-      '04-08': { name: 'Zoo Lovers Day', emoji: '🦒', desc: 'Visit the zoo!' },
-      '04-09': { name: 'Unicorn Day', emoji: '🦄', desc: 'Be magical!' },
-      '04-10': { name: 'Siblings Day', emoji: '👫', desc: 'Hug your sibling!' },
-      '04-11': { name: 'Pet Day', emoji: '🐾', desc: 'Love your pet!' },
-      '04-12': { name: 'Grilled Cheese Day', emoji: '🧀', desc: 'Melty goodness!' },
-      '04-13': { name: 'Scrabble Day', emoji: '🔤', desc: 'Word up!' },
-      '04-14': { name: 'Dolphin Day', emoji: '🐬', desc: 'Smart swimmers!' },
-      '04-15': { name: 'Tax Day', emoji: '📊', desc: 'File on time!' },
-      '04-16': { name: 'Wear Pajamas Day', emoji: '🛏', desc: 'PJs all day!' },
-      '04-17': { name: 'Haiku Poetry Day', emoji: '🌸', desc: 'Five seven five!' },
-      '04-18': { name: 'World Heritage Day', emoji: '🏛', desc: 'Preserve history!' },
-      '04-19': { name: 'Garlic Day', emoji: '🧄', desc: 'Flavor boost!' },
-      '04-20': { name: 'Chinese Language Day', emoji: '🀄', desc: 'Ni hao!' },
-      '04-21': { name: 'Kindergarten Day', emoji: '🎨', desc: 'Kid at heart!' },
-      '04-22': { name: 'Earth Day', emoji: '🌍', desc: 'Save our planet!' },
-      '04-23': { name: 'World Book Day', emoji: '📚', desc: 'Read a book!' },
-      '04-24': { name: 'DNA Day', emoji: '🧬', desc: 'Genetics matter!' },
-      '04-25': { name: 'Penguin Day', emoji: '🐧', desc: 'Waddle waddle!' },
-      '04-26': { name: 'Pretzel Day', emoji: '🥨', desc: 'Twisted treat!' },
-      '04-27': { name: 'Tell a Story Day', emoji: '📖', desc: 'Once upon a time' },
-      '04-28': { name: 'Superhero Day', emoji: '🦸', desc: 'Be a hero!' },
-      '04-29': { name: 'International Dance', emoji: '💃', desc: 'Dance it out!' },
-      '04-30': { name: 'Honesty Day', emoji: '🤞', desc: 'Truth time!' },
-
-      // May
-      '05-01': { name: 'May Day', emoji: '🌷', desc: 'Spring is here!' },
-      '05-02': { name: 'Password Day', emoji: '🔐', desc: 'Secure accounts!' },
-      '05-03': { name: 'Press Freedom Day', emoji: '📰', desc: 'Free press!' },
-      '05-04': { name: 'Star Wars Day', emoji: '⭐', desc: 'May the 4th!' },
-      '05-05': { name: 'Cinco de Mayo', emoji: '🎉', desc: 'Fiesta time!' },
-      '05-06': { name: 'No Diet Day', emoji: '🍰', desc: 'Eat what you want!' },
-      '05-07': { name: 'Space Day', emoji: '🛸', desc: 'Explore space!' },
-      '05-08': { name: 'World Red Cross Day', emoji: '🏥', desc: 'Help others!' },
-      '05-09': { name: 'Lost Sock Memorial', emoji: '🧦', desc: 'RIP lost socks' },
-      '05-10': { name: 'Clean Your Room Day', emoji: '🧹', desc: 'Tidy up!' },
-      '05-11': { name: 'Twilight Zone Day', emoji: '👁', desc: 'Enter the zone!' },
-      '05-12': { name: 'Limerick Day', emoji: '📝', desc: 'Rhyme time!' },
-      '05-13': { name: 'Frog Jumping Day', emoji: '🐸', desc: 'Hop to it!' },
-      '05-14': { name: 'Dance Like Chicken', emoji: '🐔', desc: 'Cluck cluck!' },
-      '05-15': { name: 'Chocolate Chip Day', emoji: '🍪', desc: 'Chip chip hooray!' },
-      '05-16': { name: 'Biographers Day', emoji: '✍', desc: 'Life stories!' },
-      '05-17': { name: 'World Telecom Day', emoji: '📡', desc: 'Stay connected!' },
-      '05-18': { name: 'Museum Day', emoji: '🏛', desc: 'Visit a museum!' },
-      '05-19': { name: 'Dinosaur Day', emoji: '🦖', desc: 'Rawr!' },
-      '05-20': { name: 'World Bee Day', emoji: '🐝', desc: 'Save the bees!' },
-      '05-21': { name: 'World Meditation Day', emoji: '🧘', desc: 'Find your zen' },
-      '05-22': { name: 'Sherlock Holmes Day', emoji: '🔍', desc: 'Elementary!' },
-      '05-23': { name: 'World Turtle Day', emoji: '🐢', desc: 'Slow and steady!' },
-      '05-24': { name: 'Scavenger Hunt Day', emoji: '🗺', desc: 'Seek and find!' },
-      '05-25': { name: 'Towel Day', emoji: '🛀', desc: 'Don\'t panic!' },
-      '05-26': { name: 'Paper Airplane Day', emoji: '✈', desc: 'Let it fly!' },
-      '05-27': { name: 'Sun Screen Day', emoji: '☀', desc: 'SPF up!' },
-      '05-28': { name: 'Hamburger Day', emoji: '🍔', desc: 'Burger time!' },
-      '05-29': { name: 'Biscuit Day', emoji: '🍪', desc: 'Biscuit bliss!' },
-      '05-30': { name: 'Water a Flower Day', emoji: '🌺', desc: 'Help them grow!' },
-      '05-31': { name: 'World No Tobacco Day', emoji: '🚭', desc: 'Breathe easy!' },
-
-      // June
-      '06-01': { name: 'World Milk Day', emoji: '🥛', desc: 'Got milk?' },
-      '06-02': { name: 'Rocky Road Day', emoji: '🍫', desc: 'Ice cream time!' },
-      '06-03': { name: 'Repeat Day', emoji: '🔁', desc: 'Say it again!' },
-      '06-04': { name: 'Cheese Day', emoji: '🧀', desc: 'Say cheese!' },
-      '06-05': { name: 'World Environment Day', emoji: '🌳', desc: 'Go green!' },
-      '06-06': { name: 'Yo-Yo Day', emoji: '🪀', desc: 'Up and down!' },
-      '06-07': { name: 'VCR Day', emoji: '📼', desc: 'Rewind time!' },
-      '06-08': { name: 'World Oceans Day', emoji: '🌊', desc: 'Save our seas!' },
-      '06-09': { name: 'Donald Duck Day', emoji: '🦆', desc: 'Quack quack!' },
-      '06-10': { name: 'Iced Tea Day', emoji: '🧊', desc: 'Chill out!' },
-      '06-11': { name: 'Corn on the Cob Day', emoji: '🌽', desc: 'Amaize-ing!' },
-      '06-12': { name: 'Red Rose Day', emoji: '🌹', desc: 'Classic romance!' },
-      '06-13': { name: 'Sewing Machine Day', emoji: '🧵', desc: 'Stitch it up!' },
-      '06-14': { name: 'World Blood Donor Day', emoji: '🩸', desc: 'Donate blood!' },
-      '06-15': { name: 'Nature Photography', emoji: '📷', desc: 'Snap nature!' },
-      '06-16': { name: 'Fresh Veggies Day', emoji: '🥕', desc: 'Eat your greens!' },
-      '06-17': { name: 'Eat Your Veggies Day', emoji: '🥦', desc: 'Veggie power!' },
-      '06-18': { name: 'Picnic Day', emoji: '🧺', desc: 'Al fresco dining!' },
-      '06-19': { name: 'Juneteenth', emoji: '✊', desc: 'Freedom Day!' },
-      '06-20': { name: 'World Refugee Day', emoji: '🌍', desc: 'Support refugees' },
-      '06-21': { name: 'Summer Solstice', emoji: '☀', desc: 'Longest day!' },
-      '06-22': { name: 'World Rainforest Day', emoji: '🌴', desc: 'Save rainforests!' },
-      '06-23': { name: 'Typewriter Day', emoji: '⌨', desc: 'Clack clack!' },
-      '06-24': { name: 'UFO Day', emoji: '🛸', desc: 'Truth is out there' },
-      '06-25': { name: 'Color TV Day', emoji: '📺', desc: 'Vivid viewing!' },
-      '06-26': { name: 'Beautician Day', emoji: '💇', desc: 'Looking good!' },
-      '06-27': { name: 'Sunglasses Day', emoji: '🕶', desc: 'Shade it up!' },
-      '06-28': { name: 'Insurance Awareness', emoji: '🛡', desc: 'Stay covered!' },
-      '06-29': { name: 'Hug Holiday', emoji: '🤗', desc: 'Spread hugs!' },
-      '06-30': { name: 'Social Media Day', emoji: '📱', desc: 'Post it!' },
-
-      // July
-      '07-01': { name: 'Canada Day', emoji: '🍁', desc: 'Happy Canada!' },
-      '07-02': { name: 'World UFO Day', emoji: '👽', desc: 'Believe!' },
-      '07-03': { name: 'Chocolate Wafer Day', emoji: '🍫', desc: 'Wafer thin!' },
-      '07-04': { name: 'Independence Day', emoji: '🎆', desc: 'USA celebration!' },
-      '07-05': { name: 'Bikini Day', emoji: '👙', desc: 'Beach time!' },
-      '07-06': { name: 'Fried Chicken Day', emoji: '🍗', desc: 'Finger lickin!' },
-      '07-07': { name: 'Chocolate Day', emoji: '🍫', desc: 'Chocoholic day!' },
-      '07-08': { name: 'Video Games Day', emoji: '🎮', desc: 'Game on!' },
-      '07-09': { name: 'Sugar Cookie Day', emoji: '🍪', desc: 'Sweet treats!' },
-      '07-10': { name: 'Pina Colada Day', emoji: '🍹', desc: 'Tropical vibes!' },
-      '07-11': { name: 'Free Slurpee Day', emoji: '🥤', desc: 'Brain freeze!' },
-      '07-12': { name: 'Simplicity Day', emoji: '🧘', desc: 'Keep it simple!' },
-      '07-13': { name: 'French Fries Day', emoji: '🍟', desc: 'Fry-day!' },
-      '07-14': { name: 'Bastille Day', emoji: '🇫🇷', desc: 'Vive la France!' },
-      '07-15': { name: 'Give Something Away', emoji: '🎁', desc: 'Share kindness!' },
-      '07-16': { name: 'World Snake Day', emoji: '🐍', desc: 'Ssssensational!' },
-      '07-17': { name: 'World Emoji Day', emoji: '😀', desc: 'Express yourself!' },
-      '07-18': { name: 'Ice Cream Day', emoji: '🍨', desc: 'Scoop it up!' },
-      '07-19': { name: 'Daiquiri Day', emoji: '🍹', desc: 'Cheers!' },
-      '07-20': { name: 'Moon Day', emoji: '🌙', desc: 'One small step!' },
-      '07-21': { name: 'Junk Food Day', emoji: '🍿', desc: 'Guilty pleasures!' },
-      '07-22': { name: 'Hammock Day', emoji: '🏝', desc: 'Swing and relax!' },
-      '07-23': { name: 'Vanilla Ice Cream Day', emoji: '🍦', desc: 'Classic flavor!' },
-      '07-24': { name: 'Tequila Day', emoji: '🥃', desc: 'Salt, shot, lime!' },
-      '07-25': { name: 'System Admin Day', emoji: '🖥', desc: 'Thank your admin!' },
-      '07-26': { name: 'Aunt and Uncle Day', emoji: '👨', desc: 'Family love!' },
-      '07-27': { name: 'Scotch Whisky Day', emoji: '🥃', desc: 'Slainte!' },
-      '07-28': { name: 'World Hepatitis Day', emoji: '💛', desc: 'Health awareness' },
-      '07-29': { name: 'Lasagna Day', emoji: '🍝', desc: 'Layers of yum!' },
-      '07-30': { name: 'Cheesecake Day', emoji: '🍰', desc: 'Creamy delight!' },
-      '07-31': { name: 'Harry Potter Day', emoji: '🧙', desc: 'Wizarding world!' },
-
-      // August
-      '08-01': { name: 'World Wide Web Day', emoji: '🌐', desc: 'Thanks Tim!' },
-      '08-02': { name: 'Ice Cream Sandwich Day', emoji: '🍦', desc: 'Sandwiched!' },
-      '08-03': { name: 'Watermelon Day', emoji: '🍉', desc: 'Juicy goodness!' },
-      '08-04': { name: 'Chocolate Chip Cookie', emoji: '🍪', desc: 'Cookie monster!' },
-      '08-05': { name: 'Work Like a Dog Day', emoji: '🐕', desc: 'Hard at work!' },
-      '08-06': { name: 'Wiggle Your Toes Day', emoji: '🦶', desc: 'Wiggle wiggle!' },
-      '08-07': { name: 'Lighthouse Day', emoji: '🏠', desc: 'Guiding light!' },
-      '08-08': { name: 'Cat Day', emoji: '🐱', desc: 'Purr-fect day!' },
-      '08-09': { name: 'Book Lovers Day', emoji: '📚', desc: 'Get reading!' },
-      '08-10': { name: 'Lazy Day', emoji: '🛋', desc: 'Chill vibes only' },
-      '08-11': { name: 'Hip Hop Day', emoji: '🎤', desc: 'Drop the beat!' },
-      '08-12': { name: 'World Elephant Day', emoji: '🐘', desc: 'Protect elephants!' },
-      '08-13': { name: 'Left Handers Day', emoji: '✋', desc: 'Lefty pride!' },
-      '08-14': { name: 'Creamsicle Day', emoji: '🍊', desc: 'Orange dream!' },
-      '08-15': { name: 'Relaxation Day', emoji: '😌', desc: 'Take it easy!' },
-      '08-16': { name: 'Tell a Joke Day', emoji: '😄', desc: 'Make them laugh!' },
-      '08-17': { name: 'Black Cat Day', emoji: '🐈', desc: 'Lucky kitties!' },
-      '08-18': { name: 'Bad Poetry Day', emoji: '📝', desc: 'Rhyme crimes!' },
-      '08-19': { name: 'World Photo Day', emoji: '📸', desc: 'Snap away!' },
-      '08-20': { name: 'Lemonade Day', emoji: '🍋', desc: 'When life gives...' },
-      '08-21': { name: 'Senior Citizens Day', emoji: '👴', desc: 'Honor elders!' },
-      '08-22': { name: 'Tooth Fairy Day', emoji: '🧚', desc: 'Under the pillow!' },
-      '08-23': { name: 'Ride the Wind Day', emoji: '💨', desc: 'Feel the breeze!' },
-      '08-24': { name: 'Waffle Day', emoji: '🧇', desc: 'Waffle wonder!' },
-      '08-25': { name: 'Banana Split Day', emoji: '🍌', desc: 'Split decision!' },
-      '08-26': { name: 'Dog Day', emoji: '🐕', desc: 'Man\'s best friend!' },
-      '08-27': { name: 'Just Because Day', emoji: '🤷', desc: 'Why not?' },
-      '08-28': { name: 'Bow Tie Day', emoji: '🎀', desc: 'Dapper day!' },
-      '08-29': { name: 'Video Games Day', emoji: '🕹', desc: 'Press start!' },
-      '08-30': { name: 'Beach Day', emoji: '🏖', desc: 'Sun and sand!' },
-      '08-31': { name: 'Eat Outside Day', emoji: '🌳', desc: 'Dine al fresco!' },
-
-      // September
-      '09-01': { name: 'Tofu Day', emoji: '🥢', desc: 'Plant protein!' },
-      '09-02': { name: 'VJ Day', emoji: '🕊', desc: 'Peace day!' },
-      '09-03': { name: 'Skyscraper Day', emoji: '🏙', desc: 'Look up!' },
-      '09-04': { name: 'Wildlife Day', emoji: '🦌', desc: 'Nature matters!' },
-      '09-05': { name: 'Cheese Pizza Day', emoji: '🍕', desc: 'Classic pie!' },
-      '09-06': { name: 'Read a Book Day', emoji: '📖', desc: 'Book time!' },
-      '09-07': { name: 'Beer Lovers Day', emoji: '🍺', desc: 'Cheers!' },
-      '09-08': { name: 'Literacy Day', emoji: '📚', desc: 'Reading matters!' },
-      '09-09': { name: 'Teddy Bear Day', emoji: '🧸', desc: 'Hug a bear!' },
-      '09-10': { name: 'World Suicide Prev', emoji: '💚', desc: 'You matter!' },
-      '09-11': { name: 'Remembrance Day', emoji: '🕯', desc: 'Never forget' },
-      '09-12': { name: 'Video Games Day', emoji: '🎮', desc: 'Level up!' },
-      '09-13': { name: 'Programmer\'s Day', emoji: '💻', desc: 'Day 256!' },
-      '09-14': { name: 'Cream Filled Donut', emoji: '🍩', desc: 'Donut miss it!' },
-      '09-15': { name: 'Software Freedom Day', emoji: '🐧', desc: 'Open source!' },
-      '09-16': { name: 'Guacamole Day', emoji: '🥑', desc: 'Holy guac!' },
-      '09-17': { name: 'Constitution Day', emoji: '📜', desc: 'We the people!' },
-      '09-18': { name: 'Cheeseburger Day', emoji: '🍔', desc: 'Cheese please!' },
-      '09-19': { name: 'Talk Like Pirate Day', emoji: '🏴', desc: 'Arrr matey!' },
-      '09-20': { name: 'Pepperoni Pizza Day', emoji: '🍕', desc: 'Extra pepperoni!' },
-      '09-21': { name: 'Peace Day', emoji: '☮', desc: 'World peace!' },
-      '09-22': { name: 'Car Free Day', emoji: '🚲', desc: 'Ride a bike!' },
-      '09-23': { name: 'Autumn Equinox', emoji: '🍂', desc: 'Fall begins!' },
-      '09-24': { name: 'Punctuation Day', emoji: '❗', desc: 'Use commas!' },
-      '09-25': { name: 'Comic Book Day', emoji: '📔', desc: 'POW BAM ZOOM!' },
-      '09-26': { name: 'Pancake Day', emoji: '🥞', desc: 'Flapjack time!' },
-      '09-27': { name: 'Crush a Can Day', emoji: '🥫', desc: 'Recycle it!' },
-      '09-28': { name: 'Software Freedom Day', emoji: '🔓', desc: 'FOSS rules!' },
-      '09-29': { name: 'Coffee Day', emoji: '☕', desc: 'Caffeine time!' },
-      '09-30': { name: 'Podcast Day', emoji: '🎙', desc: 'Listen in!' },
-
-      // October
-      '10-01': { name: 'World Vegetarian Day', emoji: '🥗', desc: 'Go green!' },
-      '10-02': { name: 'Gandhi Jayanti', emoji: '☮', desc: 'Be the change!' },
-      '10-03': { name: 'Techies Day', emoji: '👨', desc: 'Tech heroes!' },
-      '10-04': { name: 'Taco Day', emoji: '🌮', desc: 'Taco bout it!' },
-      '10-05': { name: 'World Teachers Day', emoji: '👩', desc: 'Thanks teachers!' },
-      '10-06': { name: 'Mad Hatter Day', emoji: '🎩', desc: '10/6 party!' },
-      '10-07': { name: 'World Smile Day', emoji: '😊', desc: 'Keep smiling!' },
-      '10-08': { name: 'Octopus Day', emoji: '🐙', desc: 'Eight arms!' },
-      '10-09': { name: 'Leif Erikson Day', emoji: '⛵', desc: 'Viking explorer!' },
-      '10-10': { name: 'Mental Health Day', emoji: '🧠', desc: 'Mind matters!' },
-      '10-11': { name: 'Coming Out Day', emoji: '🏳', desc: 'Be yourself!' },
-      '10-12': { name: 'Gumbo Day', emoji: '🍲', desc: 'Cajun cooking!' },
-      '10-13': { name: 'Ada Lovelace Day', emoji: '👩', desc: 'Women in STEM!' },
-      '10-14': { name: 'Be Bald and Free', emoji: '👨', desc: 'Rock that dome!' },
-      '10-15': { name: 'Mushroom Day', emoji: '🍄', desc: 'Fun-gi day!' },
-      '10-16': { name: 'Boss\'s Day', emoji: '💼', desc: 'Thanks boss!' },
-      '10-17': { name: 'Pasta Day', emoji: '🍝', desc: 'Carb loading!' },
-      '10-18': { name: 'Chocolate Cupcake', emoji: '🧁', desc: 'Sweet tooth!' },
-      '10-19': { name: 'Evaluate Your Life', emoji: '🤔', desc: 'Reflect today' },
-      '10-20': { name: 'World Osteoporosis', emoji: '🦴', desc: 'Bone health!' },
-      '10-21': { name: 'Apple Day', emoji: '🍎', desc: 'An apple a day!' },
-      '10-22': { name: 'Caps Lock Day', emoji: '⌨', desc: 'CRUISE CONTROL!' },
-      '10-23': { name: 'Mole Day', emoji: '🔬', desc: '6.022 x 10^23!' },
-      '10-24': { name: 'United Nations Day', emoji: '🌍', desc: 'Global unity!' },
-      '10-25': { name: 'Greasy Foods Day', emoji: '🍔', desc: 'Indulge today!' },
-      '10-26': { name: 'Pumpkin Day', emoji: '🎃', desc: 'Gourd vibes!' },
-      '10-27': { name: 'Black Cat Day', emoji: '🐈', desc: 'Not unlucky!' },
-      '10-28': { name: 'Chocolate Day', emoji: '🍫', desc: 'Cocoa bliss!' },
-      '10-29': { name: 'Internet Day', emoji: '🌐', desc: 'Log on!' },
-      '10-30': { name: 'Checklist Day', emoji: '✅', desc: 'Check it off!' },
-      '10-31': { name: 'Halloween', emoji: '🎃', desc: 'Spooky szn!' },
-
-      // November
-      '11-01': { name: 'World Vegan Day', emoji: '🌱', desc: 'Plant power!' },
-      '11-02': { name: 'Day of the Dead', emoji: '💀', desc: 'Honor ancestors' },
-      '11-03': { name: 'Sandwich Day', emoji: '🥪', desc: 'Stack it up!' },
-      '11-04': { name: 'Candy Day', emoji: '🍬', desc: 'Sweet treats!' },
-      '11-05': { name: 'Guy Fawkes Day', emoji: '🎆', desc: 'Remember!' },
-      '11-06': { name: 'Saxophone Day', emoji: '🎷', desc: 'Jazz it up!' },
-      '11-07': { name: 'Hug a Bear Day', emoji: '🐻', desc: 'Bear hugs!' },
-      '11-08': { name: 'STEM Day', emoji: '🔬', desc: 'Science rules!' },
-      '11-09': { name: 'Chaos Never Dies Day', emoji: '🌀', desc: 'Embrace chaos!' },
-      '11-10': { name: 'Sesame Street Day', emoji: '🐸', desc: 'Sunny day!' },
-      '11-11': { name: 'Veterans Day', emoji: '🎖', desc: 'Honor veterans!' },
-      '11-12': { name: 'Happy Hour Day', emoji: '🍻', desc: 'Cheers to you!' },
-      '11-13': { name: 'World Kindness Day', emoji: '💝', desc: 'Be kind!' },
-      '11-14': { name: 'World Diabetes Day', emoji: '💙', desc: 'Health aware!' },
-      '11-15': { name: 'Clean Out Fridge Day', emoji: '🧊', desc: 'Toss it!' },
-      '11-16': { name: 'Button Day', emoji: '🔘', desc: 'Push buttons!' },
-      '11-17': { name: 'Unfriend Day', emoji: '👋', desc: 'Clean up feeds!' },
-      '11-18': { name: 'Mickey Mouse Day', emoji: '🐭', desc: 'Oh boy!' },
-      '11-19': { name: 'Women\'s Day', emoji: '♀', desc: 'Girl power!' },
-      '11-20': { name: 'Children\'s Day', emoji: '👶', desc: 'For the kids!' },
-      '11-21': { name: 'World Hello Day', emoji: '👋', desc: 'Say hello!' },
-      '11-22': { name: 'Go For a Ride Day', emoji: '🚗', desc: 'Road trip!' },
-      '11-23': { name: 'Espresso Day', emoji: '☕', desc: 'Quick caffeine!' },
-      '11-24': { name: 'Celebrate Life Day', emoji: '🎉', desc: 'Life is good!' },
-      '11-25': { name: 'Shopping Reminder', emoji: '🛒', desc: 'Gift time!' },
-      '11-26': { name: 'Cake Day', emoji: '🎂', desc: 'Let them eat!' },
-      '11-27': { name: 'Thanksgiving Day', emoji: '🦃', desc: 'Gobble gobble!' },
-      '11-28': { name: 'French Toast Day', emoji: '🍞', desc: 'Breakfast win!' },
-      '11-29': { name: 'Electronic Greetings', emoji: '📧', desc: 'Send e-cards!' },
-      '11-30': { name: 'Computer Security', emoji: '🔒', desc: 'Stay secure!' },
-
-      // December
-      '12-01': { name: 'World AIDS Day', emoji: '🎗', desc: 'Awareness!' },
-      '12-02': { name: 'Cyber Monday', emoji: '💻', desc: 'Shop online!' },
-      '12-03': { name: 'Disability Day', emoji: '♿', desc: 'Inclusion!' },
-      '12-04': { name: 'Cookie Day', emoji: '🍪', desc: 'Bake cookies!' },
-      '12-05': { name: 'Volunteer Day', emoji: '🤝', desc: 'Give back!' },
-      '12-06': { name: 'Microwave Oven Day', emoji: '📻', desc: 'Quick heat!' },
-      '12-07': { name: 'Letter Writing Day', emoji: '✉', desc: 'Pen to paper!' },
-      '12-08': { name: 'Pretend to be Time', emoji: '⏰', desc: 'Time travel!' },
-      '12-09': { name: 'Christmas Card Day', emoji: '🎄', desc: 'Send cards!' },
-      '12-10': { name: 'Human Rights Day', emoji: '✊', desc: 'Rights for all!' },
-      '12-11': { name: 'App Day', emoji: '📱', desc: 'There\'s an app!' },
-      '12-12': { name: 'Gingerbread House', emoji: '🏠', desc: 'Build one!' },
-      '12-13': { name: 'Violin Day', emoji: '🎻', desc: 'String along!' },
-      '12-14': { name: 'Monkey Day', emoji: '🐵', desc: 'Go bananas!' },
-      '12-15': { name: 'Cat Herders Day', emoji: '🐱', desc: 'Herd cats!' },
-      '12-16': { name: 'Chocolate Covered Day', emoji: '🍫', desc: 'Dip it!' },
-      '12-17': { name: 'Wright Brothers Day', emoji: '✈', desc: 'First flight!' },
-      '12-18': { name: 'Ugly Sweater Day', emoji: '🧥', desc: 'Wear it proud!' },
-      '12-19': { name: 'Hard Candy Day', emoji: '🍬', desc: 'Sweet crunch!' },
-      '12-20': { name: 'Sangria Day', emoji: '🍷', desc: 'Wine time!' },
-      '12-21': { name: 'Winter Solstice', emoji: '❄', desc: 'Shortest day!' },
-      '12-22': { name: 'Mathematics Day', emoji: '🔢', desc: 'Numbers rock!' },
-      '12-23': { name: 'Festivus', emoji: '🎄', desc: 'Feats of strength!' },
-      '12-24': { name: 'Christmas Eve', emoji: '🎅', desc: 'Santa\'s coming!' },
-      '12-25': { name: 'Christmas Day', emoji: '🎄', desc: 'Merry Christmas!' },
-      '12-26': { name: 'Boxing Day', emoji: '🎁', desc: 'Unwrap more!' },
-      '12-27': { name: 'Visit the Zoo Day', emoji: '🦁', desc: 'Animal friends!' },
-      '12-28': { name: 'Card Playing Day', emoji: '🃏', desc: 'Deal the cards!' },
-      '12-29': { name: 'Tick Tock Day', emoji: '⏰', desc: 'Year\'s end near!' },
-      '12-30': { name: 'Bacon Day', emoji: '🥓', desc: 'Sizzle!' },
-      '12-31': { name: 'New Year\'s Eve', emoji: '🎊', desc: 'Ring it in!' }
-    };
+  /**
+   * Create a new national day provider.
+   * @param {YamlContentLoader} [loader] - Optional content loader instance
+   */
+  constructor(loader) {
+    this.loader = loader || new YamlContentLoader();
   }
 
   /**
-   * Get the national day for a given date
+   * Get the national day for a given date.
    * @param {Date} date - The date to look up
    * @returns {Object} The day object with name, emoji, and desc
    */
   getNationalDay(date) {
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const key = `${month}-${day}`;
+    const day = this.loader.getNationalDay(date);
+    return day || DEFAULT_DAY;
+  }
 
-    return this.days[key] || {
-      name: 'Awesome Day',
-      emoji: '✨',
-      desc: 'Make it count!'
-    };
+  /**
+   * Get today's national day.
+   * @returns {Object} Today's national day data
+   */
+  getTodaysNationalDay() {
+    return this.getNationalDay(new Date());
+  }
+
+  /**
+   * Get all loaded national days (for testing/debugging).
+   * @returns {Object} Map of MM-DD keys to day objects
+   */
+  getAllDays() {
+    return this.loader.loadNationalDays();
+  }
+
+  /**
+   * Check if a specific date has a national day entry.
+   * @param {Date|string} date - Date object or MM-DD string
+   * @returns {boolean} True if entry exists
+   */
+  hasDay(date) {
+    return this.loader.getNationalDay(date) !== null;
+  }
+
+  /**
+   * Clear cached data (useful for testing).
+   */
+  clearCache() {
+    this.loader.clearCache();
   }
 }
 
-module.exports = { NationalDayProvider };
+module.exports = { NationalDayProvider, DEFAULT_DAY };

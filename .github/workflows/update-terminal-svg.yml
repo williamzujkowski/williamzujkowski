@@ -17,6 +17,11 @@ on:
       - 'scripts/dynamic-terminal-generator.js'
       - 'scripts/advanced-terminal-generator.js'
       - 'scripts/national-day-provider.js'
+      - 'scripts/template-*.js'
+      - 'scripts/markup-parser.js'
+      - 'scripts/content-loader.js'
+      - 'templates/**/*.njk'
+      - 'content/*.yaml'
       - '.github/workflows/update-terminal-svg.yml'
 
 jobs:
@@ -50,6 +55,7 @@ jobs:
         env:
           NODE_ENV: production
           TZ: 'America/New_York'
+          USE_TEMPLATES: 'true'
       
       - name: Check for changes
         id: check_changes

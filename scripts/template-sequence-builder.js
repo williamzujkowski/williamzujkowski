@@ -276,6 +276,24 @@ function buildNpmInstallSequence(content, engine, packageName = 'left-pad') {
 }
 
 /**
+ * Build latest blog post sequence.
+ * Displays the latest post title from RSS feed.
+ * @param {Object} content - Dynamic content from generator
+ * @param {Object} engine - Template engine instance
+ * @returns {Array<Object>} Terminal sequences
+ */
+function buildBlogPostSequence(content, engine) {
+  return buildTemplateSequence({
+    command: 'curl -s williamzujkowski.github.io/feed.xml | grep -m1 title',
+    templateName: 'blocks/blog_post.njk',
+    context: { title: content.latestBlogPost },
+    color: COLORS.CYAN,
+    typingDuration: TYPING.LONG,       // Longer command
+    pause: PAUSE.STANDARD              // Standard reading time
+  }, engine);
+}
+
+/**
  * Build all core template-based sequences.
  * Returns sequences in the order they should appear in terminal.
  * @param {Object} content - Dynamic content from DynamicContentGenerator
@@ -343,6 +361,9 @@ alias monday='sudo shutdown -h now'`;
     // Profile info
     ...buildProfileSequence(content, engine),
 
+    // Latest blog post
+    ...buildBlogPostSequence(content, engine),
+
     // Process list
     ...buildProcessesSequence(content, engine),
 
@@ -378,5 +399,6 @@ module.exports = {
   buildSystemctlSequence,
   buildGoodbyeSequence,
   buildNpmInstallSequence,
+  buildBlogPostSequence,
   buildTemplateSequences
 };

@@ -319,6 +319,38 @@ class DynamicContentGenerator {
   }
 
   /**
+   * Fetch latest blog post from RSS feed
+   * Falls back to a default message if fetch fails
+   */
+  async fetchLatestBlogPost() {
+    try {
+      const response = await axios.get('https://williamzujkowski.github.io/feed.xml', {
+        timeout: 5000
+      });
+
+      if (response.data) {
+        // Extract first entry title from Atom feed using regex
+        const entryMatch = response.data.match(/<entry>[\s\S]*?<title>([^<]+)<\/title>/);
+        if (entryMatch && entryMatch[1]) {
+          const title = entryMatch[1]
+            .replace(/&#39;/g, "'")
+            .replace(/&quot;/g, '"')
+            .replace(/&amp;/g, '&')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>');
+          console.log('✓ Fetched latest blog post:', title.substring(0, 50) + '...');
+          return title;
+        }
+      }
+    } catch (error) {
+      console.log('⚠ Blog RSS failed, using fallback:', error.message);
+    }
+
+    // Fallback
+    return 'Check out my blog at williamzujkowski.github.io';
+  }
+
+  /**
    * Generate network ping statistics (dynamic values)
    */
   generateNetworkStats(date) {
@@ -356,6 +388,7 @@ class DynamicContentGenerator {
     const dockerContainers = this.generateDockerContainers(currentTime);
     const networkStats = this.generateNetworkStats(currentTime);
     const weather = await this.fetchWeather();
+    const latestBlogPost = await this.fetchLatestBlogPost();
 
     return {
       timestamp,
@@ -368,7 +401,8 @@ class DynamicContentGenerator {
       gitLog,
       dockerContainers,
       networkStats,
-      weather
+      weather,
+      latestBlogPost
     };
   }
 }

@@ -1,14 +1,26 @@
 {# Fortune cookie with cowsay output - tux penguin #}
-{# No context required - static content #}
+{# Context: fortune = { text, attribution } #}
 
- _________________________________________
-/ {{ 'Pro Tip:' | fg('yellow') | bold }}                                \
-|                                         |
-| "There are only two hard things in     |
-| Computer Science: cache invalidation,  |
-| naming things, and off-by-one errors." |
-\                                        /
- -----------------------------------------
+{% set quote_text = fortune.text if fortune else "There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors." %}
+{% set attribution = fortune.attribution if fortune and fortune.attribution else null %}
+
+{# Wrap text to fit in speech bubble (37 chars max per line) #}
+{% set lines = quote_text | wrap(37) %}
+
+{# Calculate box width based on longest line #}
+{% set max_width = 39 %}
+
+ {{ '_' | repeat(max_width + 2) }}
+/ {{ 'Pro Tip:' | fg('yellow') | bold }}{{ ' ' | repeat(max_width - 8) }}\
+{% for line in lines %}
+| {{ line | pad(max_width) }} |
+{% endfor %}
+{% if attribution %}
+|{{ ' ' | repeat(max_width + 1) }}|
+| {{ ('— ' ~ attribution) | pad(max_width) }} |
+{% endif %}
+\{{ ' ' | repeat(max_width + 1) }}/
+ {{ '-' | repeat(max_width + 2) }}
    \
     \
         .--.

@@ -1,0 +1,63 @@
+# Fortune cookies / Pro tips for terminal SVG
+# Schema: text (string), attribution (string, optional)
+# Rotation: dayOfYear % length (deterministic daily)
+
+- text: "There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors."
+  attribution: "Phil Karlton (sort of)"
+
+- text: "A SQL query walks into a bar, walks up to two tables, and asks... 'Can I join you?'"
+  attribution: null
+
+- text: "To understand recursion, you must first understand recursion."
+  attribution: "Every CS Professor"
+
+- text: "99 little bugs in the code, 99 bugs in the code. Take one down, patch it around... 127 little bugs in the code."
+  attribution: "Every Developer Ever"
+
+- text: "It works on my machine! — Then we'll ship your machine."
+  attribution: "DevOps Wisdom"
+
+- text: "The best thing about UDP jokes is I don't care if you get them."
+  attribution: "Network Engineers"
+
+- text: "A programmer is told: 'Go to the store and get a loaf of bread. If they have eggs, get a dozen.' Returns with 12 loaves."
+  attribution: "Classic"
+
+- text: "Why do we tell actors to break a leg? Because every play has a cast."
+  attribution: null
+
+- text: "In theory, theory and practice are the same. In practice, they're not."
+  attribution: "Yogi Berra"
+
+- text: "The code works, don't ask me why. The code doesn't work, don't ask me why."
+  attribution: "Stack Overflow"
+
+- text: "Documentation is like pizza: when it's good, it's really good. When it's bad, it's still better than nothing."
+  attribution: null
+
+- text: "The best error message is the one that never shows up."
+  attribution: "UX Wisdom"
+
+- text: "Weeks of coding can save you hours of planning."
+  attribution: "Experience"
+
+- text: "First, solve the problem. Then, write the code."
+  attribution: "John Johnson"
+
+- text: "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."
+  attribution: "John Woods"
+
+- text: "I don't always test my code, but when I do, I do it in production."
+  attribution: "The Most Interesting Developer"
+
+- text: "There's no place like 127.0.0.1"
+  attribution: null
+
+- text: "chmod 777 is not a security strategy."
+  attribution: "Sysadmin Wisdom"
+
+- text: "The cloud is just someone else's computer."
+  attribution: "Reality Check"
+
+- text: "Have you tried turning it off and on again?"
+  attribution: "IT Crowd"

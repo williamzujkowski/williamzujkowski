@@ -31,6 +31,7 @@ class YamlContentLoader {
     this.contentDir = contentDir || path.join(__dirname, '..', 'content');
     this._jokesCache = null;
     this._nationalDaysCache = null;
+    this._fortunesCache = null;
   }
 
   /**
@@ -80,6 +81,42 @@ class YamlContentLoader {
     }
     const index = Math.floor(Math.random() * jokes.length);
     return jokes[index];
+  }
+
+  /**
+   * Load all fortunes from YAML file.
+   * @returns {Array<Object>} Array of fortune objects
+   * @throws {ContentLoadError} If parse fails
+   */
+  loadFortunes() {
+    if (this._fortunesCache) {
+      return this._fortunesCache;
+    }
+
+    const fortunesFile = path.join(this.contentDir, 'fortunes.yaml');
+    try {
+      const content = fs.readFileSync(fortunesFile, 'utf8');
+      this._fortunesCache = yaml.load(content) || [];
+      return this._fortunesCache;
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        return [];
+      }
+      throw new ContentLoadError(`Failed to load fortunes: ${error.message}`, error);
+    }
+  }
+
+  /**
+   * Get fortune by index (deterministic selection).
+   * @param {number} index - Day of year for rotation
+   * @returns {Object|null} Fortune object or null if none available
+   */
+  getFortuneByIndex(index) {
+    const fortunes = this.loadFortunes();
+    if (fortunes.length === 0) {
+      return null;
+    }
+    return fortunes[index % fortunes.length];
   }
 
   /**
@@ -138,6 +175,7 @@ class YamlContentLoader {
   clearCache() {
     this._jokesCache = null;
     this._nationalDaysCache = null;
+    this._fortunesCache = null;
   }
 
   /**

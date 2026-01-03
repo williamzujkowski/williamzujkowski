@@ -146,6 +146,40 @@ function buildStatsSequence(content, engine) {
 }
 
 /**
+ * Build neofetch-style system info sequence.
+ * @param {Object} content - Dynamic content from generator
+ * @param {Object} engine - Template engine instance
+ * @returns {Array<Object>} Terminal sequences
+ */
+function buildNeofetchSequence(content, engine) {
+  const date = content.currentTime;
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+
+  return buildTemplateSequence({
+    command: 'neofetch --ascii_distro DadOS',
+    templateName: 'blocks/neofetch.njk',
+    context: {
+      user: 'william',
+      host: 'dev-machine',
+      os: `DadOS ${year}.${month} LTS`,
+      kernel: 'caffeine-6.1.0-dad',
+      uptime: `${content.stats.uptime} years`,
+      packages: '42 (npm), 1337 (brew)',
+      shell: '/bin/dad-jokes',
+      de: 'Coffee Desktop Environment',
+      terminal: 'dad-term 3.14',
+      coffee: content.stats.coffeeConsumed.toLocaleString(),
+      bugs: content.stats.bugsFixed.toLocaleString(),
+      commits: '∞'
+    },
+    color: COLORS.CYAN,
+    typingDuration: TYPING.QUICK,        // Quick typing for snappy feel
+    pause: PAUSE.MEDIUM                  // Brief pause before continuing
+  }, engine);
+}
+
+/**
  * Build dad joke box sequence.
  * @param {Object} content - Dynamic content from generator
  * @param {Object} engine - Template engine instance
@@ -177,7 +211,7 @@ function buildFortuneSequence(content, engine) {
   return buildTemplateSequence({
     command: 'fortune | cowsay -f tux | lolcat',
     templateName: 'blocks/fortune.njk',
-    context: {},
+    context: { fortune: content.fortune },
     color: COLORS.PURPLE,
     typingDuration: TYPING.LONG,       // Match legacy: 2200ms
     pause: PAUSE.LONGER                // Match legacy: 1500ms
@@ -230,6 +264,9 @@ function buildTemplateSequences(content) {
   const sequences = [
     // MOTD welcome banner
     ...buildMotdSequence(content, engine),
+
+    // Neofetch-style system info (DadOS branding)
+    ...buildNeofetchSequence(content, engine),
 
     // National day info
     ...buildNationalDaySequence(content, engine),
@@ -296,6 +333,7 @@ module.exports = {
   buildProfileSequence,
   buildProcessesSequence,
   buildStatsSequence,
+  buildNeofetchSequence,
   buildDadJokeSequence,
   buildFortuneSequence,
   buildSystemctlSequence,

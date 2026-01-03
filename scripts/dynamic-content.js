@@ -1,5 +1,6 @@
 const axios = require('axios');
 const { NationalDayProvider } = require('./national-day-provider');
+const { YamlContentLoader } = require('./content-loader');
 
 /**
  * Dynamic content generator for terminal SVG
@@ -12,6 +13,7 @@ class DynamicContentGenerator {
 
   constructor() {
     this.nationalDayProvider = new NationalDayProvider();
+    this.contentLoader = new YamlContentLoader();
     this.techJokes = [
       {
         q: "Why do programmers prefer dark mode?",
@@ -182,6 +184,23 @@ class DynamicContentGenerator {
   }
 
   /**
+   * Get fortune for the day (deterministic based on date)
+   * Uses YAML content loader for rotating fortunes
+   */
+  getFortuneOfDay(date) {
+    const dayOfYear = this.getDayOfYear(date);
+    const fortune = this.contentLoader.getFortuneByIndex(dayOfYear);
+    // Fallback if no fortunes loaded
+    if (!fortune) {
+      return {
+        text: "There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors.",
+        attribution: "Phil Karlton (sort of)"
+      };
+    }
+    return fortune;
+  }
+
+  /**
    * Format date/time for terminal display
    */
   formatDateTime(date) {
@@ -306,6 +325,7 @@ class DynamicContentGenerator {
     const currentTime = await this.fetchAccurateTime();
     const nationalDay = this.nationalDayProvider.getNationalDay(currentTime);
     const joke = this.getJokeOfDay(currentTime);
+    const fortune = this.getFortuneOfDay(currentTime);
     const stats = this.generateStats(currentTime);
     const timestamp = this.formatDateTime(currentTime);
     const rotation = this.getSequenceRotation(currentTime);
@@ -316,6 +336,7 @@ class DynamicContentGenerator {
     return {
       timestamp,
       joke,
+      fortune,
       stats,
       currentTime,
       nationalDay,

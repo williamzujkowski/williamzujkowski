@@ -57,30 +57,30 @@ describe('TerminalSequences', () => {
       expect(outputs).toHaveLength(3);
     });
 
-    it('first command is git log', () => {
+    it('first command is git blame', () => {
       const sequences = buildDevOpsSequences(mockContent);
       expect(sequences[0].type).toBe('command');
-      expect(sequences[0].content).toBe('git log --oneline -5');
+      expect(sequences[0].content).toBe('git blame src/life.js | head -8');
       expect(sequences[0].prompt).toBe(DEFAULT_PROMPT);
     });
 
-    it('git log output contains commit info', () => {
+    it('git blame output contains humorous comments', () => {
       const sequences = buildDevOpsSequences(mockContent);
       const gitOutput = sequences[1];
 
       expect(gitOutput.type).toBe('output');
-      expect(gitOutput.content).toContain('abc1234');
-      expect(gitOutput.content).toContain('feat: add new feature');
-      expect(gitOutput.content).toContain('2h ago');
+      expect(gitOutput.content).toContain('Coffee');
+      expect(gitOutput.content).toContain('motivation');
+      expect(gitOutput.content).toContain('stackoverflow');
       expect(gitOutput.color).toBe(COLORS.YELLOW);
     });
 
-    it('formats git commits with newlines', () => {
+    it('git blame has 8 lines of code blame', () => {
       const sequences = buildDevOpsSequences(mockContent);
       const gitOutput = sequences[1].content;
       const lines = gitOutput.split('\n');
 
-      expect(lines).toHaveLength(3);
+      expect(lines).toHaveLength(8);
     });
 
     it('second command is docker ps', () => {
@@ -302,11 +302,14 @@ describe('TerminalSequences', () => {
   });
 
   describe('Edge Cases', () => {
-    it('handles empty gitLog array', () => {
+    it('git blame output is static regardless of gitLog', () => {
+      // Git blame output is now static humorous content, not dynamic
       const emptyGitContent = { ...mockContent, gitLog: [] };
       const sequences = buildDevOpsSequences(emptyGitContent);
 
-      expect(sequences[1].content).toBe('');
+      // Should still have the static git blame joke content
+      expect(sequences[1].content).toContain('Coffee');
+      expect(sequences[1].content).toContain('stackoverflow');
     });
 
     it('handles empty dockerContainers array', () => {

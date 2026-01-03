@@ -8,15 +8,11 @@ const { DEFAULT_PROMPT, COLORS } = require('./constants');
 
 /**
  * Build DevOps sequence (Day 1 rotation)
- * Showcases git log, docker ps, and sudo sandwich joke
+ * Showcases git blame, docker ps, and sudo sandwich joke
  * @param {Object} content - Dynamic content from DynamicContentGenerator
  * @returns {Array<Object>} Terminal sequences for DevOps rotation
  */
 function buildDevOpsSequences(content) {
-  const gitCommits = content.gitLog.map(c =>
-    `${c.hash} ${c.msg} (${c.time})`
-  ).join('\n');
-
   const dockerRows = content.dockerContainers.map(c =>
     `${c.id}  ${c.image.padEnd(20)}  ${c.status.padEnd(15)}  ${c.ports}`
   ).join('\n');
@@ -25,15 +21,22 @@ function buildDevOpsSequences(content) {
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,
-      content: 'git log --oneline -5',
-      typingDuration: 1400,
+      content: 'git blame src/life.js | head -8',
+      typingDuration: 1600,
       pause: 400
     },
     {
       type: 'output',
-      content: gitCommits,
+      content: `3a7f2c1 (Coffee    06:00) const motivation = coffee.consume();
+b8d4e2a (Caffeine  06:30) if (!motivation) { coffee.refill(); }
+c9f5a3b (Espresso  07:00) // TODO: fix later (written 5 yrs ago)
+d2e6b4c (DadJokes  08:00) function tellJoke() { /* trust me */ }
+e3f7c5d (FutureMe  09:00) // Past me was an idiot
+f4a8d6e (StackOF   10:00) // copied from stackoverflow, works
+a5b9e7f (Bug       11:00) // not a bug, it's a feature
+b6c0f8a (Deadline  23:59) // ship it, fix in prod`,
       color: COLORS.YELLOW,
-      pause: 1800
+      pause: 1400
     },
     {
       type: 'command',

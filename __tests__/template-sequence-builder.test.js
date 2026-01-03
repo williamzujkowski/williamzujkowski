@@ -156,12 +156,11 @@ describe('TemplateSequenceBuilder', () => {
   });
 
   describe('buildProcessesSequence', () => {
-    it('creates processes sequence with ps command', () => {
+    it('creates processes sequence with htop command', () => {
       const sequences = buildProcessesSequence(mockContent, engine);
 
       expect(sequences).toHaveLength(2);
-      expect(sequences[0].content).toContain('ps aux');
-      expect(sequences[0].content).toContain('grep');
+      expect(sequences[0].content).toBe('htop --dad-mode');
     });
 
     it('uses WHITE color', () => {
@@ -169,10 +168,10 @@ describe('TemplateSequenceBuilder', () => {
       expect(sequences[1].color).toBe(COLORS.WHITE);
     });
 
-    it('includes process names', () => {
+    it('includes htop-style output with process names', () => {
       const sequences = buildProcessesSequence(mockContent, engine);
       expect(sequences[1].content).toContain('family');
-      expect(sequences[1].content).toContain('dad-joke-daemon');
+      expect(sequences[1].content).toContain('dad-joked');
     });
 
     it('uses extended typing duration matching legacy', () => {

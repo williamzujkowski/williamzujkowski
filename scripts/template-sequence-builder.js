@@ -112,16 +112,16 @@ function buildProfileSequence(content, engine) {
 }
 
 /**
- * Build process list sequence.
+ * Build htop-style process display sequence.
  * @param {Object} content - Dynamic content from generator
  * @param {Object} engine - Template engine instance
  * @returns {Array<Object>} Terminal sequences
  */
 function buildProcessesSequence(content, engine) {
   return buildTemplateSequence({
-    command: 'ps aux | grep "life.*processes"',
-    templateName: 'blocks/processes.njk',
-    context: { timestamp: content.timestamp },
+    command: 'htop --dad-mode',
+    templateName: 'blocks/htop.njk',
+    context: { stats: content.stats },
     color: COLORS.WHITE,
     typingDuration: TYPING.EXTENDED,   // Match legacy: 2000ms
     pause: PAUSE.DRAMATIC              // Match legacy: 1800ms

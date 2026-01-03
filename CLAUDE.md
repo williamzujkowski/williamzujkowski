@@ -213,7 +213,6 @@ GitHub Actions (`.github/workflows/update-terminal-svg.yml`):
 - Maintain playful, dad-joke friendly tone
 - Keep content family-friendly and tech-related
 - This is public-facing personal brand representation
-- Legacy files in `.archive/` should not be used
 
 ## Coding Standards
 

@@ -296,6 +296,29 @@ class DynamicContentGenerator {
   }
 
   /**
+   * Fetch weather from wttr.in for Washington DC
+   * Falls back to a default message if API fails
+   */
+  async fetchWeather() {
+    try {
+      const response = await axios.get('https://wttr.in/Washington+DC?format=3', {
+        timeout: 5000,
+        headers: { 'User-Agent': 'curl' }
+      });
+
+      if (response.data) {
+        console.log('✓ Fetched weather from wttr.in');
+        return response.data.trim();
+      }
+    } catch (error) {
+      console.log('⚠ Weather API failed, using fallback:', error.message);
+    }
+
+    // Fallback weather
+    return 'Washington+DC: ☀️ Perfect coding weather';
+  }
+
+  /**
    * Generate network ping statistics (dynamic values)
    */
   generateNetworkStats(date) {
@@ -332,6 +355,7 @@ class DynamicContentGenerator {
     const gitLog = this.generateGitLog(currentTime);
     const dockerContainers = this.generateDockerContainers(currentTime);
     const networkStats = this.generateNetworkStats(currentTime);
+    const weather = await this.fetchWeather();
 
     return {
       timestamp,
@@ -343,7 +367,8 @@ class DynamicContentGenerator {
       rotation,
       gitLog,
       dockerContainers,
-      networkStats
+      networkStats,
+      weather
     };
   }
 }

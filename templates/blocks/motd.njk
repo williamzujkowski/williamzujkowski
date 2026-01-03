@@ -1,11 +1,13 @@
 {# MOTD (Message of the Day) welcome banner #}
-{# Context: year, month #}
+{# Context: year, month, weather #}
 {% from "base/macros.njk" import prompt %}
 
 {% set banner_lines = [
   '',
   "WILLIAM'S DEV TERMINAL v" ~ year ~ '.' ~ month,
   'Powered by coffee, dad jokes & late-night debugging',
+  '',
+  weather | default('Washington+DC: ☀️ Perfect coding weather'),
   ''
 ] %}
-{{ banner_lines | doublebox(56) }}
+{{ banner_lines | doublebox(58) }}

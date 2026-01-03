@@ -69,7 +69,7 @@ function buildMotdSequence(content, engine) {
   return buildTemplateSequence({
     command: 'cat /etc/motd',
     templateName: 'blocks/motd.njk',
-    context: { year, month },
+    context: { year, month, weather: content.weather },
     color: COLORS.NEON_GREEN,
     typingDuration: TYPING.QUICK,     // Match legacy: 800ms
     pause: PAUSE.EXTENDED             // Match legacy output: 1200ms

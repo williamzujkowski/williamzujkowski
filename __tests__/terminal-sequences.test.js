@@ -13,6 +13,7 @@ const { DEFAULT_PROMPT, COLORS } = require('../scripts/constants');
 describe('TerminalSequences', () => {
   const mockContent = {
     timestamp: 'Thu Jan 2 10:30 EST 2026',
+    currentTime: new Date(2026, 0, 2, 10, 30, 0), // Jan 2, 2026
     joke: {
       q: 'Why do programmers prefer dark mode?',
       a: 'Because light attracts bugs!'
@@ -155,29 +156,27 @@ describe('TerminalSequences', () => {
       expect(outputs).toHaveLength(3);
     });
 
-    it('first command is ping', () => {
+    it('first command is a rotating ping joke', () => {
       const sequences = buildNetworkSequences(mockContent);
-      expect(sequences[0].content).toBe('ping -c 5 github.com');
+      // Should be one of the rotating ping jokes
+      expect(sequences[0].content).toMatch(/^ping /);
     });
 
-    it('ping output uses networkStats', () => {
+    it('ping output is humorous and has color', () => {
       const sequences = buildNetworkSequences(mockContent);
       const pingOutput = sequences[1];
 
-      expect(pingOutput.content).toContain(mockContent.networkStats.min_ms);
-      expect(pingOutput.content).toContain(mockContent.networkStats.avg_ms);
-      expect(pingOutput.content).toContain(mockContent.networkStats.max_ms);
-      expect(pingOutput.content).toContain('github.com');
-      expect(pingOutput.color).toBe(COLORS.CYAN);
+      expect(pingOutput.type).toBe('output');
+      expect(pingOutput.color).toBeDefined();
+      // Should contain ping-like output format
+      expect(pingOutput.content).toMatch(/PING|ping:|Request timeout/);
     });
 
-    it('ping output shows packet statistics', () => {
+    it('ping rotates deterministically based on date', () => {
+      // Day 2 (Jan 2) mod 5 = 2, so should get 'ping production'
       const sequences = buildNetworkSequences(mockContent);
-      const pingOutput = sequences[1].content;
-
-      expect(pingOutput).toContain('5 packets transmitted');
-      expect(pingOutput).toContain('5 packets received');
-      expect(pingOutput).toContain('0% packet loss');
+      expect(sequences[0].content).toBe('ping production');
+      expect(sequences[1].content).toContain('probably');
     });
 
     it('second command is curl joke API', () => {
@@ -318,36 +317,31 @@ describe('TerminalSequences', () => {
       // Should still have header, just no rows
     });
 
-    it('handles missing networkStats properties gracefully', () => {
-      const incompleteStats = {
-        ...mockContent,
-        networkStats: {
-          min_ms: '10.000',
-          avg_ms: '15.000',
-          max_ms: '20.000',
-          mdev_ms: '2.000',
-          packets_sent: 5,
-          packets_received: 5,
-          packet_loss: 0
-        }
-      };
+    it('ping jokes rotate through all 5 options', () => {
+      const pingCommands = [];
+      for (let day = 1; day <= 5; day++) {
+        const content = {
+          ...mockContent,
+          currentTime: new Date(2026, 0, day) // Jan 1-5
+        };
+        const sequences = buildNetworkSequences(content);
+        pingCommands.push(sequences[0].content);
+      }
 
-      // Should not throw
-      const sequences = buildNetworkSequences(incompleteStats);
-      expect(sequences).toHaveLength(6);
+      // Should have 5 different ping commands (one per day)
+      const uniqueCommands = new Set(pingCommands);
+      expect(uniqueCommands.size).toBe(5);
     });
 
-    it('calculates ping variations from avg_ms', () => {
-      const sequences = buildNetworkSequences(mockContent);
-      const pingOutput = sequences[1].content;
+    it('same day always returns same ping joke', () => {
+      const content1 = { ...mockContent, currentTime: new Date(2026, 0, 15) };
+      const content2 = { ...mockContent, currentTime: new Date(2026, 0, 15) };
 
-      // Check that icmp_seq=2 has avg + 1.2
-      const expectedValue = (parseFloat(mockContent.networkStats.avg_ms) + 1.2).toFixed(3);
-      expect(pingOutput).toContain(expectedValue);
+      const seq1 = buildNetworkSequences(content1);
+      const seq2 = buildNetworkSequences(content2);
 
-      // Check that icmp_seq=3 has avg - 0.8
-      const expectedValue2 = (parseFloat(mockContent.networkStats.avg_ms) - 0.8).toFixed(3);
-      expect(pingOutput).toContain(expectedValue2);
+      expect(seq1[0].content).toBe(seq2[0].content);
+      expect(seq1[1].content).toBe(seq2[1].content);
     });
   });
 });

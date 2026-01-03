@@ -70,35 +70,113 @@ Quality: Premium (as always)`,
 }
 
 /**
+ * Rotating ping jokes - deterministic selection based on day
+ */
+const PING_JOKES = [
+  {
+    command: 'ping localhost --self-esteem',
+    output: `PING localhost (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: You're doing great!
+64 bytes from 127.0.0.1: That bug wasn't your fault
+64 bytes from 127.0.0.1: Your code is beautiful
+64 bytes from 127.0.0.1: You deserve that coffee ☕
+64 bytes from 127.0.0.1: Imposter syndrome is lying
+
+--- localhost affirmation statistics ---
+5 compliments transmitted, 5 received, 0% self-doubt
+mood-trip avg/max/current = good/great/caffeinated`,
+    color: COLORS.GREEN
+  },
+  {
+    command: 'ping sleep',
+    output: `PING sleep (127.0.0.1): 56 data bytes
+Request timeout for icmp_seq 0 (kid woke up)
+Request timeout for icmp_seq 1 (had a nightmare)
+Request timeout for icmp_seq 2 (needs water)
+Request timeout for icmp_seq 3 (heard a noise)
+Request timeout for icmp_seq 4 (just checking)
+
+--- sleep statistics ---
+5 packets transmitted, 0 received, 100% packet loss
+average hours slept: 4.2 (target: 8.0)
+dad-mode: ALWAYS ACTIVE`,
+    color: COLORS.YELLOW
+  },
+  {
+    command: 'ping production',
+    output: `PING production (10.0.0.1): 56 data bytes
+64 bytes: icmp_seq=0 time=2.001ms status=OK... probably
+64 bytes: icmp_seq=1 time=2.003ms status=still OK... I think
+64 bytes: icmp_seq=2 time=1.998ms status=wait what was that
+64 bytes: icmp_seq=3 time=15023ms status=OH NO
+64 bytes: icmp_seq=4 time=0.001ms status=nvm we're fine
+
+--- production statistics ---
+5 prayers transmitted, 4 answered, 20% anxiety
+uptime: 99.9% (that 0.1% was at 3am Friday)`,
+    color: COLORS.ORANGE
+  },
+  {
+    command: 'ping work-life-balance',
+    output: `PING work-life-balance (0.0.0.0): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+Request timeout for icmp_seq 3
+Request timeout for icmp_seq 4
+
+--- work-life-balance statistics ---
+5 packets transmitted, 0 received, 100% packet loss
+error: destination unreachable (are you sure this exists?)
+suggestion: try 'ping coffee' instead`,
+    color: COLORS.PURPLE
+  },
+  {
+    command: 'ping monday.motivation',
+    output: `ping: cannot resolve monday.motivation: NXDOMAIN
+ping: trying alternate DNS...
+ping: monday.motivation: Name does not exist
+ping: maybe try tuesday.motivation?
+
+--- motivation lookup failed ---
+error: motivation not found on Mondays
+workaround: coffee && pretend_to_be_productive
+hint: try again after 10am`,
+    color: COLORS.COMMENT
+  }
+];
+
+/**
+ * Get ping joke for the day (deterministic rotation)
+ * @param {Date} date - Current date
+ * @returns {Object} Ping joke object with command, output, color
+ */
+function getPingJoke(date) {
+  const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+  return PING_JOKES[dayOfYear % PING_JOKES.length];
+}
+
+/**
  * Build Network sequence (Day 2 rotation)
- * Showcases ping, curl joke API, and top
+ * Showcases rotating ping jokes, curl joke API, and top
  * @param {Object} content - Dynamic content from DynamicContentGenerator
  * @returns {Array<Object>} Terminal sequences for Network rotation
  */
 function buildNetworkSequences(content) {
-  const stats = content.networkStats;
+  const pingJoke = getPingJoke(content.currentTime);
 
   return [
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,
-      content: 'ping -c 5 github.com',
+      content: pingJoke.command,
       typingDuration: 1400,
-      pause: 400
+      pause: 300
     },
     {
       type: 'output',
-      content: `PING github.com (140.82.113.4): 56 data bytes
-64 bytes from 140.82.113.4: icmp_seq=0 ttl=52 time=${stats.min_ms} ms
-64 bytes from 140.82.113.4: icmp_seq=1 ttl=52 time=${stats.avg_ms} ms
-64 bytes from 140.82.113.4: icmp_seq=2 ttl=52 time=${(parseFloat(stats.avg_ms) + 1.2).toFixed(3)} ms
-64 bytes from 140.82.113.4: icmp_seq=3 ttl=52 time=${(parseFloat(stats.avg_ms) - 0.8).toFixed(3)} ms
-64 bytes from 140.82.113.4: icmp_seq=4 ttl=52 time=${stats.max_ms} ms
-
---- github.com ping statistics ---
-${stats.packets_sent} packets transmitted, ${stats.packets_received} packets received, ${stats.packet_loss}% packet loss
-round-trip min/avg/max/stddev = ${stats.min_ms}/${stats.avg_ms}/${stats.max_ms}/${stats.mdev_ms} ms`,
-      color: COLORS.CYAN,
+      content: pingJoke.output,
+      color: pingJoke.color,
       pause: 2000
     },
     {

@@ -175,10 +175,10 @@ describe('TemplateSequenceBuilder', () => {
       expect(sequences[1].content).toContain('dad-joke-daemon');
     });
 
-    it('uses extra long typing duration', () => {
+    it('uses extended typing duration matching legacy', () => {
       const sequences = buildProcessesSequence(mockContent, engine);
-      expect(sequences[0].typingDuration).toBe(TYPING.EXTRA_LONG);
-      expect(sequences[1].pause).toBe(PAUSE.EXTRA);
+      expect(sequences[0].typingDuration).toBe(TYPING.EXTENDED);  // 2000ms
+      expect(sequences[1].pause).toBe(PAUSE.DRAMATIC);            // 1800ms
     });
   });
 
@@ -195,10 +195,10 @@ describe('TemplateSequenceBuilder', () => {
       expect(sequences[1].color).toBe(COLORS.BLUE);
     });
 
-    it('uses long timing values', () => {
+    it('uses slow timing values matching legacy', () => {
       const sequences = buildStatsSequence(mockContent, engine);
-      expect(sequences[0].typingDuration).toBe(TYPING.EXTRA_LONG);
-      expect(sequences[1].pause).toBe(PAUSE.EXTRA);
+      expect(sequences[0].typingDuration).toBe(TYPING.SLOW);       // 1800ms
+      expect(sequences[1].pause).toBe(PAUSE.EMPHASIS);             // 2000ms
     });
   });
 

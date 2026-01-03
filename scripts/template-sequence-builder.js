@@ -65,8 +65,8 @@ function buildMotdSequence(content, engine) {
     templateName: 'blocks/motd.njk',
     context: { year, month },
     color: COLORS.NEON_GREEN,
-    typingDuration: TYPING.STANDARD,
-    pause: PAUSE.LONG
+    typingDuration: TYPING.QUICK,     // Match legacy: 800ms
+    pause: PAUSE.EXTENDED             // Match legacy output: 1200ms
   }, engine);
 }
 
@@ -89,8 +89,8 @@ function buildNationalDaySequence(content, engine) {
       date: content.timestamp.slice(0, 10)
     },
     color: COLORS.YELLOW,
-    typingDuration: TYPING.LONG,
-    pause: PAUSE.MEDIUM
+    typingDuration: TYPING.MODERATE,   // Match legacy: 1600ms
+    pause: PAUSE.STANDARD              // Match legacy: 1000ms
   }, engine);
 }
 
@@ -106,8 +106,8 @@ function buildProfileSequence(content, engine) {
     templateName: 'blocks/profile.njk',
     context: { stats: content.stats, timestamp: content.timestamp },
     color: COLORS.BLUE,
-    typingDuration: TYPING.LONG,
-    pause: PAUSE.LONG
+    typingDuration: TYPING.MEDIUM,     // Match legacy: 1200ms
+    pause: PAUSE.LONGER                // Match legacy: 1500ms
   }, engine);
 }
 
@@ -123,8 +123,8 @@ function buildProcessesSequence(content, engine) {
     templateName: 'blocks/processes.njk',
     context: { timestamp: content.timestamp },
     color: COLORS.WHITE,
-    typingDuration: TYPING.EXTRA_LONG,
-    pause: PAUSE.EXTRA
+    typingDuration: TYPING.EXTENDED,   // Match legacy: 2000ms
+    pause: PAUSE.DRAMATIC              // Match legacy: 1800ms
   }, engine);
 }
 
@@ -140,8 +140,8 @@ function buildStatsSequence(content, engine) {
     templateName: 'blocks/stats.njk',
     context: { stats: content.stats },
     color: COLORS.BLUE,
-    typingDuration: TYPING.EXTRA_LONG,
-    pause: PAUSE.EXTRA
+    typingDuration: TYPING.SLOW,       // Match legacy: 1800ms
+    pause: PAUSE.EMPHASIS              // Match legacy: 2000ms
   }, engine);
 }
 
@@ -162,8 +162,8 @@ function buildDadJokeSequence(content, engine) {
       stats: content.stats
     },
     color: COLORS.PINK,
-    typingDuration: TYPING.EXTRA_LONG,
-    pause: PAUSE.EXTRA
+    typingDuration: TYPING.EXTENDED,   // Match legacy: 2000ms
+    pause: PAUSE.EMPHASIS              // Match legacy: 2000ms
   }, engine);
 }
 
@@ -179,8 +179,8 @@ function buildFortuneSequence(content, engine) {
     templateName: 'blocks/fortune.njk',
     context: {},
     color: COLORS.PURPLE,
-    typingDuration: TYPING.EXTRA_LONG,
-    pause: PAUSE.LONG
+    typingDuration: TYPING.LONG,       // Match legacy: 2200ms
+    pause: PAUSE.LONGER                // Match legacy: 1500ms
   }, engine);
 }
 
@@ -196,8 +196,8 @@ function buildSystemctlSequence(content, engine) {
     templateName: 'blocks/systemctl.njk',
     context: { timestamp: content.timestamp },
     color: COLORS.WHITE,
-    typingDuration: TYPING.EXTRA_LONG,
-    pause: PAUSE.EXTRA
+    typingDuration: TYPING.EXTRA_LONG, // Match legacy: 2400ms
+    pause: PAUSE.EMPHASIS              // Match legacy: 2000ms
   }, engine);
 }
 
@@ -213,8 +213,8 @@ function buildGoodbyeSequence(content, engine) {
     templateName: 'blocks/goodbye.njk',
     context: {},
     color: COLORS.GREEN,
-    typingDuration: TYPING.LONG,
-    pause: PAUSE.EXTRA
+    typingDuration: TYPING.MODERATE,   // Match legacy: 1600ms
+    pause: PAUSE.DRAMATIC              // Match legacy: 1800ms
   }, engine);
 }
 
@@ -239,14 +239,14 @@ function buildTemplateSequences(content) {
       type: 'command',
       prompt: DEFAULT_PROMPT,
       content: 'date',
-      typingDuration: TYPING.FAST,
-      pause: PAUSE.MINIMAL
+      typingDuration: TYPING.INSTANT,  // Match legacy: 400ms
+      pause: PAUSE.MINIMAL             // Match legacy: 300ms
     },
     {
       type: 'output',
       content: `${content.timestamp}`,
       color: COLORS.GREEN,
-      pause: PAUSE.SHORT
+      pause: PAUSE.MEDIUM              // Match legacy: 800ms
     },
 
     // Whoami (simple)
@@ -254,14 +254,14 @@ function buildTemplateSequences(content) {
       type: 'command',
       prompt: DEFAULT_PROMPT,
       content: 'whoami',
-      typingDuration: TYPING.FAST,
-      pause: PAUSE.MINIMAL
+      typingDuration: TYPING.FAST,     // Match legacy: 500ms
+      pause: PAUSE.MINIMAL             // Match legacy: 300ms
     },
     {
       type: 'output',
       content: 'william',
       color: COLORS.WHITE,
-      pause: PAUSE.SHORT
+      pause: PAUSE.QUICK               // Match legacy: 600ms
     },
 
     // Profile info

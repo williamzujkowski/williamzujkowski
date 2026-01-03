@@ -1359,7 +1359,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#50fa7b" filter="url(#textGlow)" xml:space="preserve">
-        Fri Jan 2 20:10 EST 2026
+        Fri Jan 2 20:11 EST 2026
       </text>
     </g>
 
@@ -1773,7 +1773,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   1337  99.9  5.0   ∞   ∞  ?  Ssl  Jan 2 20:10   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">family</tspan><tspan fill="#ffffff"> --priority=realtime</tspan>
+        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   1337  99.9  5.0   ∞   ∞  ?  Ssl  Jan 2 20:11   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">family</tspan><tspan fill="#ffffff"> --priority=realtime</tspan>
       </text>
     </g>
 
@@ -1784,7 +1784,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   2048  42.0  3.7   ∞   ∞  ?  Sl   Jan 2 20:10   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">security-automation</tspan><tspan fill="#ffffff"> --mode=defensive</tspan>
+        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   2048  42.0  3.7   ∞   ∞  ?  Sl   Jan 2 20:11   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">security-automation</tspan><tspan fill="#ffffff"> --mode=defensive</tspan>
       </text>
     </g>
 
@@ -1795,7 +1795,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   4096  15.2  2.1   ∞   ∞  ?  S    Jan 2 20:10   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">home-assistant</tspan><tspan fill="#ffffff"> --smart-home</tspan>
+        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   4096  15.2  2.1   ∞   ∞  ?  S    Jan 2 20:11   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">home-assistant</tspan><tspan fill="#ffffff"> --smart-home</tspan>
       </text>
     </g>
 
@@ -1806,7 +1806,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   8192  100   1.0   ∞   ∞  ?  R+   Jan 2 20:10   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">dad-joke-daemon</tspan><tspan fill="#ffffff"> --interval=30s</tspan>
+        <tspan fill="#50fa7b">william</tspan><tspan fill="#ffffff">   8192  100   1.0   ∞   ∞  ?  R+   Jan 2 20:11   ∞  /usr/bin/</tspan><tspan fill="#8be9fd">dad-joke-daemon</tspan><tspan fill="#ffffff"> --interval=30s</tspan>
       </text>
     </g>
 
@@ -2250,7 +2250,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Jan 2 20:10                      ║
+        ║ DAD JOKE OF THE DAY - Jan 2 20:11                      ║
       </text>
     </g>
 
@@ -3004,7 +3004,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#ffffff">Fri Jan 2 20:10 EST 2026 dad-mode[1337]: </tspan><tspan fill="#50fa7b">✓</tspan><tspan fill="#ffffff"> Joke delivery successful</tspan>
+        <tspan fill="#ffffff">Fri Jan 2 20:11 EST 2026 dad-mode[1337]: </tspan><tspan fill="#50fa7b">✓</tspan><tspan fill="#ffffff"> Joke delivery successful</tspan>
       </text>
     </g>
 
@@ -3015,7 +3015,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#ffffff">Fri Jan 2 20:10 EST 2026 dad-mode[1337]: </tspan><tspan fill="#50fa7b">✓</tspan><tspan fill="#ffffff"> Maximum groan achieved</tspan>
+        <tspan fill="#ffffff">Fri Jan 2 20:11 EST 2026 dad-mode[1337]: </tspan><tspan fill="#50fa7b">✓</tspan><tspan fill="#ffffff"> Maximum groan achieved</tspan>
       </text>
     </g>
 
@@ -3722,7 +3722,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ffffff" filter="url(#textGlow)" xml:space="preserve">
-        top - 0:10  up 44 years, load avg: 0.42, 0.37, 0.31
+        top - 0:11  up 44 years, load avg: 0.42, 0.37, 0.31
       </text>
     </g>
 

@@ -33,5 +33,5 @@ homelab: [Home Assistant, Docker, Kubernetes, Raspberry Pi]
 ---
 
 <p align="center">
-  <em>"Ship it, but ship it secure."</em>
+  <em>"Professionally paranoid."</em>
 </p>

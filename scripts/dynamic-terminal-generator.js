@@ -308,9 +308,9 @@ ${content.timestamp} dad-mode[1337]: ✓ Maximum groan achieved`,
   }
 
   // Combine sequences: core start + rotation + core end
-  // Split core into start (first 11 items) and end (last item - goodbye)
-  const coreStart = coreSequences.slice(0, -1); // All except goodbye
-  const coreEnd = coreSequences.slice(-1); // Just goodbye
+  // Split core into start (all except goodbye) and end (goodbye command + output)
+  const coreStart = coreSequences.slice(0, -2); // All except goodbye (2 items)
+  const coreEnd = coreSequences.slice(-2); // Goodbye command + output
 
   const sequences = [...coreStart, ...rotationSequences, ...coreEnd];
 

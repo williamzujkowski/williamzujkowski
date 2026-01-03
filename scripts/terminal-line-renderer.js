@@ -204,15 +204,14 @@ function generateCursor(prompt, command, startTime, typingDuration, terminal) {
       <animate attributeName="opacity" to="0"
                begin="${typingEndTime}ms" dur="10ms" fill="freeze"/>
 
-      <!-- Cursor moves to next position AFTER character appears -->
+      <!-- Cursor moves to next position AS character appears -->
       ${command.split('').map((char, idx) => {
         const charAppearTime = startTime + (idx * charDuration);
-        const moveTime = charAppearTime + 10;
         const fromX = promptWidth + (idx * charWidth);
         const toX = promptWidth + ((idx + 1) * charWidth);
         return `<animate attributeName="x"
                  from="${fromX}" to="${toX}"
-                 begin="${moveTime}ms" dur="1ms"
+                 begin="${charAppearTime}ms" dur="1ms"
                  fill="freeze"/>`;
       }).join('')}
     </rect>`;

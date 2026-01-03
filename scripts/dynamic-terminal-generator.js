@@ -93,27 +93,33 @@ async function generateDynamicTerminal() {
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,
-      content: 'date',
-      typingDuration: 400,
+      content: 'cat /var/log/dad.log | tail -4',
+      typingDuration: 1200,
       pause: 300
     },
     {
       type: 'output',
-      content: `📅 ${content.timestamp}`,
-      color: COLORS.GREEN,
+      content: `[INFO]  Coffee levels: CRITICAL - refilling...
+[WARN]  Kids detected in kitchen, engaging snack protocols
+[DEBUG] Attempting to find matching socks... timeout
+[INFO]  Dad joke #${Math.floor(content.stats.daysAlive * 0.7).toLocaleString()} deployed successfully`,
+      color: COLORS.YELLOW,
       pause: 800
     },
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,
-      content: 'whoami',
+      content: 'alias | head -4',
       typingDuration: 500,
       pause: 300
     },
     {
       type: 'output',
-      content: 'william',
-      color: COLORS.WHITE,
+      content: `alias yolo='git push --force'
+alias fix='git commit -m "fixed it"'
+alias coffee='break && brew'
+alias monday='sudo shutdown -h now'`,
+      color: COLORS.CYAN,
       pause: 600
     },
     {

@@ -271,34 +271,40 @@ function buildTemplateSequences(content) {
     // National day info
     ...buildNationalDaySequence(content, engine),
 
-    // Date command (simple, not templated)
+    // Dad log - funnier than plain 'date' command
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,
-      content: 'date',
-      typingDuration: TYPING.INSTANT,  // Match legacy: 400ms
-      pause: PAUSE.MINIMAL             // Match legacy: 300ms
+      content: 'cat /var/log/dad.log | tail -4',
+      typingDuration: TYPING.QUICK,
+      pause: PAUSE.MINIMAL
     },
     {
       type: 'output',
-      content: `${content.timestamp}`,
-      color: COLORS.GREEN,
-      pause: PAUSE.MEDIUM              // Match legacy: 800ms
+      content: `[INFO]  Coffee levels: CRITICAL - refilling...
+[WARN]  Kids detected in kitchen, engaging snack protocols
+[DEBUG] Attempting to find matching socks... timeout
+[INFO]  Dad joke #${Math.floor(content.stats.daysAlive * 0.7).toLocaleString()} deployed successfully`,
+      color: COLORS.YELLOW,
+      pause: PAUSE.QUICK
     },
 
-    // Whoami (simple)
+    // Funny aliases - more interesting than redundant 'whoami'
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,
-      content: 'whoami',
-      typingDuration: TYPING.FAST,     // Match legacy: 500ms
-      pause: PAUSE.MINIMAL             // Match legacy: 300ms
+      content: 'alias | head -4',
+      typingDuration: TYPING.INSTANT,
+      pause: PAUSE.MINIMAL
     },
     {
       type: 'output',
-      content: 'william',
-      color: COLORS.WHITE,
-      pause: PAUSE.QUICK               // Match legacy: 600ms
+      content: `alias yolo='git push --force'
+alias fix='git commit -m "fixed it"'
+alias coffee='break && brew'
+alias monday='sudo shutdown -h now'`,
+      color: COLORS.CYAN,
+      pause: PAUSE.BRIEF
     },
 
     // Profile info

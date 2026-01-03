@@ -123,8 +123,8 @@ describe('GoldenComparison', () => {
         .map(s => s.content);
 
       expect(commands).toContain('cat /etc/motd');
-      expect(commands).toContain('date');
-      expect(commands).toContain('whoami');
+      expect(commands).toContain('cat /var/log/dad.log | tail -4');
+      expect(commands).toContain('alias | head -4');
       expect(commands).toContain('cat /etc/profile');
       expect(commands.some(c => c.includes('dad-joke'))).toBe(true);
       expect(commands).toContain('cat /etc/goodbye.txt');

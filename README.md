@@ -1,59 +1,37 @@
 ![Terminal](./src/terminal.svg)
 
 <p align="center">
-  <em>👆 This terminal is <strong>alive</strong> — updates daily with fresh jokes, real-time stats, and accurate timestamps!</em><br>
-  <sub>Built with SVG animations • No JavaScript required • View source to see the magic ✨</sub>
+  <em>👆 This terminal is <strong>alive</strong> — updates every 6 hours with fresh jokes and real-time data!</em>
 </p>
 
 ---
 
-## 🎯 What I Do
+## Hey, I'm William
 
-**Senior Security Specialist** by day, **Smart Home Architect** by night, **Dad Joke Distributor** 24/7.
+**Security Specialist** • **Smart Home Enthusiast** • **Dad Joke Connoisseur**
 
-I build defensive security automation, over-engineer home networks, and occasionally ship production code that actually works on the first try (citation needed).
+I build security automation, tinker with home networks, and ship code that occasionally works on the first try.
 
 <details>
-<summary><strong>🛠️ Tech Stack & Tools</strong></summary>
+<summary><strong>🛠️ What I Work With</strong></summary>
 
 ```yaml
-languages:
-  daily: [Python, JavaScript, Bash, YAML]
-  learning: [Rust, Go]
-
-security:
-  - NIST 800-53 compliance automation
-  - Defensive security tooling
-  - Threat detection & response
-
-infrastructure:
-  - Home Assistant • ESPHome • Zigbee2MQTT
-  - Docker • Kubernetes (homelab)
-  - Raspberry Pi cluster magic
-
-current_obsession: "Making SVG animations do things they weren't designed for"
+languages: [Python, JavaScript, Bash, Go]
+security: [NIST 800-53, Threat Detection, Defensive Tooling]
+homelab: [Home Assistant, Docker, Kubernetes, Raspberry Pi]
 ```
 </details>
 
-### [🖥️ This Profile](https://github.com/williamzujkowski/williamzujkowski)
-Dynamic SVG terminal with daily joke rotation, live stats, and smooth animations
-
-**Stack:** SVG • Node.js • GitHub Actions
-
-</td>
-</tr>
-</table>
-
-## 💬 Let's Connect
+## 💬 Connect
 
 <p align="center">
-  <a href="https://github.com/williamzujkowski"><img src="https://img.shields.io/badge/GitHub-williamzujkowski-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
-  <a href="https://www.linkedin.com/in/williamzujkowski"><img src="https://img.shields.io/badge/LinkedIn-William_Zujkowski-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
-  <a href="https://williamzujkowski.github.io"><img src="https://img.shields.io/badge/Website-Visit-00D861?style=for-the-badge&logo=google-chrome" alt="Website"></a>
+  <a href="https://github.com/williamzujkowski"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
+  <a href="https://www.linkedin.com/in/williamzujkowski"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
+  <a href="https://williamzujkowski.github.io"><img src="https://img.shields.io/badge/Blog-00D861?style=for-the-badge&logo=hashnode" alt="Blog"></a>
 </p>
 
 ---
 
 <p align="center">
-  <em>"Living life one <code>git commit</code> at a time, with family as the <code>main</code> branch."</em>
+  <em>"Ship it, but ship it secure."</em>
 </p>

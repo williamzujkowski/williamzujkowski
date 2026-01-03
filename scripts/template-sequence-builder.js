@@ -302,84 +302,34 @@ function buildBlogPostSequence(content, engine) {
 function buildTemplateSequences(content) {
   const engine = new TerminalTemplateEngine();
 
+  // Optimized sequence order for better storytelling flow
+  // Removed: aliases, dad log, stats, systemctl (redundant/less interesting)
   const sequences = [
-    // MOTD welcome banner
+    // 1. MOTD welcome banner - "Welcome to my terminal"
     ...buildMotdSequence(content, engine),
 
-    // Neofetch-style system info (DadOS branding)
+    // 2. Neofetch-style system info - "About this system"
     ...buildNeofetchSequence(content, engine),
 
-    // National day info
-    ...buildNationalDaySequence(content, engine),
-
-    // Dad log - funnier than plain 'date' command
-    ...(() => {
-      const dadLogContent = `[INFO]  Coffee levels: CRITICAL - refilling...
-[WARN]  Kids detected in kitchen, engaging snack protocols
-[DEBUG] Attempting to find matching socks... timeout
-[INFO]  Dad joke #${Math.floor(content.stats.daysAlive * 0.7).toLocaleString()} deployed successfully`;
-      return [
-        {
-          type: 'command',
-          prompt: DEFAULT_PROMPT,
-          content: 'cat /var/log/dad.log | tail -4',
-          typingDuration: TYPING.QUICK,
-          pause: PAUSE.MINIMAL
-        },
-        {
-          type: 'output',
-          content: dadLogContent,
-          color: COLORS.YELLOW,
-          pause: calculateReadingPause(dadLogContent)
-        }
-      ];
-    })(),
-
-    // Funny aliases - more interesting than redundant 'whoami'
-    ...(() => {
-      const aliasContent = `alias yolo='git push --force'
-alias fix='git commit -m "fixed it"'
-alias coffee='break && brew'
-alias monday='sudo shutdown -h now'`;
-      return [
-        {
-          type: 'command',
-          prompt: DEFAULT_PROMPT,
-          content: 'alias | head -4',
-          typingDuration: TYPING.INSTANT,
-          pause: PAUSE.MINIMAL
-        },
-        {
-          type: 'output',
-          content: aliasContent,
-          color: COLORS.CYAN,
-          pause: calculateReadingPause(aliasContent)
-        }
-      ];
-    })(),
-
-    // Profile info
+    // 3. Profile info - "Who I am and where to find me"
     ...buildProfileSequence(content, engine),
 
-    // Latest blog post
+    // 4. Latest blog post - "What I'm working on"
     ...buildBlogPostSequence(content, engine),
 
-    // Process list
-    ...buildProcessesSequence(content, engine),
+    // 5. National day info - "What day is it"
+    ...buildNationalDaySequence(content, engine),
 
-    // Developer stats
-    ...buildStatsSequence(content, engine),
-
-    // Dad joke
+    // 6. Dad joke - "The main attraction"
     ...buildDadJokeSequence(content, engine),
 
-    // Fortune
+    // 7. Process list (htop) - "What's running"
+    ...buildProcessesSequence(content, engine),
+
+    // 8. Fortune - "Some wisdom for you"
     ...buildFortuneSequence(content, engine),
 
-    // Systemctl
-    ...buildSystemctlSequence(content, engine),
-
-    // Goodbye
+    // 9. Goodbye - "Thanks for visiting"
     ...buildGoodbyeSequence(content, engine)
   ];
 

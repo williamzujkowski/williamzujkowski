@@ -199,7 +199,7 @@ describe('TemplateContext', () => {
       expect(ctx.stats).toBeDefined();
       expect(typeof ctx.rotation).toBe('number');
       expect(ctx.rotationName).toBeDefined();
-    }, 10000); // Allow time for API call
+    }, 30000); // Allow time for API calls (weather, time, RSS)
   });
 
   describe('enrichWithYamlContent', () => {

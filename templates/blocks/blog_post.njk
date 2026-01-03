@@ -1,7 +1,13 @@
 {# Latest blog post from RSS feed #}
 {# Context: title (blog post title) #}
 
-📝 Latest Blog Post:
-{{ title | truncate(60) }}
-
-🔗 Read more: williamzujkowski.github.io
+{% set blog_lines = [
+  '',
+  '📝 LATEST FROM THE BLOG',
+  '',
+  title | truncate(50),
+  '',
+  '🔗 williamzujkowski.github.io',
+  ''
+] %}
+{{ blog_lines | roundedbox(56) }}

@@ -122,10 +122,11 @@ describe('GoldenComparison', () => {
         .filter(s => s.type === 'command')
         .map(s => s.content);
 
+      // Core sequences in optimized order
       expect(commands).toContain('cat /etc/motd');
-      expect(commands).toContain('cat /var/log/dad.log | tail -4');
-      expect(commands).toContain('alias | head -4');
+      expect(commands).toContain('neofetch --ascii_distro DadOS');
       expect(commands).toContain('cat /etc/profile');
+      expect(commands).toContain('curl -s williamzujkowski.github.io/feed.xml | grep -m1 title');
       expect(commands.some(c => c.includes('dad-joke'))).toBe(true);
       expect(commands).toContain('cat /etc/goodbye.txt');
     });

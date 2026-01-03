@@ -60,7 +60,6 @@ jobs:
         env:
           NODE_ENV: production
           TZ: 'America/New_York'
-          USE_TEMPLATES: 'true'
       
       - name: Check for changes
         id: check_changes

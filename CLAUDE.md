@@ -68,10 +68,9 @@ npm run test:watch   # Watch mode
 ## Key Configuration
 
 **Generator Mode**:
-- Template mode is the DEFAULT and ONLY supported mode
 - Uses Nunjucks templates in `templates/blocks/*.njk`
 - Dynamic reading-based pauses via `calculateReadingPause()`
-- Legacy inline generation is DEPRECATED (do not use `USE_TEMPLATES=false`)
+- Single code path (legacy mode removed in v2026.01)
 
 **Constants** (`scripts/constants.js`):
 - `COLORS` - Dracula theme palette

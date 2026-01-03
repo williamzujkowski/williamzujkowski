@@ -1,10 +1,11 @@
-{# Developer profile from /etc/profile #}
+{# Developer profile from /etc/profile - social/connect focus #}
 {# Context: stats = { uptime, daysAlive }, timestamp #}
 {% from "base/macros.njk" import info_row %}
 
-# William Zujkowski - Developer Profile
+# ~/.profile - William Zujkowski
 # =======================================
-{{ info_row('Role', 'Senior Security Specialist & Family CTO') }}
-{{ info_row('Uptime', stats.uptime ~ ' years (' ~ stats.daysAlive ~ ' days)') }}
-{{ info_row('Shell', '/bin/dad-jokes') }}
-{{ info_row('Status', 'Powered by coffee and curiosity', 'yellow') }}
+{{ info_row('GitHub', 'github.com/williamzujkowski', 'cyan') }}
+{{ info_row('Web', 'zujkowski.com', 'green') }}
+{{ info_row('Focus', 'Security • DevOps • Cloud Architecture') }}
+{{ info_row('Tools', 'AWS, Terraform, Python, TypeScript', 'purple') }}
+{{ info_row('Motto', '"Ship it, but ship it secure!"', 'yellow') }}

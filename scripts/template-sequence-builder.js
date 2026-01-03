@@ -174,10 +174,8 @@ function buildNeofetchSequence(content, engine) {
       packages: '42 (npm), 1337 (brew)',
       shell: '/bin/dad-jokes',
       de: 'Coffee Desktop Environment',
-      terminal: 'dad-term 3.14',
-      coffee: content.stats.coffeeConsumed.toLocaleString(),
-      bugs: content.stats.bugsFixed.toLocaleString(),
-      commits: '∞'
+      terminal: 'dad-term 3.14'
+      // memory, cpu, gpu use humorous template defaults
     },
     color: COLORS.CYAN,
     typingDuration: TYPING.QUICK,        // Quick typing for snappy feel

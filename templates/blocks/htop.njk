@@ -1,16 +1,16 @@
-{# htop-style colorful process display #}
+{# htop-style colorful process display - process/performance focus #}
 {# Context: stats = { uptime, coffeeConsumed, bugsFixed } #}
 
 {% set cpu_bar = '████████████████░░░░' %}
 {% set mem_bar = '██████████░░░░░░░░░░' %}
-{% set swp_bar = '░░░░░░░░░░░░░░░░░░░░' %}
+{% set caf_bar = '██████████████████░░' %}
 
   {{ 'CPU' | fg('cyan') }}[{{ cpu_bar | fg('green') }}  {{ '80.5%' | fg('white') }}]   {{ 'Tasks:' | fg('yellow') }} 42, {{ '3 running' | fg('green') }}
   {{ 'Mem' | fg('cyan') }}[{{ mem_bar | fg('blue') }}  {{ '50.0%' | fg('white') }}]   {{ 'Load:' | fg('yellow') }} 0.42 0.37 0.31
-  {{ 'Swp' | fg('cyan') }}[{{ swp_bar | fg('comment') }}   {{ '0.0%' | fg('white') }}]   {{ 'Uptime:' | fg('yellow') }} {{ stats.uptime }} years
+  {{ 'Caf' | fg('cyan') }}[{{ caf_bar | fg('orange') }}  {{ '90.0%' | fg('white') }}]   {{ 'Mode:' | fg('yellow') }} {{ 'DAD ACTIVE' | fg('green') }}
 
   {{ 'PID' | fg('cyan') }}  {{ 'USER' | fg('cyan') }}     {{ 'PRI' | fg('cyan') }}  {{ 'NI' | fg('cyan') }}  {{ 'VIRT' | fg('cyan') }}   {{ 'RES' | fg('cyan') }} {{ 'S' | fg('cyan') }} {{ 'CPU%' | fg('cyan') }} {{ 'MEM%' | fg('cyan') }}   {{ 'TIME+' | fg('cyan') }}  {{ 'Command' | fg('cyan') }}
  {{ '1337' | fg('white') }}  {{ 'william' | fg('green') }}   20   0  ∞     42M {{ 'R' | fg('green') }} {{ '99.9' | fg('red') }}  5.0  ∞:∞.∞  {{ 'dad-joked --premium' | fg('white') }}
  {{ '2048' | fg('white') }}  {{ 'william' | fg('green') }}   20   0  ∞     32M {{ 'S' | fg('yellow') }} {{ '42.0' | fg('yellow') }}  3.7  ∞:∞.∞  {{ 'family --priority=max' | fg('white') }}
- {{ '4096' | fg('white') }}  {{ 'william' | fg('green') }}   20   0  ∞     16M {{ 'S' | fg('yellow') }} 15.2  2.1  ∞:∞.∞  {{ 'coffee-daemon' | fg('white') }}
+ {{ '4096' | fg('white') }}  {{ 'william' | fg('green') }}   20   0  ∞     16M {{ 'S' | fg('yellow') }} 15.2  2.1  ∞:∞.∞  {{ 'security-scanner' | fg('white') }}
  {{ '8192' | fg('white') }}  {{ 'william' | fg('green') }}   20   0  ∞      8M {{ 'S' | fg('yellow') }}  8.0  1.0  ∞:∞.∞  {{ 'joke-scheduler' | fg('white') }}

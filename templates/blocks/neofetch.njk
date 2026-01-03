@@ -1,5 +1,5 @@
-{# Neofetch-style system info block #}
-{# Context: user, host, os, kernel, uptime, packages, shell, de, terminal, coffee, bugs, commits #}
+{# Neofetch-style system info block - system/software focus #}
+{# Context: user, host, os, kernel, uptime, packages, shell, de, terminal, memory, cpu, gpu #}
 {% from "base/macros.njk" import info_row, separator, color_palette %}
 
 {{ user | fg('green') | bold }}@{{ host | fg('green') | bold }}
@@ -12,8 +12,8 @@
 {{ info_row('DE', de) }}
 {{ info_row('Terminal', terminal) }}
 {{ separator(40, '─') }}
-{{ info_row('Coffee', coffee ~ ' cups', 'yellow') }}
-{{ info_row('Bugs Fixed', bugs ~ ' (and counting)', 'purple') }}
-{{ info_row('Commits', commits, 'cyan') }}
+{{ info_row('Memory', memory | default('32GB DDR5 (mostly Chrome)'), 'yellow') }}
+{{ info_row('CPU', cpu | default('AMD Ryzen 9 @ Dad Speed™'), 'purple') }}
+{{ info_row('GPU', gpu | default('RTX 4090 (for VS Code)'), 'cyan') }}
 {{ separator(40) }}
 {{ color_palette() }}

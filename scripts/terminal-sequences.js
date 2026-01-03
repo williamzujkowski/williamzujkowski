@@ -5,6 +5,8 @@
  */
 
 const { DEFAULT_PROMPT, COLORS } = require('./constants');
+const { TerminalTemplateEngine } = require('./template-engine');
+const { buildNpmInstallSequence } = require('./template-sequence-builder');
 
 /**
  * Build DevOps sequence (Day 1 rotation)
@@ -16,6 +18,8 @@ function buildDevOpsSequences(content) {
   const dockerRows = content.dockerContainers.map(c =>
     `${c.id}  ${c.image.padEnd(20)}  ${c.status.padEnd(15)}  ${c.ports}`
   ).join('\n');
+
+  const engine = new TerminalTemplateEngine();
 
   return [
     {
@@ -52,6 +56,8 @@ ${dockerRows}`,
       color: COLORS.CYAN,
       pause: 2000
     },
+    // npm install joke (web dev humor)
+    ...buildNpmInstallSequence(content, engine),
     {
       type: 'command',
       prompt: DEFAULT_PROMPT,

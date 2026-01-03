@@ -14,6 +14,7 @@ const {
   buildFortuneSequence,
   buildSystemctlSequence,
   buildGoodbyeSequence,
+  buildNpmInstallSequence,
   buildTemplateSequences
 } = require('../scripts/template-sequence-builder');
 const { TerminalTemplateEngine } = require('../scripts/template-engine');
@@ -286,6 +287,39 @@ describe('TemplateSequenceBuilder', () => {
     it('includes goodbye content', () => {
       const sequences = buildGoodbyeSequence(mockContent, engine);
       expect(sequences[1].content).toContain('Thanks for visiting');
+    });
+  });
+
+  describe('buildNpmInstallSequence', () => {
+    it('creates npm install sequence with default package', () => {
+      const sequences = buildNpmInstallSequence(mockContent, engine);
+
+      expect(sequences).toHaveLength(2);
+      expect(sequences[0].type).toBe('command');
+      expect(sequences[0].content).toBe('npm install left-pad');
+    });
+
+    it('creates npm install sequence with custom package', () => {
+      const sequences = buildNpmInstallSequence(mockContent, engine, 'is-even');
+
+      expect(sequences[0].content).toBe('npm install is-even');
+    });
+
+    it('uses YELLOW color', () => {
+      const sequences = buildNpmInstallSequence(mockContent, engine);
+      expect(sequences[1].color).toBe(COLORS.YELLOW);
+    });
+
+    it('includes dependency tree humor', () => {
+      const sequences = buildNpmInstallSequence(mockContent, engine);
+      expect(sequences[1].content).toContain('added 847 packages');
+      expect(sequences[1].content).toContain('vulnerabilities');
+      expect(sequences[1].content).toContain('universe');
+    });
+
+    it('uses medium typing duration', () => {
+      const sequences = buildNpmInstallSequence(mockContent, engine);
+      expect(sequences[0].typingDuration).toBe(TYPING.MEDIUM);
     });
   });
 

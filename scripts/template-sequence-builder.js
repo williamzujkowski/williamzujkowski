@@ -259,6 +259,25 @@ function buildGoodbyeSequence(content, engine) {
 }
 
 /**
+ * Build npm install joke sequence (web dev humor).
+ * Shows absurd dependency tree for a simple package.
+ * @param {Object} content - Dynamic content from generator
+ * @param {Object} engine - Template engine instance
+ * @param {string} [packageName='left-pad'] - Package name for the joke
+ * @returns {Array<Object>} Terminal sequences
+ */
+function buildNpmInstallSequence(content, engine, packageName = 'left-pad') {
+  return buildTemplateSequence({
+    command: `npm install ${packageName}`,
+    templateName: 'blocks/npm_install.njk',
+    context: { package_name: packageName },
+    color: COLORS.YELLOW,
+    typingDuration: TYPING.MEDIUM,     // Quick typing for short command
+    pause: PAUSE.EMPHASIS              // Let users read the joke
+  }, engine);
+}
+
+/**
  * Build all core template-based sequences.
  * Returns sequences in the order they should appear in terminal.
  * @param {Object} content - Dynamic content from DynamicContentGenerator
@@ -360,5 +379,6 @@ module.exports = {
   buildFortuneSequence,
   buildSystemctlSequence,
   buildGoodbyeSequence,
+  buildNpmInstallSequence,
   buildTemplateSequences
 };

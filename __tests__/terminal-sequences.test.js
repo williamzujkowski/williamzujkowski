@@ -43,18 +43,18 @@ describe('TerminalSequences', () => {
   };
 
   describe('buildDevOpsSequences', () => {
-    it('returns array of 6 sequences', () => {
+    it('returns array of 8 sequences', () => {
       const sequences = buildDevOpsSequences(mockContent);
-      expect(sequences).toHaveLength(6);
+      expect(sequences).toHaveLength(8);
     });
 
-    it('has correct sequence types (3 commands, 3 outputs)', () => {
+    it('has correct sequence types (4 commands, 4 outputs)', () => {
       const sequences = buildDevOpsSequences(mockContent);
       const commands = sequences.filter(s => s.type === 'command');
       const outputs = sequences.filter(s => s.type === 'output');
 
-      expect(commands).toHaveLength(3);
-      expect(outputs).toHaveLength(3);
+      expect(commands).toHaveLength(4);
+      expect(outputs).toHaveLength(4);
     });
 
     it('first command is git blame', () => {
@@ -107,14 +107,28 @@ describe('TerminalSequences', () => {
       expect(dockerOutput).toContain('redis:alpine');
     });
 
-    it('third command is sudo make sandwich', () => {
+    it('third command is npm install', () => {
       const sequences = buildDevOpsSequences(mockContent);
-      expect(sequences[4].content).toBe('sudo make me a sandwich');
+      expect(sequences[4].content).toBe('npm install left-pad');
+    });
+
+    it('npm install output includes dependency humor', () => {
+      const sequences = buildDevOpsSequences(mockContent);
+      const npmOutput = sequences[5];
+
+      expect(npmOutput.content).toContain('added 847 packages');
+      expect(npmOutput.content).toContain('vulnerabilities');
+      expect(npmOutput.color).toBe(COLORS.YELLOW);
+    });
+
+    it('fourth command is sudo make sandwich', () => {
+      const sequences = buildDevOpsSequences(mockContent);
+      expect(sequences[6].content).toBe('sudo make me a sandwich');
     });
 
     it('sandwich output includes fun message', () => {
       const sequences = buildDevOpsSequences(mockContent);
-      const sandwichOutput = sequences[5];
+      const sandwichOutput = sequences[7];
 
       expect(sandwichOutput.content).toContain('sandwich');
       expect(sandwichOutput.content).toContain('successfully');

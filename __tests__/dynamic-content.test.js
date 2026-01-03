@@ -352,7 +352,7 @@ describe('DynamicContentGenerator', () => {
       expect(result).toBeInstanceOf(Date);
       expect(axios.get).toHaveBeenCalledWith(
         'https://worldtimeapi.org/api/timezone/America/New_York',
-        { timeout: 5000 }
+        { timeout: 15000 }
       );
     });
 

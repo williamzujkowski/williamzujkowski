@@ -160,7 +160,7 @@ class DynamicContentGenerator {
     try {
       // Try World Time API first
       const response = await axios.get('https://worldtimeapi.org/api/timezone/America/New_York', {
-        timeout: 5000
+        timeout: 15000  // 15s timeout for slow API responses
       });
 
       if (response.data && response.data.datetime) {
@@ -302,7 +302,7 @@ class DynamicContentGenerator {
   async fetchWeather() {
     try {
       const response = await axios.get('https://wttr.in/Washington+DC?format=3', {
-        timeout: 5000,
+        timeout: 15000,  // 15s timeout - wttr.in can be slow on initial response
         headers: { 'User-Agent': 'curl' }
       });
 
@@ -325,7 +325,7 @@ class DynamicContentGenerator {
   async fetchLatestBlogPost() {
     try {
       const response = await axios.get('https://williamzujkowski.github.io/feed.xml', {
-        timeout: 5000
+        timeout: 15000  // 15s timeout for consistency
       });
 
       if (response.data) {

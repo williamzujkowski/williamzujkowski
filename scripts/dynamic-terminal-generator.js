@@ -187,7 +187,7 @@ Kids Impressed: 0 (work in progress)`,
         const { createAsciiBox } = require('./box-generator');
         return createAsciiBox({
           style: 'double',
-          width: 58,
+          width: 56,
           lines: [
             '',
             `DAD JOKE OF THE DAY - ${content.timestamp.slice(4, 16)}`,

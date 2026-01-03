@@ -14,6 +14,7 @@ const {
   getDisplayWidth,
   padToWidth,
   truncateToWidth,
+  wrapText,
   BOX_STYLES
 } = require('./box-generator');
 const { COLORS } = require('./constants');
@@ -119,6 +120,10 @@ class TerminalTemplateEngine {
 
     this.env.addFilter('truncate', (text, maxWidth) => {
       return truncateToWidth(text, maxWidth);
+    });
+
+    this.env.addFilter('wrap', (text, maxWidth, indent = '') => {
+      return wrapText(text, maxWidth, indent);
     });
 
     this.env.addFilter('displaywidth', (text) => {

@@ -8,6 +8,17 @@
 const { parseMarkup, hasMarkup, stripMarkup } = require('./markup-parser');
 
 /**
+ * Rounds a coordinate value to reduce floating-point artifacts in SVG.
+ * @param {number} value - The coordinate value to round
+ * @param {number} [decimals=1] - Number of decimal places
+ * @returns {number} Rounded coordinate value
+ */
+function roundCoord(value, decimals = 1) {
+  const factor = Math.pow(10, decimals);
+  return Math.round(value * factor) / factor;
+}
+
+/**
  * Escapes special XML characters to prevent SVG parsing errors.
  * @param {string} text - Text to escape
  * @returns {string} XML-safe escaped text
@@ -25,10 +36,10 @@ function escapeXml(text) {
  * Calculates approximate text width for monospace font.
  * @param {string} text - Text to measure
  * @param {number} fontSize - Font size in pixels
- * @returns {number} Approximate width in pixels
+ * @returns {number} Approximate width in pixels (rounded)
  */
 function getTextWidth(text, fontSize) {
-  return text.length * (fontSize * 0.6);
+  return roundCoord(text.length * (fontSize * 0.6));
 }
 
 /**
@@ -44,7 +55,7 @@ function generateAllLines(frames, terminal, maxVisibleLines, lineHeight) {
 
   frames.forEach((frame) => {
     if (frame.type === 'add-command') {
-      const y = frame.lineIndex * lineHeight;
+      const y = roundCoord(frame.lineIndex * lineHeight);
       const lineContent = generateCommandLine(
         frame.lineIndex,
         y,
@@ -56,7 +67,7 @@ function generateAllLines(frames, terminal, maxVisibleLines, lineHeight) {
       );
       processedLines.set(frame.lineIndex, lineContent);
     } else if (frame.type === 'add-output') {
-      const y = frame.lineIndex * lineHeight;
+      const y = roundCoord(frame.lineIndex * lineHeight);
       const lineContent = generateOutputLine(
         frame.lineIndex,
         y,
@@ -183,8 +194,8 @@ function generateOutputLine(lineIndex, y, content, color, startTime, terminal) {
  */
 function generateCursor(prompt, command, startTime, typingDuration, terminal) {
   const promptWidth = getTextWidth(prompt, terminal.fontSize);
-  const charWidth = terminal.fontSize * 0.6;
-  const cursorY = -terminal.fontSize * 0.85;
+  const charWidth = roundCoord(terminal.fontSize * 0.6);
+  const cursorY = roundCoord(-terminal.fontSize * 0.85);
   const charDuration = typingDuration / command.length;
   const typingEndTime = startTime + typingDuration;
 
@@ -207,8 +218,8 @@ function generateCursor(prompt, command, startTime, typingDuration, terminal) {
       <!-- Cursor moves to next position AS character appears -->
       ${command.split('').map((char, idx) => {
         const charAppearTime = startTime + (idx * charDuration);
-        const fromX = promptWidth + (idx * charWidth);
-        const toX = promptWidth + ((idx + 1) * charWidth);
+        const fromX = roundCoord(promptWidth + (idx * charWidth));
+        const toX = roundCoord(promptWidth + ((idx + 1) * charWidth));
         return `<animate attributeName="x"
                  from="${fromX}" to="${toX}"
                  begin="${charAppearTime}ms" dur="1ms"
@@ -218,6 +229,7 @@ function generateCursor(prompt, command, startTime, typingDuration, terminal) {
 }
 
 module.exports = {
+  roundCoord,
   escapeXml,
   getTextWidth,
   generateAllLines,

@@ -114,6 +114,56 @@ function truncateToWidth(str, maxWidth) {
 }
 
 /**
+ * Wrap text to fit within a maximum display width, breaking at word boundaries.
+ * @param {string} text - Text to wrap
+ * @param {number} maxWidth - Maximum width per line
+ * @param {string} [indent=''] - Indentation for continuation lines
+ * @returns {string[]} Array of wrapped lines
+ */
+function wrapText(text, maxWidth, indent = '') {
+  if (!text || getDisplayWidth(text) <= maxWidth) {
+    return [text || ''];
+  }
+
+  const words = text.split(/\s+/);
+  const lines = [];
+  let currentLine = '';
+  const indentWidth = getDisplayWidth(indent);
+
+  for (const word of words) {
+    const wordWidth = getDisplayWidth(word);
+    const lineWidth = getDisplayWidth(currentLine);
+    const effectiveMax = lines.length === 0 ? maxWidth : maxWidth - indentWidth;
+
+    if (currentLine === '') {
+      // First word on line - must include it even if too long
+      if (wordWidth > effectiveMax && lines.length > 0) {
+        // Word is too long, truncate it
+        currentLine = indent + truncateToWidth(word, effectiveMax - 3);
+      } else if (lines.length > 0) {
+        currentLine = indent + word;
+      } else {
+        currentLine = word;
+      }
+    } else if (lineWidth + 1 + wordWidth <= effectiveMax) {
+      // Word fits on current line
+      currentLine += ' ' + word;
+    } else {
+      // Word doesn't fit, start new line
+      lines.push(currentLine);
+      currentLine = indent + word;
+    }
+  }
+
+  // Don't forget the last line
+  if (currentLine) {
+    lines.push(currentLine);
+  }
+
+  return lines;
+}
+
+/**
  * Creates an ASCII box with automatic padding and alignment
  *
  * @param {Object} config - Box configuration
@@ -281,5 +331,6 @@ module.exports = {
   getDisplayWidth,
   padToWidth,
   truncateToWidth,
+  wrapText,
   BOX_STYLES
 };

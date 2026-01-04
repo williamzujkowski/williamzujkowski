@@ -10,7 +10,7 @@
 
 **Security Specialist** • **Smart Home Enthusiast** • **Dad Joke Connoisseur**
 
-I build security automation, tinker with home networks, and ship code that occasionally works on the first try.
+I build security automation, tinker with home networks, and ship code that occasionally works on the first try (citation needed).
 
 <details>
 <summary><strong>🛠️ What I Work With</strong></summary>

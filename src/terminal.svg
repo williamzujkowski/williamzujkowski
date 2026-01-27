@@ -1112,7 +1112,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#00ff9f" filter="url(#textGlow)" xml:space="preserve">
-        ║ Washington+DC: ☀️ Perfect coding weather              ║
+        ║ Washington+DC: ☀️   +8°F                              ║
       </text>
     </g>
 
@@ -2544,7 +2544,7 @@
 
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
             fill="#ff79c6" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Jan 27 00:13                   ║
+        ║ DAD JOKE OF THE DAY - Jan 27 06:09                   ║
       </text>
     </g>
 

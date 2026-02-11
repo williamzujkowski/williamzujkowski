@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/williamzujkowski/williamzujkowski#readme",
   "dependencies": {
-    "axios": "^1.10.0",
+    "axios": "^1.13.5",
     "js-yaml": "^4.1.1",
     "nunjucks": "^3.2.4"
   },

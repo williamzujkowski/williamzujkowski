@@ -1,31 +1,13 @@
 {
   "name": "williamzujkowski",
-  "version": "1.0.0",
-  "description": "Automated SVG terminal generator for GitHub profile README",
-  "main": "scripts/dynamic-terminal-generator.js",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "generate": "node scripts/dynamic-terminal-generator.js"
-  },
+  "version": "2.0.0",
+  "description": "GitHub profile README — powered by svg-terminal",
+  "private": true,
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/williamzujkowski/williamzujkowski.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/williamzujkowski/williamzujkowski/issues"
-  },
-  "homepage": "https://github.com/williamzujkowski/williamzujkowski#readme",
-  "dependencies": {
-    "axios": "^1.10.0",
-    "js-yaml": "^4.1.1",
-    "nunjucks": "^3.2.4"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0"
-  }
+  "homepage": "https://github.com/williamzujkowski/williamzujkowski#readme"
 }

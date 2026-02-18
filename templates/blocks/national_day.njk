@@ -1,8 +1,0 @@
-{# National day block template #}
-{# Context: day = { name: string, desc: string, emoji: string } #}
-{# Output: Rounded box showing today's national/fun day #}
-
-{# Create the box content matching legacy format #}
-{% set line1 = day.emoji ~ ' Today is ' ~ day.name %}
-{% set line2 = '  "' ~ day.desc ~ '"' %}
-{{ ['', line1, line2, ''] | roundedbox(56) }}

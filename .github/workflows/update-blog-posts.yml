@@ -1,0 +1,23 @@
+name: Update Blog Posts
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6am UTC
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pull latest blog posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://williamzujkowski.github.io/feed.xml"
+          max_post_count: 5
+          template: "- [$title]($url) — $date"
+          date_format: "MMM D, YYYY"
+          commit_message: "chore: update blog posts [skip ci]"

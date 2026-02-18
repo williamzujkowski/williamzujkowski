@@ -8,25 +8,12 @@ on:
   # Allow manual trigger
   workflow_dispatch:
 
-  # Run on push to generator scripts
+  # Run on push to config or workflow
   push:
     branches:
       - main
     paths:
-      - 'scripts/dynamic-content.js'
-      - 'scripts/dynamic-terminal-generator.js'
-      - 'scripts/advanced-terminal-generator.js'
-      - 'scripts/terminal-line-renderer.js'
-      - 'scripts/terminal-sequences.js'
-      - 'scripts/national-day-provider.js'
-      - 'scripts/template-*.js'
-      - 'scripts/markup-parser.js'
-      - 'scripts/content-loader.js'
-      - 'scripts/box-generator.js'
-      - 'scripts/svg-effects.js'
-      - 'scripts/constants.js'
-      - 'templates/**/*.njk'
-      - 'content/*.yaml'
+      - 'terminal.yml'
       - '.github/workflows/update-terminal-svg.yml'
 
 jobs:
@@ -34,33 +21,37 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     # Prevent multiple runs at the same time
     concurrency:
       group: update-terminal-svg
       cancel-in-progress: true
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm ci
+          node-version: '22'
 
-      - name: Generate Dynamic Terminal SVG
-        run: npm run generate
+      - name: Clone and build svg-terminal
+        run: |
+          git clone --depth 1 https://github.com/williamzujkowski/svg-terminal.git /tmp/svg-terminal
+          cd /tmp/svg-terminal
+          npm ci
+          npm run build
+          npm link
+
+      - name: Generate Terminal SVG
+        run: svg-terminal generate --config terminal.yml --output src/terminal.svg
         env:
           NODE_ENV: production
           TZ: 'America/New_York'
-      
+
       - name: Check for changes
         id: check_changes
         run: |
@@ -69,12 +60,12 @@ jobs:
           else
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
-      
+
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
         uses: EndBug/add-and-commit@v9
         with:
           add: 'src/terminal.svg'
-          message: 'chore: update terminal with daily joke and fresh stats [skip ci]'
+          message: 'chore: update terminal SVG [skip ci]'
           default_author: github_actions
           push: true

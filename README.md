@@ -60,15 +60,6 @@ More at [williamzujkowski.github.io](https://williamzujkowski.github.io)
 
 ---
 
-### GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=williamzujkowski&show_icons=true&theme=dracula&hide_border=true&bg_color=0d1117&ring_color=bd93f9&icon_color=bd93f9" alt="GitHub Stats" height="165">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=williamzujkowski&layout=compact&theme=dracula&hide_border=true&bg_color=0d1117&langs_count=8" alt="Top Languages" height="165">
-</p>
-
----
-
 <p align="center">
   <a href="https://github.com/williamzujkowski"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://www.linkedin.com/in/williamzujkowski"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>

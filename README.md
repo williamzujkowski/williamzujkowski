@@ -48,7 +48,8 @@
 
 ### Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->- [Building Nexus-Agents: What I Learned Creating a Multi-Model AI Orchestration System](https://williamzujkowski.github.io/posts/building-nexus-agents-what-i-learned-creating-a-multi-model-ai-orchestration-system/) — 000 D, YYYY- [Consensus Voting With AI Models: When Three Opinions Beat One](https://williamzujkowski.github.io/posts/consensus-voting-with-ai-models-when-three-opinions-beat-one/) — 000 D, YYYY- [From RouteLLM to Contextual Bandits: How Research Papers Shaped My Model Router](https://williamzujkowski.github.io/posts/from-routellm-to-contextual-bandits-how-research-papers-shaped-my-model-router/) — 000 D, YYYY- [Building a Private Cloud in Your Homelab with Proxmox and Security Best Practices](https://williamzujkowski.github.io/posts/building-a-private-cloud-in-your-homelab-with-proxmox-and-security-best-practices/) — 000 D, YYYY- [Hardening Docker Containers in Your Homelab: A Defense-in-Depth Approach](https://williamzujkowski.github.io/posts/hardening-docker-containers-in-your-homelab-a-defense-in-depth-approach/) — 000 D, YYYY<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 More at [williamzujkowski.github.io](https://williamzujkowski.github.io)
 

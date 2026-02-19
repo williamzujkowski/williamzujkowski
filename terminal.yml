@@ -6,8 +6,10 @@ theme: dracula
 
 window:
   width: 1000
-  height: 700
   title: "william@dev-machine:~"
+  autoHeight: true
+  minHeight: 600
+  maxHeight: 1400
 
 terminal:
   prompt: "william@dev:~$ "
@@ -18,12 +20,17 @@ effects:
   shadow: true
   scanlines: true
 
+fetchTimeout: 15000
+
 blocks:
-  # 1. MOTD welcome banner
+  # 1. MOTD welcome banner with live weather
   - block: motd
     config:
       title: "WILLIAM'S DEV TERMINAL"
       subtitle: "Powered by coffee, dad jokes & late-night debugging"
+      weather:
+        location: NYC
+        units: imperial
 
   # 2. Neofetch system info
   - block: neofetch
@@ -166,5 +173,13 @@ blocks:
         - "The cloud is just someone else's computer."
         - "Have you tried turning it off and on again?"
 
-  # 8. Goodbye
+  # 8. GitHub stats (live from API)
+  - block: github-stats
+    config:
+      username: williamzujkowski
+
+  # 9. Random fun fact
+  - block: fun-fact
+
+  # 10. Goodbye
   - block: goodbye

@@ -28,7 +28,7 @@
 | [**strudel-mcp-server**](https://github.com/williamzujkowski/strudel-mcp-server) | MCP server giving AI control over Strudel.cc for live music coding | ![Stars](https://img.shields.io/github/stars/williamzujkowski/strudel-mcp-server?style=flat&color=bd93f9) |
 | [**nexus-agents**](https://github.com/williamzujkowski/nexus-agents) | Multi-model AI orchestration — routes tasks to Claude, Gemini, Codex experts. 23k+ tests | ![Stars](https://img.shields.io/github/stars/williamzujkowski/nexus-agents?style=flat&color=bd93f9) |
 | [**svg-terminal**](https://github.com/williamzujkowski/svg-terminal) | Generate animated SVG terminals for GitHub READMEs. 12 block types, 3 themes | ![Stars](https://img.shields.io/github/stars/williamzujkowski/svg-terminal?style=flat&color=bd93f9) |
-| [**homelab-iac**](https://github.com/williamzujkowski/homelab-iac) | Infrastructure-as-code for bare-metal Cloud Foundry, BOSH, Terraform | ![Stars](https://img.shields.io/github/stars/williamzujkowski/homelab-iac?style=flat&color=bd93f9) |
+| [**vuln-bot**](https://github.com/williamzujkowski/vuln-bot) | Automated vulnerability intelligence platform — harvests, scores, and publishes daily briefings | ![Stars](https://img.shields.io/github/stars/williamzujkowski/vuln-bot?style=flat&color=bd93f9) |
 | [**standards**](https://github.com/williamzujkowski/standards) | Battle-tested LLM software development standards | ![Stars](https://img.shields.io/github/stars/williamzujkowski/standards?style=flat&color=bd93f9) |
 | [**mcp-standards-server**](https://github.com/williamzujkowski/mcp-standards-server) | MCP server for NIST 800-53r5 compliance checking | ![Stars](https://img.shields.io/github/stars/williamzujkowski/mcp-standards-server?style=flat&color=bd93f9) |
 

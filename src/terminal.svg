@@ -318,7 +318,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Overcast 39°F | Humidity: 59%</tspan><tspan fill="#e4e4e4">                          ║</tspan>
+        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Overcast 37°F | Humidity: 72%</tspan><tspan fill="#e4e4e4">                          ║</tspan>
       </text>
     </g>
 
@@ -678,7 +678,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14150ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Feb 19                         ║
+        ║ DAD JOKE OF THE DAY - Feb 20                         ║
       </text>
     </g>
 
@@ -686,7 +686,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14200ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: LOOPS                                      ║
+        ║ Category: LOGIC                                      ║
       </text>
     </g>
 
@@ -702,7 +702,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14300ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: Why did the developer get stuck in the shower?    ║
+        ║ Q: What&apos;s the best thing about a Boolean?            ║
       </text>
     </g>
 
@@ -718,7 +718,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14400ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: The shampoo bottle said: Lather, Rinse, Repeat!   ║
+        ║ A: Even if you&apos;re wrong, you&apos;re only off by a bit!   ║
       </text>
     </g>
 
@@ -862,7 +862,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22070ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -930,7 +930,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="24480ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">68</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">18</tspan><tspan fill="#e4e4e4">                             ║</tspan>
+        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">69</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">18</tspan><tspan fill="#e4e4e4">                             ║</tspan>
       </text>
     </g>
 
@@ -1022,7 +1022,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Marilyn Monroe had six toes.                           ║
+        ║ Over 60% of all those who marry get divorced.          ║
       </text>
     </g>
 

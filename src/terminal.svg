@@ -322,7 +322,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Overcast 44°F | Humidity: 53%</tspan><tspan fill="#e4e4e4">                          ║</tspan>
+        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Partly cloudy 45°F | Humidity: 53%</tspan><tspan fill="#e4e4e4">                     ║</tspan>
       </text>
     </g>
 
@@ -866,7 +866,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22070ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  In theory, theory and practice are the s... │
+        │  Have you tried turning it off and on again? │
       </text>
     </g>
 
@@ -1026,7 +1026,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Every year 11,000 Americans injure themselves while    ║
+        ║ Alfred Hitchcock didn`t have a belly button. It was    ║
       </text>
     </g>
 
@@ -1034,7 +1034,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26890ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ trying out bizarre sexual positions.                   ║
+        ║ eliminated when he was sewn up after surgery.          ║
       </text>
     </g>
 

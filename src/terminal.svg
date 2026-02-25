@@ -322,7 +322,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Clear 29°F | Humidity: 44%</tspan><tspan fill="#e4e4e4">                             ║</tspan>
+        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Clear 27°F | Humidity: 53%</tspan><tspan fill="#e4e4e4">                             ║</tspan>
       </text>
     </g>
 
@@ -682,7 +682,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14150ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Feb 24                         ║
+        ║ DAD JOKE OF THE DAY - Feb 25                         ║
       </text>
     </g>
 
@@ -690,7 +690,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14200ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: LANGUAGES                                  ║
+        ║ Category: GIT                                        ║
       </text>
     </g>
 
@@ -706,7 +706,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14300ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: Why did TypeScript break up with JavaScript?      ║
+        ║ Q: What do you call a mass of developers?            ║
       </text>
     </g>
 
@@ -722,7 +722,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14400ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: It wanted a more defined relationship!            ║
+        ║ A: A merge conflict!                                 ║
       </text>
     </g>
 
@@ -866,7 +866,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22070ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -1026,7 +1026,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Sex is the safest tranquilizer in the world. IT IS     ║
+        ║ Honking of car horns for a couple that just got        ║
       </text>
     </g>
 
@@ -1034,7 +1034,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26890ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ 10 TIMES MORE EFFECTIVE THAN VALIUM.                   ║
+        ║ married is an old superstition to insure great sex.    ║
       </text>
     </g>
 

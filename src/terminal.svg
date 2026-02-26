@@ -670,7 +670,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14100ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Feb 25                         ║
+        ║ DAD JOKE OF THE DAY - Feb 26                         ║
       </text>
     </g>
 
@@ -678,7 +678,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14150ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: GIT                                        ║
+        ║ Category: DEVOPS                                     ║
       </text>
     </g>
 
@@ -694,7 +694,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14250ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: What do you call a mass of developers?            ║
+        ║ Q: Why did the Kubernetes pod go to therapy?         ║
       </text>
     </g>
 
@@ -710,7 +710,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14350ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: A merge conflict!                                 ║
+        ║ A: Too many container issues!                        ║
       </text>
     </g>
 
@@ -854,7 +854,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22020ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -1014,7 +1014,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26790ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ The surface of the Earth is about 60% water and 10%    ║
+        ║ The pop you hear when you crack your knuckles is       ║
       </text>
     </g>
 
@@ -1022,7 +1022,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ ice.                                                   ║
+        ║ actually a bubble of gas burning.                      ║
       </text>
     </g>
 

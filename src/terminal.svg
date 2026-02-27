@@ -670,7 +670,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14100ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Feb 26                         ║
+        ║ DAD JOKE OF THE DAY - Feb 27                         ║
       </text>
     </g>
 
@@ -678,7 +678,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14150ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: DEVOPS                                     ║
+        ║ Category: VIM                                        ║
       </text>
     </g>
 
@@ -694,7 +694,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14250ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: Why did the Kubernetes pod go to therapy?         ║
+        ║ Q: How do you generate a random string?              ║
       </text>
     </g>
 
@@ -710,7 +710,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14350ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: Too many container issues!                        ║
+        ║ A: Put a fresh intern in front of vim and ask the... ║
       </text>
     </g>
 
@@ -854,7 +854,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22020ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -1014,7 +1014,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26790ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Every acre of American crops harvested contains 100    ║
+        ║ In 1933, Mickey Mouse, an animated cartoon             ║
       </text>
     </g>
 
@@ -1022,7 +1022,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ pounds of insects.                                     ║
+        ║ character, received 800,000 fan letters.               ║
       </text>
     </g>
 

@@ -322,7 +322,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Sunny 42°F | Humidity: 31%</tspan><tspan fill="#e4e4e4">                             ║</tspan>
+        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Clear 31°F | Humidity: 33%</tspan><tspan fill="#e4e4e4">                             ║</tspan>
       </text>
     </g>
 
@@ -682,7 +682,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14150ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Mar 1                          ║
+        ║ DAD JOKE OF THE DAY - Mar 2                          ║
       </text>
     </g>
 
@@ -690,7 +690,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14200ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: CLASSIC                                    ║
+        ║ Category: MONEY                                      ║
       </text>
     </g>
 
@@ -706,7 +706,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14300ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: Why do programmers prefer dark mode?              ║
+        ║ Q: Why did the developer go broke?                   ║
       </text>
     </g>
 
@@ -722,7 +722,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14400ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: Because light attracts bugs!                      ║
+        ║ A: Because he used up all his cache!                 ║
       </text>
     </g>
 
@@ -866,7 +866,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22070ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -1026,7 +1026,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Dueling is legal in Paraguay as long as both parties   ║
+        ║ Ancient Egyptian priests would pluck every hair from   ║
       </text>
     </g>
 
@@ -1034,7 +1034,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26890ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ are registered blood donors.                           ║
+        ║ their bodies.                                          ║
       </text>
     </g>
 

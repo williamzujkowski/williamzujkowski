@@ -850,7 +850,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22020ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -1010,7 +1010,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26790ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Camel’s have three eyelids.                            ║
+        ║ On average, Americans` favorite smell is banana.       ║
       </text>
     </g>
 

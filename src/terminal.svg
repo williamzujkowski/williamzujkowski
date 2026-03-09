@@ -670,7 +670,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14100ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Mar 8                          ║
+        ║ DAD JOKE OF THE DAY - Mar 9                          ║
       </text>
     </g>
 
@@ -678,7 +678,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14150ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: OOP                                        ║
+        ║ Category: NETWORKING                                 ║
       </text>
     </g>
 
@@ -694,7 +694,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14250ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: What&apos;s the object-oriented way to become wealthy? ║
+        ║ Q: What did the router say to the doctor?            ║
       </text>
     </g>
 
@@ -710,7 +710,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14350ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: Inheritance!                                      ║
+        ║ A: It hurts when IP!                                 ║
       </text>
     </g>
 
@@ -854,7 +854,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22020ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -930,7 +930,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="24480ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Following: 42    Gists: 134                            ║
+        ║ Following: 43    Gists: 134                            ║
       </text>
     </g>
 
@@ -1014,7 +1014,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26790ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Rats multiply so quickly that in 18 months, two rats   ║
+        ║ Charlie Chaplin once won third prize in a Charlie      ║
       </text>
     </g>
 
@@ -1022,7 +1022,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ could have over million descendants.                   ║
+        ║ Chaplin look-alike contest.                            ║
       </text>
     </g>
 

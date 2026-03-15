@@ -322,7 +322,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Partly cloudy 38°F | Humidity: 44%</tspan><tspan fill="#e4e4e4">                     ║</tspan>
+        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Overcast 40°F | Humidity: 48%</tspan><tspan fill="#e4e4e4">                          ║</tspan>
       </text>
     </g>
 
@@ -866,7 +866,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22070ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -934,7 +934,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="24480ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">72</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">19</tspan><tspan fill="#e4e4e4">                             ║</tspan>
+        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">72</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">18</tspan><tspan fill="#e4e4e4">                             ║</tspan>
       </text>
     </g>
 
@@ -1026,7 +1026,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ The surface of the Earth is about 60% water and 10%    ║
+        ║ Ten percent of the Russian government`s income comes   ║
       </text>
     </g>
 
@@ -1034,7 +1034,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26890ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ ice.                                                   ║
+        ║ from the sale of vodka.                                ║
       </text>
     </g>
 

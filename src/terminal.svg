@@ -322,7 +322,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Overcast 42°F | Humidity: 64%</tspan><tspan fill="#e4e4e4">                          ║</tspan>
+        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Overcast 48°F | Humidity: 73%</tspan><tspan fill="#e4e4e4">                          ║</tspan>
       </text>
     </g>
 
@@ -682,7 +682,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14150ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Mar 15                         ║
+        ║ DAD JOKE OF THE DAY - Mar 16                         ║
       </text>
     </g>
 
@@ -690,7 +690,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14200ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: ML                                         ║
+        ║ Category: LANGUAGES                                  ║
       </text>
     </g>
 
@@ -706,7 +706,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14300ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: How do transformers say goodbye?                  ║
+        ║ Q: Why did TypeScript break up with JavaScript?      ║
       </text>
     </g>
 
@@ -722,7 +722,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14400ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: Attention, I must go!                             ║
+        ║ A: It wanted a more defined relationship!            ║
       </text>
     </g>
 
@@ -866,7 +866,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="22070ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        │  Have you tried turning it off and on again? │
+        │  In theory, theory and practice are the s... │
       </text>
     </g>
 
@@ -934,7 +934,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="24480ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">72</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">18</tspan><tspan fill="#e4e4e4">                             ║</tspan>
+        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">72</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">19</tspan><tspan fill="#e4e4e4">                             ║</tspan>
       </text>
     </g>
 
@@ -1026,7 +1026,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26840ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ An American urologist bought Napoleon’s penis for      ║
+        ║ Czechs are the biggest consumers of beer per male in   ║
       </text>
     </g>
 
@@ -1034,7 +1034,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="26890ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="14"
              fill="#e4e4e4" filter="url(#textGlow)" xml:space="preserve">
-        ║ $40,000.                                               ║
+        ║ the world.                                             ║
       </text>
     </g>
 

@@ -30,7 +30,7 @@ blocks:
       title: "WILLIAM'S DEV TERMINAL"
       subtitle: "Security • AI/ML • Homelab"
       weather:
-        location: NYC
+        location: "Washington, DC"
         units: imperial
 
   # 2. Neofetch — the essential profile card

@@ -1,6 +1,22 @@
 <svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg"
   role="img" aria-label="Animated terminal showing: cat /etc/motd, neofetch --ascii_distro dev-machine, ./dad-joke --random --format=fancy, gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;, cat /etc/goodbye.txt">
   <style>
+    @keyframes scanlineScroll {
+      from { transform: translateY(0); }
+      to { transform: translateY(4px); }
+    }
+    @keyframes cursorPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    @keyframes subtleFlicker {
+      0%, 100% { opacity: 1; }
+      92% { opacity: 0.98; }
+      94% { opacity: 0.95; }
+      96% { opacity: 0.98; }
+    }
+    .scanline-overlay { animation: scanlineScroll 0.3s linear infinite; }
+    .terminal-screen { animation: subtleFlicker 4s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -19,13 +35,13 @@
     <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="0.2" result="coreBlur"/>
       <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="mediumBlur"/>
-      <feColorMatrix in="mediumBlur" type="matrix" result="greenGlow"
-        values="0 0 0 0 0
-                0 1 0 0 0.3
-                0 0 0 0 0
-                0 0 0 1 0"/>
+      <feColorMatrix in="mediumBlur" type="matrix" result="themeGlow"
+        values="0 0 0 0 0.00
+                0 0 0 0 1.00
+                0 0 0 0 0.25
+                0 0 0 0.8 0"/>
       <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="outerBlur"/>
-      <feBlend in="coreBlur" in2="greenGlow" mode="screen" result="layer12"/>
+      <feBlend in="coreBlur" in2="themeGlow" mode="screen" result="layer12"/>
       <feBlend in="layer12" in2="outerBlur" mode="screen" result="allLayers"/>
       <feMerge>
         <feMergeNode in="allLayers"/>
@@ -45,7 +61,7 @@
     </filter>
   </defs>
 
-  <g filter="url(#shadow)">
+  <g filter="url(#shadow)" class="terminal-screen">
     
     <rect x="0" y="0" width="1000" height="700"
           rx="12" ry="12"
@@ -667,5 +683,6 @@
     </g>
       </g>
     </g>
+    <rect x="0" y="0" width="1000" height="700" fill="url(#scanlines)" pointer-events="none" opacity="0.5" class="scanline-overlay"/>
   </g>
 </svg>

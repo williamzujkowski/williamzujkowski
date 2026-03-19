@@ -214,7 +214,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="800ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╔════════════════════════════════════════════════════════╗
+        ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
@@ -222,7 +222,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="850ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                        ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -230,7 +230,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="900ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ WILLIAM&apos;S DEV TERMINAL v2026.03                        ║
+        ║ WILLIAM&apos;S DEV TERMINAL v2026.03                                                        ║
       </text>
     </g>
 
@@ -238,7 +238,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="950ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ Security • AI/ML • Homelab                             ║
+        ║ Security • AI/ML • Homelab                                                             ║
       </text>
     </g>
 
@@ -246,7 +246,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                        ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -254,7 +254,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1050ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╚════════════════════════════════════════════════════════╝
+        ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>
 
@@ -390,7 +390,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7450ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╔══════════════════════════════════════════════════════╗
+        ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
@@ -398,7 +398,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7500ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -406,7 +406,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7550ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ DAD JOKE OF THE DAY - Mar 19                         ║
+        ║ DAD JOKE OF THE DAY - Mar 19                                                           ║
       </text>
     </g>
 
@@ -414,7 +414,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7600ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ Category: MONEY                                      ║
+        ║ Category: MONEY                                                                        ║
       </text>
     </g>
 
@@ -422,7 +422,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7650ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -430,7 +430,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7700ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ Q: Why did the developer go broke?                   ║
+        ║ Q: Why did the developer go broke?                                                     ║
       </text>
     </g>
 
@@ -438,7 +438,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7750ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -446,7 +446,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7800ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ A: Because he used up all his cache!                 ║
+        ║ A: Because he used up all his cache!                                                   ║
       </text>
     </g>
 
@@ -454,7 +454,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7850ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -462,7 +462,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="7900ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╚══════════════════════════════════════════════════════╝
+        ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>
 
@@ -490,7 +490,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10570ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╔════════════════════════════════════════════════════════╗
+        ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
@@ -498,7 +498,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10620ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                        ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -506,7 +506,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10670ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#839496">║ </tspan><tspan fill="#2aa198">GITHUB: @williamzujkowski</tspan><tspan fill="#839496">                              ║</tspan>
+        <tspan fill="#839496">║ </tspan><tspan fill="#2aa198">GITHUB: @williamzujkowski</tspan><tspan fill="#839496">                                                              ║</tspan>
       </text>
     </g>
 
@@ -514,7 +514,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10720ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#839496">║ Repos: </tspan><tspan fill="#839496" font-weight="bold">73</tspan><tspan fill="#839496">    Followers: </tspan><tspan fill="#839496" font-weight="bold">19</tspan><tspan fill="#839496">                             ║</tspan>
+        <tspan fill="#839496">║ Repos: </tspan><tspan fill="#839496" font-weight="bold">73</tspan><tspan fill="#839496">    Followers: </tspan><tspan fill="#839496" font-weight="bold">19</tspan><tspan fill="#839496">                                                             ║</tspan>
       </text>
     </g>
 
@@ -522,7 +522,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10770ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ Following: 44    Gists: 134                            ║
+        ║ Following: 44    Gists: 134                                                            ║
       </text>
     </g>
 
@@ -530,7 +530,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10820ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ Member since: Sep 2015                                 ║
+        ║ Member since: Sep 2015                                                                 ║
       </text>
     </g>
 
@@ -538,7 +538,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10870ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                        ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -546,7 +546,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="10920ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╚════════════════════════════════════════════════════════╝
+        ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>
 
@@ -574,7 +574,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13580ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╔══════════════════════════════════════════════════════╗
+        ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
@@ -582,7 +582,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13630ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -590,7 +590,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13680ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ Thanks for visiting!                                 ║
+        ║ Thanks for visiting!                                                                   ║
       </text>
     </g>
 
@@ -598,7 +598,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13730ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -606,7 +606,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13780ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ May your:                                            ║
+        ║ May your:                                                                              ║
       </text>
     </g>
 
@@ -614,7 +614,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13830ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║   - Code compile without warnings                    ║
+        ║   - Code compile without warnings                                                      ║
       </text>
     </g>
 
@@ -622,7 +622,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13880ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║   - Tests pass on first try                          ║
+        ║   - Tests pass on first try                                                            ║
       </text>
     </g>
 
@@ -630,7 +630,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13930ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║   - Bugs be easily reproducible                      ║
+        ║   - Bugs be easily reproducible                                                        ║
       </text>
     </g>
 
@@ -638,7 +638,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="13980ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║   - Coffee stay hot                                  ║
+        ║   - Coffee stay hot                                                                    ║
       </text>
     </g>
 
@@ -646,7 +646,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14030ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║   - Git conflicts be minimal                         ║
+        ║   - Git conflicts be minimal                                                           ║
       </text>
     </g>
 
@@ -654,7 +654,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14080ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -662,7 +662,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14130ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║ See you in the commits!                              ║
+        ║ See you in the commits!                                                                ║
       </text>
     </g>
 
@@ -670,7 +670,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14180ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ║                                                      ║
+        ║                                                                                        ║
       </text>
     </g>
 
@@ -678,7 +678,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="14230ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              fill="#839496" filter="url(#textGlow)" xml:space="preserve">
-        ╚══════════════════════════════════════════════════════╝
+        ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>
       </g>

@@ -1,4 +1,6 @@
-![Terminal](./src/terminal.svg)
+<p align="center">
+  <img src="./src/terminal.svg" alt="Animated terminal" width="100%">
+</p>
 
 <p align="center">
   <em>This terminal is <strong>alive</strong> — updates every 6 hours with fresh jokes and data.
@@ -7,11 +9,19 @@
 
 ---
 
-## Hey, I'm William
+<h2 align="center">Hey, I'm William</h2>
 
-**Security Engineer** · **AI Systems Builder** · **Homelab Enthusiast** · **Dad Joke Connoisseur**
+<p align="center">
+  <strong>Security Engineer</strong> · <strong>AI Systems Builder</strong> · <strong>Homelab Enthusiast</strong> · <strong>Dad Joke Connoisseur</strong>
+</p>
 
-20+ years building secure systems — from vulnerability management at NIH (100k+ assets) to federal cloud platform security. Now I spend my time building multi-agent AI orchestration, running bare-metal Cloud Foundry in my basement, and collecting dad jokes at an alarming rate.
+<p align="center">
+  20+ years building secure systems — from vulnerability management at NIH (100k+ assets)<br>
+  to federal cloud platform security. Now I build multi-agent AI orchestration,<br>
+  run bare-metal Cloud Foundry in my basement, and collect dad jokes at an alarming rate.
+</p>
+
+---
 
 ### What I'm focused on
 

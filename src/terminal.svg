@@ -250,7 +250,7 @@
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text font-family="JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace" font-size="13"
              filter="url(#textGlow)" xml:space="preserve">
-        <tspan fill="#f8f8f2">║ </tspan><tspan fill="#66d9ef">Overcast 61°F | Humidity: 77%</tspan><tspan fill="#f8f8f2">                                                          ║</tspan>
+        <tspan fill="#f8f8f2">║ </tspan><tspan fill="#66d9ef">Partly cloudy 51°F | Humidity: 39%</tspan><tspan fill="#f8f8f2">                                                     ║</tspan>
       </text>
     </g>
 

@@ -16,27 +16,28 @@
 </p>
 
 <p align="center">
-  20+ years building secure systems — from vulnerability management at NIH (100k+ assets)<br>
-  to federal cloud platform security. Now I build multi-agent AI orchestration,<br>
-  run bare-metal Cloud Foundry in my basement, and collect dad jokes at an alarming rate.
+  Started fixing computers in Harrisburg, PA in 2005. Twenty years later:<br>
+  enterprise vulnerability management across 100k+ assets, then cloud platform security.<br>
+  Now I build multi-agent AI orchestration, run bare-metal Cloud Foundry in my basement,<br>
+  and collect dad jokes at an alarming rate.
 </p>
 
 ---
 
 ### What I'm focused on
 
-- **AI/Multi-Agent Systems** — Building [nexus-agents](https://github.com/williamzujkowski/nexus-agents), a multi-model orchestration system that routes tasks across Claude, Gemini, Codex, and OpenRouter (15 models, 5 providers)
-- **Security Engineering** — Compliance automation, vulnerability scanning, supply chain security, NIST 800-53
-- **Homelab Infrastructure** — Bare-metal BOSH + Cloud Foundry, Terraform, Proxmox, Docker Swarm on Raspberry Pi cluster
+- **Multi-agent AI** — Built [nexus-agents](https://github.com/williamzujkowski/nexus-agents) because I was tired of switching between Claude, Gemini, and Codex windows. Routes tasks across 15 models and 5 providers with consensus voting.
+- **Security engineering** — Compliance automation, vuln scanning, supply chain. The boring stuff that prevents the exciting stuff.
+- **Homelab** — Bare-metal BOSH + Cloud Foundry in the basement. Terraform, Proxmox, a Pi cluster running Docker Swarm. Yes, on purpose.
 
 ---
 
-### Featured Projects
+### Featured projects
 
 | Project | Description | |
 |:--------|:------------|:--|
-| [**strudel-mcp-server**](https://github.com/williamzujkowski/strudel-mcp-server) | MCP server giving AI control over Strudel.cc for live music coding | ![Stars](https://img.shields.io/github/stars/williamzujkowski/strudel-mcp-server?style=flat&color=bd93f9) |
 | [**nexus-agents**](https://github.com/williamzujkowski/nexus-agents) | Multi-model AI orchestration — 28 MCP tools, 15 models, 5 providers, consensus voting. 24k+ tests | ![Stars](https://img.shields.io/github/stars/williamzujkowski/nexus-agents?style=flat&color=bd93f9) |
+| [**strudel-mcp-server**](https://github.com/williamzujkowski/strudel-mcp-server) | MCP server giving AI control over Strudel.cc for live music coding | ![Stars](https://img.shields.io/github/stars/williamzujkowski/strudel-mcp-server?style=flat&color=bd93f9) |
 | [**svg-terminal**](https://github.com/williamzujkowski/svg-terminal) | Generate animated SVG terminals for GitHub READMEs. 16 block types, 3 themes, responsive viewBox | ![Stars](https://img.shields.io/github/stars/williamzujkowski/svg-terminal?style=flat&color=bd93f9) |
 | [**vuln-bot**](https://github.com/williamzujkowski/vuln-bot) | Automated vulnerability intelligence platform — harvests, scores, and publishes daily briefings | ![Stars](https://img.shields.io/github/stars/williamzujkowski/vuln-bot?style=flat&color=bd93f9) |
 | [**standards**](https://github.com/williamzujkowski/standards) | Battle-tested LLM software development standards | ![Stars](https://img.shields.io/github/stars/williamzujkowski/standards?style=flat&color=bd93f9) |
@@ -44,19 +45,13 @@
 
 ---
 
-### Tech Stack
+### Stack
 
-**Languages** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
-
-**Cloud & Infra** &nbsp; ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white) ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat&logo=terraform&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white) ![Cloud Foundry](https://img.shields.io/badge/Cloud_Foundry-0C9ED5?style=flat&logo=cloudfoundry&logoColor=white)
-
-**Monitoring** &nbsp; ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white) ![Loki](https://img.shields.io/badge/Loki-F7D02C?style=flat&logo=grafana&logoColor=black)
-
-**AI/ML** &nbsp; ![Anthropic](https://img.shields.io/badge/Claude-191919?style=flat&logo=anthropic&logoColor=white) ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white) ![MCP](https://img.shields.io/badge/MCP_Protocol-6366F1?style=flat)
+The full stack lives on [my site](https://williamzujkowski.github.io) — it changes too often to badge.
 
 ---
 
-### Latest Blog Posts
+### From the blog
 
 <!-- BLOG-POST-LIST:START -->
 - [Investigating the Trivy Supply Chain Compromise with AI Agents](https://williamzujkowski.github.io/posts/2026-03-21-trivy-supply-chain-compromise-ai-assisted-investigation/)
@@ -77,5 +72,5 @@ More at [williamzujkowski.github.io](https://williamzujkowski.github.io)
 </p>
 
 <p align="center">
-  <em>"Professionally paranoid."</em>
+  <em>Views are my own. The dad jokes are not.</em>
 </p>

@@ -37,6 +37,14 @@ cacheTTL: 21600  # 6 hours, matches the workflow cadence
 accessibility:
   describe: true
 
+# Persona-first aria-label. The auto-generated label is a command summary
+# ("Animated terminal showing: cat /etc/motd, neofetch …") which tells
+# screen-reader users nothing useful. This key is currently a no-op because
+# the generator ignores config.accessibilityLabel (tracked upstream:
+# https://github.com/williamzujkowski/svg-terminal/issues/97). Leaving it set
+# so it Just Works when the upstream fix lands.
+accessibilityLabel: "William Zujkowski's GitHub profile terminal — security engineer, multi-agent AI builder, homelabber, dad-joke connoisseur. Refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke."
+
 blocks:
   # 1. MOTD with live weather — opens the terminal with a hello + a glanceable signal.
   - block: motd

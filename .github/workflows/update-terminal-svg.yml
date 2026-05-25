@@ -46,7 +46,7 @@ jobs:
           npm run build
           npm link
 
-      - name: Generate Terminal SVG
+      - name: Generate animated Terminal SVG
         # --strict promotes unknown-config-key warnings to hard errors so
         # generator drift (e.g. svg-terminal renames a config key) breaks
         # the build loudly instead of silently dropping the value.
@@ -55,10 +55,19 @@ jobs:
           NODE_ENV: production
           TZ: 'America/New_York'
 
+      - name: Generate static Terminal SVG
+        # Same content, no motion. The README's <picture> element serves this
+        # to users with `prefers-reduced-motion: reduce` set — SMIL animations
+        # don't honor that media query, so an explicit fallback is the only fix.
+        run: svg-terminal generate --config terminal.yml --output src/terminal-static.svg --strict --static
+        env:
+          NODE_ENV: production
+          TZ: 'America/New_York'
+
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet src/terminal.svg; then
+          if git diff --quiet src/terminal.svg src/terminal-static.svg; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -68,7 +77,7 @@ jobs:
         if: steps.check_changes.outputs.changed == 'true'
         uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
-          add: 'src/terminal.svg'
+          add: 'src/terminal.svg src/terminal-static.svg'
           message: 'chore: update terminal SVG [skip ci]'
           default_author: github_actions
           push: true

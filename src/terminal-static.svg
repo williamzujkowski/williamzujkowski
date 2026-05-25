@@ -2,16 +2,11 @@
   role="img" aria-label="Static terminal showing 65 lines">
   <title>Static terminal showing 65 lines</title>
   <desc>william@dev:~$ cat /etc/motd
-╔════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                        ║
 ║ WILLIAM&apos;S DEV TERMINAL v2026.05                                                        ║
 ║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
 ║ Overcast 74°F | Humidity: 82%                                                          ║
-║                                                                                        ║
-╚════════════════════════════════════════════════════════════════════════════════════════╝
 william@dev:~$ neofetch --ascii_distro dev-machine
 william@dev-machine
-───────────────────
 OS:        DadOS LTS (Linux + Coffee)
 Shell:     /bin/dad-jokes
 Uptime:    20+ years (one continuous session)
@@ -30,42 +25,26 @@ william@dev:~$ status --me
   ✓ dad-joke buffer overflowing
 
 william@dev:~$ uptime --emotional
- .  built with care (and caffeine)
+    built with care (and caffeine)
 william@dev:~$ ./dad-joke --random --format=fancy
-╔════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                        ║
 ║ DAD JOKE OF THE DAY - May 25                                                           ║
 ║ Category: SECURITY                                                                     ║
-║                                                                                        ║
 ║ Q: Why did the pentester bring a ladder to work?                                       ║
-║                                                                                        ║
 ║ A: To escalate privileges!                                                             ║
-║                                                                                        ║
-╚════════════════════════════════════════════════════════════════════════════════════════╝
 william@dev:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
-╔════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                        ║
 ║ GITHUB: @williamzujkowski                                                              ║
 ║ Repos: 88    Followers: 25                                                             ║
 ║ Following: 51    Gists: 134                                                            ║
 ║ Member since: Sep 2015                                                                 ║
-║                                                                                        ║
-╚════════════════════════════════════════════════════════════════════════════════════════╝
 william@dev:~$ cat /etc/goodbye.txt
-╔════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                        ║
 ║ Thanks for visiting!                                                                   ║
-║                                                                                        ║
 ║ May your:                                                                              ║
 ║   - Code compile without warnings                                                      ║
 ║   - Tests pass on first try                                                            ║
 ║   - Bugs be easily reproducible                                                        ║
 ║   - Coffee stay hot                                                                    ║
 ║   - Git conflicts be minimal                                                           ║
-║                                                                                        ║
-║ See you in the commits!                                                                ║
-║                                                                                        ║
-╚════════════════════════════════════════════════════════════════════════════════════════╝</desc>
+║ See you in the commits!                                                                ║</desc>
   <style>.tt { font-family: JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace; font-size: 13px; white-space: pre; }</style>
   <defs>
     
@@ -84,7 +63,7 @@ william@dev:~$ cat /etc/goodbye.txt
       </feMerge>
     </filter>
 
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="120%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
       <feOffset dx="0" dy="6" result="offsetblur"/>
       <feFlood flood-color="#000000" flood-opacity="0.55"/>
@@ -213,7 +192,7 @@ william@dev:~$ cat /etc/goodbye.txt
         william@dev:~$ uptime --emotional
       </text>
       <text class="tt" y="603">
-        <tspan fill="#bf616a"> . </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan>
+        <tspan fill="#bf616a">   </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan>
       </text>
       <text class="tt" y="624" fill="#d8dee9">
         william@dev:~$ ./dad-joke --random --format=fancy
@@ -322,6 +301,6 @@ william@dev:~$ cat /etc/goodbye.txt
       </text>
       </g>
     </g>
-    <rect x="0" y="40" width="1000" height="680" fill="url(#scanlines)" pointer-events="none" opacity="0.5" class="scanline-overlay"/>
+    <rect x="0" y="40" width="1000" height="680" fill="url(#scanlines)" pointer-events="none" opacity="0.5"/>
   </g>
 </svg>

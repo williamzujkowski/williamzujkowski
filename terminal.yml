@@ -18,7 +18,9 @@ terminal:
   lineHeight: 1.6
 
 chrome:
-  titleFontFamily: "system-ui, -apple-system, 'Segoe UI', sans-serif"
+  # titleFontFamily was declared on the TS interface but missing from the zod
+  # schema, so --strict rejected it. Tracked upstream (issue forthcoming).
+  # Re-enable once the schema fix lands.
   titleFontSize: 13
 
 effects:

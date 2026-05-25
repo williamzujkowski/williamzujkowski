@@ -4,7 +4,7 @@
   <desc>william@dev:~$ cat /etc/motd
 ║ WILLIAM&apos;S DEV TERMINAL v2026.05                                                        ║
 ║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
-║ Overcast 74°F | Humidity: 82%                                                          ║
+║ Overcast 74°F | Humidity: 79%                                                          ║
 william@dev:~$ neofetch --ascii_distro dev-machine
 william@dev-machine
 OS:        DadOS LTS (Linux + Coffee)
@@ -120,7 +120,7 @@ william@dev:~$ cat /etc/goodbye.txt
         ║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
       </text>
       <text class="tt" y="104">
-        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">Overcast 74°F | Humidity: 82%</tspan><tspan fill="#d8dee9">                                                          ║</tspan>
+        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">Overcast 74°F | Humidity: 79%</tspan><tspan fill="#d8dee9">                                                          ║</tspan>
       </text>
       <text class="tt" y="125" fill="#d8dee9">
         ║                                                                                        ║
@@ -301,6 +301,7 @@ william@dev:~$ cat /etc/goodbye.txt
       </text>
       </g>
     </g>
+    
     <rect x="0" y="40" width="1000" height="680" fill="url(#scanlines)" pointer-events="none" opacity="0.5"/>
   </g>
 </svg>

@@ -6,7 +6,7 @@
 ║                                                                                        ║
 ║ WILLIAM&apos;S DEV TERMINAL v2026.05                                                        ║
 ║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
-║ Mist 62°F | Humidity: 96%                                                              ║
+║ Mist 63°F | Humidity: 93%                                                              ║
 ║                                                                                        ║
 ╚════════════════════════════════════════════════════════════════════════════════════════╝
 william@dev:~$ neofetch --ascii_distro dev-machine
@@ -324,7 +324,7 @@ william@dev:~$ cat /etc/goodbye.txt
     <g id="line-5" transform="translate(0, 104)" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="1000ms" dur="10ms" fill="freeze"/>
       <text class="tt">
-        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">Mist 62°F | Humidity: 96%</tspan><tspan fill="#d8dee9">                                                              ║</tspan>
+        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">Mist 63°F | Humidity: 93%</tspan><tspan fill="#d8dee9">                                                              ║</tspan>
       </text>
     </g>
 

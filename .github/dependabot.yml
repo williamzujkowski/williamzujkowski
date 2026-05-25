@@ -1,0 +1,13 @@
+# Keep SHA-pinned GitHub Actions updated automatically.
+# Without this, the pinned commits in .github/workflows/* would silently rot.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    labels:
+      - dependencies
+      - github-actions
+    commit-message:
+      prefix: ci

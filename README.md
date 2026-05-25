@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <em>This terminal is <strong>alive</strong> — updates every 6 hours with fresh jokes and data.
-  <br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a>, a tool I made for generating animated SVG terminals.</em>
+  <em>This terminal is <strong>alive</strong> — updates every 6 hours with fresh jokes, live weather, and live GitHub stats.
+  <br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a> (46 blocks, 8 themes, zero runtime deps). Theme rotates daily.</em>
 </p>
 
 ---
@@ -26,9 +26,10 @@
 
 ### What I'm focused on
 
-- **Multi-agent AI** — Built [nexus-agents](https://github.com/williamzujkowski/nexus-agents) because I was tired of switching between Claude, Gemini, and Codex windows. Routes tasks across 15 models and 5 providers with consensus voting.
+- **Multi-agent AI governance** — [nexus-agents](https://github.com/williamzujkowski/nexus-agents) gives AI coding agents the guardrails I wish I had: adversarial review, drift-detected rules, immutable audit, closed-loop telemetry.
 - **Security engineering** — Compliance automation, vuln scanning, supply chain. The boring stuff that prevents the exciting stuff.
 - **Homelab** — Bare-metal BOSH + Cloud Foundry in the basement. Terraform, Proxmox, a Pi cluster running Docker Swarm. Yes, on purpose.
+- **Live-coded music with LLMs** — [live-coding-music-mcp](https://github.com/williamzujkowski/live-coding-music-mcp) hands Claude the keys to Strudel.cc. Apparently the internet liked it.
 
 ---
 
@@ -36,12 +37,12 @@
 
 | Project | Description | |
 |:--------|:------------|:--|
-| [**nexus-agents**](https://github.com/williamzujkowski/nexus-agents) | Multi-model AI orchestration — 28 MCP tools, 15 models, 5 providers, consensus voting. 24k+ tests | ![Stars](https://img.shields.io/github/stars/williamzujkowski/nexus-agents?style=flat&color=bd93f9) |
-| [**strudel-mcp-server**](https://github.com/williamzujkowski/strudel-mcp-server) | MCP server giving AI control over Strudel.cc for live music coding | ![Stars](https://img.shields.io/github/stars/williamzujkowski/strudel-mcp-server?style=flat&color=bd93f9) |
-| [**svg-terminal**](https://github.com/williamzujkowski/svg-terminal) | Generate animated SVG terminals for GitHub READMEs. 16 block types, 3 themes, responsive viewBox | ![Stars](https://img.shields.io/github/stars/williamzujkowski/svg-terminal?style=flat&color=bd93f9) |
-| [**vuln-bot**](https://github.com/williamzujkowski/vuln-bot) | Automated vulnerability intelligence platform — harvests, scores, and publishes daily briefings | ![Stars](https://img.shields.io/github/stars/williamzujkowski/vuln-bot?style=flat&color=bd93f9) |
-| [**standards**](https://github.com/williamzujkowski/standards) | Battle-tested LLM software development standards | ![Stars](https://img.shields.io/github/stars/williamzujkowski/standards?style=flat&color=bd93f9) |
-| [**mcp-standards-server**](https://github.com/williamzujkowski/mcp-standards-server) | MCP server for NIST 800-53r5 compliance checking | ![Stars](https://img.shields.io/github/stars/williamzujkowski/mcp-standards-server?style=flat&color=bd93f9) |
+| [**live-coding-music-mcp**](https://github.com/williamzujkowski/live-coding-music-mcp) | MCP server giving Claude direct control of Strudel.cc for AI-assisted live coding | ![Stars](https://img.shields.io/github/stars/williamzujkowski/live-coding-music-mcp?style=flat&color=bd93f9) |
+| [**standards**](https://github.com/williamzujkowski/standards) | Battle-tested LLM software-development standards — start any project right in 30 seconds | ![Stars](https://img.shields.io/github/stars/williamzujkowski/standards?style=flat&color=bd93f9) |
+| [**nexus-agents**](https://github.com/williamzujkowski/nexus-agents) | Governance substrate for AI coding agents — adversarial review, drift-detected rules, immutable audit | ![Stars](https://img.shields.io/github/stars/williamzujkowski/nexus-agents?style=flat&color=bd93f9) |
+| [**cognitive-toolworks**](https://github.com/williamzujkowski/cognitive-toolworks) | Generate cross-platform agent artifacts (SKILL.md, AGENTS.md) using LLM intelligence | ![Stars](https://img.shields.io/github/stars/williamzujkowski/cognitive-toolworks?style=flat&color=bd93f9) |
+| [**svg-terminal**](https://github.com/williamzujkowski/svg-terminal) | Generate animated SVG terminals for GitHub READMEs — 46 blocks, 8 themes, deterministic CI builds | ![Stars](https://img.shields.io/github/stars/williamzujkowski/svg-terminal?style=flat&color=bd93f9) |
+| [**mcp-standards-server**](https://github.com/williamzujkowski/mcp-standards-server) | MCP server for NIST 800-53r5 compliance checking and standards enforcement | ![Stars](https://img.shields.io/github/stars/williamzujkowski/mcp-standards-server?style=flat&color=bd93f9) |
 
 ---
 

@@ -29,12 +29,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '22'
 
@@ -47,7 +47,10 @@ jobs:
           npm link
 
       - name: Generate Terminal SVG
-        run: svg-terminal generate --config terminal.yml --output src/terminal.svg
+        # --strict promotes unknown-config-key warnings to hard errors so
+        # generator drift (e.g. svg-terminal renames a config key) breaks
+        # the build loudly instead of silently dropping the value.
+        run: svg-terminal generate --config terminal.yml --output src/terminal.svg --strict
         env:
           NODE_ENV: production
           TZ: 'America/New_York'
@@ -63,7 +66,7 @@ jobs:
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           add: 'src/terminal.svg'
           message: 'chore: update terminal SVG [skip ci]'

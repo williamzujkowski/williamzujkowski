@@ -11,10 +11,14 @@ jobs:
     permissions:
       contents: write
 
+    concurrency:
+      group: update-blog-posts
+      cancel-in-progress: true
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Pull latest blog posts
-        uses: gautamkrishnar/blog-post-workflow@v1
+        uses: gautamkrishnar/blog-post-workflow@2786e54a01b71aec80a5118c2bd6b5044e842597 # 1.9.6
         with:
           feed_list: "https://williamzujkowski.github.io/feed.xml"
           max_post_count: 5

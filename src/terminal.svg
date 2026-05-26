@@ -1,10 +1,10 @@
 <svg width="1000" height="720" viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg"
-  role="img" aria-label="Animated terminal showing: cat /etc/motd, neofetch --ascii_distro dev-machine, status --me, uptime --emotional, ./dad-joke --random --format=fancy">
-  <title>Animated terminal showing: cat /etc/motd, neofetch --ascii_distro dev-machine, status --me, uptime --emotional, ./dad-joke --random --format=fancy</title>
+  role="img" aria-label="William Zujkowski&apos;s GitHub profile terminal — security engineer, multi-agent AI builder, homelabber, dad-joke connoisseur. Refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke.">
+  <title>William Zujkowski&apos;s GitHub profile terminal — security engineer, multi-agent AI builder, homelabber, dad-joke connoisseur. Refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke.</title>
   <desc>william@dev:~$ cat /etc/motd
-║ WILLIAM&apos;S DEV TERMINAL v2026.05                                                        ║
-║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
-║ Overcast 74°F | Humidity: 79%                                                          ║
+WILLIAM&apos;S DEV TERMINAL v2026.05
+Security • AI/ML • Homelab • Dad Jokes
+Overcast 65°F | Humidity: 97%
 william@dev:~$ neofetch --ascii_distro dev-machine
 william@dev-machine
 OS:        DadOS LTS (Linux + Coffee)
@@ -18,33 +18,33 @@ Editor:    nvim
 ● ● ● ● ● ● ● ●
 william@dev:~$ status --me
 
-  ✓ nexus-agents online · 15 models
-  ✓ homelab    BOSH + CF healthy
-  ✓ vuln-bot   briefing shipped
-  ⚠ coffee     refill required
-  ✓ dad-joke buffer overflowing
+✓ nexus-agents online · 15 models
+✓ homelab    BOSH + CF healthy
+✓ vuln-bot   briefing shipped
+⚠ coffee     refill required
+✓ dad-joke buffer overflowing
 
 william@dev:~$ uptime --emotional
-    built with care (and caffeine)
+built with care (and caffeine)
 william@dev:~$ ./dad-joke --random --format=fancy
-║ DAD JOKE OF THE DAY - May 25                                                           ║
-║ Category: SECURITY                                                                     ║
-║ Q: Why did the pentester bring a ladder to work?                                       ║
-║ A: To escalate privileges!                                                             ║
+DAD JOKE OF THE DAY - May 26
+Category: SECURITY
+Q: What do you call a CVE that nobody patches?
+A: An invitation.
 william@dev:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
-║ GITHUB: @williamzujkowski                                                              ║
-║ Repos: 88    Followers: 25                                                             ║
-║ Following: 51    Gists: 134                                                            ║
-║ Member since: Sep 2015                                                                 ║
+GITHUB: @williamzujkowski
+Repos: 88    Followers: 25
+Following: 51    Gists: 134
+Member since: Sep 2015
 william@dev:~$ cat /etc/goodbye.txt
-║ Thanks for visiting!                                                                   ║
-║ May your:                                                                              ║
-║   - Code compile without warnings                                                      ║
-║   - Tests pass on first try                                                            ║
-║   - Bugs be easily reproducible                                                        ║
-║   - Coffee stay hot                                                                    ║
-║   - Git conflicts be minimal                                                           ║
-║ See you in the commits!                                                                ║</desc>
+Thanks for visiting!
+May your:
+- Code compile without warnings
+- Tests pass on first try
+- Bugs be easily reproducible
+- Coffee stay hot
+- Git conflicts be minimal
+See you in the commits!</desc>
   <style>
     .tt { font-family: JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace; font-size: 13px; white-space: pre; }
     @keyframes scanlineScroll {
@@ -59,6 +59,14 @@ william@dev:~$ cat /etc/goodbye.txt
        before its scheduled time. */
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .fade-in { animation: fadeIn 10ms linear backwards; }
+    /* frame-cycle-N (closes #69): one rule per unique frame count across the
+       animated blocks in this render. Each frame text element carries the
+       class + an inline animation-delay = i*frameDur. The static opacity
+       attribute (frame 0 = 1, others = 0) is the SMIL-stripped AND
+       reduced-motion fallback — frame 0 visible, rest invisible. Under
+       prefers-reduced-motion the @media block kills animation-duration so
+       the underlying opacity attribute applies. */
+    @keyframes frame-cycle-5 { 0%, 20.0000% { opacity: 1; } 20.0100%, 100% { opacity: 0; } }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -103,26 +111,26 @@ william@dev:~$ cat /etc/goodbye.txt
     
     <rect x="0" y="0" width="1000" height="720"
           rx="12" ry="12"
-          fill="#2e3440"/>
+          fill="#272822"/>
     
     <rect x="0" y="0" width="1000" height="40"
           rx="12" ry="12"
-          fill="#3b4252"/>
+          fill="#1e1f1c"/>
     <rect x="0" y="16" width="1000" height="16"
-          fill="#3b4252"/>
+          fill="#1e1f1c"/>
     <g id="window-controls">
-      <circle cx="14" cy="16" r="6" fill="#bf616a" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
-      <circle cx="34" cy="16" r="6" fill="#ebcb8b" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
-      <circle cx="54" cy="16" r="6" fill="#a3be8c" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="14" cy="16" r="6" fill="#f92672" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="34" cy="16" r="6" fill="#e6db74" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="54" cy="16" r="6" fill="#a6e22e" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
     </g>
     <text x="500" y="24.55"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13"
-          fill="#d8dee9" text-anchor="middle">
+          font-family="-apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Helvetica, Arial, sans-serif" font-size="13"
+          fill="#75715e" text-anchor="middle">
       william@dev-machine:~
     </text>
     
     <rect x="0" y="40" width="1000"
-          height="680" fill="#2e3440"/>
+          height="680" fill="#272822"/>
     <g clip-path="url(#terminalViewport)">
       <g id="scrollContainer" transform="translate(12, 54)" filter="url(#textGlow)">
         
@@ -133,11 +141,11 @@ william@dev:~$ cat /etc/goodbye.txt
         
     <g transform="translate(0, 0)">
       <defs><clipPath id="cmdrev-0"><rect x="117" y="-13" width="104" height="26"><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88;96;104" keyTimes="0.0000;0.0769;0.1538;0.2308;0.3077;0.3846;0.4615;0.5385;0.6154;0.6923;0.7692;0.8462;0.9231;1.0000" calcMode="discrete" begin="0ms" dur="500ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 0ms" fill="#a3be8c" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
-      <text class="tt" x="117" fill="#a3be8c" textLength="104" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-0)">cat /etc/motd</text>
+      <text class="tt fade-in" style="animation-delay: 0ms" fill="#a6e22e" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
+      <text class="tt" x="117" fill="#a6e22e" textLength="104" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-0)">cat /etc/motd</text>
       
     <rect x="117" y="-11" width="8" height="13"
-          fill="#88c0d0" opacity="0">
+          fill="#f8f8f2" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="0ms" dur="10ms" fill="freeze"/>
       <animate attributeName="opacity" to="0" begin="500ms" dur="10ms" fill="freeze"/>
       <animate attributeName="x" values="117;117;125;133;141;149;157;165;173;181;189;197;205;213" keyTimes="0.0000;0.0769;0.1538;0.2308;0.3077;0.3846;0.4615;0.5385;0.6154;0.6923;0.7692;0.8462;0.9231;1.0000" calcMode="discrete" begin="0ms" dur="500ms" fill="freeze"/>
@@ -145,54 +153,54 @@ william@dev:~$ cat /etc/goodbye.txt
     </g>
 
     <g transform="translate(0, 20.8)" class="fade-in" style="animation-delay: 800ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
     <g transform="translate(0, 41.6)" class="fade-in" style="animation-delay: 850ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 62.4)" class="fade-in" style="animation-delay: 900ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ WILLIAM&apos;S DEV TERMINAL v2026.05                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 83.2)" class="fade-in" style="animation-delay: 950ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
       </text>
     </g>
 
     <g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms">
       <text class="tt">
-        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">Overcast 74°F | Humidity: 79%</tspan><tspan fill="#d8dee9">                                                          ║</tspan>
+        <tspan fill="#f8f8f2">║ </tspan><tspan fill="#66d9ef">Overcast 65°F | Humidity: 97%</tspan><tspan fill="#f8f8f2">                                                          ║</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 124.8)" class="fade-in" style="animation-delay: 1050ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 145.6)" class="fade-in" style="animation-delay: 1100ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>
 
     <g transform="translate(0, 166.4)">
       <defs><clipPath id="cmdrev-8"><rect x="117" y="-13" width="280" height="26"><set attributeName="width" to="0" begin="0s" end="2150ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88;96;104;112;120;128;136;144;152;160;168;176;184;192;200;208;216;224;232;240;248;256;264;272;280" keyTimes="0.0000;0.0286;0.0571;0.0857;0.1143;0.1429;0.1714;0.2000;0.2286;0.2571;0.2857;0.3143;0.3429;0.3714;0.4000;0.4286;0.4571;0.4857;0.5143;0.5429;0.5714;0.6000;0.6286;0.6571;0.6857;0.7143;0.7429;0.7714;0.8000;0.8286;0.8571;0.8857;0.9143;0.9429;0.9714;1.0000" calcMode="discrete" begin="2150ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 2150ms" fill="#a3be8c" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
-      <text class="tt" x="117" fill="#a3be8c" textLength="280" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-8)">neofetch --ascii_distro dev-machine</text>
+      <text class="tt fade-in" style="animation-delay: 2150ms" fill="#a6e22e" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
+      <text class="tt" x="117" fill="#a6e22e" textLength="280" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-8)">neofetch --ascii_distro dev-machine</text>
       
     <rect x="117" y="-11" width="8" height="13"
-          fill="#88c0d0" opacity="0">
+          fill="#f8f8f2" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="2150ms" dur="10ms" fill="freeze"/>
       <animate attributeName="opacity" to="0" begin="3350ms" dur="10ms" fill="freeze"/>
       <animate attributeName="x" values="117;117;125;133;141;149;157;165;173;181;189;197;205;213;221;229;237;245;253;261;269;277;285;293;301;309;317;325;333;341;349;357;365;373;381;389" keyTimes="0.0000;0.0286;0.0571;0.0857;0.1143;0.1429;0.1714;0.2000;0.2286;0.2571;0.2857;0.3143;0.3429;0.3714;0.4000;0.4286;0.4571;0.4857;0.5143;0.5429;0.5714;0.6000;0.6286;0.6571;0.6857;0.7143;0.7429;0.7714;0.8000;0.8286;0.8571;0.8857;0.9143;0.9429;0.9714;1.0000" calcMode="discrete" begin="2150ms" dur="1200ms" fill="freeze"/>
@@ -201,77 +209,77 @@ william@dev:~$ cat /etc/goodbye.txt
 
     <g transform="translate(0, 187.2)" class="fade-in" style="animation-delay: 3650ms">
       <text class="tt">
-        <tspan fill="#88c0d0">william@dev-machine</tspan>
+        <tspan fill="#66d9ef">william@dev-machine</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 208)" class="fade-in" style="animation-delay: 3700ms">
       <text class="tt">
-        <tspan fill="#88c0d0">───────────────────</tspan>
+        <tspan fill="#66d9ef">───────────────────</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 228.8)" class="fade-in" style="animation-delay: 3750ms">
       <text class="tt">
-        <tspan fill="#88c0d0">OS</tspan><tspan fill="#d8dee9">:        DadOS LTS (Linux + Coffee)</tspan>
+        <tspan fill="#66d9ef">OS</tspan><tspan fill="#f8f8f2">:        DadOS LTS (Linux + Coffee)</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 249.6)" class="fade-in" style="animation-delay: 3800ms">
       <text class="tt">
-        <tspan fill="#88c0d0">Shell</tspan><tspan fill="#d8dee9">:     /bin/dad-jokes</tspan>
+        <tspan fill="#66d9ef">Shell</tspan><tspan fill="#f8f8f2">:     /bin/dad-jokes</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 270.4)" class="fade-in" style="animation-delay: 3850ms">
       <text class="tt">
-        <tspan fill="#88c0d0">Uptime</tspan><tspan fill="#d8dee9">:    20+ years (one continuous session)</tspan>
+        <tspan fill="#66d9ef">Uptime</tspan><tspan fill="#f8f8f2">:    20+ years (one continuous session)</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 291.2)" class="fade-in" style="animation-delay: 3900ms">
       <text class="tt">
-        <tspan fill="#88c0d0">Role</tspan><tspan fill="#d8dee9">:      Security Engineer • Multi-Agent AI • Homelabber</tspan>
+        <tspan fill="#66d9ef">Role</tspan><tspan fill="#f8f8f2">:      Security Engineer • Multi-Agent AI • Homelabber</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 312)" class="fade-in" style="animation-delay: 3950ms">
       <text class="tt">
-        <tspan fill="#88c0d0">Location</tspan><tspan fill="#d8dee9">:  southern PA, basement-datacenter</tspan>
+        <tspan fill="#66d9ef">Location</tspan><tspan fill="#f8f8f2">:  southern PA, basement-datacenter</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 332.8)" class="fade-in" style="animation-delay: 4000ms">
       <text class="tt">
-        <tspan fill="#88c0d0">Languages</tspan><tspan fill="#d8dee9">: TypeScript, Python, Go, Rust</tspan>
+        <tspan fill="#66d9ef">Languages</tspan><tspan fill="#f8f8f2">: TypeScript, Python, Go, Rust</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 353.6)" class="fade-in" style="animation-delay: 4050ms">
       <text class="tt">
-        <tspan fill="#88c0d0">Editor</tspan><tspan fill="#d8dee9">:    nvim</tspan>
+        <tspan fill="#66d9ef">Editor</tspan><tspan fill="#f8f8f2">:    nvim</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 374.4)" class="fade-in" style="animation-delay: 4100ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         
       </text>
     </g>
 
     <g transform="translate(0, 395.2)" class="fade-in" style="animation-delay: 4150ms">
       <text class="tt">
-        <tspan fill="#bf616a">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#a3be8c">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#ebcb8b">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#5e81ac">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#b48ead">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#88c0d0">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#eceff4">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#d08770">●</tspan>
+        <tspan fill="#f92672">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#a6e22e">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#e6db74">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#66d9ef">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#ae81ff">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#66d9ef">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#f8f8f2">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#fd971f">●</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 416)">
       <defs><clipPath id="cmdrev-20"><rect x="117" y="-13" width="88" height="26"><set attributeName="width" to="0" begin="0s" end="5400ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88" keyTimes="0.0000;0.0909;0.1818;0.2727;0.3636;0.4545;0.5455;0.6364;0.7273;0.8182;0.9091;1.0000" calcMode="discrete" begin="5400ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 5400ms" fill="#a3be8c" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
-      <text class="tt" x="117" fill="#a3be8c" textLength="88" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-20)">status --me</text>
+      <text class="tt fade-in" style="animation-delay: 5400ms" fill="#a6e22e" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
+      <text class="tt" x="117" fill="#a6e22e" textLength="88" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-20)">status --me</text>
       
     <rect x="117" y="-11" width="8" height="13"
-          fill="#88c0d0" opacity="0">
+          fill="#f8f8f2" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="5400ms" dur="10ms" fill="freeze"/>
       <animate attributeName="opacity" to="0" begin="6600ms" dur="10ms" fill="freeze"/>
       <animate attributeName="x" values="117;117;125;133;141;149;157;165;173;181;189;197" keyTimes="0.0000;0.0909;0.1818;0.2727;0.3636;0.4545;0.5455;0.6364;0.7273;0.8182;0.9091;1.0000" calcMode="discrete" begin="5400ms" dur="1200ms" fill="freeze"/>
@@ -279,54 +287,54 @@ william@dev:~$ cat /etc/goodbye.txt
     </g>
 
     <g transform="translate(0, 436.8)" class="fade-in" style="animation-delay: 6900ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         
       </text>
     </g>
 
     <g transform="translate(0, 457.6)" class="fade-in" style="animation-delay: 6950ms">
       <text class="tt">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> nexus-agents online · 15 models</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> nexus-agents online · 15 models</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 478.4)" class="fade-in" style="animation-delay: 7000ms">
       <text class="tt">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> homelab    BOSH + CF healthy</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> homelab    BOSH + CF healthy</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 499.2)" class="fade-in" style="animation-delay: 7050ms">
       <text class="tt">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> vuln-bot   briefing shipped</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> vuln-bot   briefing shipped</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 520)" class="fade-in" style="animation-delay: 7100ms">
       <text class="tt">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#ebcb8b">⚠</tspan><tspan fill="#d8dee9"> coffee     refill required</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#e6db74">⚠</tspan><tspan fill="#f8f8f2"> coffee     refill required</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 540.8)" class="fade-in" style="animation-delay: 7150ms">
       <text class="tt">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> dad-joke buffer overflowing</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> dad-joke buffer overflowing</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 561.6)" class="fade-in" style="animation-delay: 7200ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         
       </text>
     </g>
 
     <g transform="translate(0, 582.4)">
       <defs><clipPath id="cmdrev-28"><rect x="117" y="-13" width="144" height="26"><set attributeName="width" to="0" begin="0s" end="8450ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88;96;104;112;120;128;136;144" keyTimes="0.0000;0.0556;0.1111;0.1667;0.2222;0.2778;0.3333;0.3889;0.4444;0.5000;0.5556;0.6111;0.6667;0.7222;0.7778;0.8333;0.8889;0.9444;1.0000" calcMode="discrete" begin="8450ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 8450ms" fill="#a3be8c" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
-      <text class="tt" x="117" fill="#a3be8c" textLength="144" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-28)">uptime --emotional</text>
+      <text class="tt fade-in" style="animation-delay: 8450ms" fill="#a6e22e" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
+      <text class="tt" x="117" fill="#a6e22e" textLength="144" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-28)">uptime --emotional</text>
       
     <rect x="117" y="-11" width="8" height="13"
-          fill="#88c0d0" opacity="0">
+          fill="#f8f8f2" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="8450ms" dur="10ms" fill="freeze"/>
       <animate attributeName="opacity" to="0" begin="9650ms" dur="10ms" fill="freeze"/>
       <animate attributeName="x" values="117;117;125;133;141;149;157;165;173;181;189;197;205;213;221;229;237;245;253" keyTimes="0.0000;0.0556;0.1111;0.1667;0.2222;0.2778;0.3333;0.3889;0.4444;0.5000;0.5556;0.6111;0.6667;0.7222;0.7778;0.8333;0.8889;0.9444;1.0000" calcMode="discrete" begin="8450ms" dur="1200ms" fill="freeze"/>
@@ -334,16 +342,16 @@ william@dev:~$ cat /etc/goodbye.txt
     </g>
 
     <g transform="translate(0, 603.2)" class="fade-in" style="animation-delay: 9950ms">
-      <text class="tt" opacity="1"><tspan fill="#bf616a">   </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan><animate attributeName="opacity" values="1;0;0;0;0;1" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000;1.0000" calcMode="discrete" dur="1.250s" begin="9950ms" repeatCount="indefinite" fill="freeze"/></text><text class="tt" opacity="0"><tspan fill="#bf616a"> ♥ </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan><animate attributeName="opacity" values="0;1;0;0;0;0" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000;1.0000" calcMode="discrete" dur="1.250s" begin="9950ms" repeatCount="indefinite" fill="freeze"/></text><text class="tt" opacity="0"><tspan fill="#bf616a"> ♥ </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan><animate attributeName="opacity" values="0;0;1;0;0;0" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000;1.0000" calcMode="discrete" dur="1.250s" begin="9950ms" repeatCount="indefinite" fill="freeze"/></text><text class="tt" opacity="0"><tspan fill="#bf616a"> ♥ </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan><animate attributeName="opacity" values="0;0;0;1;0;0" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000;1.0000" calcMode="discrete" dur="1.250s" begin="9950ms" repeatCount="indefinite" fill="freeze"/></text><text class="tt" opacity="0"><tspan fill="#bf616a">   </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan><animate attributeName="opacity" values="0;0;0;0;1;0" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000;1.0000" calcMode="discrete" dur="1.250s" begin="9950ms" repeatCount="indefinite" fill="freeze"/></text>
+      <text class="tt frame-cycle-5" opacity="1" style="animation: frame-cycle-5 1250ms linear 0ms infinite"><tspan fill="#f92672">   </tspan><tspan fill="#f8f8f2"> built with care (and caffeine)</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 250ms infinite"><tspan fill="#f92672"> ♥ </tspan><tspan fill="#f8f8f2"> built with care (and caffeine)</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 500ms infinite"><tspan fill="#f92672"> ♥ </tspan><tspan fill="#f8f8f2"> built with care (and caffeine)</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 750ms infinite"><tspan fill="#f92672"> ♥ </tspan><tspan fill="#f8f8f2"> built with care (and caffeine)</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 1000ms infinite"><tspan fill="#f92672">   </tspan><tspan fill="#f8f8f2"> built with care (and caffeine)</tspan></text>
     </g>
 
     <g transform="translate(0, 624)">
       <defs><clipPath id="cmdrev-30"><rect x="117" y="-13" width="272" height="26"><set attributeName="width" to="0" begin="0s" end="11150ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88;96;104;112;120;128;136;144;152;160;168;176;184;192;200;208;216;224;232;240;248;256;264;272" keyTimes="0.0000;0.0294;0.0588;0.0882;0.1176;0.1471;0.1765;0.2059;0.2353;0.2647;0.2941;0.3235;0.3529;0.3824;0.4118;0.4412;0.4706;0.5000;0.5294;0.5588;0.5882;0.6176;0.6471;0.6765;0.7059;0.7353;0.7647;0.7941;0.8235;0.8529;0.8824;0.9118;0.9412;0.9706;1.0000" calcMode="discrete" begin="11150ms" dur="1800ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 11150ms" fill="#a3be8c" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
-      <text class="tt" x="117" fill="#a3be8c" textLength="272" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-30)">./dad-joke --random --format=fancy</text>
+      <text class="tt fade-in" style="animation-delay: 11150ms" fill="#a6e22e" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
+      <text class="tt" x="117" fill="#a6e22e" textLength="272" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-30)">./dad-joke --random --format=fancy</text>
       
     <rect x="117" y="-11" width="8" height="13"
-          fill="#88c0d0" opacity="0">
+          fill="#f8f8f2" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="11150ms" dur="10ms" fill="freeze"/>
       <animate attributeName="opacity" to="0" begin="12950ms" dur="10ms" fill="freeze"/>
       <animate attributeName="x" values="117;117;125;133;141;149;157;165;173;181;189;197;205;213;221;229;237;245;253;261;269;277;285;293;301;309;317;325;333;341;349;357;365;373;381" keyTimes="0.0000;0.0294;0.0588;0.0882;0.1176;0.1471;0.1765;0.2059;0.2353;0.2647;0.2941;0.3235;0.3529;0.3824;0.4118;0.4412;0.4706;0.5000;0.5294;0.5588;0.5882;0.6176;0.6471;0.6765;0.7059;0.7353;0.7647;0.7941;0.8235;0.8529;0.8824;0.9118;0.9412;0.9706;1.0000" calcMode="discrete" begin="11150ms" dur="1800ms" fill="freeze"/>
@@ -351,72 +359,72 @@ william@dev:~$ cat /etc/goodbye.txt
     </g>
 
     <g transform="translate(0, 644.8)" class="fade-in" style="animation-delay: 13360ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
     <g transform="translate(0, 665.6)" class="fade-in" style="animation-delay: 13410ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 686.4)" class="fade-in" style="animation-delay: 13460ms">
-      <text class="tt" fill="#d8dee9">
-        ║ DAD JOKE OF THE DAY - May 25                                                           ║
+      <text class="tt" fill="#f8f8f2">
+        ║ DAD JOKE OF THE DAY - May 26                                                           ║
       </text>
     </g>
 
     <g transform="translate(0, 707.2)" class="fade-in" style="animation-delay: 13510ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ Category: SECURITY                                                                     ║
       </text>
     </g>
 
     <g transform="translate(0, 728)" class="fade-in" style="animation-delay: 13560ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 748.8)" class="fade-in" style="animation-delay: 13610ms">
-      <text class="tt" fill="#d8dee9">
-        ║ Q: Why did the pentester bring a ladder to work?                                       ║
+      <text class="tt" fill="#f8f8f2">
+        ║ Q: What do you call a CVE that nobody patches?                                         ║
       </text>
     </g>
 
     <g transform="translate(0, 769.6)" class="fade-in" style="animation-delay: 13660ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 790.4)" class="fade-in" style="animation-delay: 13710ms">
-      <text class="tt" fill="#d8dee9">
-        ║ A: To escalate privileges!                                                             ║
+      <text class="tt" fill="#f8f8f2">
+        ║ A: An invitation.                                                                      ║
       </text>
     </g>
 
     <g transform="translate(0, 811.2)" class="fade-in" style="animation-delay: 13760ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 832)" class="fade-in" style="animation-delay: 13810ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>
 
     <g transform="translate(0, 852.8)">
       <defs><clipPath id="cmdrev-41"><rect x="117" y="-13" width="488" height="26"><set attributeName="width" to="0" begin="0s" end="15460ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88;96;104;112;120;128;136;144;152;160;168;176;184;192;200;208;216;224;232;240;248;256;264;272;280;288;296;304;312;320;328;336;344;352;360;368;376;384;392;400;408;416;424;432;440;448;456;464;472;480;488" keyTimes="0.0000;0.0164;0.0328;0.0492;0.0656;0.0820;0.0984;0.1148;0.1311;0.1475;0.1639;0.1803;0.1967;0.2131;0.2295;0.2459;0.2623;0.2787;0.2951;0.3115;0.3279;0.3443;0.3607;0.3770;0.3934;0.4098;0.4262;0.4426;0.4590;0.4754;0.4918;0.5082;0.5246;0.5410;0.5574;0.5738;0.5902;0.6066;0.6230;0.6393;0.6557;0.6721;0.6885;0.7049;0.7213;0.7377;0.7541;0.7705;0.7869;0.8033;0.8197;0.8361;0.8525;0.8689;0.8852;0.9016;0.9180;0.9344;0.9508;0.9672;0.9836;1.0000" calcMode="discrete" begin="15460ms" dur="500ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 15460ms" fill="#a3be8c" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
-      <text class="tt" x="117" fill="#a3be8c" textLength="488" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-41)">gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;</text>
+      <text class="tt fade-in" style="animation-delay: 15460ms" fill="#a6e22e" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
+      <text class="tt" x="117" fill="#a6e22e" textLength="488" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-41)">gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;</text>
       
     <rect x="117" y="-11" width="8" height="13"
-          fill="#88c0d0" opacity="0">
+          fill="#f8f8f2" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="15460ms" dur="10ms" fill="freeze"/>
       <animate attributeName="opacity" to="0" begin="15960ms" dur="10ms" fill="freeze"/>
       <animate attributeName="x" values="117;117;125;133;141;149;157;165;173;181;189;197;205;213;221;229;237;245;253;261;269;277;285;293;301;309;317;325;333;341;349;357;365;373;381;389;397;405;413;421;429;437;445;453;461;469;477;485;493;501;509;517;525;533;541;549;557;565;573;581;589;597" keyTimes="0.0000;0.0164;0.0328;0.0492;0.0656;0.0820;0.0984;0.1148;0.1311;0.1475;0.1639;0.1803;0.1967;0.2131;0.2295;0.2459;0.2623;0.2787;0.2951;0.3115;0.3279;0.3443;0.3607;0.3770;0.3934;0.4098;0.4262;0.4426;0.4590;0.4754;0.4918;0.5082;0.5246;0.5410;0.5574;0.5738;0.5902;0.6066;0.6230;0.6393;0.6557;0.6721;0.6885;0.7049;0.7213;0.7377;0.7541;0.7705;0.7869;0.8033;0.8197;0.8361;0.8525;0.8689;0.8852;0.9016;0.9180;0.9344;0.9508;0.9672;0.9836;1.0000" calcMode="discrete" begin="15460ms" dur="500ms" fill="freeze"/>
@@ -424,60 +432,60 @@ william@dev:~$ cat /etc/goodbye.txt
     </g>
 
     <g transform="translate(0, 873.6)" class="fade-in" style="animation-delay: 16370ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
     <g transform="translate(0, 894.4)" class="fade-in" style="animation-delay: 16420ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 915.2)" class="fade-in" style="animation-delay: 16470ms">
       <text class="tt">
-        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">GITHUB: @williamzujkowski</tspan><tspan fill="#d8dee9">                                                              ║</tspan>
+        <tspan fill="#f8f8f2">║ </tspan><tspan fill="#66d9ef">GITHUB: @williamzujkowski</tspan><tspan fill="#f8f8f2">                                                              ║</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 936)" class="fade-in" style="animation-delay: 16520ms">
       <text class="tt">
-        <tspan fill="#d8dee9">║ Repos: </tspan><tspan fill="#d8dee9" font-weight="bold">88</tspan><tspan fill="#d8dee9">    Followers: </tspan><tspan fill="#d8dee9" font-weight="bold">25</tspan><tspan fill="#d8dee9">                                                             ║</tspan>
+        <tspan fill="#f8f8f2">║ Repos: </tspan><tspan fill="#f8f8f2" font-weight="bold">88</tspan><tspan fill="#f8f8f2">    Followers: </tspan><tspan fill="#f8f8f2" font-weight="bold">25</tspan><tspan fill="#f8f8f2">                                                             ║</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 956.8)" class="fade-in" style="animation-delay: 16570ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ Following: 51    Gists: 134                                                            ║
       </text>
     </g>
 
     <g transform="translate(0, 977.6)" class="fade-in" style="animation-delay: 16620ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ Member since: Sep 2015                                                                 ║
       </text>
     </g>
 
     <g transform="translate(0, 998.4)" class="fade-in" style="animation-delay: 16670ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 1019.2)" class="fade-in" style="animation-delay: 16720ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>
 
     <g transform="translate(0, 1040)">
       <defs><clipPath id="cmdrev-50"><rect x="117" y="-13" width="160" height="26"><set attributeName="width" to="0" begin="0s" end="17770ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88;96;104;112;120;128;136;144;152;160" keyTimes="0.0000;0.0500;0.1000;0.1500;0.2000;0.2500;0.3000;0.3500;0.4000;0.4500;0.5000;0.5500;0.6000;0.6500;0.7000;0.7500;0.8000;0.8500;0.9000;0.9500;1.0000" calcMode="discrete" begin="17770ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 17770ms" fill="#a3be8c" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
-      <text class="tt" x="117" fill="#a3be8c" textLength="160" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-50)">cat /etc/goodbye.txt</text>
+      <text class="tt fade-in" style="animation-delay: 17770ms" fill="#a6e22e" textLength="117" lengthAdjust="spacingAndGlyphs">william@dev:~$ </text>
+      <text class="tt" x="117" fill="#a6e22e" textLength="160" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-50)">cat /etc/goodbye.txt</text>
       
     <rect x="117" y="-11" width="8" height="13"
-          fill="#88c0d0" opacity="0">
+          fill="#f8f8f2" opacity="0">
       <animate attributeName="opacity" from="0" to="1" begin="17770ms" dur="10ms" fill="freeze"/>
       <animate attributeName="opacity" to="0" begin="18970ms" dur="10ms" fill="freeze"/>
       <animate attributeName="x" values="117;117;125;133;141;149;157;165;173;181;189;197;205;213;221;229;237;245;253;261;269" keyTimes="0.0000;0.0500;0.1000;0.1500;0.2000;0.2500;0.3000;0.3500;0.4000;0.4500;0.5000;0.5500;0.6000;0.6500;0.7000;0.7500;0.8000;0.8500;0.9000;0.9500;1.0000" calcMode="discrete" begin="17770ms" dur="1200ms" fill="freeze"/>
@@ -485,85 +493,85 @@ william@dev:~$ cat /etc/goodbye.txt
     </g>
 
     <g transform="translate(0, 1060.8)" class="fade-in" style="animation-delay: 19380ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
     </g>
 
     <g transform="translate(0, 1081.6)" class="fade-in" style="animation-delay: 19430ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 1102.4)" class="fade-in" style="animation-delay: 19480ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ Thanks for visiting!                                                                   ║
       </text>
     </g>
 
     <g transform="translate(0, 1123.2)" class="fade-in" style="animation-delay: 19530ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 1144)" class="fade-in" style="animation-delay: 19580ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ May your:                                                                              ║
       </text>
     </g>
 
     <g transform="translate(0, 1164.8)" class="fade-in" style="animation-delay: 19630ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║   - Code compile without warnings                                                      ║
       </text>
     </g>
 
     <g transform="translate(0, 1185.6)" class="fade-in" style="animation-delay: 19680ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║   - Tests pass on first try                                                            ║
       </text>
     </g>
 
     <g transform="translate(0, 1206.4)" class="fade-in" style="animation-delay: 19730ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║   - Bugs be easily reproducible                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 1227.2)" class="fade-in" style="animation-delay: 19780ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║   - Coffee stay hot                                                                    ║
       </text>
     </g>
 
     <g transform="translate(0, 1248)" class="fade-in" style="animation-delay: 19830ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║   - Git conflicts be minimal                                                           ║
       </text>
     </g>
 
     <g transform="translate(0, 1268.8)" class="fade-in" style="animation-delay: 19880ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 1289.6)" class="fade-in" style="animation-delay: 19930ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║ See you in the commits!                                                                ║
       </text>
     </g>
 
     <g transform="translate(0, 1310.4)" class="fade-in" style="animation-delay: 19980ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
     </g>
 
     <g transform="translate(0, 1331.2)" class="fade-in" style="animation-delay: 20030ms">
-      <text class="tt" fill="#d8dee9">
+      <text class="tt" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
     </g>

@@ -1,10 +1,10 @@
 <svg width="1000" height="720" viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg"
-  role="img" aria-label="Static terminal showing 65 lines">
-  <title>Static terminal showing 65 lines</title>
+  role="img" aria-label="William Zujkowski&apos;s GitHub profile terminal — security engineer, multi-agent AI builder, homelabber, dad-joke connoisseur. Refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke.">
+  <title>William Zujkowski&apos;s GitHub profile terminal — security engineer, multi-agent AI builder, homelabber, dad-joke connoisseur. Refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke.</title>
   <desc>william@dev:~$ cat /etc/motd
-║ WILLIAM&apos;S DEV TERMINAL v2026.05                                                        ║
-║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
-║ Overcast 74°F | Humidity: 79%                                                          ║
+WILLIAM&apos;S DEV TERMINAL v2026.05
+Security • AI/ML • Homelab • Dad Jokes
+Overcast 65°F | Humidity: 97%
 william@dev:~$ neofetch --ascii_distro dev-machine
 william@dev-machine
 OS:        DadOS LTS (Linux + Coffee)
@@ -18,33 +18,33 @@ Editor:    nvim
 ● ● ● ● ● ● ● ●
 william@dev:~$ status --me
 
-  ✓ nexus-agents online · 15 models
-  ✓ homelab    BOSH + CF healthy
-  ✓ vuln-bot   briefing shipped
-  ⚠ coffee     refill required
-  ✓ dad-joke buffer overflowing
+✓ nexus-agents online · 15 models
+✓ homelab    BOSH + CF healthy
+✓ vuln-bot   briefing shipped
+⚠ coffee     refill required
+✓ dad-joke buffer overflowing
 
 william@dev:~$ uptime --emotional
-    built with care (and caffeine)
+built with care (and caffeine)
 william@dev:~$ ./dad-joke --random --format=fancy
-║ DAD JOKE OF THE DAY - May 25                                                           ║
-║ Category: SECURITY                                                                     ║
-║ Q: Why did the pentester bring a ladder to work?                                       ║
-║ A: To escalate privileges!                                                             ║
+DAD JOKE OF THE DAY - May 26
+Category: SECURITY
+Q: What do you call a CVE that nobody patches?
+A: An invitation.
 william@dev:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
-║ GITHUB: @williamzujkowski                                                              ║
-║ Repos: 88    Followers: 25                                                             ║
-║ Following: 51    Gists: 134                                                            ║
-║ Member since: Sep 2015                                                                 ║
+GITHUB: @williamzujkowski
+Repos: 88    Followers: 25
+Following: 51    Gists: 134
+Member since: Sep 2015
 william@dev:~$ cat /etc/goodbye.txt
-║ Thanks for visiting!                                                                   ║
-║ May your:                                                                              ║
-║   - Code compile without warnings                                                      ║
-║   - Tests pass on first try                                                            ║
-║   - Bugs be easily reproducible                                                        ║
-║   - Coffee stay hot                                                                    ║
-║   - Git conflicts be minimal                                                           ║
-║ See you in the commits!                                                                ║</desc>
+Thanks for visiting!
+May your:
+- Code compile without warnings
+- Tests pass on first try
+- Bugs be easily reproducible
+- Coffee stay hot
+- Git conflicts be minimal
+See you in the commits!</desc>
   <style>.tt { font-family: JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace; font-size: 13px; white-space: pre; }</style>
   <defs>
     
@@ -82,221 +82,221 @@ william@dev:~$ cat /etc/goodbye.txt
     
     <rect x="0" y="0" width="1000" height="720"
           rx="12" ry="12"
-          fill="#2e3440"/>
+          fill="#272822"/>
     
     <rect x="0" y="0" width="1000" height="40"
           rx="12" ry="12"
-          fill="#3b4252"/>
+          fill="#1e1f1c"/>
     <rect x="0" y="16" width="1000" height="16"
-          fill="#3b4252"/>
+          fill="#1e1f1c"/>
     <g id="window-controls">
-      <circle cx="14" cy="16" r="6" fill="#bf616a" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
-      <circle cx="34" cy="16" r="6" fill="#ebcb8b" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
-      <circle cx="54" cy="16" r="6" fill="#a3be8c" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="14" cy="16" r="6" fill="#f92672" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="34" cy="16" r="6" fill="#e6db74" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="54" cy="16" r="6" fill="#a6e22e" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
     </g>
     <text x="500" y="24.55"
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13"
-          fill="#d8dee9" text-anchor="middle">
+          font-family="-apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Helvetica, Arial, sans-serif" font-size="13"
+          fill="#75715e" text-anchor="middle">
       william@dev-machine:~
     </text>
     <rect x="0" y="40" width="1000"
-          height="680" fill="#2e3440"/>
+          height="680" fill="#272822"/>
     <g clip-path="url(#terminalViewport)">
       <g transform="translate(12, 54)" filter="url(#textGlow)">
         
-      <text class="tt" y="0" fill="#d8dee9">
+      <text class="tt" y="0" fill="#f8f8f2">
         william@dev:~$ cat /etc/motd
       </text>
-      <text class="tt" y="21" fill="#d8dee9">
+      <text class="tt" y="21" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
-      <text class="tt" y="42" fill="#d8dee9">
+      <text class="tt" y="42" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="62" fill="#d8dee9">
+      <text class="tt" y="62" fill="#f8f8f2">
         ║ WILLIAM&apos;S DEV TERMINAL v2026.05                                                        ║
       </text>
-      <text class="tt" y="83" fill="#d8dee9">
+      <text class="tt" y="83" fill="#f8f8f2">
         ║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
       </text>
       <text class="tt" y="104">
-        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">Overcast 74°F | Humidity: 79%</tspan><tspan fill="#d8dee9">                                                          ║</tspan>
+        <tspan fill="#f8f8f2">║ </tspan><tspan fill="#66d9ef">Overcast 65°F | Humidity: 97%</tspan><tspan fill="#f8f8f2">                                                          ║</tspan>
       </text>
-      <text class="tt" y="125" fill="#d8dee9">
+      <text class="tt" y="125" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="146" fill="#d8dee9">
+      <text class="tt" y="146" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
-      <text class="tt" y="166" fill="#d8dee9">
+      <text class="tt" y="166" fill="#f8f8f2">
         william@dev:~$ neofetch --ascii_distro dev-machine
       </text>
       <text class="tt" y="187">
-        <tspan fill="#88c0d0">william@dev-machine</tspan>
+        <tspan fill="#66d9ef">william@dev-machine</tspan>
       </text>
       <text class="tt" y="208">
-        <tspan fill="#88c0d0">───────────────────</tspan>
+        <tspan fill="#66d9ef">───────────────────</tspan>
       </text>
       <text class="tt" y="229">
-        <tspan fill="#88c0d0">OS</tspan><tspan fill="#d8dee9">:        DadOS LTS (Linux + Coffee)</tspan>
+        <tspan fill="#66d9ef">OS</tspan><tspan fill="#f8f8f2">:        DadOS LTS (Linux + Coffee)</tspan>
       </text>
       <text class="tt" y="250">
-        <tspan fill="#88c0d0">Shell</tspan><tspan fill="#d8dee9">:     /bin/dad-jokes</tspan>
+        <tspan fill="#66d9ef">Shell</tspan><tspan fill="#f8f8f2">:     /bin/dad-jokes</tspan>
       </text>
       <text class="tt" y="270">
-        <tspan fill="#88c0d0">Uptime</tspan><tspan fill="#d8dee9">:    20+ years (one continuous session)</tspan>
+        <tspan fill="#66d9ef">Uptime</tspan><tspan fill="#f8f8f2">:    20+ years (one continuous session)</tspan>
       </text>
       <text class="tt" y="291">
-        <tspan fill="#88c0d0">Role</tspan><tspan fill="#d8dee9">:      Security Engineer • Multi-Agent AI • Homelabber</tspan>
+        <tspan fill="#66d9ef">Role</tspan><tspan fill="#f8f8f2">:      Security Engineer • Multi-Agent AI • Homelabber</tspan>
       </text>
       <text class="tt" y="312">
-        <tspan fill="#88c0d0">Location</tspan><tspan fill="#d8dee9">:  southern PA, basement-datacenter</tspan>
+        <tspan fill="#66d9ef">Location</tspan><tspan fill="#f8f8f2">:  southern PA, basement-datacenter</tspan>
       </text>
       <text class="tt" y="333">
-        <tspan fill="#88c0d0">Languages</tspan><tspan fill="#d8dee9">: TypeScript, Python, Go, Rust</tspan>
+        <tspan fill="#66d9ef">Languages</tspan><tspan fill="#f8f8f2">: TypeScript, Python, Go, Rust</tspan>
       </text>
       <text class="tt" y="354">
-        <tspan fill="#88c0d0">Editor</tspan><tspan fill="#d8dee9">:    nvim</tspan>
+        <tspan fill="#66d9ef">Editor</tspan><tspan fill="#f8f8f2">:    nvim</tspan>
       </text>
-      <text class="tt" y="374" fill="#d8dee9">
+      <text class="tt" y="374" fill="#f8f8f2">
         
       </text>
       <text class="tt" y="395">
-        <tspan fill="#bf616a">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#a3be8c">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#ebcb8b">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#5e81ac">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#b48ead">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#88c0d0">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#eceff4">●</tspan><tspan fill="#d8dee9"> </tspan><tspan fill="#d08770">●</tspan>
+        <tspan fill="#f92672">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#a6e22e">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#e6db74">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#66d9ef">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#ae81ff">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#66d9ef">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#f8f8f2">●</tspan><tspan fill="#f8f8f2"> </tspan><tspan fill="#fd971f">●</tspan>
       </text>
-      <text class="tt" y="416" fill="#d8dee9">
+      <text class="tt" y="416" fill="#f8f8f2">
         william@dev:~$ status --me
       </text>
-      <text class="tt" y="437" fill="#d8dee9">
+      <text class="tt" y="437" fill="#f8f8f2">
         
       </text>
       <text class="tt" y="458">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> nexus-agents online · 15 models</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> nexus-agents online · 15 models</tspan>
       </text>
       <text class="tt" y="478">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> homelab    BOSH + CF healthy</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> homelab    BOSH + CF healthy</tspan>
       </text>
       <text class="tt" y="499">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> vuln-bot   briefing shipped</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> vuln-bot   briefing shipped</tspan>
       </text>
       <text class="tt" y="520">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#ebcb8b">⚠</tspan><tspan fill="#d8dee9"> coffee     refill required</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#e6db74">⚠</tspan><tspan fill="#f8f8f2"> coffee     refill required</tspan>
       </text>
       <text class="tt" y="541">
-        <tspan fill="#d8dee9">  </tspan><tspan fill="#a3be8c">✓</tspan><tspan fill="#d8dee9"> dad-joke buffer overflowing</tspan>
+        <tspan fill="#f8f8f2">  </tspan><tspan fill="#a6e22e">✓</tspan><tspan fill="#f8f8f2"> dad-joke buffer overflowing</tspan>
       </text>
-      <text class="tt" y="562" fill="#d8dee9">
+      <text class="tt" y="562" fill="#f8f8f2">
         
       </text>
-      <text class="tt" y="582" fill="#d8dee9">
+      <text class="tt" y="582" fill="#f8f8f2">
         william@dev:~$ uptime --emotional
       </text>
       <text class="tt" y="603">
-        <tspan fill="#bf616a">   </tspan><tspan fill="#d8dee9"> built with care (and caffeine)</tspan>
+        <tspan fill="#f92672">   </tspan><tspan fill="#f8f8f2"> built with care (and caffeine)</tspan>
       </text>
-      <text class="tt" y="624" fill="#d8dee9">
+      <text class="tt" y="624" fill="#f8f8f2">
         william@dev:~$ ./dad-joke --random --format=fancy
       </text>
-      <text class="tt" y="645" fill="#d8dee9">
+      <text class="tt" y="645" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
-      <text class="tt" y="666" fill="#d8dee9">
+      <text class="tt" y="666" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="686" fill="#d8dee9">
-        ║ DAD JOKE OF THE DAY - May 25                                                           ║
+      <text class="tt" y="686" fill="#f8f8f2">
+        ║ DAD JOKE OF THE DAY - May 26                                                           ║
       </text>
-      <text class="tt" y="707" fill="#d8dee9">
+      <text class="tt" y="707" fill="#f8f8f2">
         ║ Category: SECURITY                                                                     ║
       </text>
-      <text class="tt" y="728" fill="#d8dee9">
+      <text class="tt" y="728" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="749" fill="#d8dee9">
-        ║ Q: Why did the pentester bring a ladder to work?                                       ║
+      <text class="tt" y="749" fill="#f8f8f2">
+        ║ Q: What do you call a CVE that nobody patches?                                         ║
       </text>
-      <text class="tt" y="770" fill="#d8dee9">
+      <text class="tt" y="770" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="790" fill="#d8dee9">
-        ║ A: To escalate privileges!                                                             ║
+      <text class="tt" y="790" fill="#f8f8f2">
+        ║ A: An invitation.                                                                      ║
       </text>
-      <text class="tt" y="811" fill="#d8dee9">
+      <text class="tt" y="811" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="832" fill="#d8dee9">
+      <text class="tt" y="832" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
-      <text class="tt" y="853" fill="#d8dee9">
+      <text class="tt" y="853" fill="#f8f8f2">
         william@dev:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
       </text>
-      <text class="tt" y="874" fill="#d8dee9">
+      <text class="tt" y="874" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
-      <text class="tt" y="894" fill="#d8dee9">
+      <text class="tt" y="894" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
       <text class="tt" y="915">
-        <tspan fill="#d8dee9">║ </tspan><tspan fill="#88c0d0">GITHUB: @williamzujkowski</tspan><tspan fill="#d8dee9">                                                              ║</tspan>
+        <tspan fill="#f8f8f2">║ </tspan><tspan fill="#66d9ef">GITHUB: @williamzujkowski</tspan><tspan fill="#f8f8f2">                                                              ║</tspan>
       </text>
       <text class="tt" y="936">
-        <tspan fill="#d8dee9">║ Repos: </tspan><tspan fill="#d8dee9" font-weight="bold">88</tspan><tspan fill="#d8dee9">    Followers: </tspan><tspan fill="#d8dee9" font-weight="bold">25</tspan><tspan fill="#d8dee9">                                                             ║</tspan>
+        <tspan fill="#f8f8f2">║ Repos: </tspan><tspan fill="#f8f8f2" font-weight="bold">88</tspan><tspan fill="#f8f8f2">    Followers: </tspan><tspan fill="#f8f8f2" font-weight="bold">25</tspan><tspan fill="#f8f8f2">                                                             ║</tspan>
       </text>
-      <text class="tt" y="957" fill="#d8dee9">
+      <text class="tt" y="957" fill="#f8f8f2">
         ║ Following: 51    Gists: 134                                                            ║
       </text>
-      <text class="tt" y="978" fill="#d8dee9">
+      <text class="tt" y="978" fill="#f8f8f2">
         ║ Member since: Sep 2015                                                                 ║
       </text>
-      <text class="tt" y="998" fill="#d8dee9">
+      <text class="tt" y="998" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="1019" fill="#d8dee9">
+      <text class="tt" y="1019" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
-      <text class="tt" y="1040" fill="#d8dee9">
+      <text class="tt" y="1040" fill="#f8f8f2">
         william@dev:~$ cat /etc/goodbye.txt
       </text>
-      <text class="tt" y="1061" fill="#d8dee9">
+      <text class="tt" y="1061" fill="#f8f8f2">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
-      <text class="tt" y="1082" fill="#d8dee9">
+      <text class="tt" y="1082" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="1102" fill="#d8dee9">
+      <text class="tt" y="1102" fill="#f8f8f2">
         ║ Thanks for visiting!                                                                   ║
       </text>
-      <text class="tt" y="1123" fill="#d8dee9">
+      <text class="tt" y="1123" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="1144" fill="#d8dee9">
+      <text class="tt" y="1144" fill="#f8f8f2">
         ║ May your:                                                                              ║
       </text>
-      <text class="tt" y="1165" fill="#d8dee9">
+      <text class="tt" y="1165" fill="#f8f8f2">
         ║   - Code compile without warnings                                                      ║
       </text>
-      <text class="tt" y="1186" fill="#d8dee9">
+      <text class="tt" y="1186" fill="#f8f8f2">
         ║   - Tests pass on first try                                                            ║
       </text>
-      <text class="tt" y="1206" fill="#d8dee9">
+      <text class="tt" y="1206" fill="#f8f8f2">
         ║   - Bugs be easily reproducible                                                        ║
       </text>
-      <text class="tt" y="1227" fill="#d8dee9">
+      <text class="tt" y="1227" fill="#f8f8f2">
         ║   - Coffee stay hot                                                                    ║
       </text>
-      <text class="tt" y="1248" fill="#d8dee9">
+      <text class="tt" y="1248" fill="#f8f8f2">
         ║   - Git conflicts be minimal                                                           ║
       </text>
-      <text class="tt" y="1269" fill="#d8dee9">
+      <text class="tt" y="1269" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="1290" fill="#d8dee9">
+      <text class="tt" y="1290" fill="#f8f8f2">
         ║ See you in the commits!                                                                ║
       </text>
-      <text class="tt" y="1310" fill="#d8dee9">
+      <text class="tt" y="1310" fill="#f8f8f2">
         ║                                                                                        ║
       </text>
-      <text class="tt" y="1331" fill="#d8dee9">
+      <text class="tt" y="1331" fill="#f8f8f2">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
       </g>

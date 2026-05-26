@@ -69,11 +69,11 @@ The rest of what I build lives below.
 ### From the blog
 
 <!-- BLOG-POST-LIST:START -->
-- [Investigating the Trivy Supply Chain Compromise with AI Agents](https://williamzujkowski.github.io/posts/2026-03-21-trivy-supply-chain-compromise-ai-assisted-investigation/)
-- [From Paper to Font File: Building an Open-Source Handwriting Digitizer](https://williamzujkowski.github.io/posts/2026-03-09-handwright-paper-to-font/)
-- [Building a 3,500-Book Digital Library with Astro and Six APIs](https://williamzujkowski.github.io/posts/2026-02-23-building-tsundoku-digital-bookshelf/)
-- [Building Nexus-Agents: What I Learned Creating a Multi-Model AI Orchestration System](https://williamzujkowski.github.io/posts/2026-02-09-building-nexus-agents-multi-model-orchestration/)
-- [Consensus Voting With AI Models: When Three Opinions Beat One](https://williamzujkowski.github.io/posts/2026-01-28-consensus-voting-ai-models-multi-agent/)
+- [Patch Fast, Pull Slow: Defending in the Year of Copy Fail](https://williamzujkowski.github.io/posts/2026-05-07-patch-fast-pull-slow-defending-copy-fail-shai-hulud/)
+- [A Month of Modularization: nexus-agents in April 2026](https://williamzujkowski.github.io/posts/2026-04-18-nexus-agents-april-month-of-modularization/)
+- [Grading GitHub Repos: Six-Dimension Hygiene Scores from repo-health-report](https://williamzujkowski.github.io/posts/2026-04-16-repo-health-report-six-dimension-hygiene-scores/)
+- [Signed USB Rescue Boot: aegis-boot and the QEMU+OVMF Persona Harness](https://williamzujkowski.github.io/posts/2026-04-14-signed-usb-rescue-boot-aegis-boot-persona-harness/)
+- [Multiboxing EverQuest on Linux: Deterministic Wine Prefixes and Programmatic Window Layout](https://williamzujkowski.github.io/posts/2026-04-12-multiboxing-everquest-linux-deterministic-wine-prefixes/)
 <!-- BLOG-POST-LIST:END -->
 
 → Full archive at [williamzujkowski.github.io/posts](https://williamzujkowski.github.io/posts/). Auto-refreshes here daily.

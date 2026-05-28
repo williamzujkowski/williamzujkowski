@@ -4,7 +4,7 @@
   <desc>william@dev:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.05
 Security • AI/ML • Homelab • Dad Jokes
-Partly cloudy 70°F | Humidity: 84%
+Sunny 78°F | Humidity: 40%
 william@dev:~$ neofetch --ascii_distro dev-machine
 william@dev-machine
 OS:        DadOS LTS (Linux + Coffee)
@@ -126,7 +126,7 @@ See you in the commits!</desc>
         ║ Security • AI/ML • Homelab • Dad Jokes                                                 ║
       </text>
       <text class="tt" y="104">
-        <tspan fill="#00ff41">║ </tspan><tspan fill="#00ffaa">Partly cloudy 70°F | Humidity: 84%</tspan><tspan fill="#00ff41">                                                     ║</tspan>
+        <tspan fill="#00ff41">║ </tspan><tspan fill="#00ffaa">Sunny 78°F | Humidity: 40%</tspan><tspan fill="#00ff41">                                                             ║</tspan>
       </text>
       <text class="tt" y="125" fill="#00ff41">
         ║                                                                                        ║

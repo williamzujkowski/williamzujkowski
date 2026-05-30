@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <em>This terminal is <strong>alive</strong> — refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke. The theme rotates daily through 20 palettes.
+  <em>This terminal is <strong>alive</strong> — refreshes every 6 hours with a live GitHub language breakdown and a rotating dad joke. The theme rotates daily through 20 palettes.
   <br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a> (48 blocks, zero runtime deps). Set <code>prefers-reduced-motion</code> and you get the static version automatically.</em>
 </p>
 

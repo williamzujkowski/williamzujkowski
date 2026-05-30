@@ -40,7 +40,7 @@ svg-terminal generate --config terminal.yml --output src/terminal-static.svg --s
 
 ## Blocks Used
 
-See `terminal.yml` for full config. Current blocks (8): `motd` (live weather), `neofetch` (persona), `build-badge` (status card), `github-stats` (live), `github-languages` (live), `jumping-jack` (multi-line animation), `dad-joke` (signature), `goodbye`. Theme is `random` (daily rotation across all 20), glow/scanlines off for a sharp look.
+See `terminal.yml` for full config. Current blocks (5): `neofetch` (persona), `npm-install` (playful global install), `github-languages` (live language breakdown), `jumping-jack` (multi-line animation), `dad-joke` (signature). Theme is `random` (daily rotation across all 20), glow/scanlines off, `fontSize: 12` to keep the 5-block session roughly square (a 16:10 landscape with this much content would leave half the canvas empty). Fits fully in both the animated and static fallback — no scroll/clip.
 
 ## Content Guidelines
 

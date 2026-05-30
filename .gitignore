@@ -43,3 +43,6 @@ __pycache__/
 venv/
 .venv/
 .nexus-agents/
+
+# svg-terminal dynamic-block fetch cache
+.svg-terminal-cache.json

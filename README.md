@@ -6,8 +6,8 @@
 </p>
 
 <p align="center">
-  <em>This terminal is <strong>alive</strong> — refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke. The theme rotates daily through 8 palettes.
-  <br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a> (46 blocks, zero runtime deps). Set <code>prefers-reduced-motion</code> and you get the static version automatically.</em>
+  <em>This terminal is <strong>alive</strong> — refreshes every 6 hours with live weather, live GitHub stats, and a rotating dad joke. The theme rotates daily through 20 palettes.
+  <br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a> (48 blocks, zero runtime deps). Set <code>prefers-reduced-motion</code> and you get the static version automatically.</em>
 </p>
 
 ---
@@ -59,7 +59,7 @@ The rest of what I build lives below.
 | [**standards**](https://github.com/williamzujkowski/standards) | Battle-tested LLM software-development standards — start any project right in 30 seconds | ![Stars](https://img.shields.io/github/stars/williamzujkowski/standards?style=flat&color=bd93f9) |
 | [**nexus-agents**](https://github.com/nexus-substrate/nexus-agents) | Governance substrate for AI coding agents — adversarial review, drift-detected rules, immutable audit | ![Stars](https://img.shields.io/github/stars/nexus-substrate/nexus-agents?style=flat&color=bd93f9) |
 | [**cognitive-toolworks**](https://github.com/williamzujkowski/cognitive-toolworks) | Generate cross-platform agent artifacts (SKILL.md, AGENTS.md) using LLM intelligence | ![Stars](https://img.shields.io/github/stars/williamzujkowski/cognitive-toolworks?style=flat&color=bd93f9) |
-| [**svg-terminal**](https://github.com/williamzujkowski/svg-terminal) | Generates *↑ that thing at the top ↑* — 46 blocks, 8 themes, deterministic CI builds | ![Stars](https://img.shields.io/github/stars/williamzujkowski/svg-terminal?style=flat&color=bd93f9) |
+| [**svg-terminal**](https://github.com/williamzujkowski/svg-terminal) | Generates *↑ that thing at the top ↑* — 48 blocks, 20 themes, OKLCH WCAG-AAA palettes, deterministic CI builds | ![Stars](https://img.shields.io/github/stars/williamzujkowski/svg-terminal?style=flat&color=bd93f9) |
 | [**mcp-standards-server**](https://github.com/williamzujkowski/mcp-standards-server) | MCP server for NIST 800-53r5 compliance checking and standards enforcement | ![Stars](https://img.shields.io/github/stars/williamzujkowski/mcp-standards-server?style=flat&color=bd93f9) |
 
 > Browse the rest at [github.com/williamzujkowski?tab=repositories](https://github.com/williamzujkowski?tab=repositories) — roughly 80 public repos and one or two I keep meaning to archive.

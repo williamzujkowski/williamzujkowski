@@ -3,10 +3,13 @@
 # (https://github.com/williamzujkowski/svg-terminal). 5 curated blocks: persona,
 # a playful global install, live language breakdown, a multi-line animation, and
 # the signature dad joke. Daily theme rotation across all 20 themes, crisp (no
-# glow/scanlines). fontSize 12 keeps the 5-block session roughly square (a real
-# terminal is landscape, but a 16:10 with this much content would leave half the
-# canvas empty — so it's sized to fill its width and fit fully in BOTH the
-# animated and the reduced-motion static fallback, no scroll/clip).
+# glow/scanlines).
+#
+# Aspect ratio: a FIXED landscape viewport (1000×600, ≈5:3 — a real terminal
+# shape). `autoHeight` + `maxHeight: 600` caps the viewport, so the session
+# types in and SCROLLS up off the top like a real terminal rather than showing
+# everything at once. The reduced-motion static fallback can't scroll, so it
+# expands to the full content height (svg-terminal #129) — complete + accessible.
 # Refreshed every 6 hours by .github/workflows/update-terminal-svg.yml.
 
 theme: random  # daily rotation across all 20 built-in themes
@@ -14,14 +17,14 @@ theme: random  # daily rotation across all 20 built-in themes
 window:
   width: 1000
   title: "william@homelab: ~/profile"
-  autoHeight: true
-  minHeight: 400
-  maxHeight: 1200
+  autoHeight: true       # animated: clamps to maxHeight (scrolls); static: full height (#129)
+  minHeight: 200
+  maxHeight: 600         # the landscape viewport height (1000×600 ≈ 5:3)
 
 terminal:
   prompt: "william@homelab:~$ "
-  fontSize: 12
-  lineHeight: 1.5
+  fontSize: 13
+  lineHeight: 1.6
 
 effects:
   textGlow: false

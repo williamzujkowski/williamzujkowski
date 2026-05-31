@@ -40,7 +40,7 @@ svg-terminal generate --config terminal.yml --output src/terminal-static.svg --s
 
 ## Blocks Used
 
-See `terminal.yml` for full config. Current blocks (5): `neofetch` (persona), `npm-install` (playful global install), `github-languages` (live language breakdown), `jumping-jack` (multi-line animation), `dad-joke` (signature). Theme is `random` (daily rotation across all 20), glow/scanlines off. The animated SVG uses a FIXED landscape viewport (`maxHeight: 600`, 1000×600 ≈ 5:3) so the session types in and **scrolls** like a real terminal; the reduced-motion static fallback expands to full content height (svg-terminal #129, needs ≥ v1.2.3) so nothing is clipped.
+See `terminal.yml` for full config. Current blocks (9): `motd` (live weather), `neofetch` (persona), `npm-install` (playful global install), `build-badge` (status card), `github-stats` (live), `github-languages` (live language breakdown), `jumping-jack` (multi-line animation), `dad-joke` (signature), `goodbye` (exit). Theme is `random` (daily rotation across all 20), glow/scanlines off. The animated SVG uses a FIXED landscape viewport (`maxHeight: 600`, 1000×600 ≈ 5:3) so the session types in and **scrolls** like a real terminal (~26s loop); the reduced-motion static fallback expands to full content height (svg-terminal #129, needs ≥ v1.2.3) so nothing is clipped.
 
 ## Content Guidelines
 

@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  Started fixing computers in southern PA in 2005. Twenty years later:<br>
+  Started breaking and then fixing computers as a kid. Twenty years later:<br>
   enterprise vulnerability management across 100k+ assets, then cloud platform security at the federal level.<br>
   Now I build multi-agent AI orchestration, run bare-metal Cloud Foundry on a Dell R910 in my basement,<br>
   and collect dad jokes at an alarming rate.

@@ -4,7 +4,7 @@
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.07
 Security • Multi-Agent AI • Homelab • Dad Jokes
-Partly cloudy 95°F | Humidity: 46%
+Sunny 97°F | Humidity: 39%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -185,7 +185,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms">
       <text class="tt">
-        <tspan fill="#dcd7ba">║ </tspan><tspan fill="#6a9589">Partly cloudy 95°F | Humidity: 46%</tspan><tspan fill="#dcd7ba">                                                     ║</tspan>
+        <tspan fill="#dcd7ba">║ </tspan><tspan fill="#6a9589">Sunny 97°F | Humidity: 39%</tspan><tspan fill="#dcd7ba">                                                             ║</tspan>
       </text>
     </g>
 

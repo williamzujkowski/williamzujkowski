@@ -16,7 +16,7 @@ jobs:
       cancel-in-progress: true
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       - name: Pull latest blog posts
         uses: gautamkrishnar/blog-post-workflow@2786e54a01b71aec80a5118c2bd6b5044e842597 # 1.9.6
         with:

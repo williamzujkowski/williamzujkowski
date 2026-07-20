@@ -69,11 +69,11 @@ The rest of what I build lives below.
 ### From the blog
 
 <!-- BLOG-POST-LIST:START -->
+- [545 Terminal Themes, and the Rabbit Hole That Produced Them](https://williamzujkowski.github.io/posts/2026-07-19-oklch-terminal-themes/)
+- [The Sandbox Isolates the Agent. It Doesn&#39;t Isolate the Secret.](https://williamzujkowski.github.io/posts/2026-07-02-agentic-ai-sandbox-secret-proxying-gap/)
+- [live-coding-music-mcp: Handing Claude a Browser and a Drum Machine](https://williamzujkowski.github.io/posts/2026-06-11-live-coding-music-mcp-real-browser-not-mock/)
+- [No GIFs, No Script Tags: How Far a Single SVG File Can Go](https://williamzujkowski.github.io/posts/2026-05-26-svg-terminal-no-gifs-no-script-tags/)
 - [Patch Fast, Pull Slow: Defending in the Year of Copy Fail](https://williamzujkowski.github.io/posts/2026-05-07-patch-fast-pull-slow-defending-copy-fail-shai-hulud/)
-- [A Month of Modularization: nexus-agents in April 2026](https://williamzujkowski.github.io/posts/2026-04-18-nexus-agents-april-month-of-modularization/)
-- [Grading GitHub Repos: Six-Dimension Hygiene Scores from repo-health-report](https://williamzujkowski.github.io/posts/2026-04-16-repo-health-report-six-dimension-hygiene-scores/)
-- [Signed USB Rescue Boot: aegis-boot and the QEMU+OVMF Persona Harness](https://williamzujkowski.github.io/posts/2026-04-14-signed-usb-rescue-boot-aegis-boot-persona-harness/)
-- [Multiboxing EverQuest on Linux: Deterministic Wine Prefixes and Programmatic Window Layout](https://williamzujkowski.github.io/posts/2026-04-12-multiboxing-everquest-linux-deterministic-wine-prefixes/)
 <!-- BLOG-POST-LIST:END -->
 
 → Full archive at [williamzujkowski.github.io/posts](https://williamzujkowski.github.io/posts/). Auto-refreshes here daily.

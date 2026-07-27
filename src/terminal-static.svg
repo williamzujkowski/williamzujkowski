@@ -1,9 +1,10 @@
-<svg width="1000" height="1826" viewBox="0 0 1000 1826" xmlns="http://www.w3.org/2000/svg"
+<svg width="1000" height="1846" viewBox="0 0 1000 1846" xmlns="http://www.w3.org/2000/svg"
   role="img" aria-label="William Zujkowski&apos;s GitHub profile terminal — security engineer, multi-agent AI builder (nexus-agents), basement-datacenter homelabber in southern PA, and dad-joke connoisseur. A playful animated terminal session that scrolls through: live weather, the persona card, a global install, a status board, live GitHub stats and languages, a little exercise animation, and a rotating dad joke. The theme rotates daily.">
   <title>William Zujkowski&apos;s GitHub profile terminal — security engineer, multi-agent AI builder (nexus-agents), basement-datacenter homelabber in southern PA, and dad-joke connoisseur. A playful animated terminal session that scrolls through: live weather, the persona card, a global install, a status board, live GitHub stats and languages, a little exercise animation, and a rotating dad joke. The theme rotates daily.</title>
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.07
 Security • Multi-Agent AI • Homelab • Dad Jokes
+Sunny 81°F | Humidity: 58%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -80,13 +81,13 @@ See you in the commits.</desc>
       </feMerge>
     </filter>
     <clipPath id="terminalViewport">
-      <rect x="0" y="40" width="1000" height="1786"/>
+      <rect x="0" y="40" width="1000" height="1806"/>
     </clipPath>
   </defs>
 
   <g filter="url(#shadow)">
     
-    <rect x="0" y="0" width="1000" height="1826"
+    <rect x="0" y="0" width="1000" height="1846"
           rx="12" ry="12"
           fill="#1e1e2e"/>
     
@@ -106,7 +107,7 @@ See you in the commits.</desc>
       william@homelab: ~/profile
     </text>
     <rect x="0" y="40" width="1000"
-          height="1786" fill="#1e1e2e"/>
+          height="1806" fill="#1e1e2e"/>
     <g clip-path="url(#terminalViewport)">
       <g transform="translate(12, 54)">
         
@@ -125,241 +126,244 @@ See you in the commits.</desc>
       <text class="tt" y="83" fill="#cdd6f4">
         ║ Security • Multi-Agent AI • Homelab • Dad Jokes                                        ║
       </text>
-      <text class="tt" y="104" fill="#cdd6f4">
-        ║                                                                                        ║
+      <text class="tt" y="104">
+        <tspan fill="#cdd6f4">║ </tspan><tspan fill="#94e2d5">Sunny 81°F | Humidity: 58%</tspan><tspan fill="#cdd6f4">                                                             ║</tspan>
       </text>
       <text class="tt" y="125" fill="#cdd6f4">
-        ╚════════════════════════════════════════════════════════════════════════════════════════╝
+        ║                                                                                        ║
       </text>
       <text class="tt" y="146" fill="#cdd6f4">
+        ╚════════════════════════════════════════════════════════════════════════════════════════╝
+      </text>
+      <text class="tt" y="166" fill="#cdd6f4">
         william@homelab:~$ neofetch --ascii_distro homelab
       </text>
-      <text class="tt" y="166">
+      <text class="tt" y="187">
         <tspan fill="#94e2d5">william@homelab</tspan>
       </text>
-      <text class="tt" y="187">
+      <text class="tt" y="208">
         <tspan fill="#94e2d5">───────────────</tspan>
       </text>
-      <text class="tt" y="208">
+      <text class="tt" y="229">
         <tspan fill="#94e2d5">OS</tspan><tspan fill="#cdd6f4">:        DadOS LTS (Linux + Coffee)</tspan>
       </text>
-      <text class="tt" y="229">
+      <text class="tt" y="250">
         <tspan fill="#94e2d5">Shell</tspan><tspan fill="#cdd6f4">:     /bin/dad-jokes</tspan>
       </text>
-      <text class="tt" y="250">
+      <text class="tt" y="270">
         <tspan fill="#94e2d5">Uptime</tspan><tspan fill="#cdd6f4">:    20+ years (one continuous session)</tspan>
       </text>
-      <text class="tt" y="270">
+      <text class="tt" y="291">
         <tspan fill="#94e2d5">Role</tspan><tspan fill="#cdd6f4">:      Security Engineer • Multi-Agent AI • Homelabber</tspan>
       </text>
-      <text class="tt" y="291">
+      <text class="tt" y="312">
         <tspan fill="#94e2d5">Location</tspan><tspan fill="#cdd6f4">:  southern PA — basement datacenter</tspan>
       </text>
-      <text class="tt" y="312">
+      <text class="tt" y="333">
         <tspan fill="#94e2d5">Languages</tspan><tspan fill="#cdd6f4">: TypeScript, Python, Go, Rust</tspan>
       </text>
-      <text class="tt" y="333">
+      <text class="tt" y="354">
         <tspan fill="#94e2d5">Editor</tspan><tspan fill="#cdd6f4">:    nvim (btw)</tspan>
       </text>
-      <text class="tt" y="354" fill="#cdd6f4">
+      <text class="tt" y="374" fill="#cdd6f4">
         
       </text>
-      <text class="tt" y="374">
+      <text class="tt" y="395">
         <tspan fill="#f38ba8">●</tspan><tspan fill="#cdd6f4"> </tspan><tspan fill="#a6e3a1">●</tspan><tspan fill="#cdd6f4"> </tspan><tspan fill="#f9e2af">●</tspan><tspan fill="#cdd6f4"> </tspan><tspan fill="#89b4fa">●</tspan><tspan fill="#cdd6f4"> </tspan><tspan fill="#cba6f7">●</tspan><tspan fill="#cdd6f4"> </tspan><tspan fill="#94e2d5">●</tspan><tspan fill="#cdd6f4"> </tspan><tspan fill="#bac2de">●</tspan><tspan fill="#cdd6f4"> </tspan><tspan fill="#fab387">●</tspan>
       </text>
-      <text class="tt" y="395" fill="#cdd6f4">
+      <text class="tt" y="416" fill="#cdd6f4">
         william@homelab:~$ npm install -g good-vibes
       </text>
-      <text class="tt" y="416" fill="#cdd6f4">
+      <text class="tt" y="437" fill="#cdd6f4">
         added 847 packages in 42.0s
       </text>
-      <text class="tt" y="437" fill="#cdd6f4">
-        
-      </text>
       <text class="tt" y="458" fill="#cdd6f4">
-        Dependencies resolved:
+        
       </text>
       <text class="tt" y="478" fill="#cdd6f4">
-        ├── @williamzujkowski/good-vibes@1.0.0
+        Dependencies resolved:
       </text>
       <text class="tt" y="499" fill="#cdd6f4">
-        │   ├── is-string@1.0.0
+        ├── @williamzujkowski/good-vibes@1.0.0
       </text>
       <text class="tt" y="520" fill="#cdd6f4">
-        │   │   ├── is-object@1.0.0
+        │   ├── is-string@1.0.0
       </text>
       <text class="tt" y="541" fill="#cdd6f4">
-        │   │   │   ├── is-thing@1.0.0
+        │   │   ├── is-object@1.0.0
       </text>
       <text class="tt" y="562" fill="#cdd6f4">
-        │   │   │   │   └── is-anything@1.0.0
+        │   │   │   ├── is-thing@1.0.0
       </text>
       <text class="tt" y="582" fill="#cdd6f4">
-        │   │   │   │       └── universe@∞
+        │   │   │   │   └── is-anything@1.0.0
       </text>
       <text class="tt" y="603" fill="#cdd6f4">
-        │   └── string-utils@1.0.0
+        │   │   │   │       └── universe@∞
       </text>
       <text class="tt" y="624" fill="#cdd6f4">
-        │       └── ... 842 more packages
+        │   └── string-utils@1.0.0
       </text>
       <text class="tt" y="645" fill="#cdd6f4">
+        │       └── ... 842 more packages
+      </text>
+      <text class="tt" y="666" fill="#cdd6f4">
         │
       </text>
-      <text class="tt" y="666">
+      <text class="tt" y="686">
         <tspan fill="#f9e2af">⚠ 3 vulnerabilities (1 moderate, 2 high)</tspan>
       </text>
-      <text class="tt" y="686" fill="#cdd6f4">
+      <text class="tt" y="707" fill="#cdd6f4">
           Run `npm audit fix` to fix them
       </text>
-      <text class="tt" y="707" fill="#cdd6f4">
+      <text class="tt" y="728" fill="#cdd6f4">
         
       </text>
-      <text class="tt" y="728" fill="#cdd6f4">
+      <text class="tt" y="749" fill="#cdd6f4">
         Package size: 2.3 MB for a function that pads strings
       </text>
-      <text class="tt" y="749">
+      <text class="tt" y="770">
         <tspan fill="#cdd6f4">Worth it? </tspan><tspan fill="#f38ba8">Absolutely not.</tspan><tspan fill="#cdd6f4"> Did we do it anyway? </tspan><tspan fill="#a6e3a1">Yes.</tspan>
       </text>
-      <text class="tt" y="770" fill="#cdd6f4">
+      <text class="tt" y="790" fill="#cdd6f4">
         william@homelab:~$ status --me
       </text>
-      <text class="tt" y="790" fill="#cdd6f4">
+      <text class="tt" y="811" fill="#cdd6f4">
         
-      </text>
-      <text class="tt" y="811">
-        <tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">✓</tspan><tspan fill="#cdd6f4"> nexus-agents online · multi-model</tspan>
       </text>
       <text class="tt" y="832">
-        <tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">✓</tspan><tspan fill="#cdd6f4"> homelab    racks healthy</tspan>
+        <tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">✓</tspan><tspan fill="#cdd6f4"> nexus-agents online · multi-model</tspan>
       </text>
       <text class="tt" y="853">
-        <tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">✓</tspan><tspan fill="#cdd6f4"> vuln-briefing shipped</tspan>
+        <tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">✓</tspan><tspan fill="#cdd6f4"> homelab    racks healthy</tspan>
       </text>
       <text class="tt" y="874">
-        <tspan fill="#cdd6f4">  </tspan><tspan fill="#f9e2af">⚠</tspan><tspan fill="#cdd6f4"> coffee     refill required</tspan>
+        <tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">✓</tspan><tspan fill="#cdd6f4"> vuln-briefing shipped</tspan>
       </text>
       <text class="tt" y="894">
+        <tspan fill="#cdd6f4">  </tspan><tspan fill="#f9e2af">⚠</tspan><tspan fill="#cdd6f4"> coffee     refill required</tspan>
+      </text>
+      <text class="tt" y="915">
         <tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">✓</tspan><tspan fill="#cdd6f4"> dad-joke buffer overflowing</tspan>
       </text>
-      <text class="tt" y="915" fill="#cdd6f4">
+      <text class="tt" y="936" fill="#cdd6f4">
         
       </text>
-      <text class="tt" y="936" fill="#cdd6f4">
+      <text class="tt" y="957" fill="#cdd6f4">
         william@homelab:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
       </text>
-      <text class="tt" y="957" fill="#cdd6f4">
+      <text class="tt" y="978" fill="#cdd6f4">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
-      <text class="tt" y="978" fill="#cdd6f4">
+      <text class="tt" y="998" fill="#cdd6f4">
         ║                                                                                        ║
-      </text>
-      <text class="tt" y="998">
-        <tspan fill="#cdd6f4">║ </tspan><tspan fill="#94e2d5">GITHUB: @williamzujkowski</tspan><tspan fill="#cdd6f4">                                                              ║</tspan>
       </text>
       <text class="tt" y="1019">
+        <tspan fill="#cdd6f4">║ </tspan><tspan fill="#94e2d5">GITHUB: @williamzujkowski</tspan><tspan fill="#cdd6f4">                                                              ║</tspan>
+      </text>
+      <text class="tt" y="1040">
         <tspan fill="#cdd6f4">║ Repos: </tspan><tspan fill="#cdd6f4" font-weight="bold">78</tspan><tspan fill="#cdd6f4">    Followers: </tspan><tspan fill="#cdd6f4" font-weight="bold">30</tspan><tspan fill="#cdd6f4">                                                             ║</tspan>
       </text>
-      <text class="tt" y="1040" fill="#cdd6f4">
+      <text class="tt" y="1061" fill="#cdd6f4">
         ║ Following: 54    Gists: 134                                                            ║
       </text>
-      <text class="tt" y="1061" fill="#cdd6f4">
+      <text class="tt" y="1082" fill="#cdd6f4">
         ║ Member since: Sep 2015                                                                 ║
       </text>
-      <text class="tt" y="1082" fill="#cdd6f4">
-        ║                                                                                        ║
-      </text>
       <text class="tt" y="1102" fill="#cdd6f4">
-        ╚════════════════════════════════════════════════════════════════════════════════════════╝
+        ║                                                                                        ║
       </text>
       <text class="tt" y="1123" fill="#cdd6f4">
-        william@homelab:~$ gh lang --top 6
-      </text>
-      <text class="tt" y="1144">
-        <tspan fill="#94e2d5">Python    </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#94e2d5">████████░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">  42%</tspan>
-      </text>
-      <text class="tt" y="1165">
-        <tspan fill="#a6e3a1">TypeScript</tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">████░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">  22%</tspan>
-      </text>
-      <text class="tt" y="1186">
-        <tspan fill="#f9e2af">Shell     </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#f9e2af">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">  11%</tspan>
-      </text>
-      <text class="tt" y="1206">
-        <tspan fill="#cba6f7">JavaScript</tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#cba6f7">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">   8%</tspan>
-      </text>
-      <text class="tt" y="1227">
-        <tspan fill="#89b4fa">HTML      </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#89b4fa">█░░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">   6%</tspan>
-      </text>
-      <text class="tt" y="1248">
-        <tspan fill="#94e2d5">Go        </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#94e2d5">█░░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">   5%</tspan>
-      </text>
-      <text class="tt" y="1269" fill="#cdd6f4">
-        william@homelab:~$ exercise --dad
-      </text>
-      <text class="tt" y="1290">
-        <tspan fill="#a6e3a1">\o/</tspan>
-      </text>
-      <text class="tt" y="1310">
-        <tspan fill="#a6e3a1"> | </tspan>
-      </text>
-      <text class="tt" y="1331">
-        <tspan fill="#a6e3a1">/ \</tspan>
-      </text>
-      <text class="tt" y="1352" fill="#cdd6f4">
-        william@homelab:~$ fortune | dad
-      </text>
-      <text class="tt" y="1373" fill="#cdd6f4">
-        ╔════════════════════════════════════════════════════════════════════════════════════════╗
-      </text>
-      <text class="tt" y="1394" fill="#cdd6f4">
-        ║                                                                                        ║
-      </text>
-      <text class="tt" y="1414" fill="#cdd6f4">
-        ║ DAD JOKE OF THE DAY - Jul 27                                                           ║
-      </text>
-      <text class="tt" y="1435" fill="#cdd6f4">
-        ║ Category: CLASSIC                                                                      ║
-      </text>
-      <text class="tt" y="1456" fill="#cdd6f4">
-        ║                                                                                        ║
-      </text>
-      <text class="tt" y="1477" fill="#cdd6f4">
-        ║ Q: Why do programmers prefer dark mode?                                                ║
-      </text>
-      <text class="tt" y="1498" fill="#cdd6f4">
-        ║                                                                                        ║
-      </text>
-      <text class="tt" y="1518" fill="#cdd6f4">
-        ║ A: Because light attracts bugs!                                                        ║
-      </text>
-      <text class="tt" y="1539" fill="#cdd6f4">
-        ║                                                                                        ║
-      </text>
-      <text class="tt" y="1560" fill="#cdd6f4">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
-      <text class="tt" y="1581" fill="#cdd6f4">
-        william@homelab:~$ logout
+      <text class="tt" y="1144" fill="#cdd6f4">
+        william@homelab:~$ gh lang --top 6
       </text>
-      <text class="tt" y="1602" fill="#cdd6f4">
+      <text class="tt" y="1165">
+        <tspan fill="#94e2d5">Python    </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#94e2d5">████████░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">  42%</tspan>
+      </text>
+      <text class="tt" y="1186">
+        <tspan fill="#a6e3a1">TypeScript</tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#a6e3a1">████░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">  22%</tspan>
+      </text>
+      <text class="tt" y="1206">
+        <tspan fill="#f9e2af">Shell     </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#f9e2af">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">  11%</tspan>
+      </text>
+      <text class="tt" y="1227">
+        <tspan fill="#cba6f7">JavaScript</tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#cba6f7">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">   8%</tspan>
+      </text>
+      <text class="tt" y="1248">
+        <tspan fill="#89b4fa">HTML      </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#89b4fa">█░░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">   6%</tspan>
+      </text>
+      <text class="tt" y="1269">
+        <tspan fill="#94e2d5">Go        </tspan><tspan fill="#cdd6f4">  </tspan><tspan fill="#94e2d5">█░░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#cdd6f4">   5%</tspan>
+      </text>
+      <text class="tt" y="1290" fill="#cdd6f4">
+        william@homelab:~$ exercise --dad
+      </text>
+      <text class="tt" y="1310">
+        <tspan fill="#a6e3a1">\o/</tspan>
+      </text>
+      <text class="tt" y="1331">
+        <tspan fill="#a6e3a1"> | </tspan>
+      </text>
+      <text class="tt" y="1352">
+        <tspan fill="#a6e3a1">/ \</tspan>
+      </text>
+      <text class="tt" y="1373" fill="#cdd6f4">
+        william@homelab:~$ fortune | dad
+      </text>
+      <text class="tt" y="1394" fill="#cdd6f4">
         ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
-      <text class="tt" y="1622" fill="#cdd6f4">
+      <text class="tt" y="1414" fill="#cdd6f4">
         ║                                                                                        ║
+      </text>
+      <text class="tt" y="1435" fill="#cdd6f4">
+        ║ DAD JOKE OF THE DAY - Jul 27                                                           ║
+      </text>
+      <text class="tt" y="1456" fill="#cdd6f4">
+        ║ Category: CLASSIC                                                                      ║
+      </text>
+      <text class="tt" y="1477" fill="#cdd6f4">
+        ║                                                                                        ║
+      </text>
+      <text class="tt" y="1498" fill="#cdd6f4">
+        ║ Q: Why do programmers prefer dark mode?                                                ║
+      </text>
+      <text class="tt" y="1518" fill="#cdd6f4">
+        ║                                                                                        ║
+      </text>
+      <text class="tt" y="1539" fill="#cdd6f4">
+        ║ A: Because light attracts bugs!                                                        ║
+      </text>
+      <text class="tt" y="1560" fill="#cdd6f4">
+        ║                                                                                        ║
+      </text>
+      <text class="tt" y="1581" fill="#cdd6f4">
+        ╚════════════════════════════════════════════════════════════════════════════════════════╝
+      </text>
+      <text class="tt" y="1602" fill="#cdd6f4">
+        william@homelab:~$ logout
+      </text>
+      <text class="tt" y="1622" fill="#cdd6f4">
+        ╔════════════════════════════════════════════════════════════════════════════════════════╗
       </text>
       <text class="tt" y="1643" fill="#cdd6f4">
-        ║ Thanks for stopping by — may your builds stay green,                                   ║
-      </text>
-      <text class="tt" y="1664" fill="#cdd6f4">
-        ║ your agents stay aligned, and your coffee stay hot.                                    ║
-      </text>
-      <text class="tt" y="1685" fill="#cdd6f4">
         ║                                                                                        ║
       </text>
+      <text class="tt" y="1664" fill="#cdd6f4">
+        ║ Thanks for stopping by — may your builds stay green,                                   ║
+      </text>
+      <text class="tt" y="1685" fill="#cdd6f4">
+        ║ your agents stay aligned, and your coffee stay hot.                                    ║
+      </text>
       <text class="tt" y="1706" fill="#cdd6f4">
-        ║ See you in the commits.                                                                ║
+        ║                                                                                        ║
       </text>
       <text class="tt" y="1726" fill="#cdd6f4">
+        ║ See you in the commits.                                                                ║
+      </text>
+      <text class="tt" y="1747" fill="#cdd6f4">
         ╚════════════════════════════════════════════════════════════════════════════════════════╝
       </text>
       </g>

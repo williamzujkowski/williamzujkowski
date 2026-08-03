@@ -4,7 +4,7 @@
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.08
 Security • Multi-Agent AI • Homelab • Dad Jokes
-Mist 74°F | Humidity: 94%
+Sunny 88°F | Humidity: 56%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -43,16 +43,16 @@ william@homelab:~$ status --me
 
 william@homelab:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
 GITHUB: @williamzujkowski
-Repos: 80    Followers: 31
+Repos: 81    Followers: 31
 Following: 54    Gists: 134
 Member since: Sep 2015
 william@homelab:~$ gh lang --top 6
 Python      ████████░░░░░░░░░░░░  42%
-TypeScript  █████░░░░░░░░░░░░░░░  23%
-Shell       ██░░░░░░░░░░░░░░░░░░  11%
-JavaScript  ██░░░░░░░░░░░░░░░░░░   8%
+TypeScript  ████░░░░░░░░░░░░░░░░  22%
+Shell       ██░░░░░░░░░░░░░░░░░░  10%
+JavaScript  ██░░░░░░░░░░░░░░░░░░   9%
 HTML        █░░░░░░░░░░░░░░░░░░░   6%
-Go          █░░░░░░░░░░░░░░░░░░░   5%
+Go          █░░░░░░░░░░░░░░░░░░░   4%
 william@homelab:~$ exercise --dad
 \o/
 |
@@ -185,7 +185,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms">
       <text class="tt">
-        <tspan fill="#d3c6aa">║ </tspan><tspan fill="#83c092">Mist 74°F | Humidity: 94%</tspan><tspan fill="#d3c6aa">                                                              ║</tspan>
+        <tspan fill="#d3c6aa">║ </tspan><tspan fill="#83c092">Sunny 88°F | Humidity: 56%</tspan><tspan fill="#d3c6aa">                                                             ║</tspan>
       </text>
     </g>
 
@@ -483,7 +483,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 1040)" class="fade-in" style="animation-delay: 13680ms">
       <text class="tt">
-        <tspan fill="#d3c6aa">║ Repos: </tspan><tspan fill="#d3c6aa" font-weight="bold">80</tspan><tspan fill="#d3c6aa">    Followers: </tspan><tspan fill="#d3c6aa" font-weight="bold">31</tspan><tspan fill="#d3c6aa">                                                             ║</tspan>
+        <tspan fill="#d3c6aa">║ Repos: </tspan><tspan fill="#d3c6aa" font-weight="bold">81</tspan><tspan fill="#d3c6aa">    Followers: </tspan><tspan fill="#d3c6aa" font-weight="bold">31</tspan><tspan fill="#d3c6aa">                                                             ║</tspan>
       </text>
     </g>
 
@@ -532,19 +532,19 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 1185.6)" class="fade-in" style="animation-delay: 15890ms">
       <text class="tt">
-        <tspan fill="#a7c080">TypeScript</tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#a7c080">█████░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">  23%</tspan>
+        <tspan fill="#a7c080">TypeScript</tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#a7c080">████░░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">  22%</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 1206.4)" class="fade-in" style="animation-delay: 15940ms">
       <text class="tt">
-        <tspan fill="#dbbc7f">Shell     </tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#dbbc7f">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">  11%</tspan>
+        <tspan fill="#dbbc7f">Shell     </tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#dbbc7f">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">  10%</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 1227.2)" class="fade-in" style="animation-delay: 15990ms">
       <text class="tt">
-        <tspan fill="#d699b6">JavaScript</tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#d699b6">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">   8%</tspan>
+        <tspan fill="#d699b6">JavaScript</tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#d699b6">██░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">   9%</tspan>
       </text>
     </g>
 
@@ -556,7 +556,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 1268.8)" class="fade-in" style="animation-delay: 16090ms">
       <text class="tt">
-        <tspan fill="#83c092">Go        </tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#83c092">█░░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">   5%</tspan>
+        <tspan fill="#83c092">Go        </tspan><tspan fill="#d3c6aa">  </tspan><tspan fill="#83c092">█░░░░░░░░░░░░░░░░░░░</tspan><tspan fill="#d3c6aa">   4%</tspan>
       </text>
     </g>
 

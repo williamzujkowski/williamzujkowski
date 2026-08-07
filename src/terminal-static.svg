@@ -4,7 +4,7 @@
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.08
 Security • Multi-Agent AI • Homelab • Dad Jokes
-Clear  74°F | Humidity: 93%
+Smoky haze 70°F | Humidity: 92%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -43,7 +43,7 @@ william@homelab:~$ status --me
 
 william@homelab:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
 GITHUB: @williamzujkowski
-Repos: 81    Followers: 31
+Repos: 81    Followers: 32
 Following: 54    Gists: 134
 Member since: Sep 2015
 william@homelab:~$ gh lang --top 6
@@ -127,7 +127,7 @@ See you in the commits.</desc>
         ║ Security • Multi-Agent AI • Homelab • Dad Jokes                                        ║
       </text>
       <text class="tt" y="104">
-        <tspan fill="#3d2b5a">║ </tspan><tspan fill="#287980">Clear  74°F | Humidity: 93%</tspan><tspan fill="#3d2b5a">                                                            ║</tspan>
+        <tspan fill="#3d2b5a">║ </tspan><tspan fill="#287980">Smoky haze 70°F | Humidity: 92%</tspan><tspan fill="#3d2b5a">                                                        ║</tspan>
       </text>
       <text class="tt" y="125" fill="#3d2b5a">
         ║                                                                                        ║
@@ -262,7 +262,7 @@ See you in the commits.</desc>
         <tspan fill="#3d2b5a">║ </tspan><tspan fill="#287980">GITHUB: @williamzujkowski</tspan><tspan fill="#3d2b5a">                                                              ║</tspan>
       </text>
       <text class="tt" y="1040">
-        <tspan fill="#3d2b5a">║ Repos: </tspan><tspan fill="#3d2b5a" font-weight="bold">81</tspan><tspan fill="#3d2b5a">    Followers: </tspan><tspan fill="#3d2b5a" font-weight="bold">31</tspan><tspan fill="#3d2b5a">                                                             ║</tspan>
+        <tspan fill="#3d2b5a">║ Repos: </tspan><tspan fill="#3d2b5a" font-weight="bold">81</tspan><tspan fill="#3d2b5a">    Followers: </tspan><tspan fill="#3d2b5a" font-weight="bold">32</tspan><tspan fill="#3d2b5a">                                                             ║</tspan>
       </text>
       <text class="tt" y="1061" fill="#3d2b5a">
         ║ Following: 54    Gists: 134                                                            ║

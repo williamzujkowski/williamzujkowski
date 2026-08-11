@@ -4,7 +4,7 @@
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.08
 Security • Multi-Agent AI • Homelab • Dad Jokes
-Clear  70°F | Humidity: 93%
+Sunny 69°F | Humidity: 92%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -43,7 +43,7 @@ william@homelab:~$ status --me
 
 william@homelab:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
 GITHUB: @williamzujkowski
-Repos: 81    Followers: 32
+Repos: 81    Followers: 33
 Following: 55    Gists: 134
 Member since: Sep 2015
 william@homelab:~$ gh lang --top 6
@@ -190,7 +190,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms">
       <text class="tt">
-        <tspan fill="#ffb000">║ </tspan><tspan fill="#ffcc00">Clear  70°F | Humidity: 93%</tspan><tspan fill="#ffb000">                                                            ║</tspan>
+        <tspan fill="#ffb000">║ </tspan><tspan fill="#ffcc00">Sunny 69°F | Humidity: 92%</tspan><tspan fill="#ffb000">                                                             ║</tspan>
       </text>
     </g>
 
@@ -488,7 +488,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 1040)" class="fade-in" style="animation-delay: 13680ms">
       <text class="tt">
-        <tspan fill="#ffb000">║ Repos: </tspan><tspan fill="#ffb000" font-weight="bold">81</tspan><tspan fill="#ffb000">    Followers: </tspan><tspan fill="#ffb000" font-weight="bold">32</tspan><tspan fill="#ffb000">                                                             ║</tspan>
+        <tspan fill="#ffb000">║ Repos: </tspan><tspan fill="#ffb000" font-weight="bold">81</tspan><tspan fill="#ffb000">    Followers: </tspan><tspan fill="#ffb000" font-weight="bold">33</tspan><tspan fill="#ffb000">                                                             ║</tspan>
       </text>
     </g>
 

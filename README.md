@@ -69,11 +69,11 @@ The rest of what I build lives below.
 ### From the blog
 
 <!-- BLOG-POST-LIST:START -->
+- [Nobody Publishes the Denominator](https://williamzujkowski.github.io/posts/2026-08-14-nobody-publishes-the-denominator/)
 - [You Can&#39;t Prove the Agent. Prove the Gate.](https://williamzujkowski.github.io/posts/2026-07-30-prove-the-gate-not-the-agent/)
 - [The Firewall Stays Put. The Agent Improvises.](https://williamzujkowski.github.io/posts/2026-07-23-agent-controls-as-oscal/)
 - [545 Terminal Themes, and the Rabbit Hole That Produced Them](https://williamzujkowski.github.io/posts/2026-07-19-oklch-terminal-themes/)
 - [The Sandbox Isolates the Agent. It Doesn&#39;t Isolate the Secret.](https://williamzujkowski.github.io/posts/2026-07-02-agentic-ai-sandbox-secret-proxying-gap/)
-- [live-coding-music-mcp: Handing Claude a Browser and a Drum Machine](https://williamzujkowski.github.io/posts/2026-06-11-live-coding-music-mcp-real-browser-not-mock/)
 <!-- BLOG-POST-LIST:END -->
 
 → Full archive at [williamzujkowski.github.io/posts](https://williamzujkowski.github.io/posts/). Auto-refreshes here daily.

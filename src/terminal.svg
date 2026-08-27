@@ -4,7 +4,7 @@
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.08
 Security • Multi-Agent AI • Homelab • Dad Jokes
-Overcast  80°F | Humidity: 53%
+Overcast  70°F | Humidity: 71%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -58,7 +58,7 @@ william@homelab:~$ exercise --dad
 |
 / \
 william@homelab:~$ fortune | dad
-DAD JOKE OF THE DAY - Aug 26
+DAD JOKE OF THE DAY - Aug 27
 Category: HOMELAB
 Q: How does a sysadmin propose?
 A: With a ring0.
@@ -185,7 +185,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms">
       <text class="tt">
-        <tspan fill="#1f2328">║ </tspan><tspan fill="#1b7c83">Overcast  80°F | Humidity: 53%</tspan><tspan fill="#1f2328">                                                         ║</tspan>
+        <tspan fill="#1f2328">║ </tspan><tspan fill="#1b7c83">Overcast  70°F | Humidity: 71%</tspan><tspan fill="#1f2328">                                                         ║</tspan>
       </text>
     </g>
 
@@ -604,7 +604,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 1435.2)" class="fade-in" style="animation-delay: 22260ms">
       <text class="tt" fill="#1f2328">
-        ║ DAD JOKE OF THE DAY - Aug 26                                                           ║
+        ║ DAD JOKE OF THE DAY - Aug 27                                                           ║
       </text>
     </g>
 

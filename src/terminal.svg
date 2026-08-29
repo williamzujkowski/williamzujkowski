@@ -4,7 +4,7 @@
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.08
 Security • Multi-Agent AI • Homelab • Dad Jokes
-Patchy rain nearby 84°F | Humidity: 72%
+Sunny 78°F | Humidity: 61%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -43,8 +43,8 @@ william@homelab:~$ status --me
 
 william@homelab:~$ gh api users/williamzujkowski --jq &apos;.public_repos,.followers&apos;
 GITHUB: @williamzujkowski
-Repos: 83    Followers: 33
-Following: 55    Gists: 134
+Repos: 83    Followers: 32
+Following: 56    Gists: 134
 Member since: Sep 2015
 william@homelab:~$ gh lang --top 6
 Python      ████████░░░░░░░░░░░░  42%
@@ -185,7 +185,7 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms">
       <text class="tt">
-        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Patchy rain nearby 84°F | Humidity: 72%</tspan><tspan fill="#e4e4e4">                                                ║</tspan>
+        <tspan fill="#e4e4e4">║ </tspan><tspan fill="#8be9fd">Sunny 78°F | Humidity: 61%</tspan><tspan fill="#e4e4e4">                                                             ║</tspan>
       </text>
     </g>
 
@@ -483,13 +483,13 @@ See you in the commits.</desc>
 
     <g transform="translate(0, 1040)" class="fade-in" style="animation-delay: 13680ms">
       <text class="tt">
-        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">83</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">33</tspan><tspan fill="#e4e4e4">                                                             ║</tspan>
+        <tspan fill="#e4e4e4">║ Repos: </tspan><tspan fill="#e4e4e4" font-weight="bold">83</tspan><tspan fill="#e4e4e4">    Followers: </tspan><tspan fill="#e4e4e4" font-weight="bold">32</tspan><tspan fill="#e4e4e4">                                                             ║</tspan>
       </text>
     </g>
 
     <g transform="translate(0, 1060.8)" class="fade-in" style="animation-delay: 13730ms">
       <text class="tt" fill="#e4e4e4">
-        ║ Following: 55    Gists: 134                                                            ║
+        ║ Following: 56    Gists: 134                                                            ║
       </text>
     </g>
 

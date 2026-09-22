@@ -69,11 +69,11 @@ The rest of what I build lives below.
 ### From the blog
 
 <!-- BLOG-POST-LIST:START -->
+- [Two Processes, One Page Cache: Testing Shared State Before Blaming the VM](https://williamzujkowski.github.io/posts/2026-09-21-vm-disk-cache-isolation-boundary/)
 - [A Correct Answer Doesn&#39;t Mean the Agent&#39;s Memory Is Clean](https://williamzujkowski.github.io/posts/2026-09-15-agent-memory-recovery-lab/)
 - [Your Backup Administrator Should Not Be Able to Delete Yesterday](https://williamzujkowski.github.io/posts/2026-09-14-backup-administrator-cannot-delete-yesterday/)
 - [The Database Gets a Vote on Your Read-Only Agent](https://williamzujkowski.github.io/posts/2026-09-11-read-only-mcp-database-role/)
 - [The Recovery Button Deserves a Dry Run](https://williamzujkowski.github.io/posts/2026-08-18-recovery-needs-a-dry-run/)
-- [The Policy Is the Part That Moves](https://williamzujkowski.github.io/posts/2026-08-18-the-policy-is-the-part-that-moves/)
 <!-- BLOG-POST-LIST:END -->
 
 → Full archive at [williamzujkowski.github.io/posts](https://williamzujkowski.github.io/posts/). Auto-refreshes here daily.

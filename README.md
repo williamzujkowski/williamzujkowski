@@ -13,7 +13,8 @@
 
 <p align="center">
   <em>This terminal is <strong>alive</strong> — an interactive session refreshing every 6 hours with live weather, real-time GitHub stats, and rotating dad jokes across 20 WCAG-AAA OKLCH themes.
-  <br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a> v1.3.1 (zero runtime dependencies, continuous vector stroke borders, and responsive mobile layouts).</em>
+  <br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a> v1.3.1 (zero runtime dependencies, continuous vector stroke borders, and responsive mobile layouts).
+  <br>🎮 <strong>Want to play?</strong> Step up to the <a href="https://williamzujkowski.github.io/arcade/"><strong>Terminal Arcade</strong></a> for turn-based RPG boss battles, Zork dungeon crawls, and 8-bit sound fx.</em>
 </p>
 
 ---
@@ -36,6 +37,8 @@
   🛠️ <a href="https://williamzujkowski.github.io/uses/"><strong>/uses</strong></a> — the homelab rack & toolchain
   &nbsp;·&nbsp;
   📚 <a href="https://williamzujkowski.github.io/posts/"><strong>/posts</strong></a> — engineering deep-dives & essays
+  &nbsp;·&nbsp;
+  🕹️ <a href="https://williamzujkowski.github.io/arcade/"><strong>/arcade</strong></a> — interactive terminal arcade
 </p>
 
 ---

@@ -1,14 +1,13 @@
 name: Update Terminal SVG
 
-# Regenerates the profile hero terminal from terminal.yml using the published
-# svg-terminal GitHub Action (williamzujkowski/svg-terminal@v1). The action
-# installs the pinned npm release and runs `svg-terminal generate`, so this
-# workflow no longer clones + builds the tool from source.
+# Regenerates the profile hero terminal from terminal.yml and terminal-mobile.yml
+# using the published svg-terminal GitHub Action (williamzujkowski/svg-terminal@v1).
 #
-# Two outputs:
-#   - src/terminal.svg         animated (default)
-#   - src/terminal-static.svg  --static, served to prefers-reduced-motion users
-#     via the README's <picture> element (SMIL doesn't honor that media query).
+# Four responsive outputs:
+#   - src/terminal.svg                animated desktop (default)
+#   - src/terminal-static.svg         static desktop (prefers-reduced-motion)
+#   - src/terminal-mobile.svg         animated mobile (max-width: 600px)
+#   - src/terminal-mobile-static.svg  static mobile (max-width: 600px + reduced-motion)
 
 on:
   # Every 6 hours (~midnight/6/noon/6pm EST). Daily theme rotation + live data.
@@ -19,6 +18,7 @@ on:
     branches: [main]
     paths:
       - 'terminal.yml'
+      - 'terminal-mobile.yml'
       - '.github/workflows/update-terminal-svg.yml'
 
 permissions:
@@ -39,30 +39,45 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
 
-      - name: Generate animated terminal SVG
+      - name: Generate Desktop Animated SVG
         uses: williamzujkowski/svg-terminal@v1
         with:
           config: terminal.yml
           output: src/terminal.svg
-          # animated (static defaults to false); cache-mode normal re-fetches
-          # live blocks once per run, shared with the static pass below.
+          strict: 'true'
 
-      - name: Generate static fallback SVG
+      - name: Generate Desktop Static SVG
         uses: williamzujkowski/svg-terminal@v1
         with:
           config: terminal.yml
           output: src/terminal-static.svg
-          static: 'true'   # reads the cache written by the pass above — no double fetch
+          static: 'true'
+          strict: 'true'
+
+      - name: Generate Mobile Animated SVG
+        uses: williamzujkowski/svg-terminal@v1
+        with:
+          config: terminal-mobile.yml
+          output: src/terminal-mobile.svg
+          strict: 'true'
+
+      - name: Generate Mobile Static SVG
+        uses: williamzujkowski/svg-terminal@v1
+        with:
+          config: terminal-mobile.yml
+          output: src/terminal-mobile-static.svg
+          static: 'true'
+          strict: 'true'
 
       - name: Commit updated SVGs
         run: |
           set -euo pipefail
-          if git diff --quiet src/terminal.svg src/terminal-static.svg; then
-            echo "No SVG changes — nothing to commit."
+          if git diff --quiet src/terminal.svg src/terminal-static.svg src/terminal-mobile.svg src/terminal-mobile-static.svg; then
+            echo "No SVG changes across all 4 targets — nothing to commit."
             exit 0
           fi
           git config --local user.name  "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/terminal.svg src/terminal-static.svg
-          git commit -m "chore: update terminal SVG [skip ci]"
+          git add src/terminal.svg src/terminal-static.svg src/terminal-mobile.svg src/terminal-mobile-static.svg
+          git commit -m "chore: update desktop and mobile terminal SVGs [skip ci]"
           git push origin "HEAD:${GITHUB_REF_NAME}"

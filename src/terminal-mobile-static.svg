@@ -1,0 +1,139 @@
+<svg width="360" height="1248" viewBox="0 0 360 1248" xmlns="http://www.w3.org/2000/svg"
+  role="img" aria-label="William Zujkowski&apos;s mobile profile terminal — Security Engineer, Multi-Agent AI Builder, Homelabber, and Dad Joke Connoisseur.">
+  <title>William Zujkowski&apos;s mobile profile terminal — Security Engineer, Multi-Agent AI Builder, Homelabber, and Dad Joke Connoisseur.</title>
+  <desc>w@lab:~$ cat /etc/motd
+WILLIAM&apos;S TERMINAL v2026.11
+Security · Multi-Agent AI
+Overcast  57°F | Humidity: 45%
+w@lab:~$ neofetch
+william@homelab
+OS:        DadOS LTS (Linux + Coffee)
+Shell:     /bin/dad-jokes
+Uptime:    20+ years
+Role:      Security &amp; Multi-Agent AI
+Location:  PA · Basement Lab
+Languages: TS, Python, Go, Rust
+Editor:    nvim (btw)
+
+● ● ● ● ● ● ● ●
+w@lab:~$ status
+
+✓ nexus      online
+✓ homelab    healthy
+✓ aegis      secure
+⚠ coffee     low
+✓ dad-jokes  ready
+
+w@lab:~$ gh stats
+GITHUB: @williamzujkowski
+Repos: 94    Followers: 36
+Following: 58    Gists: 134
+Member since: Sep 2015
+w@lab:~$ gh lang
+Python      ████░░░░░░  43%
+TypeScript  ██░░░░░░░░  21%
+Shell       █░░░░░░░░░  11%
+JavaScript  █░░░░░░░░░   9%
+HTML        █░░░░░░░░░   6%
+w@lab:~$ exercise
+\o/
+|
+/ \
+w@lab:~$ dad-joke
+DAD JOKE OF THE DAY - Nov 1
+Category: AI
+Q: How transformers bye?
+A: Attention, I must go!
+w@lab:~$ ping lab
+homelab online</desc>
+  <style>.tt { font-family: JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace; font-size: 13px; white-space: pre; }</style>
+  <defs>
+    
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="black" stop-opacity="0"/>
+      <stop offset="60%" stop-color="black" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.25"/>
+    </radialGradient>
+    
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="6" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.55"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="terminalViewport">
+      <rect x="0" y="40" width="360" height="1208"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#shadow)">
+    
+    <rect x="0" y="0" width="360" height="1248"
+          rx="12" ry="12"
+          fill="#0a0014"/>
+    
+    <rect x="0" y="0" width="360" height="40"
+          rx="12" ry="12"
+          fill="#150028"/>
+    <rect x="0" y="16" width="360" height="16"
+          fill="#150028"/>
+    <g id="window-controls">
+      <circle cx="14" cy="16" r="6" fill="#ff0055" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="34" cy="16" r="6" fill="#ffff00" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+      <circle cx="54" cy="16" r="6" fill="#00ff88" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
+    </g>
+    <text x="180" y="24.55"
+          font-family="-apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Helvetica, Arial, sans-serif" font-size="13"
+          fill="#e0e0ff" text-anchor="middle">
+      william@homelab:~
+    </text>
+    <rect x="0" y="40" width="360"
+          height="1208" fill="#0a0014"/>
+    <g clip-path="url(#terminalViewport)">
+      <g transform="translate(12, 54)">
+        
+      <text class="tt" y="0" fill="#e0e0ff">w@lab:~$ cat /etc/motd</text><g transform="translate(0, 19.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 39)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 58.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  WILLIAM&apos;S TERMINAL v2026.11          </tspan></text></g><g transform="translate(0, 78)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Security · Multi-Agent AI            </tspan></text></g><g transform="translate(0, 97.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#00ffff" textLength="234" lengthAdjust="spacingAndGlyphs">Overcast  57°F | Humidity: 45%</tspan><tspan x="249.6" fill="#e0e0ff" textLength="54.6" lengthAdjust="spacingAndGlyphs">       </tspan></text></g><g transform="translate(0, 117)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 136.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="156" fill="#e0e0ff">w@lab:~$ neofetch</text>
+      <text class="tt" y="175.5"><tspan fill="#00ffff">william@homelab</tspan></text>
+      <text class="tt" y="195"><tspan fill="#00ffff">───────────────</tspan></text>
+      <text class="tt" y="214.5"><tspan fill="#00ffff">OS</tspan><tspan fill="#e0e0ff">:        DadOS LTS (Linux + Coffee)</tspan></text>
+      <text class="tt" y="234"><tspan fill="#00ffff">Shell</tspan><tspan fill="#e0e0ff">:     /bin/dad-jokes</tspan></text>
+      <text class="tt" y="253.5"><tspan fill="#00ffff">Uptime</tspan><tspan fill="#e0e0ff">:    20+ years</tspan></text>
+      <text class="tt" y="273"><tspan fill="#00ffff">Role</tspan><tspan fill="#e0e0ff">:      Security &amp; Multi-Agent AI</tspan></text>
+      <text class="tt" y="292.5"><tspan fill="#00ffff">Location</tspan><tspan fill="#e0e0ff">:  PA · Basement Lab</tspan></text>
+      <text class="tt" y="312"><tspan fill="#00ffff">Languages</tspan><tspan fill="#e0e0ff">: TS, Python, Go, Rust</tspan></text>
+      <text class="tt" y="331.5"><tspan fill="#00ffff">Editor</tspan><tspan fill="#e0e0ff">:    nvim (btw)</tspan></text>
+      <text class="tt" y="351" fill="#e0e0ff"></text>
+      <text class="tt" y="370.5"><tspan fill="#ff0055">●</tspan><tspan fill="#e0e0ff"> </tspan><tspan fill="#00ff88">●</tspan><tspan fill="#e0e0ff"> </tspan><tspan fill="#ffff00">●</tspan><tspan fill="#e0e0ff"> </tspan><tspan fill="#0088ff">●</tspan><tspan fill="#e0e0ff"> </tspan><tspan fill="#ff00ff">●</tspan><tspan fill="#e0e0ff"> </tspan><tspan fill="#00ffff">●</tspan><tspan fill="#e0e0ff"> </tspan><tspan fill="#ffffff">●</tspan><tspan fill="#e0e0ff"> </tspan><tspan fill="#ff8800">●</tspan></text>
+      <text class="tt" y="390" fill="#e0e0ff">w@lab:~$ status</text>
+      <text class="tt" y="409.5" fill="#e0e0ff"></text>
+      <text class="tt" y="429"><tspan fill="#e0e0ff">  </tspan><tspan fill="#00ff88">✓</tspan><tspan fill="#e0e0ff"> nexus      online</tspan></text>
+      <text class="tt" y="448.5"><tspan fill="#e0e0ff">  </tspan><tspan fill="#00ff88">✓</tspan><tspan fill="#e0e0ff"> homelab    healthy</tspan></text>
+      <text class="tt" y="468"><tspan fill="#e0e0ff">  </tspan><tspan fill="#00ff88">✓</tspan><tspan fill="#e0e0ff"> aegis      secure</tspan></text>
+      <text class="tt" y="487.5"><tspan fill="#e0e0ff">  </tspan><tspan fill="#ffff00">⚠</tspan><tspan fill="#e0e0ff"> coffee     low</tspan></text>
+      <text class="tt" y="507"><tspan fill="#e0e0ff">  </tspan><tspan fill="#00ff88">✓</tspan><tspan fill="#e0e0ff"> dad-jokes  ready</tspan></text>
+      <text class="tt" y="526.5" fill="#e0e0ff"></text>
+      <text class="tt" y="546" fill="#e0e0ff">w@lab:~$ gh stats</text><g transform="translate(0, 565.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 585)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 604.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#00ffff" textLength="195" lengthAdjust="spacingAndGlyphs">GITHUB: @williamzujkowski</tspan><tspan x="210.6" fill="#e0e0ff" textLength="93.6" lengthAdjust="spacingAndGlyphs">            </tspan></text></g><g transform="translate(0, 624)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="70.2" lengthAdjust="spacingAndGlyphs">  Repos: </tspan><tspan x="70.2" fill="#e0e0ff" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">94</tspan><tspan x="85.8" fill="#e0e0ff" textLength="117" lengthAdjust="spacingAndGlyphs">    Followers: </tspan><tspan x="202.8" fill="#e0e0ff" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">36</tspan><tspan x="218.4" fill="#e0e0ff" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g><g transform="translate(0, 643.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Following: 58    Gists: 134          </tspan></text></g><g transform="translate(0, 663)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Member since: Sep 2015               </tspan></text></g><g transform="translate(0, 682.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 702)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="721.5" fill="#e0e0ff">w@lab:~$ gh lang</text>
+      <text class="tt" y="741"><tspan fill="#00ffff">Python    </tspan><tspan fill="#e0e0ff">  </tspan><tspan fill="#00ffff">████░░░░░░</tspan><tspan fill="#e0e0ff">  43%</tspan></text>
+      <text class="tt" y="760.5"><tspan fill="#00ff88">TypeScript</tspan><tspan fill="#e0e0ff">  </tspan><tspan fill="#00ff88">██░░░░░░░░</tspan><tspan fill="#e0e0ff">  21%</tspan></text>
+      <text class="tt" y="780"><tspan fill="#ffff00">Shell     </tspan><tspan fill="#e0e0ff">  </tspan><tspan fill="#ffff00">█░░░░░░░░░</tspan><tspan fill="#e0e0ff">  11%</tspan></text>
+      <text class="tt" y="799.5"><tspan fill="#ff00ff">JavaScript</tspan><tspan fill="#e0e0ff">  </tspan><tspan fill="#ff00ff">█░░░░░░░░░</tspan><tspan fill="#e0e0ff">   9%</tspan></text>
+      <text class="tt" y="819"><tspan fill="#0088ff">HTML      </tspan><tspan fill="#e0e0ff">  </tspan><tspan fill="#0088ff">█░░░░░░░░░</tspan><tspan fill="#e0e0ff">   6%</tspan></text>
+      <text class="tt" y="838.5" fill="#e0e0ff">w@lab:~$ exercise</text>
+      <text class="tt" y="858"><tspan fill="#00ff88">\o/</tspan></text>
+      <text class="tt" y="877.5"><tspan fill="#00ff88"> | </tspan></text>
+      <text class="tt" y="897"><tspan fill="#00ff88">/ \</tspan></text>
+      <text class="tt" y="916.5" fill="#e0e0ff">w@lab:~$ dad-joke</text><g transform="translate(0, 936)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 955.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 975)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  DAD JOKE OF THE DAY - Nov 1          </tspan></text></g><g transform="translate(0, 994.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Category: AI                         </tspan></text></g><g transform="translate(0, 1014)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1033.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Q: How transformers bye?             </tspan></text></g><g transform="translate(0, 1053)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1072.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  A: Attention, I must go!             </tspan></text></g><g transform="translate(0, 1092)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#e0e0ff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1111.5)"><path fill="none" stroke="#e0e0ff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="1131" fill="#e0e0ff">w@lab:~$ ping lab</text>
+      <text class="tt" y="1150.5"><tspan fill="#ff0055">   </tspan><tspan fill="#e0e0ff"> homelab online</tspan></text>
+      </g>
+    </g>
+    <rect x="0" y="40" width="360" height="1208" fill="url(#vignette)" pointer-events="none"/>
+    
+  </g>
+</svg>

@@ -79,7 +79,7 @@ blocks:
       badges:
         - { label: "nexus-agents",    status: "ok",   value: "online · multi-model" }
         - { label: "homelab",         status: "ok",   value: "racks healthy"         }
-        - { label: "vuln-briefing",   status: "ok",   value: "shipped"               }
+        - { label: "aegis-boot",      status: "ok",   value: "secure boot · kexec"   }
         - { label: "coffee",          status: "warn", value: "refill required"       }
         - { label: "dad-joke buffer", status: "ok",   value: "overflowing"           }
 

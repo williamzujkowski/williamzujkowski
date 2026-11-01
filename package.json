@@ -1,9 +1,13 @@
 {
   "name": "williamzujkowski",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "GitHub profile README — powered by svg-terminal",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "generate": "svg-terminal generate --config terminal.yml --output src/terminal.svg --strict && svg-terminal generate --config terminal.yml --output src/terminal-static.svg --static --strict && svg-terminal generate --config terminal-mobile.yml --output src/terminal-mobile.svg --strict && svg-terminal generate --config terminal-mobile.yml --output src/terminal-mobile-static.svg --static --strict",
+    "generate:desktop": "svg-terminal generate --config terminal.yml --output src/terminal.svg --strict && svg-terminal generate --config terminal.yml --output src/terminal-static.svg --static --strict",
+    "generate:mobile": "svg-terminal generate --config terminal-mobile.yml --output src/terminal-mobile.svg --strict && svg-terminal generate --config terminal-mobile.yml --output src/terminal-mobile-static.svg --static --strict"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/williamzujkowski/williamzujkowski.git"

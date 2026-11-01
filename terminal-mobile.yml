@@ -1,0 +1,143 @@
+# svg-terminal mobile profile config — William Zujkowski
+# Compact 360px viewport tailored for mobile devices and narrow screens.
+# Features continuous SVG stroke borders (v1.3.1), shorter commands,
+# compact prompt, and curated blocks that convey William's core identity.
+# Refreshed every 6 hours alongside terminal.yml.
+
+theme: random  # Synchronized daily rotation with desktop across 20 OKLCH WCAG-AAA themes
+
+window:
+  width: 360
+  title: "william@homelab:~"
+  autoHeight: true
+  minHeight: 200
+  maxHeight: 650
+
+terminal:
+  prompt: "w@lab:~$ "
+  fontSize: 13
+  lineHeight: 1.5
+
+effects:
+  textGlow: false
+  scanlines: false
+  shadow: true
+
+fetchTimeout: 15000
+cacheTTL: 21600
+
+accessibility:
+  describe: true
+
+accessibilityLabel: "William Zujkowski's mobile profile terminal — Security Engineer, Multi-Agent AI Builder, Homelabber, and Dad Joke Connoisseur."
+
+blocks:
+  # 1. MOTD — compact greeting with weather
+  - block: motd
+    config:
+      title: "WILLIAM'S TERMINAL"
+      subtitle: "Security · Multi-Agent AI"
+      weather:
+        location: "Harrisburg, PA"
+        units: imperial
+
+  # 2. Neofetch — mobile persona card
+  - block: neofetch
+    config:
+      username: william
+      hostname: homelab
+      os: "DadOS LTS (Linux + Coffee)"
+      shell: "/bin/dad-jokes"
+      role: "Security & Multi-Agent AI"
+      location: "PA · Basement Lab"
+      languages: "TS, Python, Go, Rust"
+      editor: "nvim (btw)"
+      uptime: "20+ years"
+      command: "neofetch"
+
+  # 3. Status card — compact build-badge
+  - block: build-badge
+    config:
+      command: "status"
+      badges:
+        - { label: "nexus",      status: "ok",   value: "online" }
+        - { label: "homelab",    status: "ok",   value: "healthy" }
+        - { label: "aegis",      status: "ok",   value: "secure" }
+        - { label: "coffee",     status: "warn", value: "low" }
+        - { label: "dad-jokes",  status: "ok",   value: "ready" }
+
+  # 4. GitHub stats (live, cached)
+  - block: github-stats
+    config:
+      username: williamzujkowski
+      command: "gh stats"
+
+  # 5. GitHub languages with compact bar
+  - block: github-languages
+    config:
+      username: williamzujkowski
+      top: 5
+      command: "gh lang"
+      barWidth: 10
+      fallback:
+        - { name: "TypeScript", percent: 42 }
+        - { name: "Python",     percent: 31 }
+        - { name: "Go",         percent: 14 }
+        - { name: "Rust",       percent: 9  }
+        - { name: "Shell",      percent: 4  }
+
+  # 6. Jumping jack — multi-line stick figure animation
+  - block: jumping-jack
+    config:
+      command: "exercise"
+      fps: 3
+      color: green
+
+  # 7. Dad joke — curated compact jokes that fit 360px box width
+  - block: dad-joke
+    config:
+      command: "dad-joke"
+      jokes:
+        - q: "Why prefer dark mode?"
+          a: "Light attracts bugs!"
+          category: classic
+        - q: "Why developer broke?"
+          a: "Used up all his cache!"
+          category: money
+        - q: "How comfort JS bug?"
+          a: "You console it!"
+          category: javascript
+        - q: "Why function sad?"
+          a: "It had no closure!"
+          category: javascript
+        - q: "Why did LLM get help?"
+          a: "Too many hallucinations!"
+          category: ai
+        - q: "How transformers bye?"
+          a: "Attention, I must go!"
+          category: ai
+        - q: "Why no poker for AI?"
+          a: "Leaks chain of thought!"
+          category: ai
+        - q: "Why ladder at work?"
+          a: "Escalate privileges!"
+          category: security
+        - q: "What is unpatched CVE?"
+          a: "An invitation."
+          category: security
+        - q: "What firewall said?"
+          a: "DROP it like it's hot."
+          category: security
+        - q: "Why 4th homelab UPS?"
+          a: "Redundancy for the rest!"
+          category: homelab
+        - q: "How sysadmin propose?"
+          a: "With a ring0."
+          category: homelab
+
+  # 8. Heartbeat — playful homelab pulse
+  - block: heartbeat
+    config:
+      command: "ping lab"
+      label: "homelab online"
+      color: red

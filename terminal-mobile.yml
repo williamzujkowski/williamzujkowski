@@ -4,7 +4,7 @@
 # compact prompt, and curated blocks that convey William's core identity.
 # Refreshed every 6 hours alongside terminal.yml.
 
-theme: random  # Synchronized daily rotation with desktop across 20 OKLCH WCAG-AAA themes
+theme: random  # Synchronized daily rotation with desktop across 25 OKLCH WCAG-AAA themes
 
 window:
   width: 360

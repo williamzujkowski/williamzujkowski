@@ -4,7 +4,7 @@
   <desc>w@lab:~$ cat /etc/motd
 WILLIAM&apos;S TERMINAL v2026.11
 Security · Multi-Agent AI
-Overcast  61°F | Humidity: 40%
+Cloudy  48°F | Humidity: 62%
 w@lab:~$ neofetch
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -26,7 +26,7 @@ w@lab:~$ status
 
 w@lab:~$ gh stats
 GITHUB: @williamzujkowski
-Repos: 94    Followers: 36
+Repos: 94    Followers: 37
 Following: 58    Gists: 134
 Member since: Sep 2015
 w@lab:~$ gh lang
@@ -112,7 +112,7 @@ homelab online</desc>
         ║ Security · Multi-Agent AI           ║
       </text>
       <text class="tt" y="98">
-        <tspan fill="#e0e0ff">║ </tspan><tspan fill="#00ffff">Overcast  61°F | Humidity: 40%</tspan><tspan fill="#e0e0ff">      ║</tspan>
+        <tspan fill="#e0e0ff">║ </tspan><tspan fill="#00ffff">Cloudy  48°F | Humidity: 62%</tspan><tspan fill="#e0e0ff">        ║</tspan>
       </text>
       <text class="tt" y="117" fill="#e0e0ff">
         ║                                     ║
@@ -193,7 +193,7 @@ homelab online</desc>
         <tspan fill="#e0e0ff">║ </tspan><tspan fill="#00ffff">GITHUB: @williamzujkowski</tspan><tspan fill="#e0e0ff">           ║</tspan>
       </text>
       <text class="tt" y="624">
-        <tspan fill="#e0e0ff">║ Repos: </tspan><tspan fill="#e0e0ff" font-weight="bold">94</tspan><tspan fill="#e0e0ff">    Followers: </tspan><tspan fill="#e0e0ff" font-weight="bold">36</tspan><tspan fill="#e0e0ff">          ║</tspan>
+        <tspan fill="#e0e0ff">║ Repos: </tspan><tspan fill="#e0e0ff" font-weight="bold">94</tspan><tspan fill="#e0e0ff">    Followers: </tspan><tspan fill="#e0e0ff" font-weight="bold">37</tspan><tspan fill="#e0e0ff">          ║</tspan>
       </text>
       <text class="tt" y="644" fill="#e0e0ff">
         ║ Following: 58    Gists: 134         ║

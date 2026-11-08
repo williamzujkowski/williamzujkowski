@@ -4,7 +4,7 @@
   <desc>w@lab:~$ cat /etc/motd
 WILLIAM&apos;S TERMINAL v2026.11
 Security · Multi-Agent AI
-Sunny 52°F | Humidity: 58%
+Sunny 58°F | Humidity: 40%
 w@lab:~$ neofetch
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -25,16 +25,13 @@ w@lab:~$ status
 ✓ dad-jokes  ready
 
 w@lab:~$ gh stats
-GITHUB: @williamzujkowski
-Repos: 94    Followers: 38
-Following: 58    Gists: 134
-Member since: Sep 2015
+GitHub stats unavai...
 w@lab:~$ gh lang
-Python      ████░░░░░░  43%
-TypeScript  ██░░░░░░░░  21%
-Shell       █░░░░░░░░░  11%
-JavaScript  █░░░░░░░░░   9%
-HTML        █░░░░░░░░░   6%
+TypeScript  ████░░░░░░  42%
+Python      ███░░░░░░░  31%
+Go          █░░░░░░░░░  14%
+Rust        █░░░░░░░░░   9%
+Shell       ░░░░░░░░░░   4%
 w@lab:~$ exercise
 \o/
 |
@@ -124,8 +121,8 @@ homelab online</desc>
         
         <animateTransform
           attributeName="transform" type="translate"
-          values="12 54;12 54;12 34;12 14;12 -6;12 -26;12 -46;12 -66;12 -86;12 -106;12 -106;12 -126;12 -126;12 -146;12 -166;12 -186;12 -206;12 -226;12 -226;12 -246;12 -246;12 -306;12 -306;12 -326;12 -326;12 -346;12 -366;12 -386;12 -406;12 -426;12 -446;12 -466;12 -486;12 -506;12 -526;12 -526;12 -546;12 -546;12 -566" keyTimes="0.0000;0.4253;0.4299;0.4322;0.4345;0.4368;0.4391;0.4414;0.4437;0.4460;0.4897;0.4943;0.5315;0.5361;0.5384;0.5407;0.5430;0.5453;0.5890;0.5936;0.6630;0.6676;0.7232;0.7278;0.8248;0.8294;0.8317;0.8340;0.8363;0.8386;0.8409;0.8432;0.8455;0.8478;0.8501;0.9214;0.9260;0.9954;1.0000"
-          dur="21750ms" fill="freeze"/>
+          values="12 54;12 54;12 34;12 14;12 -6;12 -26;12 -46;12 -46;12 -66;12 -66;12 -86;12 -106;12 -126;12 -146;12 -166;12 -166;12 -186;12 -186;12 -246;12 -246;12 -266;12 -266;12 -286;12 -306;12 -326;12 -346;12 -366;12 -386;12 -406;12 -426;12 -446;12 -466;12 -466;12 -486;12 -486;12 -506" keyTimes="0.0000;0.4282;0.4329;0.4352;0.4375;0.4398;0.4421;0.4861;0.4907;0.5282;0.5329;0.5352;0.5375;0.5398;0.5421;0.5861;0.5907;0.6606;0.6653;0.7213;0.7259;0.8236;0.8282;0.8306;0.8329;0.8352;0.8375;0.8398;0.8421;0.8444;0.8468;0.8491;0.9208;0.9255;0.9954;1.0000"
+          dur="21600ms" fill="freeze"/>
         
     <g transform="translate(0, 0)">
       <defs><clipPath id="cmdrev-0"><rect x="70" y="-13" width="104" height="26"><animate attributeName="width" values="0;8;16;24;32;40;48;56;64;72;80;88;96;104" keyTimes="0.0000;0.0769;0.1538;0.2308;0.3077;0.3846;0.4615;0.5385;0.6154;0.6923;0.7692;0.8462;0.9231;1.0000" calcMode="discrete" begin="0ms" dur="500ms" fill="freeze"/></rect></clipPath></defs>
@@ -143,7 +140,7 @@ homelab online</desc>
 <g transform="translate(0, 39)" class="fade-in" style="animation-delay: 850ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
 <g transform="translate(0, 58.5)" class="fade-in" style="animation-delay: 900ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  WILLIAM&apos;S TERMINAL v2026.11          </tspan></text></g>
 <g transform="translate(0, 78)" class="fade-in" style="animation-delay: 950ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Security · Multi-Agent AI            </tspan></text></g>
-<g transform="translate(0, 97.5)" class="fade-in" style="animation-delay: 1000ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#00d3d0" textLength="202.8" lengthAdjust="spacingAndGlyphs">Sunny 52°F | Humidity: 58%</tspan><tspan x="218.4" fill="#ffffff" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g>
+<g transform="translate(0, 97.5)" class="fade-in" style="animation-delay: 1000ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#00d3d0" textLength="202.8" lengthAdjust="spacingAndGlyphs">Sunny 58°F | Humidity: 40%</tspan><tspan x="218.4" fill="#ffffff" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g>
 <g transform="translate(0, 117)" class="fade-in" style="animation-delay: 1050ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
 <g transform="translate(0, 136.5)" class="fade-in" style="animation-delay: 1100ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
 
@@ -259,100 +256,97 @@ homelab online</desc>
     </g>
 <g transform="translate(0, 565.5)" class="fade-in" style="animation-delay: 9360ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g>
 <g transform="translate(0, 585)" class="fade-in" style="animation-delay: 9410ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
-<g transform="translate(0, 604.5)" class="fade-in" style="animation-delay: 9460ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#00d3d0" textLength="195" lengthAdjust="spacingAndGlyphs">GITHUB: @williamzujkowski</tspan><tspan x="210.6" fill="#ffffff" textLength="93.6" lengthAdjust="spacingAndGlyphs">            </tspan></text></g>
-<g transform="translate(0, 624)" class="fade-in" style="animation-delay: 9510ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="70.2" lengthAdjust="spacingAndGlyphs">  Repos: </tspan><tspan x="70.2" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">94</tspan><tspan x="85.8" fill="#ffffff" textLength="117" lengthAdjust="spacingAndGlyphs">    Followers: </tspan><tspan x="202.8" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">38</tspan><tspan x="218.4" fill="#ffffff" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g>
-<g transform="translate(0, 643.5)" class="fade-in" style="animation-delay: 9560ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Following: 58    Gists: 134          </tspan></text></g>
-<g transform="translate(0, 663)" class="fade-in" style="animation-delay: 9610ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Member since: Sep 2015               </tspan></text></g>
-<g transform="translate(0, 682.5)" class="fade-in" style="animation-delay: 9660ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
-<g transform="translate(0, 702)" class="fade-in" style="animation-delay: 9710ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+<g transform="translate(0, 604.5)" class="fade-in" style="animation-delay: 9460ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#d0bc00" textLength="288.6" lengthAdjust="spacingAndGlyphs">GitHub stats unavai...               </tspan></text></g>
+<g transform="translate(0, 624)" class="fade-in" style="animation-delay: 9510ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
+<g transform="translate(0, 643.5)" class="fade-in" style="animation-delay: 9560ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
 
-    <g transform="translate(0, 721.5)">
-      <defs><clipPath id="cmdrev-37"><rect x="70" y="-13" width="56" height="26"><set attributeName="width" to="0" begin="0s" end="10760ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56" keyTimes="0.0000;0.1429;0.2857;0.4286;0.5714;0.7143;0.8571;1.0000" calcMode="discrete" begin="10760ms" dur="500ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 10760ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
-      <text class="tt" x="70" fill="#6ae4b9" textLength="56" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-37)">gh lang</text>
+    <g transform="translate(0, 663)">
+      <defs><clipPath id="cmdrev-34"><rect x="70" y="-13" width="56" height="26"><set attributeName="width" to="0" begin="0s" end="10610ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56" keyTimes="0.0000;0.1429;0.2857;0.4286;0.5714;0.7143;0.8571;1.0000" calcMode="discrete" begin="10610ms" dur="500ms" fill="freeze"/></rect></clipPath></defs>
+      <text class="tt fade-in" style="animation-delay: 10610ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
+      <text class="tt" x="70" fill="#6ae4b9" textLength="56" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-34)">gh lang</text>
       
     <rect x="70" y="-11" width="8" height="13"
           fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="10760ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="opacity" to="0" begin="11260ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="x" values="70;70;78;86;94;102;110;118" keyTimes="0.0000;0.1429;0.2857;0.4286;0.5714;0.7143;0.8571;1.0000" calcMode="discrete" begin="10760ms" dur="500ms" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="1" begin="10610ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="opacity" to="0" begin="11110ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="x" values="70;70;78;86;94;102;110;118" keyTimes="0.0000;0.1429;0.2857;0.4286;0.5714;0.7143;0.8571;1.0000" calcMode="discrete" begin="10610ms" dur="500ms" fill="freeze"/>
     </rect>
+    </g>
+
+    <g transform="translate(0, 682.5)" class="fade-in" style="animation-delay: 11520ms">
+      <text class="tt"><tspan fill="#00d3d0">TypeScript</tspan><tspan fill="#ffffff">  </tspan><tspan fill="#00d3d0">████░░░░░░</tspan><tspan fill="#ffffff">  42%</tspan></text>
+    </g>
+
+    <g transform="translate(0, 702)" class="fade-in" style="animation-delay: 11570ms">
+      <text class="tt"><tspan fill="#44bc44">Python    </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#44bc44">███░░░░░░░</tspan><tspan fill="#ffffff">  31%</tspan></text>
+    </g>
+
+    <g transform="translate(0, 721.5)" class="fade-in" style="animation-delay: 11620ms">
+      <text class="tt"><tspan fill="#d0bc00">Go        </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#d0bc00">█░░░░░░░░░</tspan><tspan fill="#ffffff">  14%</tspan></text>
     </g>
 
     <g transform="translate(0, 741)" class="fade-in" style="animation-delay: 11670ms">
-      <text class="tt"><tspan fill="#00d3d0">Python    </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#00d3d0">████░░░░░░</tspan><tspan fill="#ffffff">  43%</tspan></text>
+      <text class="tt"><tspan fill="#feacd0">Rust      </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#feacd0">█░░░░░░░░░</tspan><tspan fill="#ffffff">   9%</tspan></text>
     </g>
 
     <g transform="translate(0, 760.5)" class="fade-in" style="animation-delay: 11720ms">
-      <text class="tt"><tspan fill="#44bc44">TypeScript</tspan><tspan fill="#ffffff">  </tspan><tspan fill="#44bc44">██░░░░░░░░</tspan><tspan fill="#ffffff">  21%</tspan></text>
+      <text class="tt"><tspan fill="#2fafff">Shell     </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#2fafff">░░░░░░░░░░</tspan><tspan fill="#ffffff">   4%</tspan></text>
     </g>
 
-    <g transform="translate(0, 780)" class="fade-in" style="animation-delay: 11770ms">
-      <text class="tt"><tspan fill="#d0bc00">Shell     </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#d0bc00">█░░░░░░░░░</tspan><tspan fill="#ffffff">  11%</tspan></text>
-    </g>
-
-    <g transform="translate(0, 799.5)" class="fade-in" style="animation-delay: 11820ms">
-      <text class="tt"><tspan fill="#feacd0">JavaScript</tspan><tspan fill="#ffffff">  </tspan><tspan fill="#feacd0">█░░░░░░░░░</tspan><tspan fill="#ffffff">   9%</tspan></text>
-    </g>
-
-    <g transform="translate(0, 819)" class="fade-in" style="animation-delay: 11870ms">
-      <text class="tt"><tspan fill="#2fafff">HTML      </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#2fafff">█░░░░░░░░░</tspan><tspan fill="#ffffff">   6%</tspan></text>
-    </g>
-
-    <g transform="translate(0, 838.5)">
-      <defs><clipPath id="cmdrev-43"><rect x="70" y="-13" width="64" height="26"><set attributeName="width" to="0" begin="0s" end="12920ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="12920ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 12920ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
-      <text class="tt" x="70" fill="#6ae4b9" textLength="64" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-43)">exercise</text>
+    <g transform="translate(0, 780)">
+      <defs><clipPath id="cmdrev-40"><rect x="70" y="-13" width="64" height="26"><set attributeName="width" to="0" begin="0s" end="12770ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="12770ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
+      <text class="tt fade-in" style="animation-delay: 12770ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
+      <text class="tt" x="70" fill="#6ae4b9" textLength="64" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-40)">exercise</text>
       
     <rect x="70" y="-11" width="8" height="13"
           fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="12920ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="opacity" to="0" begin="14120ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="x" values="70;70;78;86;94;102;110;118;126" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="12920ms" dur="1200ms" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="1" begin="12770ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="opacity" to="0" begin="13970ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="x" values="70;70;78;86;94;102;110;118;126" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="12770ms" dur="1200ms" fill="freeze"/>
     </rect>
     </g>
 
-    <g transform="translate(0, 858)" class="fade-in" style="animation-delay: 14530ms">
+    <g transform="translate(0, 799.5)" class="fade-in" style="animation-delay: 14380ms">
       <g class="tt frame-cycle-2" opacity="1" style="animation: frame-cycle-2 667ms linear 0ms infinite"><text y="0"><tspan fill="#44bc44">\o/</tspan></text><text y="20"><tspan fill="#44bc44"> | </tspan></text><text y="39"><tspan fill="#44bc44">/ \</tspan></text></g><g class="tt frame-cycle-2" opacity="0" style="animation: frame-cycle-2 667ms linear 333ms infinite"><text y="0"><tspan fill="#44bc44"> o </tspan></text><text y="20"><tspan fill="#44bc44">/|\</tspan></text><text y="39"><tspan fill="#44bc44"> | </tspan></text></g>
     </g>
 
-    <g transform="translate(0, 916.5)">
-      <defs><clipPath id="cmdrev-47"><rect x="70" y="-13" width="64" height="26"><set attributeName="width" to="0" begin="0s" end="15840ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="15840ms" dur="1800ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 15840ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
-      <text class="tt" x="70" fill="#6ae4b9" textLength="64" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-47)">dad-joke</text>
+    <g transform="translate(0, 858)">
+      <defs><clipPath id="cmdrev-44"><rect x="70" y="-13" width="64" height="26"><set attributeName="width" to="0" begin="0s" end="15690ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="15690ms" dur="1800ms" fill="freeze"/></rect></clipPath></defs>
+      <text class="tt fade-in" style="animation-delay: 15690ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
+      <text class="tt" x="70" fill="#6ae4b9" textLength="64" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-44)">dad-joke</text>
       
     <rect x="70" y="-11" width="8" height="13"
           fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="15840ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="opacity" to="0" begin="17640ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="x" values="70;70;78;86;94;102;110;118;126" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="15840ms" dur="1800ms" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="1" begin="15690ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="opacity" to="0" begin="17490ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="x" values="70;70;78;86;94;102;110;118;126" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="15690ms" dur="1800ms" fill="freeze"/>
     </rect>
     </g>
-<g transform="translate(0, 936)" class="fade-in" style="animation-delay: 18050ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g>
+<g transform="translate(0, 877.5)" class="fade-in" style="animation-delay: 17900ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g>
+<g transform="translate(0, 897)" class="fade-in" style="animation-delay: 17950ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
+<g transform="translate(0, 916.5)" class="fade-in" style="animation-delay: 18000ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  DAD JOKE OF THE DAY - Nov 8          </tspan></text></g>
+<g transform="translate(0, 936)" class="fade-in" style="animation-delay: 18050ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Category: CLASSIC                    </tspan></text></g>
 <g transform="translate(0, 955.5)" class="fade-in" style="animation-delay: 18100ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
-<g transform="translate(0, 975)" class="fade-in" style="animation-delay: 18150ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  DAD JOKE OF THE DAY - Nov 8          </tspan></text></g>
-<g transform="translate(0, 994.5)" class="fade-in" style="animation-delay: 18200ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Category: CLASSIC                    </tspan></text></g>
-<g transform="translate(0, 1014)" class="fade-in" style="animation-delay: 18250ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
-<g transform="translate(0, 1033.5)" class="fade-in" style="animation-delay: 18300ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Q: Why prefer dark mode?             </tspan></text></g>
-<g transform="translate(0, 1053)" class="fade-in" style="animation-delay: 18350ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
-<g transform="translate(0, 1072.5)" class="fade-in" style="animation-delay: 18400ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  A: Light attracts bugs!              </tspan></text></g>
-<g transform="translate(0, 1092)" class="fade-in" style="animation-delay: 18450ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
-<g transform="translate(0, 1111.5)" class="fade-in" style="animation-delay: 18500ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+<g transform="translate(0, 975)" class="fade-in" style="animation-delay: 18150ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Q: Why prefer dark mode?             </tspan></text></g>
+<g transform="translate(0, 994.5)" class="fade-in" style="animation-delay: 18200ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
+<g transform="translate(0, 1014)" class="fade-in" style="animation-delay: 18250ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  A: Light attracts bugs!              </tspan></text></g>
+<g transform="translate(0, 1033.5)" class="fade-in" style="animation-delay: 18300ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g>
+<g transform="translate(0, 1053)" class="fade-in" style="animation-delay: 18350ms"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
 
-    <g transform="translate(0, 1131)">
-      <defs><clipPath id="cmdrev-58"><rect x="70" y="-13" width="64" height="26"><set attributeName="width" to="0" begin="0s" end="20150ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="20150ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
-      <text class="tt fade-in" style="animation-delay: 20150ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
-      <text class="tt" x="70" fill="#6ae4b9" textLength="64" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-58)">ping lab</text>
+    <g transform="translate(0, 1072.5)">
+      <defs><clipPath id="cmdrev-55"><rect x="70" y="-13" width="64" height="26"><set attributeName="width" to="0" begin="0s" end="20000ms"/><animate attributeName="width" values="0;8;16;24;32;40;48;56;64" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="20000ms" dur="1200ms" fill="freeze"/></rect></clipPath></defs>
+      <text class="tt fade-in" style="animation-delay: 20000ms" fill="#6ae4b9" textLength="70" lengthAdjust="spacingAndGlyphs">w@lab:~$ </text>
+      <text class="tt" x="70" fill="#6ae4b9" textLength="64" lengthAdjust="spacingAndGlyphs" clip-path="url(#cmdrev-55)">ping lab</text>
       
     <rect x="70" y="-11" width="8" height="13"
           fill="#ffffff" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" begin="20150ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="opacity" to="0" begin="21350ms" dur="10ms" fill="freeze"/>
-      <animate attributeName="x" values="70;70;78;86;94;102;110;118;126" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="20150ms" dur="1200ms" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="1" begin="20000ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="opacity" to="0" begin="21200ms" dur="10ms" fill="freeze"/>
+      <animate attributeName="x" values="70;70;78;86;94;102;110;118;126" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750;1.0000" calcMode="discrete" begin="20000ms" dur="1200ms" fill="freeze"/>
     </rect>
     </g>
 
-    <g transform="translate(0, 1150.5)" class="fade-in" style="animation-delay: 21760ms">
+    <g transform="translate(0, 1092)" class="fade-in" style="animation-delay: 21610ms">
       <text class="tt frame-cycle-5" opacity="1" style="animation: frame-cycle-5 1250ms linear 0ms infinite"><tspan fill="#ff5f59">   </tspan><tspan fill="#ffffff"> homelab online</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 250ms infinite"><tspan fill="#ff5f59"> ♥ </tspan><tspan fill="#ffffff"> homelab online</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 500ms infinite"><tspan fill="#ff5f59"> ♥ </tspan><tspan fill="#ffffff"> homelab online</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 750ms infinite"><tspan fill="#ff5f59"> ♥ </tspan><tspan fill="#ffffff"> homelab online</tspan></text><text class="tt frame-cycle-5" opacity="0" style="animation: frame-cycle-5 1250ms linear 1000ms infinite"><tspan fill="#ff5f59">   </tspan><tspan fill="#ffffff"> homelab online</tspan></text>
     </g>
       </g>

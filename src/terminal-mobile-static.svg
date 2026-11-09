@@ -1,10 +1,10 @@
-<svg width="360" height="1190" viewBox="0 0 360 1190" xmlns="http://www.w3.org/2000/svg"
+<svg width="360" height="1248" viewBox="0 0 360 1248" xmlns="http://www.w3.org/2000/svg"
   role="img" aria-label="William Zujkowski&apos;s mobile profile terminal — Security Engineer, Multi-Agent AI Builder, Homelabber, and Dad Joke Connoisseur.">
   <title>William Zujkowski&apos;s mobile profile terminal — Security Engineer, Multi-Agent AI Builder, Homelabber, and Dad Joke Connoisseur.</title>
   <desc>w@lab:~$ cat /etc/motd
 WILLIAM&apos;S TERMINAL v2026.11
 Security · Multi-Agent AI
-Sunny 58°F | Humidity: 40%
+Clear  50°F | Humidity: 52%
 w@lab:~$ neofetch
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -25,22 +25,25 @@ w@lab:~$ status
 ✓ dad-jokes  ready
 
 w@lab:~$ gh stats
-GitHub stats unavai...
+GITHUB: @williamzujkowski
+Repos: 94    Followers: 38
+Following: 58    Gists: 134
+Member since: Sep 2015
 w@lab:~$ gh lang
-TypeScript  ████░░░░░░  42%
-Python      ███░░░░░░░  31%
-Go          █░░░░░░░░░  14%
-Rust        █░░░░░░░░░   9%
-Shell       ░░░░░░░░░░   4%
+Python      ████░░░░░░  43%
+TypeScript  ██░░░░░░░░  21%
+Shell       █░░░░░░░░░  11%
+JavaScript  █░░░░░░░░░   9%
+HTML        █░░░░░░░░░   6%
 w@lab:~$ exercise
 \o/
 |
 / \
 w@lab:~$ dad-joke
-DAD JOKE OF THE DAY - Nov 8
-Category: CLASSIC
-Q: Why prefer dark mode?
-A: Light attracts bugs!
+DAD JOKE OF THE DAY - Nov 9
+Category: MONEY
+Q: Why developer broke?
+A: Used up all his cache!
 w@lab:~$ ping lab
 homelab online</desc>
   <style>.tt { font-family: JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace; font-size: 13px; white-space: pre; }</style>
@@ -58,21 +61,21 @@ homelab online</desc>
       </feMerge>
     </filter>
     <clipPath id="terminalViewport">
-      <rect x="0" y="40" width="360" height="1150"/>
+      <rect x="0" y="40" width="360" height="1208"/>
     </clipPath>
   </defs>
 
   <g filter="url(#shadow)">
     
-    <rect x="0" y="0" width="360" height="1190"
+    <rect x="0" y="0" width="360" height="1248"
           rx="12" ry="12"
-          fill="#000000"/>
+          fill="#161616"/>
     
     <rect x="0" y="0" width="360" height="40"
           rx="12" ry="12"
-          fill="#171717"/>
+          fill="#2a2a2a"/>
     <rect x="0" y="16" width="360" height="16"
-          fill="#171717"/>
+          fill="#2a2a2a"/>
     <g id="window-controls">
       <circle cx="14" cy="16" r="6" fill="#ff5f57" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
       <circle cx="34" cy="16" r="6" fill="#ffbd2e" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
@@ -80,49 +83,49 @@ homelab online</desc>
     </g>
     <text x="180" y="24.55"
           font-family="-apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Helvetica, Arial, sans-serif" font-size="13"
-          fill="#ffffff" text-anchor="middle">
+          fill="#f2f4f8" text-anchor="middle">
       william@homelab:~
     </text>
     <rect x="0" y="40" width="360"
-          height="1150" fill="#000000"/>
+          height="1208" fill="#161616"/>
     <g clip-path="url(#terminalViewport)">
       <g transform="translate(12, 54)">
         
-      <text class="tt" y="0" fill="#ffffff">w@lab:~$ cat /etc/motd</text><g transform="translate(0, 19.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 39)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 58.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  WILLIAM&apos;S TERMINAL v2026.11          </tspan></text></g><g transform="translate(0, 78)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Security · Multi-Agent AI            </tspan></text></g><g transform="translate(0, 97.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#00d3d0" textLength="202.8" lengthAdjust="spacingAndGlyphs">Sunny 58°F | Humidity: 40%</tspan><tspan x="218.4" fill="#ffffff" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g><g transform="translate(0, 117)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 136.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
-      <text class="tt" y="156" fill="#ffffff">w@lab:~$ neofetch</text>
-      <text class="tt" y="175.5"><tspan fill="#00d3d0">william@homelab</tspan></text>
-      <text class="tt" y="195"><tspan fill="#00d3d0">───────────────</tspan></text>
-      <text class="tt" y="214.5"><tspan fill="#00d3d0">OS</tspan><tspan fill="#ffffff">:        DadOS LTS (Linux + Coffee)</tspan></text>
-      <text class="tt" y="234"><tspan fill="#00d3d0">Shell</tspan><tspan fill="#ffffff">:     /bin/dad-jokes</tspan></text>
-      <text class="tt" y="253.5"><tspan fill="#00d3d0">Uptime</tspan><tspan fill="#ffffff">:    20+ years</tspan></text>
-      <text class="tt" y="273"><tspan fill="#00d3d0">Role</tspan><tspan fill="#ffffff">:      Security &amp; Multi-Agent AI</tspan></text>
-      <text class="tt" y="292.5"><tspan fill="#00d3d0">Location</tspan><tspan fill="#ffffff">:  PA · Basement Lab</tspan></text>
-      <text class="tt" y="312"><tspan fill="#00d3d0">Languages</tspan><tspan fill="#ffffff">: TS, Python, Go, Rust</tspan></text>
-      <text class="tt" y="331.5"><tspan fill="#00d3d0">Editor</tspan><tspan fill="#ffffff">:    nvim (btw)</tspan></text>
-      <text class="tt" y="351" fill="#ffffff"></text>
-      <text class="tt" y="370.5"><tspan fill="#ff5f59">●</tspan><tspan fill="#ffffff"> </tspan><tspan fill="#44bc44">●</tspan><tspan fill="#ffffff"> </tspan><tspan fill="#d0bc00">●</tspan><tspan fill="#ffffff"> </tspan><tspan fill="#2fafff">●</tspan><tspan fill="#ffffff"> </tspan><tspan fill="#feacd0">●</tspan><tspan fill="#ffffff"> </tspan><tspan fill="#00d3d0">●</tspan><tspan fill="#ffffff"> </tspan><tspan fill="#a6a6a6">●</tspan><tspan fill="#ffffff"> </tspan><tspan fill="#e88e2c">●</tspan></text>
-      <text class="tt" y="390" fill="#ffffff">w@lab:~$ status</text>
-      <text class="tt" y="409.5" fill="#ffffff"></text>
-      <text class="tt" y="429"><tspan fill="#ffffff">  </tspan><tspan fill="#44bc44">✓</tspan><tspan fill="#ffffff"> nexus      online</tspan></text>
-      <text class="tt" y="448.5"><tspan fill="#ffffff">  </tspan><tspan fill="#44bc44">✓</tspan><tspan fill="#ffffff"> homelab    healthy</tspan></text>
-      <text class="tt" y="468"><tspan fill="#ffffff">  </tspan><tspan fill="#44bc44">✓</tspan><tspan fill="#ffffff"> aegis      secure</tspan></text>
-      <text class="tt" y="487.5"><tspan fill="#ffffff">  </tspan><tspan fill="#d0bc00">⚠</tspan><tspan fill="#ffffff"> coffee     low</tspan></text>
-      <text class="tt" y="507"><tspan fill="#ffffff">  </tspan><tspan fill="#44bc44">✓</tspan><tspan fill="#ffffff"> dad-jokes  ready</tspan></text>
-      <text class="tt" y="526.5" fill="#ffffff"></text>
-      <text class="tt" y="546" fill="#ffffff">w@lab:~$ gh stats</text><g transform="translate(0, 565.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 585)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 604.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#d0bc00" textLength="288.6" lengthAdjust="spacingAndGlyphs">GitHub stats unavai...               </tspan></text></g><g transform="translate(0, 624)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 643.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
-      <text class="tt" y="663" fill="#ffffff">w@lab:~$ gh lang</text>
-      <text class="tt" y="682.5"><tspan fill="#00d3d0">TypeScript</tspan><tspan fill="#ffffff">  </tspan><tspan fill="#00d3d0">████░░░░░░</tspan><tspan fill="#ffffff">  42%</tspan></text>
-      <text class="tt" y="702"><tspan fill="#44bc44">Python    </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#44bc44">███░░░░░░░</tspan><tspan fill="#ffffff">  31%</tspan></text>
-      <text class="tt" y="721.5"><tspan fill="#d0bc00">Go        </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#d0bc00">█░░░░░░░░░</tspan><tspan fill="#ffffff">  14%</tspan></text>
-      <text class="tt" y="741"><tspan fill="#feacd0">Rust      </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#feacd0">█░░░░░░░░░</tspan><tspan fill="#ffffff">   9%</tspan></text>
-      <text class="tt" y="760.5"><tspan fill="#2fafff">Shell     </tspan><tspan fill="#ffffff">  </tspan><tspan fill="#2fafff">░░░░░░░░░░</tspan><tspan fill="#ffffff">   4%</tspan></text>
-      <text class="tt" y="780" fill="#ffffff">w@lab:~$ exercise</text>
-      <text class="tt" y="799.5"><tspan fill="#44bc44">\o/</tspan></text>
-      <text class="tt" y="819"><tspan fill="#44bc44"> | </tspan></text>
-      <text class="tt" y="838.5"><tspan fill="#44bc44">/ \</tspan></text>
-      <text class="tt" y="858" fill="#ffffff">w@lab:~$ dad-joke</text><g transform="translate(0, 877.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 897)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 916.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  DAD JOKE OF THE DAY - Nov 8          </tspan></text></g><g transform="translate(0, 936)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Category: CLASSIC                    </tspan></text></g><g transform="translate(0, 955.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 975)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Q: Why prefer dark mode?             </tspan></text></g><g transform="translate(0, 994.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1014)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">  A: Light attracts bugs!              </tspan></text></g><g transform="translate(0, 1033.5)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#ffffff" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1053)"><path fill="none" stroke="#ffffff" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
-      <text class="tt" y="1072.5" fill="#ffffff">w@lab:~$ ping lab</text>
-      <text class="tt" y="1092"><tspan fill="#ff5f59">   </tspan><tspan fill="#ffffff"> homelab online</tspan></text>
+      <text class="tt" y="0" fill="#f2f4f8">w@lab:~$ cat /etc/motd</text><g transform="translate(0, 19.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 39)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 58.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  WILLIAM&apos;S TERMINAL v2026.11          </tspan></text></g><g transform="translate(0, 78)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Security · Multi-Agent AI            </tspan></text></g><g transform="translate(0, 97.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#ff74b8" textLength="210.6" lengthAdjust="spacingAndGlyphs">Clear  50°F | Humidity: 52%</tspan><tspan x="226.2" fill="#f2f4f8" textLength="78" lengthAdjust="spacingAndGlyphs">          </tspan></text></g><g transform="translate(0, 117)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 136.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="156" fill="#f2f4f8">w@lab:~$ neofetch</text>
+      <text class="tt" y="175.5"><tspan fill="#ff74b8">william@homelab</tspan></text>
+      <text class="tt" y="195"><tspan fill="#ff74b8">───────────────</tspan></text>
+      <text class="tt" y="214.5"><tspan fill="#ff74b8">OS</tspan><tspan fill="#f2f4f8">:        DadOS LTS (Linux + Coffee)</tspan></text>
+      <text class="tt" y="234"><tspan fill="#ff74b8">Shell</tspan><tspan fill="#f2f4f8">:     /bin/dad-jokes</tspan></text>
+      <text class="tt" y="253.5"><tspan fill="#ff74b8">Uptime</tspan><tspan fill="#f2f4f8">:    20+ years</tspan></text>
+      <text class="tt" y="273"><tspan fill="#ff74b8">Role</tspan><tspan fill="#f2f4f8">:      Security &amp; Multi-Agent AI</tspan></text>
+      <text class="tt" y="292.5"><tspan fill="#ff74b8">Location</tspan><tspan fill="#f2f4f8">:  PA · Basement Lab</tspan></text>
+      <text class="tt" y="312"><tspan fill="#ff74b8">Languages</tspan><tspan fill="#f2f4f8">: TS, Python, Go, Rust</tspan></text>
+      <text class="tt" y="331.5"><tspan fill="#ff74b8">Editor</tspan><tspan fill="#f2f4f8">:    nvim (btw)</tspan></text>
+      <text class="tt" y="351" fill="#f2f4f8"></text>
+      <text class="tt" y="370.5"><tspan fill="#00dfdb">●</tspan><tspan fill="#f2f4f8"> </tspan><tspan fill="#00b4ff">●</tspan><tspan fill="#f2f4f8"> </tspan><tspan fill="#ff4297">●</tspan><tspan fill="#f2f4f8"> </tspan><tspan fill="#00c15a">●</tspan><tspan fill="#f2f4f8"> </tspan><tspan fill="#c693ff">●</tspan><tspan fill="#f2f4f8"> </tspan><tspan fill="#ff74b8">●</tspan><tspan fill="#f2f4f8"> </tspan><tspan fill="#f2f4f8">●</tspan><tspan fill="#f2f4f8"> </tspan><tspan fill="#8090b9">●</tspan></text>
+      <text class="tt" y="390" fill="#f2f4f8">w@lab:~$ status</text>
+      <text class="tt" y="409.5" fill="#f2f4f8"></text>
+      <text class="tt" y="429"><tspan fill="#f2f4f8">  </tspan><tspan fill="#00b4ff">✓</tspan><tspan fill="#f2f4f8"> nexus      online</tspan></text>
+      <text class="tt" y="448.5"><tspan fill="#f2f4f8">  </tspan><tspan fill="#00b4ff">✓</tspan><tspan fill="#f2f4f8"> homelab    healthy</tspan></text>
+      <text class="tt" y="468"><tspan fill="#f2f4f8">  </tspan><tspan fill="#00b4ff">✓</tspan><tspan fill="#f2f4f8"> aegis      secure</tspan></text>
+      <text class="tt" y="487.5"><tspan fill="#f2f4f8">  </tspan><tspan fill="#ff4297">⚠</tspan><tspan fill="#f2f4f8"> coffee     low</tspan></text>
+      <text class="tt" y="507"><tspan fill="#f2f4f8">  </tspan><tspan fill="#00b4ff">✓</tspan><tspan fill="#f2f4f8"> dad-jokes  ready</tspan></text>
+      <text class="tt" y="526.5" fill="#f2f4f8"></text>
+      <text class="tt" y="546" fill="#f2f4f8">w@lab:~$ gh stats</text><g transform="translate(0, 565.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 585)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 604.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#ff74b8" textLength="195" lengthAdjust="spacingAndGlyphs">GITHUB: @williamzujkowski</tspan><tspan x="210.6" fill="#f2f4f8" textLength="93.6" lengthAdjust="spacingAndGlyphs">            </tspan></text></g><g transform="translate(0, 624)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="70.2" lengthAdjust="spacingAndGlyphs">  Repos: </tspan><tspan x="70.2" fill="#f2f4f8" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">94</tspan><tspan x="85.8" fill="#f2f4f8" textLength="117" lengthAdjust="spacingAndGlyphs">    Followers: </tspan><tspan x="202.8" fill="#f2f4f8" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">38</tspan><tspan x="218.4" fill="#f2f4f8" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g><g transform="translate(0, 643.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Following: 58    Gists: 134          </tspan></text></g><g transform="translate(0, 663)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Member since: Sep 2015               </tspan></text></g><g transform="translate(0, 682.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 702)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="721.5" fill="#f2f4f8">w@lab:~$ gh lang</text>
+      <text class="tt" y="741"><tspan fill="#ff74b8">Python    </tspan><tspan fill="#f2f4f8">  </tspan><tspan fill="#ff74b8">████░░░░░░</tspan><tspan fill="#f2f4f8">  43%</tspan></text>
+      <text class="tt" y="760.5"><tspan fill="#00b4ff">TypeScript</tspan><tspan fill="#f2f4f8">  </tspan><tspan fill="#00b4ff">██░░░░░░░░</tspan><tspan fill="#f2f4f8">  21%</tspan></text>
+      <text class="tt" y="780"><tspan fill="#ff4297">Shell     </tspan><tspan fill="#f2f4f8">  </tspan><tspan fill="#ff4297">█░░░░░░░░░</tspan><tspan fill="#f2f4f8">  11%</tspan></text>
+      <text class="tt" y="799.5"><tspan fill="#c693ff">JavaScript</tspan><tspan fill="#f2f4f8">  </tspan><tspan fill="#c693ff">█░░░░░░░░░</tspan><tspan fill="#f2f4f8">   9%</tspan></text>
+      <text class="tt" y="819"><tspan fill="#00c15a">HTML      </tspan><tspan fill="#f2f4f8">  </tspan><tspan fill="#00c15a">█░░░░░░░░░</tspan><tspan fill="#f2f4f8">   6%</tspan></text>
+      <text class="tt" y="838.5" fill="#f2f4f8">w@lab:~$ exercise</text>
+      <text class="tt" y="858"><tspan fill="#00b4ff">\o/</tspan></text>
+      <text class="tt" y="877.5"><tspan fill="#00b4ff"> | </tspan></text>
+      <text class="tt" y="897"><tspan fill="#00b4ff">/ \</tspan></text>
+      <text class="tt" y="916.5" fill="#f2f4f8">w@lab:~$ dad-joke</text><g transform="translate(0, 936)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 955.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 975)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  DAD JOKE OF THE DAY - Nov 9          </tspan></text></g><g transform="translate(0, 994.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Category: MONEY                      </tspan></text></g><g transform="translate(0, 1014)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1033.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Q: Why developer broke?              </tspan></text></g><g transform="translate(0, 1053)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1072.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">  A: Used up all his cache!            </tspan></text></g><g transform="translate(0, 1092)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#f2f4f8" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1111.5)"><path fill="none" stroke="#f2f4f8" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="1131" fill="#f2f4f8">w@lab:~$ ping lab</text>
+      <text class="tt" y="1150.5"><tspan fill="#00dfdb">   </tspan><tspan fill="#f2f4f8"> homelab online</tspan></text>
       </g>
     </g>
     

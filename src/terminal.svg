@@ -4,7 +4,7 @@
   <desc>william@homelab:~$ cat /etc/motd
 WILLIAM&apos;S DEV TERMINAL v2026.11
 Security • Multi-Agent AI • Homelab • Dad Jokes
-Clear  35°F | Humidity: 74%
+Cloudy  43°F | Humidity: 57%
 william@homelab:~$ neofetch --ascii_distro homelab
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -171,7 +171,7 @@ See you in the commits.</desc>
 <g transform="translate(0, 41.6)" class="fade-in" style="animation-delay: 850ms"><path fill="none" stroke="#1f2328" stroke-width="0.845" d="M2.86 -14.95V5.85M699.14 -14.95V5.85M4.94 -14.95V5.85M697.06 -14.95V5.85"/><text class="tt"><tspan x="0" fill="#1f2328" textLength="702" lengthAdjust="spacingAndGlyphs">                                                                                          </tspan></text></g>
 <g transform="translate(0, 62.4)" class="fade-in" style="animation-delay: 900ms"><path fill="none" stroke="#1f2328" stroke-width="0.845" d="M2.86 -14.95V5.85M699.14 -14.95V5.85M4.94 -14.95V5.85M697.06 -14.95V5.85"/><text class="tt"><tspan x="0" fill="#1f2328" textLength="702" lengthAdjust="spacingAndGlyphs">  WILLIAM&apos;S DEV TERMINAL v2026.11                                                         </tspan></text></g>
 <g transform="translate(0, 83.2)" class="fade-in" style="animation-delay: 950ms"><path fill="none" stroke="#1f2328" stroke-width="0.845" d="M2.86 -14.95V5.85M699.14 -14.95V5.85M4.94 -14.95V5.85M697.06 -14.95V5.85"/><text class="tt"><tspan x="0" fill="#1f2328" textLength="702" lengthAdjust="spacingAndGlyphs">  Security • Multi-Agent AI • Homelab • Dad Jokes                                         </tspan></text></g>
-<g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms"><path fill="none" stroke="#1f2328" stroke-width="0.845" d="M2.86 -14.95V5.85M699.14 -14.95V5.85M4.94 -14.95V5.85M697.06 -14.95V5.85"/><text class="tt"><tspan x="0" fill="#1f2328" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#1b7c83" textLength="210.6" lengthAdjust="spacingAndGlyphs">Clear  35°F | Humidity: 74%</tspan><tspan x="226.2" fill="#1f2328" textLength="475.8" lengthAdjust="spacingAndGlyphs">                                                             </tspan></text></g>
+<g transform="translate(0, 104)" class="fade-in" style="animation-delay: 1000ms"><path fill="none" stroke="#1f2328" stroke-width="0.845" d="M2.86 -14.95V5.85M699.14 -14.95V5.85M4.94 -14.95V5.85M697.06 -14.95V5.85"/><text class="tt"><tspan x="0" fill="#1f2328" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#1b7c83" textLength="218.4" lengthAdjust="spacingAndGlyphs">Cloudy  43°F | Humidity: 57%</tspan><tspan x="234" fill="#1f2328" textLength="468" lengthAdjust="spacingAndGlyphs">                                                            </tspan></text></g>
 <g transform="translate(0, 124.8)" class="fade-in" style="animation-delay: 1050ms"><path fill="none" stroke="#1f2328" stroke-width="0.845" d="M2.86 -14.95V5.85M699.14 -14.95V5.85M4.94 -14.95V5.85M697.06 -14.95V5.85"/><text class="tt"><tspan x="0" fill="#1f2328" textLength="702" lengthAdjust="spacingAndGlyphs">                                                                                          </tspan></text></g>
 <g transform="translate(0, 145.6)" class="fade-in" style="animation-delay: 1100ms"><path fill="none" stroke="#1f2328" stroke-width="0.845" d="M2.86 -14.95V-3.51Q2.86 -3.51 2.86 -3.51H699.14Q699.14 -3.51 699.14 -3.51V-14.95M4.94 -14.95V-5.59Q4.94 -5.59 4.94 -5.59H697.06Q697.06 -5.59 697.06 -5.59V-14.95"/></g>
 

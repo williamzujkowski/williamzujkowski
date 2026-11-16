@@ -4,7 +4,7 @@
   <desc>w@lab:~$ cat /etc/motd
 WILLIAM&apos;S TERMINAL v2026.11
 Security · Multi-Agent AI
-Cloudy  45°F | Humidity: 54%
+Partly Cloudy  39°F | Humidity: 74%
 w@lab:~$ neofetch
 william@homelab
 OS:        DadOS LTS (Linux + Coffee)
@@ -40,15 +40,20 @@ w@lab:~$ exercise
 |
 / \
 w@lab:~$ dad-joke
-DAD JOKE OF THE DAY - Nov 15
+DAD JOKE OF THE DAY - Nov 16
 Category: SECURITY
-Q: Why ladder at work?
-A: Escalate privileges!
+Q: What is unpatched CVE?
+A: An invitation.
 w@lab:~$ ping lab
 homelab online</desc>
   <style>.tt { font-family: JetBrains Mono, Fira Code, Ubuntu Mono, Consolas, Monaco, monospace; font-size: 13px; white-space: pre; }</style>
   <defs>
     
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="black" stop-opacity="0"/>
+      <stop offset="60%" stop-color="black" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.25"/>
+    </radialGradient>
     
     <filter id="shadow" x="-8%" y="-8%" width="116%" height="120%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
@@ -69,13 +74,13 @@ homelab online</desc>
     
     <rect x="0" y="0" width="360" height="1248"
           rx="12" ry="12"
-          fill="#f6f2ee"/>
+          fill="#40318d"/>
     
     <rect x="0" y="0" width="360" height="40"
           rx="12" ry="12"
-          fill="#e5e0e1"/>
+          fill="#2d2266"/>
     <rect x="0" y="16" width="360" height="16"
-          fill="#e5e0e1"/>
+          fill="#2d2266"/>
     <g id="window-controls">
       <circle cx="14" cy="16" r="6" fill="#ff5f57" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
       <circle cx="34" cy="16" r="6" fill="#ffbd2e" stroke="rgba(0,0,0,0.18)" stroke-width="0.5"/>
@@ -83,52 +88,52 @@ homelab online</desc>
     </g>
     <text x="180" y="24.55"
           font-family="-apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Helvetica, Arial, sans-serif" font-size="13"
-          fill="#3d2b5a" text-anchor="middle">
+          fill="#bfce72" text-anchor="middle">
       william@homelab:~
     </text>
     <rect x="0" y="40" width="360"
-          height="1208" fill="#f6f2ee"/>
+          height="1208" fill="#40318d"/>
     <g clip-path="url(#terminalViewport)">
       <g transform="translate(12, 54)">
         
-      <text class="tt" y="0" fill="#3d2b5a">w@lab:~$ cat /etc/motd</text><g transform="translate(0, 19.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 39)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 58.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  WILLIAM&apos;S TERMINAL v2026.11          </tspan></text></g><g transform="translate(0, 78)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Security · Multi-Agent AI            </tspan></text></g><g transform="translate(0, 97.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#287980" textLength="218.4" lengthAdjust="spacingAndGlyphs">Cloudy  45°F | Humidity: 54%</tspan><tspan x="234" fill="#3d2b5a" textLength="70.2" lengthAdjust="spacingAndGlyphs">         </tspan></text></g><g transform="translate(0, 117)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 136.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
-      <text class="tt" y="156" fill="#3d2b5a">w@lab:~$ neofetch</text>
-      <text class="tt" y="175.5"><tspan fill="#287980">william@homelab</tspan></text>
-      <text class="tt" y="195"><tspan fill="#287980">───────────────</tspan></text>
-      <text class="tt" y="214.5"><tspan fill="#287980">OS</tspan><tspan fill="#3d2b5a">:        DadOS LTS (Linux + Coffee)</tspan></text>
-      <text class="tt" y="234"><tspan fill="#287980">Shell</tspan><tspan fill="#3d2b5a">:     /bin/dad-jokes</tspan></text>
-      <text class="tt" y="253.5"><tspan fill="#287980">Uptime</tspan><tspan fill="#3d2b5a">:    20+ years</tspan></text>
-      <text class="tt" y="273"><tspan fill="#287980">Role</tspan><tspan fill="#3d2b5a">:      Security &amp; Multi-Agent AI</tspan></text>
-      <text class="tt" y="292.5"><tspan fill="#287980">Location</tspan><tspan fill="#3d2b5a">:  PA · Basement Lab</tspan></text>
-      <text class="tt" y="312"><tspan fill="#287980">Languages</tspan><tspan fill="#3d2b5a">: TS, Python, Go, Rust</tspan></text>
-      <text class="tt" y="331.5"><tspan fill="#287980">Editor</tspan><tspan fill="#3d2b5a">:    nvim (btw)</tspan></text>
-      <text class="tt" y="351" fill="#3d2b5a"></text>
-      <text class="tt" y="370.5"><tspan fill="#a5222f">●</tspan><tspan fill="#3d2b5a"> </tspan><tspan fill="#396847">●</tspan><tspan fill="#3d2b5a"> </tspan><tspan fill="#ac5402">●</tspan><tspan fill="#3d2b5a"> </tspan><tspan fill="#2848a9">●</tspan><tspan fill="#3d2b5a"> </tspan><tspan fill="#6e33ce">●</tspan><tspan fill="#3d2b5a"> </tspan><tspan fill="#287980">●</tspan><tspan fill="#3d2b5a"> </tspan><tspan fill="#bfb6ae">●</tspan><tspan fill="#3d2b5a"> </tspan><tspan fill="#a83b18">●</tspan></text>
-      <text class="tt" y="390" fill="#3d2b5a">w@lab:~$ status</text>
-      <text class="tt" y="409.5" fill="#3d2b5a"></text>
-      <text class="tt" y="429"><tspan fill="#3d2b5a">  </tspan><tspan fill="#396847">✓</tspan><tspan fill="#3d2b5a"> nexus      online</tspan></text>
-      <text class="tt" y="448.5"><tspan fill="#3d2b5a">  </tspan><tspan fill="#396847">✓</tspan><tspan fill="#3d2b5a"> homelab    healthy</tspan></text>
-      <text class="tt" y="468"><tspan fill="#3d2b5a">  </tspan><tspan fill="#396847">✓</tspan><tspan fill="#3d2b5a"> aegis      secure</tspan></text>
-      <text class="tt" y="487.5"><tspan fill="#3d2b5a">  </tspan><tspan fill="#ac5402">⚠</tspan><tspan fill="#3d2b5a"> coffee     low</tspan></text>
-      <text class="tt" y="507"><tspan fill="#3d2b5a">  </tspan><tspan fill="#396847">✓</tspan><tspan fill="#3d2b5a"> dad-jokes  ready</tspan></text>
-      <text class="tt" y="526.5" fill="#3d2b5a"></text>
-      <text class="tt" y="546" fill="#3d2b5a">w@lab:~$ gh stats</text><g transform="translate(0, 565.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 585)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 604.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#287980" textLength="195" lengthAdjust="spacingAndGlyphs">GITHUB: @williamzujkowski</tspan><tspan x="210.6" fill="#3d2b5a" textLength="93.6" lengthAdjust="spacingAndGlyphs">            </tspan></text></g><g transform="translate(0, 624)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="70.2" lengthAdjust="spacingAndGlyphs">  Repos: </tspan><tspan x="70.2" fill="#3d2b5a" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">95</tspan><tspan x="85.8" fill="#3d2b5a" textLength="117" lengthAdjust="spacingAndGlyphs">    Followers: </tspan><tspan x="202.8" fill="#3d2b5a" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">38</tspan><tspan x="218.4" fill="#3d2b5a" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g><g transform="translate(0, 643.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Following: 59    Gists: 134          </tspan></text></g><g transform="translate(0, 663)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Member since: Sep 2015               </tspan></text></g><g transform="translate(0, 682.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 702)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
-      <text class="tt" y="721.5" fill="#3d2b5a">w@lab:~$ gh lang</text>
-      <text class="tt" y="741"><tspan fill="#287980">Python    </tspan><tspan fill="#3d2b5a">  </tspan><tspan fill="#287980">████░░░░░░</tspan><tspan fill="#3d2b5a">  42%</tspan></text>
-      <text class="tt" y="760.5"><tspan fill="#396847">TypeScript</tspan><tspan fill="#3d2b5a">  </tspan><tspan fill="#396847">██░░░░░░░░</tspan><tspan fill="#3d2b5a">  23%</tspan></text>
-      <text class="tt" y="780"><tspan fill="#ac5402">Shell     </tspan><tspan fill="#3d2b5a">  </tspan><tspan fill="#ac5402">█░░░░░░░░░</tspan><tspan fill="#3d2b5a">  11%</tspan></text>
-      <text class="tt" y="799.5"><tspan fill="#6e33ce">JavaScript</tspan><tspan fill="#3d2b5a">  </tspan><tspan fill="#6e33ce">█░░░░░░░░░</tspan><tspan fill="#3d2b5a">   8%</tspan></text>
-      <text class="tt" y="819"><tspan fill="#2848a9">HTML      </tspan><tspan fill="#3d2b5a">  </tspan><tspan fill="#2848a9">█░░░░░░░░░</tspan><tspan fill="#3d2b5a">   6%</tspan></text>
-      <text class="tt" y="838.5" fill="#3d2b5a">w@lab:~$ exercise</text>
-      <text class="tt" y="858"><tspan fill="#396847">\o/</tspan></text>
-      <text class="tt" y="877.5"><tspan fill="#396847"> | </tspan></text>
-      <text class="tt" y="897"><tspan fill="#396847">/ \</tspan></text>
-      <text class="tt" y="916.5" fill="#3d2b5a">w@lab:~$ dad-joke</text><g transform="translate(0, 936)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 955.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 975)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  DAD JOKE OF THE DAY - Nov 15         </tspan></text></g><g transform="translate(0, 994.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Category: SECURITY                   </tspan></text></g><g transform="translate(0, 1014)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1033.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Q: Why ladder at work?               </tspan></text></g><g transform="translate(0, 1053)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1072.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">  A: Escalate privileges!              </tspan></text></g><g transform="translate(0, 1092)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#3d2b5a" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1111.5)"><path fill="none" stroke="#3d2b5a" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
-      <text class="tt" y="1131" fill="#3d2b5a">w@lab:~$ ping lab</text>
-      <text class="tt" y="1150.5"><tspan fill="#a5222f">   </tspan><tspan fill="#3d2b5a"> homelab online</tspan></text>
+      <text class="tt" y="0" fill="#a89fe0">w@lab:~$ cat /etc/motd</text><g transform="translate(0, 19.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 39)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 58.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  WILLIAM&apos;S TERMINAL v2026.11          </tspan></text></g><g transform="translate(0, 78)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Security · Multi-Agent AI            </tspan></text></g><g transform="translate(0, 97.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#67b6bd" textLength="273" lengthAdjust="spacingAndGlyphs">Partly Cloudy  39°F | Humidity: 74%</tspan><tspan x="288.6" fill="#a89fe0" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan></text></g><g transform="translate(0, 117)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 136.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="156" fill="#a89fe0">w@lab:~$ neofetch</text>
+      <text class="tt" y="175.5"><tspan fill="#67b6bd">william@homelab</tspan></text>
+      <text class="tt" y="195"><tspan fill="#67b6bd">───────────────</tspan></text>
+      <text class="tt" y="214.5"><tspan fill="#67b6bd">OS</tspan><tspan fill="#a89fe0">:        DadOS LTS (Linux + Coffee)</tspan></text>
+      <text class="tt" y="234"><tspan fill="#67b6bd">Shell</tspan><tspan fill="#a89fe0">:     /bin/dad-jokes</tspan></text>
+      <text class="tt" y="253.5"><tspan fill="#67b6bd">Uptime</tspan><tspan fill="#a89fe0">:    20+ years</tspan></text>
+      <text class="tt" y="273"><tspan fill="#67b6bd">Role</tspan><tspan fill="#a89fe0">:      Security &amp; Multi-Agent AI</tspan></text>
+      <text class="tt" y="292.5"><tspan fill="#67b6bd">Location</tspan><tspan fill="#a89fe0">:  PA · Basement Lab</tspan></text>
+      <text class="tt" y="312"><tspan fill="#67b6bd">Languages</tspan><tspan fill="#a89fe0">: TS, Python, Go, Rust</tspan></text>
+      <text class="tt" y="331.5"><tspan fill="#67b6bd">Editor</tspan><tspan fill="#a89fe0">:    nvim (btw)</tspan></text>
+      <text class="tt" y="351" fill="#a89fe0"></text>
+      <text class="tt" y="370.5"><tspan fill="#a2524c">●</tspan><tspan fill="#a89fe0"> </tspan><tspan fill="#55a049">●</tspan><tspan fill="#a89fe0"> </tspan><tspan fill="#bfce72">●</tspan><tspan fill="#a89fe0"> </tspan><tspan fill="#6657b3">●</tspan><tspan fill="#a89fe0"> </tspan><tspan fill="#984ca3">●</tspan><tspan fill="#a89fe0"> </tspan><tspan fill="#67b6bd">●</tspan><tspan fill="#a89fe0"> </tspan><tspan fill="#ffffff">●</tspan><tspan fill="#a89fe0"> </tspan><tspan fill="#c27244">●</tspan></text>
+      <text class="tt" y="390" fill="#a89fe0">w@lab:~$ status</text>
+      <text class="tt" y="409.5" fill="#a89fe0"></text>
+      <text class="tt" y="429"><tspan fill="#a89fe0">  </tspan><tspan fill="#55a049">✓</tspan><tspan fill="#a89fe0"> nexus      online</tspan></text>
+      <text class="tt" y="448.5"><tspan fill="#a89fe0">  </tspan><tspan fill="#55a049">✓</tspan><tspan fill="#a89fe0"> homelab    healthy</tspan></text>
+      <text class="tt" y="468"><tspan fill="#a89fe0">  </tspan><tspan fill="#55a049">✓</tspan><tspan fill="#a89fe0"> aegis      secure</tspan></text>
+      <text class="tt" y="487.5"><tspan fill="#a89fe0">  </tspan><tspan fill="#bfce72">⚠</tspan><tspan fill="#a89fe0"> coffee     low</tspan></text>
+      <text class="tt" y="507"><tspan fill="#a89fe0">  </tspan><tspan fill="#55a049">✓</tspan><tspan fill="#a89fe0"> dad-jokes  ready</tspan></text>
+      <text class="tt" y="526.5" fill="#a89fe0"></text>
+      <text class="tt" y="546" fill="#a89fe0">w@lab:~$ gh stats</text><g transform="translate(0, 565.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 585)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 604.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="15.6" lengthAdjust="spacingAndGlyphs">  </tspan><tspan x="15.6" fill="#67b6bd" textLength="195" lengthAdjust="spacingAndGlyphs">GITHUB: @williamzujkowski</tspan><tspan x="210.6" fill="#a89fe0" textLength="93.6" lengthAdjust="spacingAndGlyphs">            </tspan></text></g><g transform="translate(0, 624)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="70.2" lengthAdjust="spacingAndGlyphs">  Repos: </tspan><tspan x="70.2" fill="#a89fe0" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">95</tspan><tspan x="85.8" fill="#a89fe0" textLength="117" lengthAdjust="spacingAndGlyphs">    Followers: </tspan><tspan x="202.8" fill="#a89fe0" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">38</tspan><tspan x="218.4" fill="#a89fe0" textLength="85.8" lengthAdjust="spacingAndGlyphs">           </tspan></text></g><g transform="translate(0, 643.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Following: 59    Gists: 134          </tspan></text></g><g transform="translate(0, 663)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Member since: Sep 2015               </tspan></text></g><g transform="translate(0, 682.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 702)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="721.5" fill="#a89fe0">w@lab:~$ gh lang</text>
+      <text class="tt" y="741"><tspan fill="#67b6bd">Python    </tspan><tspan fill="#a89fe0">  </tspan><tspan fill="#67b6bd">████░░░░░░</tspan><tspan fill="#a89fe0">  42%</tspan></text>
+      <text class="tt" y="760.5"><tspan fill="#55a049">TypeScript</tspan><tspan fill="#a89fe0">  </tspan><tspan fill="#55a049">██░░░░░░░░</tspan><tspan fill="#a89fe0">  23%</tspan></text>
+      <text class="tt" y="780"><tspan fill="#bfce72">Shell     </tspan><tspan fill="#a89fe0">  </tspan><tspan fill="#bfce72">█░░░░░░░░░</tspan><tspan fill="#a89fe0">  11%</tspan></text>
+      <text class="tt" y="799.5"><tspan fill="#984ca3">JavaScript</tspan><tspan fill="#a89fe0">  </tspan><tspan fill="#984ca3">█░░░░░░░░░</tspan><tspan fill="#a89fe0">   8%</tspan></text>
+      <text class="tt" y="819"><tspan fill="#6657b3">HTML      </tspan><tspan fill="#a89fe0">  </tspan><tspan fill="#6657b3">█░░░░░░░░░</tspan><tspan fill="#a89fe0">   6%</tspan></text>
+      <text class="tt" y="838.5" fill="#a89fe0">w@lab:~$ exercise</text>
+      <text class="tt" y="858"><tspan fill="#55a049">\o/</tspan></text>
+      <text class="tt" y="877.5"><tspan fill="#55a049"> | </tspan></text>
+      <text class="tt" y="897"><tspan fill="#55a049">/ \</tspan></text>
+      <text class="tt" y="916.5" fill="#a89fe0">w@lab:~$ dad-joke</text><g transform="translate(0, 936)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 5.2V-5.59Q2.86 -5.59 2.86 -5.59H301.34Q301.34 -5.59 301.34 -5.59V5.2M4.94 5.2V-3.51Q4.94 -3.51 4.94 -3.51H299.26Q299.26 -3.51 299.26 -3.51V5.2"/></g><g transform="translate(0, 955.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 975)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  DAD JOKE OF THE DAY - Nov 16         </tspan></text></g><g transform="translate(0, 994.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Category: SECURITY                   </tspan></text></g><g transform="translate(0, 1014)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1033.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  Q: What is unpatched CVE?            </tspan></text></g><g transform="translate(0, 1053)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1072.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">  A: An invitation.                    </tspan></text></g><g transform="translate(0, 1092)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V5.2M301.34 -14.3V5.2M4.94 -14.3V5.2M299.26 -14.3V5.2"/><text class="tt"><tspan x="0" fill="#a89fe0" textLength="304.2" lengthAdjust="spacingAndGlyphs">                                       </tspan></text></g><g transform="translate(0, 1111.5)"><path fill="none" stroke="#a89fe0" stroke-width="0.845" d="M2.86 -14.3V-3.51Q2.86 -3.51 2.86 -3.51H301.34Q301.34 -3.51 301.34 -3.51V-14.3M4.94 -14.3V-5.59Q4.94 -5.59 4.94 -5.59H299.26Q299.26 -5.59 299.26 -5.59V-14.3"/></g>
+      <text class="tt" y="1131" fill="#a89fe0">w@lab:~$ ping lab</text>
+      <text class="tt" y="1150.5"><tspan fill="#a2524c">   </tspan><tspan fill="#a89fe0"> homelab online</tspan></text>
       </g>
     </g>
-    
+    <rect x="0" y="40" width="360" height="1208" fill="url(#vignette)" pointer-events="none"/>
     
   </g>
 </svg>

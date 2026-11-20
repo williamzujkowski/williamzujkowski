@@ -80,11 +80,11 @@ The rest of what I build lives below.
 ### From the blog
 
 <!-- BLOG-POST-LIST:START -->
+- [When the Reviewer Is an Agent](https://williamzujkowski.github.io/posts/2026-11-19-when-the-reviewer-is-an-agent/)
 - [Approving the Command Approves What It Runs](https://williamzujkowski.github.io/posts/2026-11-12-approving-the-command-approves-what-it-runs/)
 - [The Override Was Still in package.json](https://williamzujkowski.github.io/posts/2026-11-05-dependabot-pnpm-overrides-two-ways/)
 - [The Repository Link That Points at Nobody](https://williamzujkowski.github.io/posts/2026-10-29-dead-repository-links-freed-owners/)
 - [Plant the Defect, Watch the Gate](https://williamzujkowski.github.io/posts/2026-10-22-plant-the-defect-watch-the-gate/)
-- [Provenance Attests the Pipeline, Not the Intent](https://williamzujkowski.github.io/posts/2026-10-15-npm-provenance-attests-the-pipeline/)
 <!-- BLOG-POST-LIST:END -->
 
 → Full archive at [williamzujkowski.github.io/posts](https://williamzujkowski.github.io/posts/). Auto-refreshes daily.
